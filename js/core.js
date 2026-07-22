@@ -548,8 +548,8 @@ async function loadRetailItemChart(key) {
   document.getElementById('synote').textContent = d.yn;
 
   if(itemsObj && Object.keys(itemsObj).length > 0) {
-    renderRetailItemFilters(itemsObj, ymList, labels, d);
-    renderRetailItemsChart(itemsObj, ymList, labels, d);
+    renderRetailItemFilters(itemsObj, ymList, labels, d, vals);
+    renderChart(vals, null, labels, d);   // 기본값: 전체 합계 추이만 표시
   } else {
     // 품목 데이터 없으면 합계 단일 라인
     var _rif0 = document.getElementById('retail-item-filters');
@@ -561,14 +561,14 @@ async function loadRetailItemChart(key) {
 /* ═══════════════════════════════════════════
    JS § 18. 유통채널 품목별 필터 버튼
    · renderRetailItemFilters(): "전체" + 품목별 버튼 렌더링
-   · selRetailItem(): 버튼 클릭 시 전체/단일 품목 전환
+   · selRetailItem(): 버튼 클릭 시 전체(합계)/단일 품목 전환
    ═══════════════════════════════════════════ */
-var _rItemsObj = null, _rYmList = null, _rLabels = null, _rD = null;
+var _rItemsObj = null, _rYmList = null, _rLabels = null, _rD = null, _rVals = null;
 
-function renderRetailItemFilters(itemsObj, ymList, labels, d) {
+function renderRetailItemFilters(itemsObj, ymList, labels, d, vals) {
   var container = document.getElementById('retail-item-filters');
   if(!container) return;
-  _rItemsObj = itemsObj; _rYmList = ymList; _rLabels = labels; _rD = d;
+  _rItemsObj = itemsObj; _rYmList = ymList; _rLabels = labels; _rD = d; _rVals = vals;
 
   var itemNames = Object.keys(itemsObj);
   var html = '<button class="ritem-btn on" onclick="selRetailItem(\'__all__\',this)">전체</button>';
@@ -585,7 +585,7 @@ function selRetailItem(name, btn) {
   btn.classList.add('on');
   if(!_rItemsObj) return;
   if(name === '__all__') {
-    renderRetailItemsChart(_rItemsObj, _rYmList, _rLabels, _rD);
+    renderChart(_rVals, null, _rLabels, _rD);   // 전체 = 합계 추이 단일 라인
   } else {
     var single = {};
     single[name] = _rItemsObj[name];
