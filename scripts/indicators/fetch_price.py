@@ -18,7 +18,7 @@ load_dotenv()
 
 from utils import (
     load_existing, save_data, upsert,
-    get_fetch_start, today_str, ecos_fetch
+    get_fetch_start, today_str, ecos_fetch, months_ago
 )
 
 ECOS_KEY = os.environ["ECOS_KEY"]
