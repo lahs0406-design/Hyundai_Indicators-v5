@@ -10,7 +10,7 @@ fetch_price.py — 물가·금리 데이터 수집
 """
 
 import sys, os
-sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file  start_date = get_fetch_start(series) + "01"   # 일별 조__)), ".."))
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from dotenv import load_dotenv
@@ -44,7 +44,7 @@ def run(data: dict) -> dict:
     # ── 기준금리 (일별 조회 후 월별 집계 — 금리 변경일이 월중 언제든 반영되도록)
     print("\n[물가금리] 기준금리")
     series = data.get("rate", [])
-    start_date = get_fetch_start(series) + "01"   # 일별 조회는 YYYYMMDD 형식
+    start_date = months_ago(3) + "01"   # 일별 조회는 최근 3개월만 봐도 변경일 놓치지 않음 (ECOS 500행 한도 회피)
     rows = ecos_fetch("722Y001", "0101000", "D",
                       start_date, today, ECOS_KEY)
     if rows:
