@@ -81,11 +81,24 @@
     <div class="index-note" id="index-note"></div>
     <div class="chart-src" id="cmeta">출처: 한국은행 · 월별 발표 · 기준선 100</div>
     <div class="kpi-grid">
-      <div class="kpill"><div class="kl">최신값</div><div class="kv" id="scur">100.3</div><div class="kc down" id="schg">▼ -1.2</div></div>
+      <div class="kpill"><div class="kl">최신값</div><div class="kv" id="scur">100.3</div></div>
+      <div class="kpill"><div class="kl">전월비</div><div class="kc down" id="schg">▼ -1.2</div></div>
+      <div class="kpill"><div class="kl">전년비</div><div class="kv" id="syoy">-3.1</div><span id="synote" style="display:none"></span></div>
       <div class="kpill"><div class="kl">6개월 평균</div><div class="kv" id="savg">101.8</div><div class="kc neu" id="snote">기준 100+</div></div>
-      <div class="kpill"><div class="kl">전년 대비</div><div class="kv" id="syoy">-3.1</div><div class="kc down" id="synote">점진 위축</div></div>
     </div>
+    <div class="retail-item-filters" id="retail-item-filters" style="display:none"></div>
     <div class="canvas-wrap"><canvas id="mc" role="img" aria-label="지표 추세 차트"></canvas></div>
+
+    <!-- AI 지표 해석 (공간 확보 — 데이터 연동은 추후 예정) -->
+    <div class="ai-interpret-box" id="ai-interpret-box">
+      <div class="ai-interpret-hd">
+        <span class="ai-feature-badge">✦ AI</span>
+        <span class="ai-interpret-title">AI 지표 해석</span>
+      </div>
+      <div class="ai-interpret-body" id="ai-interpret-body">
+        <span class="ai-interpret-placeholder">추후 업데이트 예정입니다.</span>
+      </div>
+    </div>
 
   </div>
 
@@ -199,7 +212,7 @@
   <!-- 탭 네비게이션 -->
   <div class="right-tabs">
     <button class="rtab on" data-tab="tab-news" onclick="switchTab(this)">최근 기사 요약</button>
-    <button class="rtab" data-tab="tab-reports" onclick="switchTab(this)">연구기관 보고서</button>
+    <button class="rtab" data-tab="tab-reports" onclick="switchTab(this)">연구기관 보도자료</button>
     <button class="rtab rtab-ai" data-tab="tab-insight" onclick="switchTab(this)">지표 교차 인사이트 <span class="ai-badge">AI</span></button>
   </div>
 
@@ -220,10 +233,10 @@
     </div>
   </div>
 
-  <!-- 탭 3: 연구기관 보고서 -->
+  <!-- 탭 3: 연구기관 보도자료 -->
   <div class="tab-panel" id="tab-reports" style="display:none">
     <div class="tab-panel-inner">
-      <div class="tab-meta">보고서 <span id="rpt-updated"></span></div>
+      <div class="tab-meta">보도자료 <span id="rpt-updated"></span></div>
       <div class="rpt-org" id="rpt-hri">
         <div class="rpt-org-header">
           <div><div class="rpt-org-name">현대경제연구원 <span class="rpt-org-url">hri.co.kr</span></div><div class="rpt-org-desc">매주 경제 동향·이슈 보고서 발간 · 소비·유통·경기 분석 중심</div></div>
