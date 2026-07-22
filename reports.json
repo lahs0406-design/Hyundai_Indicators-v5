@@ -99,16 +99,16 @@
       "url": "https://www.dnews.co.kr/uhtml/view.jsp?idxno=202607221518465770120"
     },
     {
-      "title": "KDI \"AI 발전할수록 일자리 타격…10년 후 25만개 증발\"",
-      "date": "Wed, 22 Jul 2026 15:40:00",
-      "source": "n.news.naver.com",
-      "url": "http://www.kookje.co.kr/news2011/asp/newsbody.asp?code=0200&key=20260722.99099006582"
-    },
-    {
       "title": "AI 확산 10년 뒤 연 25만6000개 일자리 감소…생산성은 최대 3.5%↑",
       "date": "Wed, 22 Jul 2026 15:40:00",
       "source": "kbsm.net",
       "url": "https://www.kbsm.net/news/view.php?idx=527655"
+    },
+    {
+      "title": "KDI \"AI 발전할수록 일자리 타격…10년 후 25만개 증발\"",
+      "date": "Wed, 22 Jul 2026 15:40:00",
+      "source": "n.news.naver.com",
+      "url": "http://www.kookje.co.kr/news2011/asp/newsbody.asp?code=0200&key=20260722.99099006582"
     },
     {
       "title": "\"AI 확산으로 10년 뒤 일자리 연 25만개 감소\"",
@@ -124,6 +124,18 @@
     }
   ],
   "bok": [
+    {
+      "title": "5월 은행 대출 연체율 '9년 7개월 만에 최고'…중기·자영업자 직격탄",
+      "date": "Wed, 22 Jul 2026 16:56:00",
+      "source": "smarttimes.co.kr",
+      "url": "http://www.smarttimes.co.kr/news/articleView.html?idxno=47472"
+    },
+    {
+      "title": "중소기업 연체율 11년 만에 1%대···고금리·고환율·고유가에 K자 양...",
+      "date": "Wed, 22 Jul 2026 16:52:00",
+      "source": "n.news.naver.com",
+      "url": "https://www.khan.co.kr/article/202607221652001"
+    },
     {
       "title": "기준금리 오르자 예금도 들썩…은행권, 수신 경쟁 재점화",
       "date": "Wed, 22 Jul 2026 16:00:00",
@@ -171,18 +183,6 @@
       "date": "Wed, 22 Jul 2026 11:30:00",
       "source": "n.news.naver.com",
       "url": "https://news.tf.co.kr/read/economy/2345710.htm"
-    },
-    {
-      "title": "대출금리 4% 이상 비중 70% 육박…1년 새 24%P↑",
-      "date": "Wed, 22 Jul 2026 10:28:00",
-      "source": "n.news.naver.com",
-      "url": "https://view.asiae.co.kr/article/2026072210062106041"
-    },
-    {
-      "title": "노근창 \"반도체 슈퍼사이클 2028년까지\"…이금룡 \"'한국판 네덜란드병'...",
-      "date": "Wed, 22 Jul 2026 10:20:00",
-      "source": "newsworks.co.kr",
-      "url": "https://www.newsworks.co.kr/news/articleView.html?idxno=847802"
     }
   ],
   "kiep": [
@@ -309,5 +309,5 @@
       "url": "http://www.whitepaper.co.kr/news/articleView.html?idxno=264090"
     }
   ],
-  "updated": "2026.07.22 16:48"
+  "updated": "2026.07.22 17:14"
 }
