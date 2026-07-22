@@ -1,7 +1,249 @@
 {
-  "dept": [],
-  "trend": [],
-  "rate": [],
-  "asset": [],
-  "updated": "2026.07.22 15:33"
+  "dept": [
+    {
+      "title": "신동빈 회장, 롯데쇼핑 지분 423억원어치 매각…유동성 확보 나선다",
+      "date": "Wed, 22 Jul 2026 16:46:00",
+      "source": "joongangenews.com",
+      "url": "https://www.joongangenews.com/news/articleView.html?idxno=534569",
+      "sub": ""
+    },
+    {
+      "title": "무신사 2026 임팩트 리포트 발간, 온실가스 관리 그룹 차원으로 확대",
+      "date": "Wed, 22 Jul 2026 16:44:00",
+      "source": "businesspost.co.kr",
+      "url": "https://www.businesspost.co.kr/BP?command=article_view&num=442877",
+      "sub": ""
+    },
+    {
+      "title": "신동빈 회장, 롯데쇼핑 지분 1.15% 매각한다",
+      "date": "Wed, 22 Jul 2026 16:44:00",
+      "source": "news.einfomax.co.kr",
+      "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4426261",
+      "sub": ""
+    },
+    {
+      "title": "아이브 '리즈' 뜬 토니모리 창립 20주년 성수 팝업스토어",
+      "date": "Wed, 22 Jul 2026 16:40:00",
+      "source": "pinpointnews.co.kr",
+      "url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=470596",
+      "sub": ""
+    },
+    {
+      "title": "스타크래프트 미니어처, 더현대 판교 팝업으로",
+      "date": "Wed, 22 Jul 2026 16:40:00",
+      "source": "n.news.naver.com",
+      "url": "https://biz.chosun.com/distribution/living/2026/07/22/UF3HRTF53BFK5ELITBNHAGLZV4/?utm_source=naver&utm_medium=original&utm_campaign=biz",
+      "sub": ""
+    },
+    {
+      "title": "신동빈 회장, 롯데쇼핑 지분 1.15% 매각…\"유동성 확보\"",
+      "date": "Wed, 22 Jul 2026 16:40:00",
+      "source": "n.news.naver.com",
+      "url": "https://www.yna.co.kr/view/AKR20260722144900030?input=1195m",
+      "sub": ""
+    },
+    {
+      "title": "\"AI 활용 역량 본다\"… 올리브영, 'AI 네이티브' 인재 전격 채용",
+      "date": "Wed, 22 Jul 2026 16:36:00",
+      "source": "economytalk.kr",
+      "url": "http://www.economytalk.kr/news/articleView.html?idxno=422916",
+      "sub": ""
+    },
+    {
+      "title": "티켓투더문, NC백화점 강서점서 여름 팝업 오픈…신제품과 구매 혜택 선...",
+      "date": "Wed, 22 Jul 2026 16:36:00",
+      "source": "fashionbiz.co.kr",
+      "url": "https://www.fashionbiz.co.kr/article/228067",
+      "sub": ""
+    },
+    {
+      "title": "매일유업, K-웰니스 대표 제품 8종 미국 진출…美 올리브영 입점",
+      "date": "Wed, 22 Jul 2026 16:32:00",
+      "source": "e-science.co.kr",
+      "url": "https://www.e-science.co.kr/news/articleView.html?idxno=132271",
+      "sub": ""
+    },
+    {
+      "title": "'좀비고등학교' 팝업스토어 용산서 오픈",
+      "date": "Wed, 22 Jul 2026 16:30:00",
+      "source": "tgdaily.co.kr",
+      "url": "https://www.tgdaily.co.kr/news/articleView.html?idxno=405869",
+      "sub": ""
+    }
+  ],
+  "trend": [
+    {
+      "title": "\"해외 이전 동의 안 하면 계정 삭제\"…샤넬코리아 '통보식 동의' 논란",
+      "date": "Wed, 22 Jul 2026 16:45:00",
+      "source": "n.news.naver.com",
+      "url": "https://view.asiae.co.kr/article/2026072216374618873",
+      "sub": ""
+    },
+    {
+      "title": "종합특검, 김건희 여사 금품 수수액 1000만원 특정",
+      "date": "Wed, 22 Jul 2026 16:40:00",
+      "source": "n.news.naver.com",
+      "url": "https://www.dailian.co.kr/news/view/1669737/?sc=Naver",
+      "sub": ""
+    },
+    {
+      "title": "특검, 김건희 '금품수수액 1012만원' 특정…金 진술거부",
+      "date": "Wed, 22 Jul 2026 16:34:00",
+      "source": "m-i.kr",
+      "url": "https://www.m-i.kr/news/articleView.html?idxno=1394234",
+      "sub": ""
+    },
+    {
+      "title": "구글·메타 취업, 스탠퍼드대학원…",
+      "date": "Wed, 22 Jul 2026 14:10:00",
+      "source": "koreadaily.com",
+      "url": "https://www.koreadaily.com/article/20260721220834012",
+      "sub": ""
+    },
+    {
+      "title": "신현빈 “알고 있는 거잖아요, 누군가는. 내가 애쓰고 있다는 걸”",
+      "date": "Wed, 22 Jul 2026 12:00:00",
+      "source": "gqkorea.co.kr",
+      "url": "https://www.gqkorea.co.kr/2026/07/22/%ec%8b%a0%ed%98%84%eb%b9%88-%ec%95%8c%ea%b3%a0-%ec%9e%88%eb%8a%94-%ea%b1%b0%ec%9e%96%ec%95%84%ec%9a%94-%eb%88%84%ea%b5%b0%ea%b0%80%eb%8a%94-%eb%82%b4%ea%b0%80-%ec%95%a0%ec%93%b0%ea%b3%a0-%ec%9e%88/?utm_source=naver&utm_medium=partnership",
+      "sub": ""
+    },
+    {
+      "title": "野 김재원 \"신천지, 與 전대까지?…민주당, 전대 통해 망조 들어\"",
+      "date": "Wed, 22 Jul 2026 10:53:00",
+      "source": "n.news.naver.com",
+      "url": "https://www.news1.kr/politics/assembly/6235091",
+      "sub": ""
+    },
+    {
+      "title": "고객은 AI 쓰는데…명품은 왜 인공지능을 감췄을까 [김인애의 프렌치 캐...",
+      "date": "Wed, 22 Jul 2026 09:41:00",
+      "source": "n.news.naver.com",
+      "url": "https://www.hankyung.com/article/202607156270i",
+      "sub": ""
+    },
+    {
+      "title": "스카이인텔리전스, 세계적 로봇기업과 손잡고 스마트팩토리 AI 협력",
+      "date": "Wed, 22 Jul 2026 09:06:00",
+      "source": "tournews21.com",
+      "url": "https://www.tournews21.com/news/articleView.html?idxno=139099",
+      "sub": ""
+    },
+    {
+      "title": "반클리프 아펠의 하이 주얼리로 다시 태어난 고대 이집트",
+      "date": "Wed, 22 Jul 2026 00:02:00",
+      "source": "elle.co.kr",
+      "url": "https://www.elle.co.kr/article/1906447",
+      "sub": ""
+    },
+    {
+      "title": "“폐기하던 샤넬 재고, 아울렛에 풀릴까”…EU 새 규제에 명품업계 전략...",
+      "date": "Tue, 21 Jul 2026 19:46:00",
+      "source": "n.news.naver.com",
+      "url": "https://biz.heraldcorp.com/article/10815030?ref=naver",
+      "sub": ""
+    }
+  ],
+  "rate": [
+    {
+      "title": "한국관광대, 현대그린푸드서 1천만원 장학기금 받아…조리아카데미 학...",
+      "date": "Wed, 22 Jul 2026 16:48:00",
+      "source": "kyosu.net",
+      "url": "https://www.kyosu.net/news/articleView.html?idxno=208001",
+      "sub": ""
+    },
+    {
+      "title": "'6시 내고향' 순천, 자연의 풍경과 함께하는 한 끼",
+      "date": "Wed, 22 Jul 2026 16:48:00",
+      "source": "stardailynews.co.kr",
+      "url": "https://www.stardailynews.co.kr/news/articleView.html?idxno=543515",
+      "sub": ""
+    },
+    {
+      "title": "보령시, 보령머드축제 연계 머드뷰티치유관 할인 이벤트 추진",
+      "date": "Wed, 22 Jul 2026 16:48:00",
+      "source": "gocj.net",
+      "url": "http://www.gocj.net/news/articleView.html?idxno=150389",
+      "sub": ""
+    },
+    {
+      "title": "문체부·관광공사, 제주 동문재래시장서 '스마일 캠페인'…야시장 다회...",
+      "date": "Wed, 22 Jul 2026 16:47:00",
+      "source": "n.news.naver.com",
+      "url": "https://www.sportschosun.com/life/2026-07-22/202607220100136570008664",
+      "sub": ""
+    },
+    {
+      "title": "\"지하철 패션이 K-굿즈로\"···탑텐, '서울 메트로' 테마로 글로벌 고객...",
+      "date": "Wed, 22 Jul 2026 16:46:00",
+      "source": "todaykorea.co.kr",
+      "url": "https://www.todaykorea.co.kr/news/articleView.html?idxno=404086",
+      "sub": ""
+    },
+    {
+      "title": "Unification minister, Cardinal You share hope of reviving inter-Korean ex...",
+      "date": "Wed, 22 Jul 2026 16:39:00",
+      "source": "n.news.naver.com",
+      "url": "https://en.yna.co.kr/view/AEN20260722008000315?input=2106m",
+      "sub": ""
+    },
+    {
+      "title": "'2026 관광 글로벌 비즈니스 데이' 개최...역대 최대규모",
+      "date": "Wed, 22 Jul 2026 16:36:00",
+      "source": "dongponews.net",
+      "url": "https://www.dongponews.net/news/articleView.html?idxno=59425",
+      "sub": ""
+    },
+    {
+      "title": "“장마철 환경 재난 틈 안 낸다”… 박소영 원주환경청장, 삼척빛드림본...",
+      "date": "Wed, 22 Jul 2026 16:02:00",
+      "source": "breaknews.com",
+      "url": "http://www.breaknews.com/1223493",
+      "sub": ""
+    },
+    {
+      "title": "동국제약 'K-약국' 붐 타고 화장품 사업 날개 : 14년 전 시작된 권기범 ...",
+      "date": "Wed, 22 Jul 2026 16:00:00",
+      "source": "huffingtonpost.kr",
+      "url": "https://www.huffingtonpost.kr/article/258911",
+      "sub": ""
+    },
+    {
+      "title": "Industry minister heads to Washington to manage tariff risks, advance $35...",
+      "date": "Wed, 22 Jul 2026 15:48:00",
+      "source": "koreatimes.co.kr",
+      "url": "https://www.koreatimes.co.kr/path/A2026072214470001725",
+      "sub": ""
+    }
+  ],
+  "asset": [
+    {
+      "title": "코스피 7000 찍고 6700선 마감…급등했다 상승폭 반납",
+      "date": "Wed, 22 Jul 2026 16:47:00",
+      "source": "n.news.naver.com",
+      "url": "https://news.jtbc.co.kr/article/NB12309626?influxDiv=NAVER",
+      "sub": ""
+    },
+    {
+      "title": "“비트코인 왜 하죠?”…코스피 변동성, 실제 코인보다 컸다 [자막뉴스...",
+      "date": "Wed, 22 Jul 2026 16:45:00",
+      "source": "n.news.naver.com",
+      "url": "https://www.ichannela.com/news/main/news_detailPage.do?publishId=000000541148",
+      "sub": ""
+    },
+    {
+      "title": "[업앤다운]보험종목, 코스피·코스닥서 희비 엇갈려...롯데손해보험↑·...",
+      "date": "Wed, 22 Jul 2026 16:44:00",
+      "source": "nspna.com",
+      "url": "https://www.nspna.com/news/?mode=view&newsid=821519",
+      "sub": ""
+    },
+    {
+      "title": "기준금리 인상에 은행권 예·적금 금리 줄인상…수신 경쟁 본격화",
+      "date": "Wed, 22 Jul 2026 16:38:00",
+      "source": "n.news.naver.com",
+      "url": "https://www.sidae.com/article/2026072215233628043",
+      "sub": ""
+    }
+  ],
+  "updated": "2026.07.22 16:48"
 }

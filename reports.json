@@ -1,8 +1,313 @@
 {
-  "hri": [],
-  "kdi": [],
-  "bok": [],
-  "kiep": [],
-  "kif": [],
-  "updated": "2026.07.22 15:33"
+  "hri": [
+    {
+      "title": "워시의 매파 본색…\"연내 1회 금리인상\"",
+      "date": "Wed, 22 Jul 2026 11:38:00",
+      "source": "fntimes.com",
+      "url": "https://www.fntimes.com/html/view.php?ud=2026072211372179209bdb80fab5_18"
+    },
+    {
+      "title": "“美 기준금리 4%대까지 오를 것”…‘국내 금융불안 대비’ 경고 나왔...",
+      "date": "Sat, 18 Jul 2026 08:00:00",
+      "source": "n.news.naver.com",
+      "url": "https://www.nongmin.com/article/20260715500778"
+    },
+    {
+      "title": "“꽉 잡아! 더 강한 달러 온다”…美 금리인상 가능성 커져..주식시장 ...",
+      "date": "Thu, 16 Jul 2026 19:03:00",
+      "source": "n.news.naver.com",
+      "url": "https://www.munhwa.com/article/11603199?ref=naver"
+    },
+    {
+      "title": "반도체에 올라타 ‘3·4·5’…고용 전망은 축소",
+      "date": "Wed, 15 Jul 2026 06:29:00",
+      "source": "n.news.naver.com",
+      "url": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8610987&ref=A"
+    },
+    {
+      "title": "반도체에 올라타 ‘3·4·5’…고용 전망은 축소",
+      "date": "Tue, 14 Jul 2026 21:47:00",
+      "source": "n.news.naver.com",
+      "url": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8610770&ref=A"
+    },
+    {
+      "title": "[하반기 성장전략] 2%→3% 상향에도 취업자는 하향 조정…\"고용없는 성...",
+      "date": "Tue, 14 Jul 2026 11:51:00",
+      "source": "n.news.naver.com",
+      "url": "https://view.asiae.co.kr/article/2026071409061643107"
+    },
+    {
+      "title": "'금통위 D-3' 긴축 신호탄 쏘나…몇 차례, 얼마나 오를까",
+      "date": "Mon, 13 Jul 2026 15:22:00",
+      "source": "n.news.naver.com",
+      "url": "https://www.dailian.co.kr/news/view/1666532/?sc=Naver"
+    },
+    {
+      "title": "\"안 올리면 이상한 지경\"... 한은, 3년 6개월 만에 '긴축 페달' 밟는다",
+      "date": "Mon, 13 Jul 2026 10:04:00",
+      "source": "fntoday.co.kr",
+      "url": "https://www.fntoday.co.kr/news/articleView.html?idxno=388004"
+    },
+    {
+      "title": "16일 기준금리 인상 전망…'변동금리 쏠린' 대출자 부담 더 커질 듯",
+      "date": "Mon, 13 Jul 2026 09:06:00",
+      "source": "raonnews.com",
+      "url": "https://www.raonnews.com/news/article.html?no=59501"
+    },
+    {
+      "title": "현대경제硏 \"美 금리 인상 가능성↑…긴축 충격 선제적 대비해야\"",
+      "date": "Sun, 12 Jul 2026 18:58:00",
+      "source": "kfenews.co.kr",
+      "url": "https://www.kfenews.co.kr/news/articleView.html?idxno=660265"
+    }
+  ],
+  "kdi": [
+    {
+      "title": "[필동정담] 사라질 일자리",
+      "date": "Wed, 22 Jul 2026 16:42:00",
+      "source": "n.news.naver.com",
+      "url": "https://www.mk.co.kr/article/12104545"
+    },
+    {
+      "title": "\"AI 확산에 10년 후 일자리 25만6천개 감소 전망\"",
+      "date": "Wed, 22 Jul 2026 16:34:00",
+      "source": "namdonews.com",
+      "url": "https://www.namdonews.com/news/articleView.html?idxno=917703"
+    },
+    {
+      "title": "KDI “AI로 10년 뒤 일자리 25만6000개 감소···전문직 충격 집중”",
+      "date": "Wed, 22 Jul 2026 16:31:00",
+      "source": "n.news.naver.com",
+      "url": "https://www.khan.co.kr/article/202607221631001"
+    },
+    {
+      "title": "KDI \"AI 확산에 10년 뒤 일자리 25만개 감소\"",
+      "date": "Wed, 22 Jul 2026 16:30:00",
+      "source": "ppss.kr",
+      "url": "https://www.ppss.kr/news/articleView.html?idxno=302882"
+    },
+    {
+      "title": "AI가 일자리 바꾼다…제조도시 TK, ‘생산성 향상’과 ‘고용 충격’ 사...",
+      "date": "Wed, 22 Jul 2026 16:06:00",
+      "source": "kbmaeil.com",
+      "url": "https://www.kbmaeil.com/article/20260722500628"
+    },
+    {
+      "title": "AI로 年 25만개 일자리 사라진다…‘지식노동자’ 정조준",
+      "date": "Wed, 22 Jul 2026 15:42:00",
+      "source": "dnews.co.kr",
+      "url": "https://www.dnews.co.kr/uhtml/view.jsp?idxno=202607221518465770120"
+    },
+    {
+      "title": "KDI \"AI 발전할수록 일자리 타격…10년 후 25만개 증발\"",
+      "date": "Wed, 22 Jul 2026 15:40:00",
+      "source": "n.news.naver.com",
+      "url": "http://www.kookje.co.kr/news2011/asp/newsbody.asp?code=0200&key=20260722.99099006582"
+    },
+    {
+      "title": "AI 확산 10년 뒤 연 25만6000개 일자리 감소…생산성은 최대 3.5%↑",
+      "date": "Wed, 22 Jul 2026 15:40:00",
+      "source": "kbsm.net",
+      "url": "https://www.kbsm.net/news/view.php?idx=527655"
+    },
+    {
+      "title": "\"AI 확산으로 10년 뒤 일자리 연 25만개 감소\"",
+      "date": "Wed, 22 Jul 2026 14:34:00",
+      "source": "bigtanews.co.kr",
+      "url": "https://www.bigtanews.co.kr/article/view/big202607220010"
+    },
+    {
+      "title": "KDI \"AI 확산 10년간 생산성 3.5%↑…일자리 25.6만개↓\"",
+      "date": "Wed, 22 Jul 2026 14:22:00",
+      "source": "newsfc.co.kr",
+      "url": "http://www.newsfc.co.kr/news/articleView.html?idxno=80049"
+    }
+  ],
+  "bok": [
+    {
+      "title": "기준금리 오르자 예금도 들썩…은행권, 수신 경쟁 재점화",
+      "date": "Wed, 22 Jul 2026 16:00:00",
+      "source": "ziksir.com",
+      "url": "https://www.ziksir.com/news/articleView.html?idxno=140819"
+    },
+    {
+      "title": "돈 못 갚는 중기·자영업자 급증…금리 상승 어쩌나",
+      "date": "Wed, 22 Jul 2026 15:00:00",
+      "source": "asiatime.co.kr",
+      "url": "https://www.asiatime.co.kr/article/20260722500262"
+    },
+    {
+      "title": "[ADC 2026] \"막힌 착공 뚫고 공공정비 넓혀라\"…주택공급 병목 해소 '촉...",
+      "date": "Wed, 22 Jul 2026 14:52:00",
+      "source": "asiatime.co.kr",
+      "url": "https://www.asiatime.co.kr/article/20260722500287"
+    },
+    {
+      "title": "[브런치 경제] “주식 말고 예·적금 해볼까”… 3년 반만 기준금리 인...",
+      "date": "Wed, 22 Jul 2026 14:02:00",
+      "source": "n.news.naver.com",
+      "url": "https://www.womennews.co.kr/news/articleView.html?idxno=280190"
+    },
+    {
+      "title": "은행 연체율 10년, 중기는 11년만에 '최고' … 반도체 착시 속 커지는 '...",
+      "date": "Wed, 22 Jul 2026 14:00:00",
+      "source": "biz.newdaily.co.kr",
+      "url": "https://biz.newdaily.co.kr/site/data/html/2026/07/22/2026072200171.html"
+    },
+    {
+      "title": "[ADC 2026] \"똘똘한 한 채 현상 강화…묻지마 부동산 투자는 끝\"",
+      "date": "Wed, 22 Jul 2026 13:58:00",
+      "source": "asiatime.co.kr",
+      "url": "https://www.asiatime.co.kr/article/20260722500228"
+    },
+    {
+      "title": "가계대출은 죄고 성장산업엔 돈 푼다…하반기 은행권 '기업금융' 더 커...",
+      "date": "Wed, 22 Jul 2026 13:38:00",
+      "source": "goodkyung.com",
+      "url": "https://www.goodkyung.com/news/articleView.html?idxno=289419"
+    },
+    {
+      "title": "\"업계 최고 수준인데도\"…삼성생명·화재 주주환원 요구 커질까",
+      "date": "Wed, 22 Jul 2026 11:30:00",
+      "source": "n.news.naver.com",
+      "url": "https://news.tf.co.kr/read/economy/2345710.htm"
+    },
+    {
+      "title": "대출금리 4% 이상 비중 70% 육박…1년 새 24%P↑",
+      "date": "Wed, 22 Jul 2026 10:28:00",
+      "source": "n.news.naver.com",
+      "url": "https://view.asiae.co.kr/article/2026072210062106041"
+    },
+    {
+      "title": "노근창 \"반도체 슈퍼사이클 2028년까지\"…이금룡 \"'한국판 네덜란드병'...",
+      "date": "Wed, 22 Jul 2026 10:20:00",
+      "source": "newsworks.co.kr",
+      "url": "https://www.newsworks.co.kr/news/articleView.html?idxno=847802"
+    }
+  ],
+  "kiep": [
+    {
+      "title": "반도체 호황에 수출 '역대 최대'…7월 초순 298억달러 기록",
+      "date": "Mon, 13 Jul 2026 11:52:00",
+      "source": "ppss.kr",
+      "url": "https://www.ppss.kr/news/articleView.html?idxno=301920"
+    },
+    {
+      "title": "미친 환율에 ‘속수무책’ 외환당국…달러 0.7% 오를 때 원화 6.7% 밀렸다",
+      "date": "Thu, 25 Jun 2026 07:29:00",
+      "source": "n.news.naver.com",
+      "url": "https://www.kmib.co.kr/article/view.asp?arcid=0030017761&code=61141111&cp=nv"
+    },
+    {
+      "title": "[프로필] 이동훈 수출입은행 상임이사, 대외협력·자금조달·리스크관리...",
+      "date": "Tue, 09 Jun 2026 14:56:00",
+      "source": "fntimes.com",
+      "url": "http://www.fntimes.com/html/view.php?ud=2026060911203414025e6e69892f_18"
+    },
+    {
+      "title": "[성공예감] 스페이스X 상장의 이면, 일론 머스크 발등에 떨어진 불 – 홍...",
+      "date": "Tue, 09 Jun 2026 14:43:00",
+      "source": "n.news.naver.com",
+      "url": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8581636&ref=A"
+    },
+    {
+      "title": "2026년 1분기 캐나다 경제동향 및 2026년 연간 전망",
+      "date": "Mon, 08 Jun 2026 16:40:00",
+      "source": "dream.kotra.or.kr",
+      "url": "http://dream.kotra.or.kr/kotranews/cms/news/actionKotraBoardDetail.do?SITE_NO=3&MENU_ID=80&CONTENTS_NO=2&bbsGbn=242&bbsSn=242&pNttSn=241953"
+    },
+    {
+      "title": "환율 1540원 벽도 깨졌다…금융위기 이후 17년 만에 최고치",
+      "date": "Thu, 04 Jun 2026 18:04:00",
+      "source": "newsworks.co.kr",
+      "url": "https://www.newsworks.co.kr/news/articleView.html?idxno=842913"
+    },
+    {
+      "title": "코스피 8800·환율 1530 동행시대, 자산 지킬 4대 외환 지표",
+      "date": "Thu, 04 Jun 2026 04:46:00",
+      "source": "g-enews.com",
+      "url": "https://www.g-enews.com/view.php?ud=202606032100171616fbbec65dfb_1"
+    },
+    {
+      "title": "산업연구원, 올해 韓 경제 2.5% 성장 전망···기존 대비 0.6%p 상향",
+      "date": "Thu, 28 May 2026 09:00:00",
+      "source": "todaykorea.co.kr",
+      "url": "https://www.todaykorea.co.kr/news/articleView.html?idxno=402055"
+    },
+    {
+      "title": "한은, 성장률 상향 촉각…1인당 GDP '4만 달러' 당겨질까",
+      "date": "Wed, 27 May 2026 10:25:00",
+      "source": "n.news.naver.com",
+      "url": "https://www.sidae.com/article/2026052707513769941"
+    },
+    {
+      "title": "[외환-주간] 외국인과 스무딩의 시간…'매파 동결' FOMC 의사록 확인",
+      "date": "Sun, 17 May 2026 15:02:00",
+      "source": "news.einfomax.co.kr",
+      "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4415296"
+    }
+  ],
+  "kif": [
+    {
+      "title": "얼라인 JB-BNK금융 합병 검토 요구, 왜 지금인가 [금융지주는 지금]",
+      "date": "Wed, 15 Jul 2026 07:02:00",
+      "source": "fntimes.com",
+      "url": "https://www.fntimes.com/html/view.php?ud=202607142227415925b4a7c6999c_18"
+    },
+    {
+      "title": "한국 국채, WGBI 편입 외국인 순매수 40조원 돌파…효과는 제한적",
+      "date": "Fri, 10 Jul 2026 16:00:00",
+      "source": "ppss.kr",
+      "url": "https://www.ppss.kr/news/articleView.html?idxno=301797"
+    },
+    {
+      "title": "'외인 41조 유입' 순조로운 WGBI 편입에도…\"실질적 체감은 아직\"",
+      "date": "Fri, 10 Jul 2026 11:03:00",
+      "source": "n.news.naver.com",
+      "url": "https://www.yna.co.kr/view/AKR20260710057800008?input=1195m"
+    },
+    {
+      "title": "중기특화 증권사 7곳 지정…3년간 모험자본 공급 주력",
+      "date": "Fri, 10 Jul 2026 10:00:00",
+      "source": "newsfc.co.kr",
+      "url": "http://www.newsfc.co.kr/news/articleView.html?idxno=79833"
+    },
+    {
+      "title": "은행주, 개미들 피난처 될까…주주환원 넘어 '빅테크·보험사 쇼핑'",
+      "date": "Thu, 09 Jul 2026 08:06:00",
+      "source": "ftoday.co.kr",
+      "url": "http://www.ftoday.co.kr/news/articleView.html?idxno=361843"
+    },
+    {
+      "title": "은행株, 반도체 변동성 피난처로 부각…“높아진 ROE가 밸류에이션 밀어...",
+      "date": "Thu, 09 Jul 2026 07:53:00",
+      "source": "n.news.naver.com",
+      "url": "https://www.edaily.co.kr/news/newspath.asp?newsid=02538726645512880"
+    },
+    {
+      "title": "우리금융, 7월 금통위 인상 전망 무게…내년까지 최종 3%대 중반 예측",
+      "date": "Fri, 03 Jul 2026 10:52:00",
+      "source": "megaeconomy.co.kr",
+      "url": "https://www.megaeconomy.co.kr/news/newsview.php?ncode=1065577155690402"
+    },
+    {
+      "title": "[경제 전망] 자본시장연구원, 하반기 인플레이션 불확실성 커지고 환율...",
+      "date": "Fri, 03 Jul 2026 09:18:00",
+      "source": "sisacast.kr",
+      "url": "http://www.sisacast.kr/news/articleView.html?idxno=97171"
+    },
+    {
+      "title": "[하반기 경제전망上] 수출·내수 따로 노는 'K자형 양극화'···'3高' 위...",
+      "date": "Thu, 02 Jul 2026 10:17:00",
+      "source": "seoulfn.com",
+      "url": "https://www.seoulfn.com/news/articleView.html?idxno=632391"
+    },
+    {
+      "title": "국민연금 리밸런싱 첫날 코스피 낙폭 축소…상반기 96% 상승 후 하반기...",
+      "date": "Wed, 01 Jul 2026 14:52:00",
+      "source": "whitepaper.co.kr",
+      "url": "http://www.whitepaper.co.kr/news/articleView.html?idxno=264090"
+    }
+  ],
+  "updated": "2026.07.22 16:48"
 }
