@@ -385,6 +385,10 @@ async function selChartWithAPI(key, btn, grpId) {
   curKey = key;
   document.querySelectorAll('.sub-btn').forEach(function(b){ b.classList.remove('on'); });
   btn.classList.add('on');
+
+  // 유통채널 품목별 필터 버튼: 다른 지표로 이동 시 항상 초기화 (loadRetailItemChart에서 다시 채움)
+  var _rif = document.getElementById('retail-item-filters');
+  if(_rif) { _rif.style.display = 'none'; _rif.innerHTML = ''; }
   document.querySelectorAll('.sub-panel').forEach(function(s){ s.classList.remove('open'); });
   document.querySelectorAll('.cat-col-btn').forEach(function(b){ b.classList.remove('open'); });
   var grp = document.getElementById(grpId);
@@ -544,9 +548,47 @@ async function loadRetailItemChart(key) {
   document.getElementById('synote').textContent = d.yn;
 
   if(itemsObj && Object.keys(itemsObj).length > 0) {
+    renderRetailItemFilters(itemsObj, ymList, labels, d);
     renderRetailItemsChart(itemsObj, ymList, labels, d);
   } else {
     // 품목 데이터 없으면 합계 단일 라인
+    var _rif0 = document.getElementById('retail-item-filters');
+    if(_rif0) { _rif0.style.display = 'none'; _rif0.innerHTML = ''; }
     renderChart(vals, null, labels, d);
+  }
+}
+
+/* ═══════════════════════════════════════════
+   JS § 18. 유통채널 품목별 필터 버튼
+   · renderRetailItemFilters(): "전체" + 품목별 버튼 렌더링
+   · selRetailItem(): 버튼 클릭 시 전체/단일 품목 전환
+   ═══════════════════════════════════════════ */
+var _rItemsObj = null, _rYmList = null, _rLabels = null, _rD = null;
+
+function renderRetailItemFilters(itemsObj, ymList, labels, d) {
+  var container = document.getElementById('retail-item-filters');
+  if(!container) return;
+  _rItemsObj = itemsObj; _rYmList = ymList; _rLabels = labels; _rD = d;
+
+  var itemNames = Object.keys(itemsObj);
+  var html = '<button class="ritem-btn on" onclick="selRetailItem(\'__all__\',this)">전체</button>';
+  itemNames.forEach(function(nm) {
+    var safe = nm.replace(/'/g, "\\'");
+    html += '<button class="ritem-btn" onclick="selRetailItem(\'' + safe + '\',this)">' + nm + '</button>';
+  });
+  container.innerHTML = html;
+  container.style.display = itemNames.length > 0 ? 'flex' : 'none';
+}
+
+function selRetailItem(name, btn) {
+  document.querySelectorAll('.ritem-btn').forEach(function(b){ b.classList.remove('on'); });
+  btn.classList.add('on');
+  if(!_rItemsObj) return;
+  if(name === '__all__') {
+    renderRetailItemsChart(_rItemsObj, _rYmList, _rLabels, _rD);
+  } else {
+    var single = {};
+    single[name] = _rItemsObj[name];
+    renderRetailItemsChart(single, _rYmList, _rLabels, _rD);
   }
 }
