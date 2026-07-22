@@ -41,14 +41,18 @@ def run(data: dict) -> dict:
     else:
         print("  → 데이터 없음, 기존 유지")
 
-    # ── 기준금리
+    # ── 기준금리 (일별 조회 후 월별 집계 — 금리 변경일이 월중 언제든 반영되도록)
     print("\n[물가금리] 기준금리")
     series = data.get("rate", [])
-    rows = ecos_fetch("722Y001", "0101000", "M",
-                      get_fetch_start(series), today[:6], ECOS_KEY)
+    start_date = get_fetch_start(series) + "01"   # 일별 조회는 YYYYMMDD 형식
+    rows = ecos_fetch("722Y001", "0101000", "D",
+                      start_date, today, ECOS_KEY)
     if rows:
+        monthly = {}
         for r in rows:
-            series = upsert(series, r["ym"], r["val"])
+            monthly[r["ym"][:6]] = r["val"]   # 같은 달 내 최신일자 값으로 덮어씀
+        for ym in sorted(monthly.keys()):
+            series = upsert(series, ym, monthly[ym])
         data["rate"] = sorted(series, key=lambda x: x["ym"])[-30:]
         print(f"  → {len(data['rate'])}개월, 최신: {data['rate'][-1]}")
     else:
