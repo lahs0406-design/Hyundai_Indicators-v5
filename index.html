@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>백화점 영향 외부지표 현황 · 현대백화점 v2.2</title>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-R2SZ7V3NRV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-R2SZ7V3NRV');
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/9.1.6/marked.min.js"></script>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="page">
+
+<!-- ═══════════════════════════════════════════
+     HTML § 1. 상단 바 (Top Bar)
+     ═══════════════════════════════════════════ -->
+<div class="top-bar">
+  <div class="logo-mark"><span>H</span></div>
+  <div><div class="top-bar-org">현대백화점 상품본부 지원팀</div><div class="top-bar-title">백화점 영향 외부지표 현황 <span class="badge-s" id="live-badge">日 1회 자동 연동</span></div></div>
+  <div style="margin-left:auto"></div>
+</div>
+
+<!-- AI 키 입력 모달 -->
+<div class="key-modal-backdrop" id="key-modal-backdrop" style="display:none" onclick="closeKeyModal(event)">
+  <div class="key-modal">
+    <div class="key-modal-title" id="key-modal-title">AI 분석 키 설정</div>
+    <div class="key-modal-desc" id="key-modal-desc"></div>
+    <input class="key-modal-input" id="key-modal-input" type="password" placeholder="" autocomplete="off">
+    <div class="key-modal-actions">
+      <button class="key-modal-clear" onclick="clearKey()">키 삭제</button>
+      <button class="key-modal-save" onclick="saveKey()">저장</button>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     HTML § 2. 메인 레이아웃 (body-wrap)
+     ═══════════════════════════════════════════ -->
+<div class="body-wrap">
+
+
+<!-- ═══════════════════════════════════════════
+     HTML § 3. 사이드바 - 좌측 패널
+     ─────────────────────────────────────────────
+     § 3-1. 카테고리 버튼 그리드
+     § 3-2. 지표별 서브 버튼 패널 (grp1~grp6)
+     § 3-3. 차트 + KPI 수치
+     § 3-4. AI 추세 해석 박스
+     ═══════════════════════════════════════════ -->
+<div class="sidebar">
+  <!-- § 3-1. 카테고리 버튼 그리드 -->
+  <div class="sidebar-hd">
+    <div class="sidebar-label">1 · 지표 추세 <span id="data-updated" style="font-size:9px;font-weight:400;color:var(--text3);text-transform:none;letter-spacing:0;margin-left:4px"></span></div>
+<div class="cat-grid">
+  <button class="cat-col-btn open" onclick="toggleCat(this,'grp1')"><span class="em">💬</span>소비심리</button>
+  <button class="cat-col-btn" onclick="toggleCat(this,'grp3')"><span class="em">📈</span>물가·금리</button>
+  <button class="cat-col-btn" onclick="toggleCat(this,'grp4')"><span class="em">🏠</span>자산시장</button>
+  <button class="cat-col-btn" onclick="toggleCat(this,'grp7')"><span class="em">✈️</span>관광객</button>
+  <button class="cat-col-btn" onclick="toggleCat(this,'grp5')"><span class="em">🛍️</span>유통채널</button>
+</div>
+  </div>
+  <!-- § 3-2. 지표별 서브 버튼 패널 -->
+  <div class="sub-panel open" id="grp1"><button class="sub-btn on" onclick="selChart('csi',this,'grp1')">소비자심리지수</button></div>
+  <div class="sub-panel" id="grp3"><button class="sub-btn" onclick="selChart('cpi',this,'grp3')">소비자물가</button><button class="sub-btn" onclick="selChart('rate',this,'grp3')">기준금리</button></div>
+  <div class="sub-panel" id="grp4"><button class="sub-btn" onclick="selChart('kospi',this,'grp4')">KOSPI</button><button class="sub-btn" onclick="selChart('fx',this,'grp4')">환율</button></div>
+  <div class="sub-panel" id="grp5"><button class="sub-btn" onclick="selChart('dept',this,'grp5')">백화점매출(전년비)</button><button class="sub-btn" onclick="selChart('mart',this,'grp5')">대형마트매출</button><button class="sub-btn" onclick="selChart('convenience',this,'grp5')">편의점매출</button><button class="sub-btn" onclick="selChart('retail',this,'grp5')">소매판매지수</button></div>
+<div class="sub-panel" id="grp7">
+  <button class="sub-btn" onclick="selChart('tourist',this,'grp7')">방한외국인</button>
+  <button class="sub-btn" onclick="selChart('outbound',this,'grp7')">내국인출국</button>
+</div>
+  <!-- § 3-3. 차트 + KPI 수치 -->
+  <div class="sidebar-chart">
+    <div class="chart-name" id="ctitle">소비자심리지수 (CCSI)</div>
+    <div class="index-note" id="index-note"></div>
+    <div class="chart-src" id="cmeta">출처: 한국은행 · 월별 발표 · 기준선 100</div>
+    <div class="kpi-grid">
+      <div class="kpill"><div class="kl">최신값</div><div class="kv" id="scur">100.3</div><div class="kc down" id="schg">▼ -1.2</div></div>
+      <div class="kpill"><div class="kl">6개월 평균</div><div class="kv" id="savg">101.8</div><div class="kc neu" id="snote">기준 100+</div></div>
+      <div class="kpill"><div class="kl">전년 대비</div><div class="kv" id="syoy">-3.1</div><div class="kc down" id="synote">점진 위축</div></div>
+    </div>
+    <div class="canvas-wrap"><canvas id="mc" role="img" aria-label="지표 추세 차트"></canvas></div>
+
+  </div>
+
+<!-- ═══════════════════════════════════════════
+     HTML § 3-4. 날씨 달력 섹션
+     ═══════════════════════════════════════════ -->
+<div class="wx-section" id="wx-section">
+  <div class="wx-section-label">2 · 기온 · 강수 달력</div>
+  <div class="wx-region-tabs" id="wx-tabs">
+    <button class="wx-rtab on" data-region="seoul" onclick="wxSelRegion(this)">서울</button>
+    <button class="wx-rtab" data-region="busan" onclick="wxSelRegion(this)">부산</button>
+    <button class="wx-rtab" data-region="daegu" onclick="wxSelRegion(this)">대구</button>
+    <button class="wx-rtab" data-region="incheon" onclick="wxSelRegion(this)">인천</button>
+    <button class="wx-rtab" data-region="gwangju" onclick="wxSelRegion(this)">광주</button>
+    <button class="wx-rtab" data-region="daejeon" onclick="wxSelRegion(this)">대전</button>
+    <button class="wx-rtab" data-region="ulsan" onclick="wxSelRegion(this)">울산</button>
+    <button class="wx-rtab" data-region="cheongju" onclick="wxSelRegion(this)">청주</button>
+  </div>
+  <div class="wx-nav">
+    <button class="wx-nav-btn" id="wx-prev" onclick="wxMove(-1)">&#8249;</button>
+    <span class="wx-nav-label" id="wx-nav-label">—<span class="wx-nav-sub" id="wx-nav-sub"></span></span>
+    <button class="wx-nav-btn" id="wx-next" onclick="wxMove(1)">&#8250;</button>
+  </div>
+  <div class="wx-cards" id="wx-summary">
+    <div class="wx-card">
+      <div class="wx-card-lbl">🌡 기온 <span class="wx-card-unit">(월평균)</span></div>
+      <div class="wx-card-val" id="wx-s-temp">—</div>
+      <div class="wx-card-sub">전년 <span id="wx-s-ptemp">—</span>&thinsp;<span id="wx-s-tdiff"></span></div>
+    </div>
+    <div class="wx-card">
+      <div class="wx-card-lbl">🌧 강수 <span class="wx-card-unit">(월평균)</span></div>
+      <div class="wx-card-val" id="wx-s-rain">—</div>
+      <div class="wx-card-sub">전년 <span id="wx-s-prain">—</span>&thinsp;<span id="wx-s-rdiff"></span></div>
+    </div>
+  </div>
+  <div class="wx-cals">
+    <div class="wx-cal">
+      <div class="wx-cal-hd"><span class="wx-cal-hd-lbl" id="wx-cur-lbl">—</span><span class="wx-cal-hd-sub">금년</span></div>
+      <div class="wx-dow-row"><div class="wx-dow">일</div><div class="wx-dow">월</div><div class="wx-dow">화</div><div class="wx-dow">수</div><div class="wx-dow">목</div><div class="wx-dow">금</div><div class="wx-dow">토</div></div>
+      <div class="wx-day-grid" id="wx-grid-cur"></div>
+    </div>
+    <div class="wx-cal">
+      <div class="wx-cal-hd"><span class="wx-cal-hd-lbl" id="wx-prev-lbl">—</span><span class="wx-cal-hd-sub">전년 동월</span></div>
+      <div class="wx-dow-row"><div class="wx-dow">일</div><div class="wx-dow">월</div><div class="wx-dow">화</div><div class="wx-dow">수</div><div class="wx-dow">목</div><div class="wx-dow">금</div><div class="wx-dow">토</div></div>
+      <div class="wx-day-grid" id="wx-grid-prev"></div>
+    </div>
+  </div>
+  <div class="wx-legend">
+    <div class="wx-leg"><div class="wx-leg-dot" style="background:#F0997B"></div>기온(°C)</div>
+    <div class="wx-leg"><div class="wx-leg-dot" style="background:#1659A8"></div>강수(mm)</div>
+    <div class="wx-leg"><div class="wx-leg-box" style="background:var(--accent-lt);border:.5px solid var(--accent)"></div>오늘</div>
+    <div class="wx-leg"><div class="wx-leg-box" style="background:#FCEBEB;border:.5px solid #F7C1C1"></div>공휴일</div>
+  </div>
+  <div class="wx-dow-idx">
+    <div class="wx-di-hd">
+      <span class="wx-di-hd-lbl">요일지수 <span id="wx-di-month" style="font-size:9px;font-weight:400;color:var(--text2)"></span></span>
+      <span class="wx-di-hd-sub">금년 vs 전년 동월</span>
+    </div>
+    <div class="wx-di-body" id="wx-di-body"></div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     HTML § 3-5. 주요 지역 방문자 섹션
+     ═══════════════════════════════════════════ -->
+<div class="wx-section" id="tour-section">
+  <div style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:8px;gap:8px;flex-wrap:wrap">
+    <div>
+      <div class="wx-section-label" style="margin-bottom:4px">3 · 주요 지역 방문자 (외국인) 현황</div>
+      <div style="font-size:10px;color:var(--text2);line-height:1.6">
+        SK텔레콤(외국인) 이동통신 데이터 기반 · 거주·통근·통학 등 일상생활권을 벗어나 관광 목적으로 방문한 <b style="font-weight:600;color:var(--text)">외국인 전체</b> 기준입니다.<br>
+        일자별 순방문자 수 기준(동일인이 2박3일 머무를 경우 = 3명 집계) · 추세 분석 목적으로 활용 권장
+      </div>
+    </div>
+    <div style="display:flex;gap:4px;flex-shrink:0">
+      <button class="wx-rtab on" id="tour-tab-card" onclick="tourSetView('card',this)">카드</button>
+      <button class="wx-rtab" id="tour-tab-chart" onclick="tourSetView('chart',this)">추이</button>
+    </div>
+  </div>
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;padding:8px 10px;background:var(--bg2);border-radius:6px">
+    <span style="font-size:12px;font-weight:600;color:var(--text);min-width:76px" id="tour-sl-label">2025년 04월</span>
+    <input type="range" id="tour-slider" min="0" max="12" value="11" step="1" style="flex:1">
+    <span style="font-size:10px;padding:2px 8px;border-radius:5px;font-weight:500;white-space:nowrap" id="tour-avg-badge">—</span>
+  </div>
+  <div id="tour-card-view">
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:6px" id="tour-city-grid"></div>
+  </div>
+  <div id="tour-chart-view" style="display:none">
+    <div style="border:.5px solid var(--border);border-radius:8px;overflow:hidden">
+      <div style="padding:7px 10px;background:var(--bg2);border-bottom:.5px solid var(--border);display:flex;justify-content:space-between;align-items:center">
+        <span style="font-size:11px;font-weight:600;color:var(--text)" id="tour-chart-title">전체 도시 추이</span>
+        <span style="font-size:9px;color:var(--text2)">외지인 월별 방문자수 · 만명</span>
+      </div>
+      <div style="padding:12px;height:180px;position:relative"><canvas id="tour-chart"></canvas></div>
+      <div style="display:flex;gap:8px;padding:0 12px 10px;flex-wrap:wrap" id="tour-chart-legend"></div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<!-- HTML § 4. 리사이저 (좌우 드래그 구분선) -->
+<div class="resizer" id="resizer"></div>
+
+
+<!-- ═══════════════════════════════════════════
+     HTML § 5. 우측 콘텐츠 패널
+     ═══════════════════════════════════════════ -->
+<div class="content">
+
+  <!-- 탭 네비게이션 -->
+  <div class="right-tabs">
+    <button class="rtab on" data-tab="tab-news" onclick="switchTab(this)">최근 기사 요약</button>
+    <button class="rtab" data-tab="tab-reports" onclick="switchTab(this)">연구기관 보고서</button>
+    <button class="rtab rtab-ai" data-tab="tab-insight" onclick="switchTab(this)">지표 교차 인사이트 <span class="ai-badge">AI</span></button>
+  </div>
+
+  <!-- 탭 2: 최근 기사 요약 -->
+  <div class="tab-panel" id="tab-news">
+    <div class="tab-panel-inner">
+      <div class="tab-meta">기사 <span id="news-updated"></span></div>
+      <div class="news-kw-row">
+        <button class="kwbtn on" onclick="fnews('all',this)">전체</button>
+        <button class="kwbtn" onclick="fnews('store',this)">백화점·유통</button>
+        <button class="kwbtn" onclick="fnews('consume',this)">소비 트렌드</button>
+        <button class="kwbtn" onclick="fnews('fx',this)">환율·관광</button>
+        <button class="kwbtn" onclick="fnews('rate',this)">금리·경기</button>
+      </div>
+      <div class="news-wrap" id="nwrap">
+        <div style="padding:1.2rem;text-align:center;font-size:12px;color:var(--text3)">불러오는 중…</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 탭 3: 연구기관 보고서 -->
+  <div class="tab-panel" id="tab-reports" style="display:none">
+    <div class="tab-panel-inner">
+      <div class="tab-meta">보고서 <span id="rpt-updated"></span></div>
+      <div class="rpt-org" id="rpt-hri">
+        <div class="rpt-org-header">
+          <div><div class="rpt-org-name">현대경제연구원 <span class="rpt-org-url">hri.co.kr</span></div><div class="rpt-org-desc">매주 경제 동향·이슈 보고서 발간 · 소비·유통·경기 분석 중심</div></div>
+          <div class="rpt-org-actions"><a href="https://www.hri.co.kr/research/list.aspx" target="_blank" class="rpt-link-btn">홈페이지 ↗</a></div>
+        </div>
+        <div class="rpt-manual-label">최신 관련 뉴스 <span style="font-weight:400;color:var(--text3)">(자동갱신)</span></div>
+        <div class="rpt-list" id="rpt-hri-list"><div class="rpt-empty">불러오는 중…</div></div>
+      </div>
+      <div class="rpt-org" id="rpt-kdi">
+        <div class="rpt-org-header">
+          <div><div class="rpt-org-name">한국개발연구원 <span class="rpt-org-url">kdi.re.kr</span></div><div class="rpt-org-desc">국책 싱크탱크 · 재정·복지·노동·성장 정책 분석 중심</div></div>
+          <div class="rpt-org-actions"><a href="https://www.kdi.re.kr/research/reportList.jsp" target="_blank" class="rpt-link-btn">홈페이지 ↗</a></div>
+        </div>
+        <div class="rpt-manual-label">최신 관련 뉴스 <span style="font-weight:400;color:var(--text3)">(자동갱신)</span></div>
+        <div class="rpt-list" id="rpt-kdi-list"><div class="rpt-empty">불러오는 중…</div></div>
+      </div>
+      <div class="rpt-org" id="rpt-bok">
+        <div class="rpt-org-header">
+          <div><div class="rpt-org-name">한국은행 <span class="rpt-org-url">bok.or.kr</span></div><div class="rpt-org-desc">통화·금리·경상수지·물가 분석 · 금융안정보고서·통화신용정책보고서 발간</div></div>
+          <div class="rpt-org-actions"><a href="https://www.bok.or.kr/portal/bbs/P0000559/list.do?menuNo=200760" target="_blank" class="rpt-link-btn">홈페이지 ↗</a></div>
+        </div>
+        <div class="rpt-manual-label">최신 관련 뉴스 <span style="font-weight:400;color:var(--text3)">(자동갱신)</span></div>
+        <div class="rpt-list" id="rpt-bok-list"><div class="rpt-empty">불러오는 중…</div></div>
+      </div>
+      <div class="rpt-org" id="rpt-kiep">
+        <div class="rpt-org-header">
+          <div><div class="rpt-org-name">대외경제정책연구원 <span class="rpt-org-url">kiep.go.kr</span></div><div class="rpt-org-desc">대외경제·통상·글로벌 이슈 분석 · 국제무역 및 해외시장 동향 중심</div></div>
+          <div class="rpt-org-actions"><a href="https://www.kiep.go.kr/menu.es?mid=a10100000000" target="_blank" class="rpt-link-btn">홈페이지 ↗</a></div>
+        </div>
+        <div class="rpt-manual-label">최신 관련 뉴스 <span style="font-weight:400;color:var(--text3)">(자동갱신)</span></div>
+        <div class="rpt-list" id="rpt-kiep-list"><div class="rpt-empty">불러오는 중…</div></div>
+      </div>
+      <div class="rpt-org" id="rpt-kif">
+        <div class="rpt-org-header">
+          <div><div class="rpt-org-name">한국금융연구원 <span class="rpt-org-url">kif.re.kr</span></div><div class="rpt-org-desc">금융·은행·자본시장 정책 분석 · 금리·환율·자산시장 동향 중심</div></div>
+          <div class="rpt-org-actions"><a href="https://www.kif.re.kr/kif2/publication/pub_list.aspx" target="_blank" class="rpt-link-btn">홈페이지 ↗</a></div>
+        </div>
+        <div class="rpt-manual-label">최신 관련 뉴스 <span style="font-weight:400;color:var(--text3)">(자동갱신)</span></div>
+        <div class="rpt-list" id="rpt-kif-list"><div class="rpt-empty">불러오는 중…</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 탭 4: 지표 교차 인사이트 -->
+  <div class="tab-panel" id="tab-insight" style="display:none">
+    <div class="tab-panel-inner">
+      <div class="custom-box">
+        <div class="custom-title">
+          <span class="ai-feature-badge">✦ AI</span>
+          지표를 선택하면 AI가 현대백화점 관점으로 교차분석합니다
+        </div>
+
+        <!-- AI 프로바이더 선택 + 키 설정 -->
+        <div class="insight-key-row">
+          <span class="insight-key-label">AI 엔진</span>
+          <div class="provider-tabs" id="provider-tabs">
+            <button class="ptab" data-provider="copilot"    onclick="switchProvider(this)"><span class="ptab-dot" id="ptab-dot-copilot"></span>Copilot Studio</button>
+            <button class="ptab" data-provider="gemini"     onclick="switchProvider(this)"><span class="ptab-dot" id="ptab-dot-gemini"></span>Gemini</button>
+            <button class="ptab" data-provider="anthropic"  onclick="switchProvider(this)"><span class="ptab-dot" id="ptab-dot-anthropic"></span>Claude</button>
+            <button class="ptab" data-provider="groq"       onclick="switchProvider(this)"><span class="ptab-dot" id="ptab-dot-groq"></span>Groq</button>
+          </div>
+          <button class="ai-key-btn" id="ai-key-btn" onclick="openKeyModal()">
+            <span id="ai-key-status-dot" class="ai-key-dot unset"></span><span id="ai-key-btn-text">키 미설정 — 클릭하여 등록</span>
+          </button>
+        </div>
+
+        <div class="custom-subtitle">2~5개 선택 후 분석 버튼 클릭 → AI가 현대백화점 관점으로 실시간 분석 <span id="chk-counter" style="font-weight:600;color:#006241;margin-left:8px">0/5 선택됨</span></div>
+        <div class="ind-checks">
+          <input type="checkbox" class="ind-chk" id="ic_csi"         value="소비자심리지수(최신값, 경기 동향)"><label class="ind-chk-label" for="ic_csi">소비자심리지수</label>
+          <input type="checkbox" class="ind-chk" id="ic_cpi"         value="소비자물가(전년비 상승률)"><label class="ind-chk-label" for="ic_cpi">소비자물가</label>
+          <input type="checkbox" class="ind-chk" id="ic_rate"        value="기준금리(한국은행 통화정책)"><label class="ind-chk-label" for="ic_rate">기준금리</label>
+          <input type="checkbox" class="ind-chk" id="ic_fx"          value="원/달러 환율(원화 강약)"><label class="ind-chk-label" for="ic_fx">환율</label>
+          <input type="checkbox" class="ind-chk" id="ic_kospi"       value="KOSPI(주가 자산효과)"><label class="ind-chk-label" for="ic_kospi">KOSPI</label>
+          <input type="checkbox" class="ind-chk" id="ic_tourist"     value="방한 외국인 관광객 수"><label class="ind-chk-label" for="ic_tourist">관광객 수</label>
+          <input type="checkbox" class="ind-chk" id="ic_retail"      value="소매판매지수(내수 소비)"><label class="ind-chk-label" for="ic_retail">소매판매</label>
+          <input type="checkbox" class="ind-chk" id="ic_dept"        value="백화점 품목별 매출증감률(전년비)"><label class="ind-chk-label" for="ic_dept">백화점매출</label>
+          <input type="checkbox" class="ind-chk" id="ic_mart"        value="대형마트 품목별 매출증감률(전년비)"><label class="ind-chk-label" for="ic_mart">대형마트매출</label>
+          <input type="checkbox" class="ind-chk" id="ic_convenience" value="편의점 품목별 매출증감률(전년비)"><label class="ind-chk-label" for="ic_convenience">편의점매출</label>
+        </div>
+        <div class="prompt-input-row">
+          <div class="prompt-input-label">AI에게 보낼 질문 <span style="font-size:11px;color:#888;font-weight:400">(지표 선택 시 자동 생성 · 직접 수정 가능)</span></div>
+          <textarea id="custom-prompt-input" class="prompt-textarea" placeholder="지표를 2개 이상 선택하면 기본 프롬프트가 자동으로 입력됩니다."></textarea>
+        </div>
+        <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
+          <button class="custom-run" id="custom-run-btn" onclick="runCustomInsight()">🔍 선택 지표 AI 교차분석 생성</button>
+          <button class="custom-cancel" id="custom-cancel-btn" onclick="cancelInsight()" style="display:none">✕ 분석 중단</button>
+        </div>
+        <div class="custom-result" id="custom-result">
+          <div class="cr-hd">AI 교차분석 결과 <span id="cir-pulse" style="display:none"><span class="pulse"></span></span></div>
+          <div id="cir-selected" class="cir-selected-tags" style="display:none"></div>
+          <!-- 엔진별 결과 탭 (결과 받은 엔진만 활성화) -->
+          <div id="result-engine-tabs" class="res-tabs" style="display:none">
+            <button class="res-tab-btn" data-provider="copilot"    onclick="switchProvider(document.querySelector('.ptab[data-provider=copilot]'))" disabled>Copilot Studio</button>
+            <button class="res-tab-btn" data-provider="gemini"     onclick="switchProvider(document.querySelector('.ptab[data-provider=gemini]'))"  disabled>Gemini</button>
+            <button class="res-tab-btn" data-provider="anthropic"  onclick="switchProvider(document.querySelector('.ptab[data-provider=anthropic]'))" disabled>Claude</button>
+            <button class="res-tab-btn" data-provider="groq"       onclick="switchProvider(document.querySelector('.ptab[data-provider=groq]'))"    disabled>Groq</button>
+          </div>
+          <div class="cr-body markdown-body" id="cir-body"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>현대백화점 상품본부 지원팀 내부용 · Made with Claude · 2026</footer>
+
+</div>
+
+<script>
+/* ── 프로바이더 설정 ── */
+var PROVIDER_CFG = {
+  copilot: {
+    label: 'Copilot Studio',
+    storageKey: 'copilot_secret',
+    placeholder: 'Direct Line Secret 붙여넣기…',
+    desc: 'Copilot Studio → Settings → Security → Web channel security에서 <b>Secret 1</b> 값을 복사해 입력하세요.'
+  },
+  gemini: {
+    label: 'Gemini',
+    storageKey: 'gemini_api_key',
+    placeholder: 'AIza… API 키 붙여넣기…',
+    desc: '<a href="https://aistudio.google.com/apikey" target="_blank" style="color:var(--accent)">Google AI Studio</a>에서 API 키를 발급해 입력하세요. (gemini-2.0-flash 사용)'
+  },
+  anthropic: {
+    label: 'Claude',
+    storageKey: 'anthropic_api_key',
+    placeholder: 'sk-ant-… API 키 붙여넣기…',
+    desc: '<a href="https://console.anthropic.com/settings/keys" target="_blank" style="color:var(--accent)">Anthropic Console</a>에서 API 키를 발급해 입력하세요. (claude-haiku 사용)'
+  },
+  groq: {
+    label: 'Groq',
+    storageKey: 'groq_api_key',
+    placeholder: 'gsk_… API 키 붙여넣기…',
+    desc: '<a href="https://console.groq.com/keys" target="_blank" style="color:var(--accent)">Groq Console</a>에서 API 키를 발급해 입력하세요. 무료, 카드 불필요. (llama-3.3-70b 사용)'
+  }
+};
+
+function currentProvider() {
+  return localStorage.getItem('ai_provider') || 'copilot';
+}
+
+function switchProvider(btn) {
+  document.querySelectorAll('.ptab').forEach(function(b){ b.classList.remove('on'); });
+  btn.classList.add('on');
+  localStorage.setItem('ai_provider', btn.dataset.provider);
+  updateKeyStatus();
+}
+
+/* ── 탭 전환 ── */
+function switchTab(btn) {
+  document.querySelectorAll('.rtab').forEach(function(b){ b.classList.remove('on'); });
+  document.querySelectorAll('.tab-panel').forEach(function(p){ p.style.display = 'none'; });
+  btn.classList.add('on');
+  var panel = document.getElementById(btn.dataset.tab);
+  if (panel) panel.style.display = '';
+}
+
+/* ── AI 키 모달 ── */
+function openKeyModal() {
+  var cfg    = PROVIDER_CFG[currentProvider()];
+  var stored = localStorage.getItem(cfg.storageKey) || '';
+  document.getElementById('key-modal-title').textContent = cfg.label + ' 키 설정';
+  document.getElementById('key-modal-desc').innerHTML =
+    cfg.desc + '<br><span style="color:var(--text3);font-size:10px">키는 이 브라우저에만 저장되며 서버로 전송되지 않습니다.</span>';
+  document.getElementById('key-modal-input').placeholder = cfg.placeholder;
+  document.getElementById('key-modal-input').value = stored ? '••••••••••••••••' : '';
+  document.getElementById('key-modal-backdrop').style.display = 'flex';
+  if (!stored) document.getElementById('key-modal-input').focus();
+}
+function closeKeyModal(e) {
+  if (!e || e.target === document.getElementById('key-modal-backdrop')) {
+    document.getElementById('key-modal-backdrop').style.display = 'none';
+  }
+}
+function saveKey() {
+  var val = document.getElementById('key-modal-input').value.trim();
+  if (!val || val === '••••••••••••••••') { closeKeyModal(); return; }
+  var cfg = PROVIDER_CFG[currentProvider()];
+  localStorage.setItem(cfg.storageKey, val);
+  updateKeyStatus();
+  closeKeyModal();
+}
+function clearKey() {
+  var cfg = PROVIDER_CFG[currentProvider()];
+  localStorage.removeItem(cfg.storageKey);
+  if (currentProvider() === 'copilot' && typeof _dlToken !== 'undefined') {
+    _dlToken = null; _dlTokenExpiresAt = 0;
+  }
+  updateKeyStatus();
+  document.getElementById('key-modal-input').value = '';
+}
+function updateKeyStatus() {
+  var provider = currentProvider();
+  var cfg      = PROVIDER_CFG[provider];
+  var dot      = document.getElementById('ai-key-status-dot');
+  var btnTxt   = document.getElementById('ai-key-btn-text');
+  var hasKey   = !!localStorage.getItem(cfg.storageKey);
+  dot.className = 'ai-key-dot ' + (hasKey ? 'set' : 'unset');
+  if (btnTxt) btnTxt.textContent = hasKey ? '키 등록됨 — 클릭하여 변경' : '키 미설정 — 클릭하여 등록';
+  document.querySelectorAll('.ptab').forEach(function(b){
+    b.classList.toggle('on', b.dataset.provider === provider);
+  });
+}
+document.addEventListener('DOMContentLoaded', updateKeyStatus);
+document.addEventListener('keydown', function(e){ if(e.key === 'Escape') closeKeyModal(); });
+</script>
+
+<script src="js/config.js"></script>
+<script src="js/core.js"></script>
+<script src="js/ai.js"></script>
+<script src="js/content.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
