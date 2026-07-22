@@ -3,14 +3,14 @@ fetch_price.py — 물가·금리 데이터 수집
 ────────────────────────────────────────────
 수집 지표:
   · 소비자물가 상승률 (CPI) — ECOS 월별
-  · 기준금리 — ECOS 월별
+  · 기준금리 — ECOS 일별 조회 후 월별 집계
 
 환경변수:
   ECOS_KEY  한국은행 ECOS API 인증키
 """
 
 import sys, os
-sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file  start_date = get_fetch_start(series) + "01"   # 일별 조__)), ".."))
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from dotenv import load_dotenv
@@ -50,23 +50,4 @@ def run(data: dict) -> dict:
     if rows:
         monthly = {}
         for r in rows:
-            monthly[r["ym"][:6]] = r["val"]   # 같은 달 내 최신일자 값으로 덮어씀
-        for ym in sorted(monthly.keys()):
-            series = upsert(series, ym, monthly[ym])
-        data["rate"] = sorted(series, key=lambda x: x["ym"])[-30:]
-        print(f"  → {len(data['rate'])}개월, 최신: {data['rate'][-1]}")
-    else:
-        print("  → 데이터 없음, 기존 유지")
-
-    return data
-
-
-def main():
-    data = load_existing()
-    data = run(data)
-    save_data(data)
-    print("\n✅ fetch_price.py 완료")
-
-
-if __name__ == "__main__":
-    main()
+            monthly[r["ym"][:6]] = r["val"]
