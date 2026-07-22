@@ -1,0 +1,52 @@
+name: 외부지표 데이터 자동 갱신
+
+on:
+  schedule:
+    - cron: '0 17 * * *'   # 매일 02:00 KST (UTC 17:00)
+  workflow_dispatch: {}     # 수동 실행 버튼
+
+permissions:
+  contents: write
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: 의존성 설치
+        run: pip install python-dotenv
+
+      - name: data.json 갱신 (ECOS/KOSIS/기상청)
+        env:
+          ECOS_KEY: ${{ secrets.ECOS_KEY }}
+          KOSIS_KEY: ${{ secrets.KOSIS_KEY }}
+          KOSIS_PROXY: ${{ secrets.KOSIS_PROXY }}
+          KMA_KEY: ${{ secrets.KMA_KEY }}
+          HOLIDAY_KEY: ${{ secrets.HOLIDAY_KEY }}
+          TOURISM_KEY: ${{ secrets.TOURISM_KEY }}
+        run: python scripts/fetch_data.py
+
+      - name: news.json 갱신 (네이버 뉴스)
+        env:
+          NAVER_CLIENT_ID: ${{ secrets.NAVER_CLIENT_ID }}
+          NAVER_CLIENT_SECRET: ${{ secrets.NAVER_CLIENT_SECRET }}
+        run: python scripts/news/fetch_news.py
+
+      - name: reports.json 갱신 (연구기관 보고서)
+        env:
+          NAVER_CLIENT_ID: ${{ secrets.NAVER_CLIENT_ID }}
+          NAVER_CLIENT_SECRET: ${{ secrets.NAVER_CLIENT_SECRET }}
+        run: python scripts/reports/fetch_reports.py
+
+      - name: 결과 커밋 & 푸시
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data.json summary.json news.json reports.json
+          git diff --staged --quiet || git commit -m "chore: 외부지표 데이터 자동 갱신 $(TZ='Asia/Seoul' date +'%Y-%m-%d %H:%M KST')"
+          git push
