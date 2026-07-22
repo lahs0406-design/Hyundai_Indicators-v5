@@ -50,4 +50,23 @@ def run(data: dict) -> dict:
     if rows:
         monthly = {}
         for r in rows:
-            monthly[r["ym"][:6]] = r["val"]
+            monthly[r["ym"][:6]] = r["val"]   # 같은 달 내 최신일자 값으로 덮어씀
+        for ym in sorted(monthly.keys()):
+            series = upsert(series, ym, monthly[ym])
+        data["rate"] = sorted(series, key=lambda x: x["ym"])[-30:]
+        print(f"  → {len(data['rate'])}개월, 최신: {data['rate'][-1]}")
+    else:
+        print("  → 데이터 없음, 기존 유지")
+
+    return data
+
+
+def main():
+    data = load_existing()
+    data = run(data)
+    save_data(data)
+    print("\n✅ fetch_price.py 완료")
+
+
+if __name__ == "__main__":
+    main()
