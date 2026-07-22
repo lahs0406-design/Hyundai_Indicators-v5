@@ -248,21 +248,54 @@ body {
 }
 .chart-src { font-size: 10.5px; color: var(--text3); margin-bottom: .7rem; }
 
-/* KPI 카드 */
-.kpi-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 5px; margin-bottom: .7rem; }
+/* KPI 카드 (4분할: 최신값 / 전월비 / 전년비 / 6개월평균) */
+.kpi-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 5px; margin-bottom: .7rem; }
 .kpill {
   background: var(--bg2);
   border: 1px solid var(--border);
-  border-radius: 9px; padding: 7px 8px;
+  border-radius: 9px; padding: 6px 5px;
 }
-.kpill .kl { font-size: 9.5px; color: var(--text3); margin-bottom: 2px; font-weight: 500; }
-.kpill .kv { font-size: 14px; font-weight: 700; color: var(--text); line-height: 1.2; }
-.kpill .kc { font-size: 9.5px; margin-top: 2px; font-weight: 500; }
+.kpill .kl { font-size: 8.5px; color: var(--text3); margin-bottom: 2px; font-weight: 500; white-space: nowrap; }
+.kpill .kv { font-size: 12.5px; font-weight: 700; color: var(--text); line-height: 1.2; }
+.kpill .kc { font-size: 8.5px; margin-top: 2px; font-weight: 500; }
+/* 전월비(schg)는 JS가 className을 통째로 갈아끼우므로 ID 선택자로 크기를 고정 */
+#schg, #syoy { font-size: 12.5px; font-weight: 700; line-height: 1.2; margin-top: 0; }
 
 /* KPI 색상 */
 .up   { color: #C0392B; }
 .down { color: #1659A8; }
 .neu  { color: var(--text3); }
+
+/* 유통채널 품목별 필터 버튼 */
+.retail-item-filters {
+  display: flex; flex-wrap: wrap; gap: 4px;
+  margin-bottom: .6rem;
+}
+.ritem-btn {
+  font-size: 10px; padding: 3px 8px;
+  border: 1px solid var(--border); border-radius: 999px;
+  background: var(--bg); color: var(--text2);
+  cursor: pointer; font-family: inherit;
+  transition: all .15s; white-space: nowrap;
+}
+.ritem-btn:hover { background: var(--bg2); color: var(--text); }
+.ritem-btn.on {
+  background: var(--accent); color: #E6F1FB;
+  border-color: var(--accent); font-weight: 600;
+}
+
+/* AI 지표 해석 박스 (공간 확보용 — 데이터 연동 추후 예정) */
+.ai-interpret-box {
+  margin-top: .7rem;
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  background: var(--bg2);
+  padding: 8px 10px;
+}
+.ai-interpret-hd { display: flex; align-items: center; gap: 6px; margin-bottom: 5px; }
+.ai-interpret-title { font-size: 11.5px; font-weight: 700; color: var(--text); }
+.ai-interpret-body { font-size: 11px; color: var(--text3); min-height: 32px; display: flex; align-items: center; }
+.ai-interpret-placeholder { font-style: italic; }
 
 /* 지수 설명 박스 */
 .index-note {
@@ -1050,8 +1083,10 @@ footer {
   .sidebar-chart { max-height: none; overflow: visible; }
   .content { overflow: visible; }
   .cat-grid { grid-template-columns: 1fr 1fr 1fr; }
+  .kpi-grid { grid-template-columns: 1fr 1fr; row-gap: 5px; }
   .kpill .kv { font-size: 12px; }
-  .kpill .kl { font-size: 9px; }
+  .kpill .kl { font-size: 8px; }
+  #schg, #syoy { font-size: 12px; }
   .wx-cals { grid-template-columns: 1fr; }
   .wx-summary { grid-template-columns: 1fr 1fr; }
 }
