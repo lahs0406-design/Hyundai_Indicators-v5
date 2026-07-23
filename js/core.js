@@ -101,10 +101,10 @@ function makeMonthLabels() {
    ═══════════════════════════════════════════ */
 // 일별 데이터(KOSPI 등)일 때: 데이터 포인트는 일별 그대로 유지하되
 // 가로축 레이블만 "월이 바뀌는 첫 번째 인덱스"에만 월 표시
-var _lastSeriesVals = null, _lastSeriesLabels = null;
+var _lastSeriesVals = null, _lastSeriesLabels = null, _lastSeriesYms = null;
 
-function renderChart(vals, prevVals, labels, d) {
-  _lastSeriesVals = vals; _lastSeriesLabels = labels;
+function renderChart(vals, prevVals, labels, d, yms) {
+  _lastSeriesVals = vals; _lastSeriesLabels = labels; _lastSeriesYms = yms || null;
   if(mc){ mc.destroy(); mc = null; }
 
   // MM/DD 형식이면 일별 데이터로 판단
@@ -298,7 +298,7 @@ async function loadEcosChart(key) {
   document.getElementById('snote').textContent  = d.note;
   document.getElementById('synote').textContent = d.yn;
 
-  renderChart(vals, null, labels, d);
+  renderChart(vals, null, labels, d, rows.map(function(r){return r.ym;}));
 }
 
 /* ═══════════════════════════════════════════
@@ -363,7 +363,7 @@ async function loadKosisChart(key) {
     schg.className = 'kc ' + (displayDiff>0?'up':displayDiff<0?'down':'neu');
     document.getElementById('snote').textContent  = d.note;
     document.getElementById('synote').textContent = d.yn;
-    renderChart(vals, prevVals, labels, d);
+    renderChart(vals, prevVals, labels, d, rows.map(function(r){return r.ym;}));
     return;
   }
 
@@ -378,7 +378,7 @@ async function loadKosisChart(key) {
   document.getElementById('snote').textContent  = d.note;
   document.getElementById('synote').textContent = d.yn;
 
-  renderChart(vals, prevVals, labels, d);
+  renderChart(vals, prevVals, labels, d, rows.map(function(r){return r.ym;}));
 }
 /* ===========================================
    JS § 15. 카테고리 토글 (toggleCat)
@@ -443,21 +443,25 @@ if(idx !== undefined && catBtns[idx]) catBtns[idx].classList.add('open');
 
   var d = CD[key]; if(!d) return;
 
-  if(ECOS_MAP[key]) {
-    await loadEcosChart(key);
-  } else if(key==='dept'||key==='mart'||key==='convenience') {
-    await loadRetailItemChart(key);
-  } else if(KOSIS_MAP[key]) {
-    await loadKosisChart(key);
-  } else {
-    document.getElementById('ctitle').textContent = d.title;
-    document.getElementById('cmeta').textContent  = d.meta+' (샘플 데이터)';
-    updateKPI(d);
-    renderChart(d.data||[], null, makeMonthLabels(), d);
+  try {
+    if(ECOS_MAP[key]) {
+      await loadEcosChart(key);
+    } else if(key==='dept'||key==='mart'||key==='convenience') {
+      await loadRetailItemChart(key);
+    } else if(KOSIS_MAP[key]) {
+      await loadKosisChart(key);
+    } else {
+      document.getElementById('ctitle').textContent = d.title;
+      document.getElementById('cmeta').textContent  = d.meta+' (샘플 데이터)';
+      updateKPI(d);
+      renderChart(d.data||[], null, makeMonthLabels(), d);
+    }
+  } catch(e) {
+    console.error('[차트 로드 오류]', key, e);
+  } finally {
+    // 차트 로드가 성공하든 실패하든 항상 실행 → 왼쪽 AI 지표 해석이 이전 지표에 멈춰있는 일 방지
+    if(typeof resetIndicatorAI === 'function') resetIndicatorAI(key, d);
   }
-
-  // KPI·차트 데이터가 다 반영된 뒤에 실행 → AI 해석이 최신값을 정확히 참조
-  if(typeof resetIndicatorAI === 'function') resetIndicatorAI(key, d);
 }
 
 /* ═══════════════════════════════════════════
@@ -581,12 +585,12 @@ async function loadRetailItemChart(key) {
 
   if(itemsObj && Object.keys(itemsObj).length > 0) {
     renderRetailItemFilters(itemsObj, ymList, labels, d, vals);
-    renderChart(vals, null, labels, d);   // 기본값: 전체 합계 추이만 표시
+    renderChart(vals, null, labels, d, ymList);   // 기본값: 전체 합계 추이만 표시
   } else {
     // 품목 데이터 없으면 합계 단일 라인
     var _rif0 = document.getElementById('retail-item-filters');
     if(_rif0) { _rif0.style.display = 'none'; _rif0.innerHTML = ''; }
-    renderChart(vals, null, labels, d);
+    renderChart(vals, null, labels, d, ymList);
   }
 }
 
@@ -617,7 +621,7 @@ function selRetailItem(name, btn) {
   btn.classList.add('on');
   if(!_rItemsObj) return;
   if(name === '__all__') {
-    renderChart(_rVals, null, _rLabels, _rD);   // 전체 = 합계 추이 단일 라인
+    renderChart(_rVals, null, _rLabels, _rD, _rYmList);   // 전체 = 합계 추이 단일 라인
   } else {
     var single = {};
     single[name] = _rItemsObj[name];
