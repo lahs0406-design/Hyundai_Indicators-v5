@@ -1,1126 +1,459 @@
-/* ═══════════════════════════════════════════
-   CSS § 1. 리셋 & CSS 변수
-   ═══════════════════════════════════════════ */
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>백화점 영향 외부지표 현황 · 현대백화점 v2.2</title>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-R2SZ7V3NRV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-R2SZ7V3NRV');
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/9.1.6/marked.min.js"></script>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="page">
 
-:root {
-  --bg:       #ffffff;
-  --bg2:      #f5f5f3;
-  --bg3:      #ebebea;
-  --text:     #111111;
-  --text2:    #4a4a4a;
-  --text3:    #888888;
-  --border:   rgba(0,0,0,0.10);
-  --border2:  rgba(0,0,0,0.18);
-  --accent:   #006241;
-  --accent-lt:#E6F4ED;
-  --radius:   10px;
-  --radius-lg:14px;
-  --sidebar:  50vw;
-  --shadow-sm:0 1px 4px rgba(0,0,0,0.07);
-  --shadow:   0 2px 10px rgba(0,0,0,0.09);
-}
+<!-- ═══════════════════════════════════════════
+     HTML § 1. 상단 바 (Top Bar)
+     ═══════════════════════════════════════════ -->
+<div class="top-bar">
+  <div class="logo-mark"><span>H</span></div>
+  <div><div class="top-bar-org">현대백화점 상품본부 지원팀</div><div class="top-bar-title">백화점 영향 외부지표 현황 <span class="badge-s" id="live-badge">日 1회 자동 연동</span></div></div>
+  <div style="margin-left:auto"></div>
 
-/* ═══════════════════════════════════════════
-   CSS § 1-1. AI 키 설정 버튼 & 모달
-   ═══════════════════════════════════════════ */
-.ai-key-btn {
-  display: flex; align-items: center; gap: 6px;
-  font-size: 11.5px; font-weight: 600;
-  padding: 5px 13px;
-  border: 1.5px solid var(--border2);
-  border-radius: 20px;
-  background: var(--bg2); color: var(--text2);
-  cursor: pointer; font-family: inherit;
-  transition: all .15s;
-}
-.ai-key-btn:hover { background: var(--bg3); color: var(--text); }
-.ai-key-dot {
-  width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0;
-}
-.ai-key-dot.set   { background: #5aaa1e; }
-.ai-key-dot.unset { background: var(--text3); }
+  <!-- AI 엔진 선택 + 키 설정 (전역 공통 — 좌측 AI 지표 해석 / 우측 AI 교차분석 둘 다 여기서 등록한 키를 공유) -->
+  <div class="insight-key-row" id="topbar-key-row">
+    <span class="insight-key-label">AI 엔진</span>
+    <div class="provider-tabs" id="provider-tabs">
+      <button class="ptab" data-provider="copilot"    onclick="switchProvider(this)"><span class="ptab-dot" id="ptab-dot-copilot"></span>Copilot Studio</button>
+      <button class="ptab" data-provider="gemini"     onclick="switchProvider(this)"><span class="ptab-dot" id="ptab-dot-gemini"></span>Gemini</button>
+      <button class="ptab" data-provider="anthropic"  onclick="switchProvider(this)"><span class="ptab-dot" id="ptab-dot-anthropic"></span>Claude</button>
+      <button class="ptab" data-provider="groq"       onclick="switchProvider(this)"><span class="ptab-dot" id="ptab-dot-groq"></span>Groq</button>
+    </div>
+    <button class="ai-key-btn" id="ai-key-btn" onclick="openKeyModal()">
+      <span id="ai-key-status-dot" class="ai-key-dot unset"></span><span id="ai-key-btn-text">키 미설정 — 클릭하여 등록</span>
+    </button>
+  </div>
+</div>
 
-/* 모달 배경 */
-.key-modal-backdrop {
-  position: fixed; inset: 0; z-index: 1000;
-  background: rgba(0,0,0,0.35);
-  display: flex; align-items: center; justify-content: center;
-}
-/* 모달 박스 */
-.key-modal {
-  background: var(--bg); border-radius: 16px;
-  padding: 1.5rem 1.6rem;
-  width: 100%; max-width: 420px;
-  box-shadow: 0 8px 40px rgba(0,0,0,0.18);
-}
-.key-modal-title {
-  font-size: 15px; font-weight: 700; color: var(--text);
-  margin-bottom: .65rem;
-}
-.key-modal-desc {
-  font-size: 12px; color: var(--text2);
-  line-height: 1.7; margin-bottom: 1rem;
-}
-.key-modal-input {
-  width: 100%; padding: 9px 12px;
-  border: 1.5px solid var(--border2); border-radius: 9px;
-  font-size: 13px; font-family: monospace;
-  background: var(--bg2); color: var(--text);
-  outline: none; margin-bottom: .9rem;
-  transition: border-color .15s;
-}
-.key-modal-input:focus { border-color: var(--accent); }
-.key-modal-actions { display: flex; gap: 8px; justify-content: flex-end; }
-.key-modal-clear {
-  font-size: 12px; padding: 6px 14px;
-  border: 1.5px solid var(--border2); border-radius: 20px;
-  background: transparent; color: var(--text3);
-  cursor: pointer; font-family: inherit; transition: all .15s;
-}
-.key-modal-clear:hover { color: #C0392B; border-color: #C0392B; }
-.key-modal-save {
-  font-size: 12px; font-weight: 600; padding: 6px 18px;
-  border: none; border-radius: 20px;
-  background: var(--accent); color: #fff;
-  cursor: pointer; font-family: inherit; transition: all .15s;
-  box-shadow: 0 2px 8px rgba(22,89,168,.25);
-}
-.key-modal-save:hover { background: #0e4a8a; }
+<!-- AI 키 입력 모달 -->
+<div class="key-modal-backdrop" id="key-modal-backdrop" style="display:none" onclick="closeKeyModal(event)">
+  <div class="key-modal">
+    <div class="key-modal-title" id="key-modal-title">AI 분석 키 설정</div>
+    <div class="key-modal-desc" id="key-modal-desc"></div>
+    <input class="key-modal-input" id="key-modal-input" type="password" placeholder="" autocomplete="off">
+    <div class="key-modal-actions">
+      <button class="key-modal-clear" onclick="clearKey()">키 삭제</button>
+      <button class="key-modal-save" onclick="saveKey()">저장</button>
+    </div>
+  </div>
+</div>
 
-/* ═══════════════════════════════════════════
-   CSS § 2. 전체 레이아웃
-   ═══════════════════════════════════════════ */
-html, body { height: 100%; }
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Pretendard", "Segoe UI", sans-serif;
-  background: var(--bg3);
-  color: var(--text);
-  line-height: 1.6;
-  overflow: hidden;
-  -webkit-font-smoothing: antialiased;
-}
-.page { display: flex; flex-direction: column; height: 100vh; }
+<!-- ═══════════════════════════════════════════
+     HTML § 2. 메인 레이아웃 (body-wrap)
+     ═══════════════════════════════════════════ -->
+<div class="body-wrap">
 
-/* ═══════════════════════════════════════════
-   CSS § 3. 상단 바
-   ═══════════════════════════════════════════ */
-.top-bar {
-  background: var(--bg);
-  border-bottom: 1px solid var(--border);
-  padding: .65rem 1.25rem;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  flex-shrink: 0;
-  box-shadow: var(--shadow-sm);
-  z-index: 10;
-}
-.logo-mark {
-  width: 28px; height: 28px;
-  background: var(--accent);
-  border-radius: 8px;
-  display: flex; align-items: center; justify-content: center;
-  flex-shrink: 0;
-  box-shadow: 0 2px 6px rgba(22,89,168,0.3);
-}
-.logo-mark span { color: #fff; font-size: 13px; font-weight: 700; }
-.top-bar-org { font-size: 10.5px; color: var(--text3); font-weight: 500; }
-.top-bar-title { font-size: 14.5px; font-weight: 700; color: var(--text); letter-spacing: -.01em; }
-.badge-s {
-  display: inline-flex; align-items: center; gap: 4px;
-  font-size: 10px; color: #2e6b0a; background: #e4f3d8;
-  padding: 2px 9px; border-radius: 20px; margin-left: 8px;
-  vertical-align: middle; font-weight: 600;
-}
-.badge-s::before {
-  content: ""; display: inline-block;
-  width: 5px; height: 5px; border-radius: 50%; background: #5aaa1e;
-  animation: badge-pulse 2s infinite;
-}
-@keyframes badge-pulse { 0%,100%{opacity:1} 50%{opacity:.4} }
 
-.body-wrap { display: flex; flex: 1; overflow: hidden; }
+<!-- ═══════════════════════════════════════════
+     HTML § 3. 사이드바 - 좌측 패널
+     ─────────────────────────────────────────────
+     § 3-1. 카테고리 버튼 그리드
+     § 3-2. 지표별 서브 버튼 패널 (grp1~grp6)
+     § 3-3. 차트 + KPI 수치
+     § 3-4. AI 추세 해석 박스
+     ═══════════════════════════════════════════ -->
+<div class="sidebar">
+  <!-- § 3-1. 카테고리 버튼 그리드 -->
+  <div class="sidebar-hd">
+    <div class="sidebar-label">1 · 지표 추세 <span id="data-updated" style="font-size:9px;font-weight:400;color:var(--text3);text-transform:none;letter-spacing:0;margin-left:4px"></span></div>
+<div class="cat-grid">
+  <button class="cat-col-btn open" onclick="toggleCat(this,'grp1')"><span class="em">💬</span>소비심리</button>
+  <button class="cat-col-btn" onclick="toggleCat(this,'grp3')"><span class="em">📈</span>물가·금리</button>
+  <button class="cat-col-btn" onclick="toggleCat(this,'grp4')"><span class="em">🏠</span>자산시장</button>
+  <button class="cat-col-btn" onclick="toggleCat(this,'grp7')"><span class="em">✈️</span>관광객</button>
+  <button class="cat-col-btn" onclick="toggleCat(this,'grp5')"><span class="em">🛍️</span>유통채널</button>
+</div>
+  </div>
+  <!-- § 3-2. 지표별 서브 버튼 패널 -->
+  <div class="sub-panel open" id="grp1"><button class="sub-btn on" onclick="selChart('csi',this,'grp1')">소비자심리지수</button></div>
+  <div class="sub-panel" id="grp3"><button class="sub-btn" onclick="selChart('cpi',this,'grp3')">소비자물가</button><button class="sub-btn" onclick="selChart('rate',this,'grp3')">기준금리</button></div>
+  <div class="sub-panel" id="grp4"><button class="sub-btn" onclick="selChart('kospi',this,'grp4')">KOSPI</button><button class="sub-btn" onclick="selChart('fx',this,'grp4')">환율</button></div>
+  <div class="sub-panel" id="grp5"><button class="sub-btn" onclick="selChart('dept',this,'grp5')">백화점매출(전년비)</button><button class="sub-btn" onclick="selChart('mart',this,'grp5')">대형마트매출</button><button class="sub-btn" onclick="selChart('convenience',this,'grp5')">편의점매출</button><button class="sub-btn" onclick="selChart('retail',this,'grp5')">소매판매지수</button></div>
+<div class="sub-panel" id="grp7">
+  <button class="sub-btn" onclick="selChart('tourist',this,'grp7')">방한외국인</button>
+  <button class="sub-btn" onclick="selChart('outbound',this,'grp7')">내국인출국</button>
+</div>
+  <!-- § 3-3. 차트 + KPI 수치 -->
+  <div class="sidebar-chart">
+    <div class="chart-name" id="ctitle">소비자심리지수 (CCSI)</div>
+    <div class="index-note" id="index-note"></div>
+    <div class="chart-src" id="cmeta">출처: 한국은행 · 월별 발표 · 기준선 100</div>
+    <div class="kpi-grid">
+      <div class="kpill"><div class="kl">최신값</div><div class="kv" id="scur">100.3</div></div>
+      <div class="kpill"><div class="kl">전월비</div><div class="kc down" id="schg">▼ -1.2</div></div>
+      <div class="kpill"><div class="kl">전년비</div><div class="kv" id="syoy">-3.1</div><span id="synote" style="display:none"></span></div>
+      <div class="kpill"><div class="kl">6개월 평균</div><div class="kv" id="savg">101.8</div><div class="kc neu" id="snote">기준 100+</div></div>
+    </div>
+    <div class="retail-item-filters" id="retail-item-filters" style="display:none"></div>
+    <div class="canvas-wrap"><canvas id="mc" role="img" aria-label="지표 추세 차트"></canvas></div>
 
-/* ═══════════════════════════════════════════
-   CSS § 4. 리사이저
-   ═══════════════════════════════════════════ */
-.resizer {
-  width: 4px; flex-shrink: 0;
-  cursor: col-resize;
-  background: var(--border);
-  position: relative; z-index: 10;
-  transition: background .2s, width .2s;
-  user-select: none;
-}
-.resizer:hover, .resizer.dragging {
-  background: var(--accent);
-  width: 4px;
-}
-.resizer::after {
-  content: "⋮"; position: absolute;
-  top: 50%; left: 50%; transform: translate(-50%, -50%);
-  font-size: 11px; color: rgba(255,255,255,.7);
-  line-height: 1; opacity: 0; transition: opacity .2s;
-}
-.resizer:hover::after, .resizer.dragging::after { opacity: 1; }
+    <!-- AI 지표 해석 (공간 확보 — 데이터 연동은 추후 예정) -->
+    <div class="ai-interpret-box" id="ai-interpret-box" style="display:none">
+      <div class="ai-interpret-hd">
+        <span class="ai-feature-badge">✦ AI</span>
+        <span class="ai-interpret-title">AI 지표 해석</span>
+        <span class="ai-interpret-provider" id="ai-interpret-provider"></span>
+        <button class="ai-interpret-refresh" id="ai-interpret-refresh-btn" onclick="runIndicatorAI()" title="다시 생성" style="display:none">⟳</button>
+      </div>
+      <div class="ai-interpret-body" id="ai-interpret-body">
+        <span class="ai-interpret-placeholder">지표를 선택하면 분석이 표시됩니다.</span>
+      </div>
+    </div>
 
-/* ═══════════════════════════════════════════
-   CSS § 5. 사이드바
-   ═══════════════════════════════════════════ */
-.sidebar {
-  width: var(--sidebar);
-  min-width: 260px; max-width: 60vw;
-  flex-shrink: 0;
-  background: var(--bg);
-  border-right: 1px solid var(--border);
-  display: flex; flex-direction: column;
-  overflow-y: auto; overflow-x: hidden;
-}
-.sidebar-hd {
-  padding: .8rem .9rem .55rem;
-  border-bottom: 1px solid var(--border);
-  flex-shrink: 0;
-  background: var(--bg);
-  position: sticky; top: 0; z-index: 5;
-}
-.sidebar-label {
-  font-size: 10px; font-weight: 700;
-  color: var(--accent); letter-spacing: .1em;
-  text-transform: uppercase; margin-bottom: .5rem;
-}
+  </div>
 
-/* 카테고리 버튼 */
-.cat-grid {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  gap: 4px;
-}
-.cat-col-btn {
-  font-size: 10px; font-weight: 600;
-  padding: 5px 3px;
-  background: var(--bg2);
-  border: 1px solid var(--border);
-  border-radius: 7px;
-  cursor: pointer; font-family: inherit;
-  color: var(--text2); text-align: center;
-  transition: all .15s;
-  line-height: 1.3; white-space: nowrap;
-  overflow: hidden; text-overflow: ellipsis;
-}
-.cat-col-btn:hover { background: var(--bg3); color: var(--text); }
-.cat-col-btn.open {
-  background: var(--accent); color: #E6F1FB;
-  border-color: var(--accent);
-  box-shadow: 0 2px 6px rgba(22,89,168,0.25);
-}
-.cat-col-btn .em { display: none; }
+<!-- ═══════════════════════════════════════════
+     HTML § 3-4. 날씨 달력 섹션
+     ═══════════════════════════════════════════ -->
+<div class="wx-section" id="wx-section">
+  <div class="wx-section-label">2 · 기온 · 강수 달력</div>
+  <div class="wx-region-tabs" id="wx-tabs">
+    <button class="wx-rtab on" data-region="seoul" onclick="wxSelRegion(this)">서울</button>
+    <button class="wx-rtab" data-region="busan" onclick="wxSelRegion(this)">부산</button>
+    <button class="wx-rtab" data-region="daegu" onclick="wxSelRegion(this)">대구</button>
+    <button class="wx-rtab" data-region="incheon" onclick="wxSelRegion(this)">인천</button>
+    <button class="wx-rtab" data-region="gwangju" onclick="wxSelRegion(this)">광주</button>
+    <button class="wx-rtab" data-region="daejeon" onclick="wxSelRegion(this)">대전</button>
+    <button class="wx-rtab" data-region="ulsan" onclick="wxSelRegion(this)">울산</button>
+    <button class="wx-rtab" data-region="cheongju" onclick="wxSelRegion(this)">청주</button>
+  </div>
+  <div class="wx-nav">
+    <button class="wx-nav-btn" id="wx-prev" onclick="wxMove(-1)">&#8249;</button>
+    <span class="wx-nav-label" id="wx-nav-label">—<span class="wx-nav-sub" id="wx-nav-sub"></span></span>
+    <button class="wx-nav-btn" id="wx-next" onclick="wxMove(1)">&#8250;</button>
+  </div>
+  <div class="wx-cards" id="wx-summary">
+    <div class="wx-card">
+      <div class="wx-card-lbl">🌡 기온 <span class="wx-card-unit">(월평균)</span></div>
+      <div class="wx-card-val" id="wx-s-temp">—</div>
+      <div class="wx-card-sub">전년 <span id="wx-s-ptemp">—</span>&thinsp;<span id="wx-s-tdiff"></span></div>
+    </div>
+    <div class="wx-card">
+      <div class="wx-card-lbl">🌧 강수 <span class="wx-card-unit">(월평균)</span></div>
+      <div class="wx-card-val" id="wx-s-rain">—</div>
+      <div class="wx-card-sub">전년 <span id="wx-s-prain">—</span>&thinsp;<span id="wx-s-rdiff"></span></div>
+    </div>
+  </div>
+  <div class="wx-cals">
+    <div class="wx-cal">
+      <div class="wx-cal-hd"><span class="wx-cal-hd-lbl" id="wx-cur-lbl">—</span><span class="wx-cal-hd-sub">금년</span></div>
+      <div class="wx-dow-row"><div class="wx-dow">일</div><div class="wx-dow">월</div><div class="wx-dow">화</div><div class="wx-dow">수</div><div class="wx-dow">목</div><div class="wx-dow">금</div><div class="wx-dow">토</div></div>
+      <div class="wx-day-grid" id="wx-grid-cur"></div>
+    </div>
+    <div class="wx-cal">
+      <div class="wx-cal-hd"><span class="wx-cal-hd-lbl" id="wx-prev-lbl">—</span><span class="wx-cal-hd-sub">전년 동월</span></div>
+      <div class="wx-dow-row"><div class="wx-dow">일</div><div class="wx-dow">월</div><div class="wx-dow">화</div><div class="wx-dow">수</div><div class="wx-dow">목</div><div class="wx-dow">금</div><div class="wx-dow">토</div></div>
+      <div class="wx-day-grid" id="wx-grid-prev"></div>
+    </div>
+  </div>
+  <div class="wx-legend">
+    <div class="wx-leg"><div class="wx-leg-dot" style="background:#F0997B"></div>기온(°C)</div>
+    <div class="wx-leg"><div class="wx-leg-dot" style="background:#1659A8"></div>강수(mm)</div>
+    <div class="wx-leg"><div class="wx-leg-box" style="background:var(--accent-lt);border:.5px solid var(--accent)"></div>오늘</div>
+    <div class="wx-leg"><div class="wx-leg-box" style="background:#FCEBEB;border:.5px solid #F7C1C1"></div>공휴일</div>
+  </div>
+  <div class="wx-dow-idx">
+    <div class="wx-di-hd">
+      <span class="wx-di-hd-lbl">요일지수 <span id="wx-di-month" style="font-size:9px;font-weight:400;color:var(--text2)"></span></span>
+      <span class="wx-di-hd-sub">금년 vs 전년 동월</span>
+    </div>
+    <div class="wx-di-body" id="wx-di-body"></div>
+  </div>
+</div>
 
-/* 서브 버튼 */
-.sub-panel {
-  padding: .5rem .9rem;
-  border-bottom: 1px solid var(--border);
-  display: none; flex-wrap: wrap; gap: 5px;
-}
-.sub-panel.open { display: flex; }
-.sub-btn {
-  font-size: 11px; padding: 3px 11px;
-  border: 1px solid var(--border2);
-  border-radius: 20px;
-  background: var(--bg); color: var(--text2);
-  cursor: pointer; font-family: inherit;
-  transition: all .15s; white-space: nowrap;
-}
-.sub-btn:hover { background: var(--bg2); color: var(--text); }
-.sub-btn.on {
-  background: var(--accent); color: #E6F1FB;
-  border-color: var(--accent); font-weight: 600;
-  box-shadow: 0 2px 6px rgba(22,89,168,0.2);
-}
+<!-- ═══════════════════════════════════════════
+     HTML § 3-5. 주요 지역 방문자 섹션
+     ═══════════════════════════════════════════ -->
+<div class="wx-section" id="tour-section">
+  <div style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:8px;gap:8px;flex-wrap:wrap">
+    <div>
+      <div class="wx-section-label" style="margin-bottom:4px">3 · 주요 지역 방문자 (외국인) 현황</div>
+      <div style="font-size:10px;color:var(--text2);line-height:1.6">
+        SK텔레콤(외국인) 이동통신 데이터 기반 · 거주·통근·통학 등 일상생활권을 벗어나 관광 목적으로 방문한 <b style="font-weight:600;color:var(--text)">외국인 전체</b> 기준입니다.<br>
+        일자별 순방문자 수 기준(동일인이 2박3일 머무를 경우 = 3명 집계) · 추세 분석 목적으로 활용 권장
+      </div>
+    </div>
+    <div style="display:flex;gap:4px;flex-shrink:0">
+      <button class="wx-rtab on" id="tour-tab-card" onclick="tourSetView('card',this)">카드</button>
+      <button class="wx-rtab" id="tour-tab-chart" onclick="tourSetView('chart',this)">추이</button>
+    </div>
+  </div>
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;padding:8px 10px;background:var(--bg2);border-radius:6px">
+    <span style="font-size:12px;font-weight:600;color:var(--text);min-width:76px" id="tour-sl-label">2025년 04월</span>
+    <input type="range" id="tour-slider" min="0" max="12" value="11" step="1" style="flex:1">
+    <span style="font-size:10px;padding:2px 8px;border-radius:5px;font-weight:500;white-space:nowrap" id="tour-avg-badge">—</span>
+  </div>
+  <div id="tour-card-view">
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:6px" id="tour-city-grid"></div>
+  </div>
+  <div id="tour-chart-view" style="display:none">
+    <div style="border:.5px solid var(--border);border-radius:8px;overflow:hidden">
+      <div style="padding:7px 10px;background:var(--bg2);border-bottom:.5px solid var(--border);display:flex;justify-content:space-between;align-items:center">
+        <span style="font-size:11px;font-weight:600;color:var(--text)" id="tour-chart-title">전체 도시 추이</span>
+        <span style="font-size:9px;color:var(--text2)">외지인 월별 방문자수 · 만명</span>
+      </div>
+      <div style="padding:12px;height:180px;position:relative"><canvas id="tour-chart"></canvas></div>
+      <div style="display:flex;gap:8px;padding:0 12px 10px;flex-wrap:wrap" id="tour-chart-legend"></div>
+    </div>
+  </div>
+</div>
 
-/* ═══════════════════════════════════════════
-   CSS § 6. 사이드바 — 차트 · KPI
-   ═══════════════════════════════════════════ */
-.sidebar-chart { padding: .8rem .9rem; }
-.chart-name {
-  font-size: 13px; font-weight: 700;
-  color: var(--text); margin-bottom: 2px; letter-spacing: -.01em;
-}
-.chart-src { font-size: 10.5px; color: var(--text3); margin-bottom: .7rem; }
+</div>
 
-/* KPI 카드 (4분할: 최신값 / 전월비 / 전년비 / 6개월평균) */
-.kpi-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 5px; margin-bottom: .7rem; }
-.kpill {
-  background: var(--bg2);
-  border: 1px solid var(--border);
-  border-radius: 9px; padding: 6px 5px;
-}
-.kpill .kl { font-size: 8.5px; color: var(--text3); margin-bottom: 2px; font-weight: 500; white-space: nowrap; }
-.kpill .kv { font-size: 12.5px; font-weight: 700; color: var(--text); line-height: 1.2; }
-.kpill .kc { font-size: 8.5px; margin-top: 2px; font-weight: 500; }
-/* 전월비(schg)는 JS가 className을 통째로 갈아끼우므로 ID 선택자로 크기를 고정 */
-#schg, #syoy { font-size: 12.5px; font-weight: 700; line-height: 1.2; margin-top: 0; }
+<!-- HTML § 4. 리사이저 (좌우 드래그 구분선) -->
+<div class="resizer" id="resizer"></div>
 
-/* KPI 색상 */
-.up   { color: #C0392B; }
-.down { color: #1659A8; }
-.neu  { color: var(--text3); }
 
-/* 유통채널 품목별 필터 버튼 */
-.retail-item-filters {
-  display: flex; flex-wrap: wrap; gap: 4px;
-  margin-bottom: .6rem;
-}
-.ritem-btn {
-  font-size: 10px; padding: 3px 8px;
-  border: 1px solid var(--border); border-radius: 999px;
-  background: var(--bg); color: var(--text2);
-  cursor: pointer; font-family: inherit;
-  transition: all .15s; white-space: nowrap;
-}
-.ritem-btn:hover { background: var(--bg2); color: var(--text); }
-.ritem-btn.on {
-  background: var(--accent); color: #E6F1FB;
-  border-color: var(--accent); font-weight: 600;
-}
+<!-- ═══════════════════════════════════════════
+     HTML § 5. 우측 콘텐츠 패널
+     ═══════════════════════════════════════════ -->
+<div class="content">
 
-/* AI 지표 해석 박스 (공간 확보용 — 데이터 연동 추후 예정) */
-.ai-interpret-box {
-  margin-top: .7rem;
-  border: 1px solid var(--border);
-  border-radius: 9px;
-  background: var(--bg2);
-  padding: 8px 10px;
-}
-.ai-interpret-hd { display: flex; align-items: center; gap: 6px; margin-bottom: 5px; }
-.ai-interpret-title { font-size: 11.5px; font-weight: 700; color: var(--text); }
-.ai-interpret-provider {
-  font-size: 9px; color: var(--text3); background: var(--bg);
-  border: 1px solid var(--border); border-radius: 999px;
-  padding: 1px 7px; margin-left: 2px;
-}
-.ai-interpret-refresh {
-  margin-left: auto; background: none; border: none; cursor: pointer;
-  font-size: 13px; color: var(--text2); padding: 2px 5px; line-height: 1;
-  border-radius: 5px;
-}
-.ai-interpret-refresh:hover { color: var(--text); background: var(--bg); }
-.ai-interpret-refresh:disabled { opacity: .4; cursor: default; }
-.ai-interpret-body { font-size: 11px; color: var(--text3); min-height: 32px; line-height: 1.6; overflow-wrap: break-word; }
-.ai-interpret-body a { color: var(--accent); }
-.ai-interpret-body p { margin: 0 0 .5em; }
-.ai-interpret-body p:last-child { margin-bottom: 0; }
-.ai-interpret-body ul, .ai-interpret-body ol {
-  margin: .3em 0 .5em; padding-left: 1.2em;
-}
-.ai-interpret-body li { margin: .15em 0; }
-.ai-interpret-body strong { color: var(--text); }
-.ai-interpret-placeholder { font-style: italic; }
+  <!-- 탭 네비게이션 -->
+  <div class="right-tabs">
+    <button class="rtab on" data-tab="tab-news" onclick="switchTab(this)">최근 기사 요약</button>
+    <button class="rtab" data-tab="tab-reports" onclick="switchTab(this)">연구기관 보도자료</button>
+    <button class="rtab rtab-ai" data-tab="tab-insight" onclick="switchTab(this)">지표 교차 인사이트 <span class="ai-badge">AI</span></button>
+  </div>
 
-/* 지수 설명 박스 */
-.index-note {
-  font-size: 10px; color: var(--text2);
-  background: var(--accent-lt);
-  border-left: 2.5px solid var(--accent);
-  border-radius: 0 6px 6px 0;
-  padding: 5px 9px; margin-bottom: .65rem;
-  line-height: 1.6; display: none;
-}
-.index-note.show { display: block; }
+  <!-- 탭 2: 최근 기사 요약 -->
+  <div class="tab-panel" id="tab-news">
+    <div class="tab-panel-inner">
+      <div class="tab-meta">기사 <span id="news-updated"></span></div>
+      <div class="news-kw-row">
+        <button class="kwbtn on" onclick="fnews('all',this)">전체</button>
+        <button class="kwbtn" onclick="fnews('store',this)">백화점·유통</button>
+        <button class="kwbtn" onclick="fnews('consume',this)">소비 트렌드</button>
+        <button class="kwbtn" onclick="fnews('fx',this)">환율·관광</button>
+        <button class="kwbtn" onclick="fnews('rate',this)">금리·경기</button>
+      </div>
+      <div class="news-wrap" id="nwrap">
+        <div style="padding:1.2rem;text-align:center;font-size:12px;color:var(--text3)">불러오는 중…</div>
+      </div>
+    </div>
+  </div>
 
-/* 샘플 표시 */
-.chart-src.is-sample { color: #C0392B; font-weight: 600; }
+  <!-- 탭 3: 연구기관 보도자료 -->
+  <div class="tab-panel" id="tab-reports" style="display:none">
+    <div class="tab-panel-inner">
+      <div class="tab-meta">보도자료 <span id="rpt-updated"></span></div>
+      <div class="rpt-org" id="rpt-hri">
+        <div class="rpt-org-header">
+          <div><div class="rpt-org-name">현대경제연구원 <span class="rpt-org-url">hri.co.kr</span></div><div class="rpt-org-desc">매주 경제 동향·이슈 보고서 발간 · 소비·유통·경기 분석 중심</div></div>
+          <div class="rpt-org-actions"><a href="https://www.hri.co.kr/research/list.aspx" target="_blank" class="rpt-link-btn">홈페이지 ↗</a></div>
+        </div>
+        <div class="rpt-manual-label">최신 관련 뉴스 <span style="font-weight:400;color:var(--text3)">(자동갱신)</span></div>
+        <div class="rpt-list" id="rpt-hri-list"><div class="rpt-empty">불러오는 중…</div></div>
+      </div>
+      <div class="rpt-org" id="rpt-kdi">
+        <div class="rpt-org-header">
+          <div><div class="rpt-org-name">한국개발연구원 <span class="rpt-org-url">kdi.re.kr</span></div><div class="rpt-org-desc">국책 싱크탱크 · 재정·복지·노동·성장 정책 분석 중심</div></div>
+          <div class="rpt-org-actions"><a href="https://www.kdi.re.kr/research/reportList.jsp" target="_blank" class="rpt-link-btn">홈페이지 ↗</a></div>
+        </div>
+        <div class="rpt-manual-label">최신 관련 뉴스 <span style="font-weight:400;color:var(--text3)">(자동갱신)</span></div>
+        <div class="rpt-list" id="rpt-kdi-list"><div class="rpt-empty">불러오는 중…</div></div>
+      </div>
+      <div class="rpt-org" id="rpt-bok">
+        <div class="rpt-org-header">
+          <div><div class="rpt-org-name">한국은행 <span class="rpt-org-url">bok.or.kr</span></div><div class="rpt-org-desc">통화·금리·경상수지·물가 분석 · 금융안정보고서·통화신용정책보고서 발간</div></div>
+          <div class="rpt-org-actions"><a href="https://www.bok.or.kr/portal/bbs/P0000559/list.do?menuNo=200760" target="_blank" class="rpt-link-btn">홈페이지 ↗</a></div>
+        </div>
+        <div class="rpt-manual-label">최신 관련 뉴스 <span style="font-weight:400;color:var(--text3)">(자동갱신)</span></div>
+        <div class="rpt-list" id="rpt-bok-list"><div class="rpt-empty">불러오는 중…</div></div>
+      </div>
+      <div class="rpt-org" id="rpt-kiep">
+        <div class="rpt-org-header">
+          <div><div class="rpt-org-name">대외경제정책연구원 <span class="rpt-org-url">kiep.go.kr</span></div><div class="rpt-org-desc">대외경제·통상·글로벌 이슈 분석 · 국제무역 및 해외시장 동향 중심</div></div>
+          <div class="rpt-org-actions"><a href="https://www.kiep.go.kr/menu.es?mid=a10100000000" target="_blank" class="rpt-link-btn">홈페이지 ↗</a></div>
+        </div>
+        <div class="rpt-manual-label">최신 관련 뉴스 <span style="font-weight:400;color:var(--text3)">(자동갱신)</span></div>
+        <div class="rpt-list" id="rpt-kiep-list"><div class="rpt-empty">불러오는 중…</div></div>
+      </div>
+      <div class="rpt-org" id="rpt-kif">
+        <div class="rpt-org-header">
+          <div><div class="rpt-org-name">한국금융연구원 <span class="rpt-org-url">kif.re.kr</span></div><div class="rpt-org-desc">금융·은행·자본시장 정책 분석 · 금리·환율·자산시장 동향 중심</div></div>
+          <div class="rpt-org-actions"><a href="https://www.kif.re.kr/kif2/publication/pub_list.aspx" target="_blank" class="rpt-link-btn">홈페이지 ↗</a></div>
+        </div>
+        <div class="rpt-manual-label">최신 관련 뉴스 <span style="font-weight:400;color:var(--text3)">(자동갱신)</span></div>
+        <div class="rpt-list" id="rpt-kif-list"><div class="rpt-empty">불러오는 중…</div></div>
+      </div>
+    </div>
+  </div>
 
-/* 차트 캔버스 */
-.canvas-wrap { position: relative; width: 100%; height: 150px; margin-bottom: .65rem; }
+  <!-- 탭 4: 지표 교차 인사이트 -->
+  <div class="tab-panel" id="tab-insight" style="display:none">
+    <div class="tab-panel-inner">
+      <div class="custom-box">
+        <div class="custom-title">
+          <span class="ai-feature-badge">✦ AI</span>
+          지표를 선택하면 AI가 현대백화점 관점으로 교차분석합니다
+        </div>
 
-/* 펄스 */
-.pulse {
-  display: inline-block; width: 5px; height: 5px;
-  border-radius: 50%; background: var(--accent);
-  animation: pulse 1.2s infinite; margin-left: 4px; vertical-align: middle;
-}
-@keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.2} }
+        <div class="custom-subtitle">2~5개 선택 후 분석 버튼 클릭 → AI가 현대백화점 관점으로 실시간 분석 <span id="chk-counter" style="font-weight:600;color:#006241;margin-left:8px">0/5 선택됨</span></div>
+        <div class="ind-checks">
+          <input type="checkbox" class="ind-chk" id="ic_csi"         value="소비자심리지수(최신값, 경기 동향)"><label class="ind-chk-label" for="ic_csi">소비자심리지수</label>
+          <input type="checkbox" class="ind-chk" id="ic_cpi"         value="소비자물가(전년비 상승률)"><label class="ind-chk-label" for="ic_cpi">소비자물가</label>
+          <input type="checkbox" class="ind-chk" id="ic_rate"        value="기준금리(한국은행 통화정책)"><label class="ind-chk-label" for="ic_rate">기준금리</label>
+          <input type="checkbox" class="ind-chk" id="ic_fx"          value="원/달러 환율(원화 강약)"><label class="ind-chk-label" for="ic_fx">환율</label>
+          <input type="checkbox" class="ind-chk" id="ic_kospi"       value="KOSPI(주가 자산효과)"><label class="ind-chk-label" for="ic_kospi">KOSPI</label>
+          <input type="checkbox" class="ind-chk" id="ic_tourist"     value="방한 외국인 관광객 수"><label class="ind-chk-label" for="ic_tourist">관광객 수</label>
+          <input type="checkbox" class="ind-chk" id="ic_retail"      value="소매판매지수(내수 소비)"><label class="ind-chk-label" for="ic_retail">소매판매</label>
+          <input type="checkbox" class="ind-chk" id="ic_dept"        value="백화점 품목별 매출증감률(전년비)"><label class="ind-chk-label" for="ic_dept">백화점매출</label>
+          <input type="checkbox" class="ind-chk" id="ic_mart"        value="대형마트 품목별 매출증감률(전년비)"><label class="ind-chk-label" for="ic_mart">대형마트매출</label>
+          <input type="checkbox" class="ind-chk" id="ic_convenience" value="편의점 품목별 매출증감률(전년비)"><label class="ind-chk-label" for="ic_convenience">편의점매출</label>
+        </div>
+        <div class="prompt-input-row">
+          <button type="button" class="prompt-toggle-btn" id="prompt-toggle-btn" onclick="togglePromptEditor()">
+            <span class="prompt-toggle-icon" id="prompt-toggle-icon">▸</span> 커스텀 분석
+            <span class="prompt-toggle-sub">(질문 직접 수정)</span>
+          </button>
+          <div class="prompt-input-body" id="prompt-input-body" style="display:none">
+            <textarea id="custom-prompt-input" class="prompt-textarea" placeholder="지표를 2개 이상 선택하면 기본 프롬프트가 자동으로 입력됩니다."></textarea>
+          </div>
+        </div>
+        <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
+          <button class="custom-run" id="custom-run-btn" onclick="runCustomInsight()">🔍 선택 지표 AI 교차분석 생성</button>
+          <button class="custom-cancel" id="custom-cancel-btn" onclick="cancelInsight()" style="display:none">✕ 분석 중단</button>
+        </div>
+        <div class="custom-result" id="custom-result">
+          <div class="cr-hd">AI 교차분석 결과 <span id="cir-pulse" style="display:none"><span class="pulse"></span></span></div>
+          <div id="cir-selected" class="cir-selected-tags" style="display:none"></div>
+          <!-- 엔진별 결과 탭 (결과 받은 엔진만 활성화) -->
+          <div id="result-engine-tabs" class="res-tabs" style="display:none">
+            <button class="res-tab-btn" data-provider="copilot"    onclick="switchProvider(document.querySelector('.ptab[data-provider=copilot]'))" disabled>Copilot Studio</button>
+            <button class="res-tab-btn" data-provider="gemini"     onclick="switchProvider(document.querySelector('.ptab[data-provider=gemini]'))"  disabled>Gemini</button>
+            <button class="res-tab-btn" data-provider="anthropic"  onclick="switchProvider(document.querySelector('.ptab[data-provider=anthropic]'))" disabled>Claude</button>
+            <button class="res-tab-btn" data-provider="groq"       onclick="switchProvider(document.querySelector('.ptab[data-provider=groq]'))"    disabled>Groq</button>
+          </div>
+          <div class="cr-body markdown-body" id="cir-body"></div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-/* 타이프라이터 커서 */
-.typewriter-cursor {
-  display: inline-block; width: 2px; height: .9em;
-  background: var(--accent); margin-left: 1px;
-  vertical-align: text-bottom;
-  animation: tw-blink .6s step-end infinite;
-}
-@keyframes tw-blink { 0%,100%{opacity:1} 50%{opacity:0} }
+  <footer>현대백화점 상품본부 지원팀 내부용 · Made with Claude · 2026</footer>
 
-/* ═══════════════════════════════════════════
-   CSS § 7. 우측 콘텐츠 패널
-   ═══════════════════════════════════════════ */
-.content {
-  flex: 1; overflow-y: auto;
-  display: flex; flex-direction: column;
-  background: var(--bg3);
-}
+</div>
 
-/* 탭 네비게이션 */
-.right-tabs {
-  display: flex; gap: 2px;
-  padding: .65rem .9rem .65rem;
-  background: var(--bg);
-  border-bottom: 1px solid var(--border);
-  flex-shrink: 0;
-  position: sticky; top: 0; z-index: 5;
-}
-.rtab {
-  font-size: 12px; font-weight: 600;
-  padding: 6px 16px;
-  border: 1.5px solid transparent;
-  border-radius: 8px;
-  background: transparent;
-  color: var(--text3);
-  cursor: pointer; font-family: inherit;
-  transition: all .15s;
-}
-.rtab:hover { background: var(--bg2); color: var(--text2); }
-.rtab.on {
-  background: var(--accent);
-  color: #fff;
-  border-color: var(--accent);
-  box-shadow: 0 2px 8px rgba(0,98,65,.25);
-}
-
-/* AI 탭 뱃지 */
-.ai-badge {
-  display: inline-block;
-  font-size: 9px; font-weight: 800; letter-spacing: .03em;
-  padding: 1px 5px; border-radius: 4px; margin-left: 4px;
-  background: linear-gradient(135deg, #7c3aed, #a855f7);
-  color: #fff; vertical-align: middle; line-height: 14px;
-}
-.rtab.on .ai-badge {
-  background: rgba(255,255,255,.25);
-  color: #fff;
-}
-
-/* AI 기능 타이틀 뱃지 */
-.ai-feature-badge {
-  display: inline-block;
-  font-size: 11px; font-weight: 800; letter-spacing: .04em;
-  padding: 2px 8px; border-radius: 6px; margin-right: 6px;
-  background: linear-gradient(135deg, #7c3aed, #a855f7);
-  color: #fff; vertical-align: middle;
-}
-
-/* 탭 패널 */
-.tab-panel { flex: 1; }
-.tab-panel-inner { padding: 1.25rem 1.4rem; }
-.tab-meta {
-  font-size: 10px; font-weight: 600; color: var(--text3);
-  letter-spacing: .08em; text-transform: uppercase;
-  margin-bottom: .9rem; padding-bottom: 8px;
-  border-bottom: 1px solid var(--border);
-}
-.tab-meta span { font-weight: 400; color: var(--text3); text-transform: none; letter-spacing: 0; margin-left: 4px; }
-
-.sec { margin-bottom: 2rem; }
-.sec-label {
-  font-size: 10px; font-weight: 700; color: var(--text3);
-  letter-spacing: .1em; text-transform: uppercase;
-  margin-bottom: .9rem; padding-bottom: 8px;
-  border-bottom: 1px solid var(--border);
-  display: flex; align-items: center; gap: 6px;
-}
-
-/* ═══════════════════════════════════════════
-   CSS § 8. 뉴스 기사 섹션
-   ═══════════════════════════════════════════ */
-.news-kw-row {
-  display: flex; flex-wrap: wrap; gap: 5px;
-  margin-bottom: .85rem;
-}
-.kwbtn {
-  font-size: 11px; padding: 5px 13px;
-  border: 1px solid var(--border2);
-  border-radius: 20px;
-  background: var(--bg); color: var(--text2);
-  cursor: pointer; font-family: inherit;
-  transition: all .15s; font-weight: 500;
-}
-.kwbtn:hover { background: var(--bg2); color: var(--text); }
-.kwbtn.on {
-  background: var(--text); color: var(--bg);
-  border-color: var(--text);
-}
-
-.news-wrap {
-  background: var(--bg);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  box-shadow: var(--shadow-sm);
-}
-.news-item {
-  display: flex; gap: 0;
-  padding: 0;
-  border-bottom: 1px solid var(--border);
-  transition: background .12s;
-  position: relative;
-}
-.news-item:last-child { border-bottom: none; }
-.news-item:hover { background: var(--bg2); }
-
-/* 카테고리 컬러 바 (좌측) */
-.ndot {
-  width: 3px; flex-shrink: 0;
-  border-radius: 0;
-  /* height: auto — flex child fills parent */
-  align-self: stretch;
-}
-
-.news-item-body {
-  flex: 1; min-width: 0;
-  padding: 11px 14px 11px 12px;
-}
-.nkw {
-  font-size: 10px; font-weight: 700;
-  margin-bottom: 4px; letter-spacing: .03em;
-  text-transform: uppercase;
-}
-.nkw-store   { color: var(--accent); }
-.nkw-rival   { color: #993C1D; }
-.nkw-consume { color: #2e6b0a; }
-.nkw-fx      { color: #854F0B; }
-.nkw-rate    { color: #534AB7; }
-
-.nh {
-  font-size: 12.5px; font-weight: 500;
-  color: var(--text); line-height: 1.55;
-  margin-bottom: 4px;
-}
-.nd {
-  font-size: 10.5px; color: var(--text3); font-weight: 400;
-}
-.news-link {
-  display: inline-flex; align-items: center; gap: 3px;
-  font-size: 10px; margin-top: 5px;
-  padding: 3px 9px;
-  border: 1px solid var(--border2);
-  border-radius: 20px;
-  color: var(--text2); text-decoration: none;
-  transition: all .15s; font-weight: 500;
-}
-.news-link:hover {
-  background: var(--accent); color: #fff;
-  border-color: var(--accent);
-}
-
-/* ═══════════════════════════════════════════
-   CSS § 9. 더보기 버튼
-   ═══════════════════════════════════════════ */
-.show-more-btn {
-  display: block; width: 100%; margin-top: 8px;
-  padding: 8px 0; font-size: 11.5px; font-weight: 600;
-  color: var(--accent); background: var(--bg);
-  border: 1px solid var(--border);
-  border-radius: var(--radius); cursor: pointer;
-  text-align: center; transition: all .15s;
-}
-.show-more-btn:hover { background: var(--accent-lt); border-color: var(--accent); }
-
-/* ═══════════════════════════════════════════
-   CSS § 10. 연구기관 보고서 섹션
-   ═══════════════════════════════════════════ */
-.rpt-org {
-  background: var(--bg);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  padding: 1rem 1.1rem;
-  margin-bottom: .75rem;
-  box-shadow: var(--shadow-sm);
-  transition: box-shadow .15s;
-}
-.rpt-org:hover { box-shadow: var(--shadow); }
-.rpt-org-header {
-  display: flex; justify-content: space-between;
-  align-items: flex-start; gap: 10px;
-  margin-bottom: .7rem; flex-wrap: wrap;
-}
-.rpt-org-name {
-  font-size: 13px; font-weight: 700;
-  color: var(--text); margin-bottom: 2px;
-}
-.rpt-org-url {
-  font-size: 10px; color: var(--text3);
-  font-weight: 400; margin-left: 5px;
-}
-.rpt-org-desc { font-size: 11px; color: var(--text2); line-height: 1.5; }
-.rpt-org-actions { display: flex; gap: 6px; flex-shrink: 0; }
-.rpt-link-btn {
-  font-size: 11px; padding: 4px 12px;
-  border: 1px solid var(--border2);
-  border-radius: 20px;
-  background: var(--bg); color: var(--text2);
-  text-decoration: none; display: inline-block;
-  transition: all .15s; font-weight: 500;
-}
-.rpt-link-btn:hover {
-  background: var(--accent); color: #fff;
-  border-color: var(--accent);
-}
-.rpt-manual-label {
-  font-size: 10px; font-weight: 700; color: var(--text3);
-  letter-spacing: .07em; text-transform: uppercase; margin-bottom: .45rem;
-}
-.rpt-list {
-  border: 1px solid var(--border);
-  border-radius: var(--radius); overflow: hidden;
-  margin-bottom: .55rem;
-}
-.rpt-item {
-  display: flex; gap: 10px;
-  padding: .8rem 1rem;
-  border-bottom: 1px solid var(--border);
-  transition: background .12s;
-}
-.rpt-item:hover { background: var(--bg2); }
-.rpt-item:last-child { border-bottom: none; }
-.rpt-date {
-  font-size: 10px; color: var(--text3);
-  white-space: nowrap; padding-top: 2px;
-  min-width: 40px; font-weight: 500;
-}
-.rpt-body { flex: 1; }
-.rpt-title {
-  font-size: 12.5px; font-weight: 600;
-  color: var(--text); margin-bottom: 3px; line-height: 1.45;
-}
-.rpt-title a {
-  color: inherit; text-decoration: none;
-  transition: color .15s;
-}
-.rpt-title a:hover { color: var(--accent); }
-.rpt-summary { font-size: 11px; color: var(--text2); line-height: 1.6; margin-bottom: 4px; }
-.rpt-tags-row { display: flex; flex-wrap: wrap; gap: 3px; }
-.rtag {
-  font-size: 10px; padding: 1px 7px;
-  border-radius: 6px; background: var(--bg3);
-  color: var(--text2); border: 1px solid var(--border);
-}
-.rpt-empty {
-  padding: .85rem 1rem;
-  font-size: 11.5px; color: var(--text3); text-align: center;
-}
-
-/* ═══════════════════════════════════════════
-   CSS § 11. AI 교차 인사이트
-   ═══════════════════════════════════════════ */
-.custom-box {
-  background: var(--bg);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  padding: 1rem 1.15rem;
-  box-shadow: var(--shadow-sm);
-}
-.custom-title { font-size: 13px; font-weight: 700; color: var(--text); margin-bottom: .4rem; display: flex; align-items: center; flex-wrap: wrap; gap: 2px; }
-.custom-subtitle { font-size: 10.5px; color: var(--text2); margin-bottom: .7rem; line-height: 1.5; }
-
-.ind-checks { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: .85rem; }
-.ind-chk { display: none; }
-.ind-chk-label {
-  font-size: 11px; padding: 4px 12px;
-  border: 1px solid var(--border2);
-  border-radius: 20px; background: var(--bg2);
-  color: var(--text2); cursor: pointer;
-  transition: all .15s; user-select: none; font-weight: 500;
-}
-.ind-chk-label:hover { background: var(--bg3); color: var(--text); }
-.ind-chk:checked + .ind-chk-label {
-  background: var(--accent); color: #E6F1FB;
-  border-color: var(--accent); font-weight: 600;
-  box-shadow: 0 2px 6px rgba(22,89,168,.2);
-}
-
-.custom-run {
-  font-size: 12px; padding: 7px 20px;
-  background: var(--accent); color: #fff;
-  border: none; border-radius: 20px;
-  cursor: pointer; font-family: inherit; font-weight: 600;
-  transition: all .15s;
-  box-shadow: 0 2px 8px rgba(22,89,168,.25);
-}
-.custom-run:hover { background: #0e4a8a; box-shadow: 0 4px 12px rgba(22,89,168,.35); }
-.custom-run:disabled { opacity: .5; cursor: not-allowed; box-shadow: none; }
-
-/* 상단 바로 옮긴 AI 키 행 (기존 인사이트 탭 내부 스타일 재사용, 여기선 카드 배경 없이 한 줄로) */
-#topbar-key-row.insight-key-row {
-  margin-bottom: 0; background: transparent; border: none; padding: 0;
-  flex-wrap: nowrap;
-}
-#topbar-key-row .ai-key-btn { margin-left: 8px; white-space: nowrap; }
-.insight-key-row {
-  display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
-  background: var(--bg2); border: 1px solid var(--border);
-  border-radius: var(--radius); padding: .55rem .85rem;
-  margin-bottom: .85rem;
-}
-.insight-key-label {
-  font-size: 11px; font-weight: 700; color: var(--text2);
-  white-space: nowrap;
-}
-.insight-key-row .ai-key-btn {
-  font-size: 11.5px; padding: 4px 12px; margin-left: auto;
-}
-
-/* 프로바이더 탭 (다중 선택) */
-.provider-tabs { display: flex; gap: 4px; flex-wrap: wrap; }
-.ptab {
-  font-size: 11px; font-weight: 600;
-  padding: 4px 12px; border-radius: 20px;
-  border: 1.5px solid var(--border2);
-  background: var(--bg); color: var(--text2);
-  cursor: pointer; font-family: inherit;
-  transition: all .15s; display: flex; align-items: center; gap: 5px;
-}
-.ptab:hover { background: var(--bg3); color: var(--text); }
-.ptab.on {
-  background: var(--accent); color: #fff;
-  border-color: var(--accent);
-  box-shadow: 0 2px 6px rgba(22,89,168,.25);
-}
-.ptab-dot {
-  width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0;
-  background: rgba(255,255,255,.4);
-}
-.ptab:not(.on) .ptab-dot { background: var(--border2); }
-.ptab-dot.set   { background: #5aaa1e !important; }
-.ptab-dot.unset { }
-
-/* 결과 엔진별 탭 */
-.res-tabs {
-  display: flex; gap: 3px; margin-bottom: .65rem;
-  border-bottom: 1.5px solid var(--border); padding-bottom: 0;
-}
-.res-tab-btn {
-  font-size: 11px; font-weight: 600;
-  padding: 5px 12px; border-radius: 6px 6px 0 0;
-  border: 1.5px solid transparent;
-  background: transparent; color: var(--text3);
-  cursor: pointer; font-family: inherit; transition: all .15s;
-  position: relative; bottom: -1.5px;
-}
-.res-tab-btn:disabled { opacity: .35; cursor: default; pointer-events: none; }
-.res-tab-btn.has-result:hover { color: var(--text); background: var(--bg3); }
-.res-tab-btn.on {
-  background: var(--bg2); color: var(--accent);
-  border-color: var(--border); border-bottom-color: var(--bg2);
-}
-.res-tab-btn.has-result::after {
-  content: ''; display: inline-block;
-  width: 5px; height: 5px; border-radius: 50%;
-  background: #5aaa1e; margin-left: 5px; vertical-align: middle;
-}
-.res-pane { display: none; }
-.res-pane.show { display: block; }
-.res-pane-loading {
-  display: flex; align-items: center; gap: 8px;
-  color: var(--text3); font-size: 12px; padding: .5rem 0;
-}
-.res-pane-error { color: #C0392B; font-size: 12px; }
-
-/* 프롬프트 입력창 (기본 접힘 · 커스텀 분석 토글) */
-.prompt-input-row {
-  margin: .8rem 0 .65rem;
-}
-.prompt-toggle-btn {
-  display: flex; align-items: center; gap: 5px;
-  font-size: 11.5px; font-weight: 700; color: var(--text2);
-  background: none; border: none; padding: 2px 0;
-  cursor: pointer; font-family: inherit; margin-bottom: .35rem;
-}
-.prompt-toggle-btn:hover { color: var(--text); }
-.prompt-toggle-icon { font-size: 9px; display: inline-block; transition: transform .15s; }
-.prompt-toggle-sub { font-size: 11px; color: #888; font-weight: 400; }
-.prompt-input-body { margin-top: .35rem; }
-.prompt-textarea {
-  width: 100%; min-height: 110px;
-  font-size: 12px; font-family: inherit; color: var(--text);
-  background: var(--bg); border: 1.5px solid var(--border2);
-  border-radius: var(--radius); padding: .65rem .8rem;
-  resize: vertical; line-height: 1.65;
-  transition: border-color .15s;
-  outline: none;
-}
-.prompt-textarea:focus { border-color: var(--accent); }
-
-.custom-cancel {
-  font-size: 12px; padding: 7px 16px;
-  background: #fff; color: #C0392B;
-  border: 1.5px solid #C0392B; border-radius: 20px;
-  cursor: pointer; font-family: inherit; font-weight: 600;
-  transition: all .15s;
-}
-.custom-cancel:hover { background: #fdf0ef; }
-
-.custom-result {
-  margin-top: .85rem;
-  background: var(--bg2); border: 1px solid var(--border);
-  border-radius: var(--radius); padding: .9rem 1rem; display: none;
-}
-.custom-result.show { display: block; }
-.cr-hd {
-  font-size: 10px; font-weight: 700; color: var(--accent);
-  letter-spacing: .07em; text-transform: uppercase; margin-bottom: .45rem;
-}
-.cr-body { font-size: 12.5px; color: var(--text); line-height: 1.78; }
-
-/* 선택 지표 태그 */
-.cir-selected-tags {
-  display: flex; flex-wrap: wrap; gap: 5px;
-  margin-bottom: .6rem;
-}
-.cir-tag {
-  font-size: 11px; font-weight: 600;
-  background: var(--accent-lt); color: var(--accent);
-  border: 1px solid rgba(22,89,168,.2);
-  border-radius: 20px; padding: 2px 9px;
-}
-
-/* 마크다운 렌더링 */
-.markdown-body h1,.markdown-body h2,.markdown-body h3,.markdown-body h4 {
-  font-weight: 700; margin: .9em 0 .35em; color: var(--text);
-}
-.markdown-body h1 { font-size: 15px; }
-.markdown-body h2 { font-size: 14px; border-bottom: 1px solid var(--border); padding-bottom: .25em; }
-.markdown-body h3 { font-size: 13px; color: var(--accent); }
-.markdown-body h4 { font-size: 12.5px; }
-.markdown-body p { margin: .45em 0; }
-.markdown-body ul,.markdown-body ol { padding-left: 1.4em; margin: .35em 0; }
-.markdown-body li { margin: .2em 0; }
-.markdown-body strong { font-weight: 700; color: var(--text); }
-.markdown-body em { font-style: italic; color: var(--text2); }
-.markdown-body code {
-  font-family: 'SFMono-Regular', Consolas, monospace;
-  font-size: 11px; background: var(--bg3);
-  padding: 1px 5px; border-radius: 4px;
-}
-.markdown-body pre {
-  background: var(--bg3); border-radius: 6px;
-  padding: .6em .8em; overflow-x: auto; margin: .5em 0;
-}
-.markdown-body pre code { background: none; padding: 0; }
-.markdown-body blockquote {
-  border-left: 3px solid var(--accent-lt); margin: .4em 0;
-  padding: .3em .7em; color: var(--text2); background: var(--accent-lt);
-  border-radius: 0 4px 4px 0;
-}
-.markdown-body hr { border: none; border-top: 1px solid var(--border); margin: .7em 0; }
-.markdown-body table { border-collapse: collapse; width: 100%; font-size: 11.5px; margin: .5em 0; }
-.markdown-body th,.markdown-body td { border: 1px solid var(--border2); padding: .3em .6em; }
-.markdown-body th { background: var(--bg3); font-weight: 700; }
-
-/* AI 진행 단계 표시 */
-.ai-progress-steps {
-  display: flex; gap: 0; margin-bottom: .7rem;
-  border: 1px solid var(--border); border-radius: 9px; overflow: hidden;
-}
-.ai-step {
-  flex: 1; display: flex; align-items: center; justify-content: center;
-  gap: 5px; padding: 7px 4px;
-  font-size: 10.5px; font-weight: 500;
-  border-right: 1px solid var(--border); background: var(--bg2);
-  color: var(--text3); transition: all .2s;
-}
-.ai-step:last-child { border-right: none; }
-.ai-step.done    { background: #eaf5e4; color: #2e6b0a; }
-.ai-step.active  { background: var(--accent-lt); color: var(--accent); font-weight: 700; }
-.ai-step.pending { opacity: .45; }
-.ai-step-icon {
-  width: 16px; height: 16px; border-radius: 50%;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 9px; font-weight: 700; flex-shrink: 0;
-  background: currentColor; color: #fff;
-}
-.ai-step.done   .ai-step-icon { background: #2e6b0a; color: #fff; }
-.ai-step.active .ai-step-icon { background: var(--accent); color: #fff; }
-.ai-step.pending .ai-step-icon { background: var(--text3); color: #fff; }
-.ai-progress-msg {
-  font-size: 11.5px; color: var(--text2); text-align: center; padding: 2px 0;
-}
-
-/* 인사이트 카드 (AI 응답) */
-.ins-card {
-  background: var(--bg);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  margin-bottom: 10px; overflow: hidden;
-  box-shadow: var(--shadow-sm);
-}
-.ins-top { padding: .9rem 1.1rem .8rem; }
-.ins-tags { display: flex; gap: 5px; flex-wrap: wrap; margin-bottom: .5rem; }
-.tag {
-  font-size: 10px; padding: 2px 9px;
-  border-radius: 20px; font-weight: 600; letter-spacing: .02em;
-}
-.t-blue   { background: #E6F1FB; color: #0C447C; }
-.t-amber  { background: #FEF3E2; color: #7A4400; }
-.t-red    { background: #FEE9E9; color: #8B1F1F; }
-.t-green  { background: #E8F5D9; color: #2A5909; }
-.t-purple { background: #EEEDFE; color: #3C3489; }
-.ins-body { font-size: 12.5px; color: var(--text); line-height: 1.74; }
-.ins-ref {
-  padding: .55rem 1.1rem;
-  background: var(--bg2); border-top: 1px solid var(--border);
-}
-.ins-ref-label {
-  font-size: 9.5px; font-weight: 700; color: var(--text3);
-  letter-spacing: .06em; text-transform: uppercase; margin-bottom: .3rem;
-}
-.ins-ref-item {
-  display: flex; align-items: baseline; gap: 5px;
-  font-size: 11px; color: var(--text2); line-height: 1.5; margin-bottom: 2px;
-}
-.ins-ref-item::before { content: "↳"; color: var(--accent); flex-shrink: 0; }
-.ins-divider { height: 1px; background: var(--border); }
-.ins-block { padding: .7rem 1.1rem; }
-.ins-block-label {
-  font-size: 9.5px; font-weight: 700; color: var(--text3);
-  margin-bottom: .38rem; text-transform: uppercase; letter-spacing: .06em;
-}
-.prod-chips { display: flex; flex-wrap: wrap; gap: 4px; }
-.pchip {
-  font-size: 11px; padding: 2px 9px;
-  border-radius: 9px; border: 1px solid var(--border2);
-  color: var(--text); background: var(--bg2);
-}
-.pchip.hi { border-color: #E24B4A; color: #8B1F1F; background: #FEE9E9; }
-.pchip.md { border-color: #C0850D; color: #7A4400; background: #FEF3E2; }
-.chip-legend {
-  display: flex; gap: 8px; margin-top: 6px;
-  font-size: 10px; color: var(--text3);
-}
-.chip-legend span { display: flex; align-items: center; gap: 3px; }
-.dot { width: 6px; height: 6px; border-radius: 50%; display: inline-block; }
-.alt-text { font-size: 12px; color: var(--text); line-height: 1.68; }
-
-/* 기타 */
-.ai-btn, .tbtn {
-  font-size: 11px; padding: 4px 12px;
-  border: 1px solid var(--border2);
-  border-radius: 20px; background: var(--bg);
-  color: var(--text2); cursor: pointer;
-  font-family: inherit; transition: all .15s; font-weight: 500;
-}
-.ai-btn:hover, .tbtn:hover { background: var(--bg2); }
-.tbtn.on {
-  background: var(--accent); color: #fff;
-  border-color: var(--accent); font-weight: 600;
-}
-.ai-label {
-  display: inline-block; font-size: 10px; font-weight: 700;
-  color: #0C447C; background: var(--accent-lt);
-  padding: 2px 8px; border-radius: 8px; margin-bottom: .45rem;
-}
-.ai-text { font-size: 11.5px; color: var(--text); line-height: 1.72; }
-.rpt-ai-result {
-  background: var(--bg2); border-radius: var(--radius);
-  padding: .85rem; margin-bottom: .75rem;
-}
-.rpt-add-btn {
-  font-size: 11px; padding: 4px 12px;
-  border: 1px solid var(--border2); border-radius: 20px;
-  background: var(--bg); color: var(--text2);
-  cursor: pointer; font-family: inherit; transition: all .15s; font-weight: 500;
-}
-.rpt-add-btn:hover { background: var(--bg2); }
-.rpt-add-form {
-  background: var(--bg2); border-radius: var(--radius);
-  padding: .85rem; margin-top: .6rem;
-  display: flex; flex-direction: column; gap: 6px;
-}
-.rpt-input {
-  font-size: 12px; padding: 7px 10px;
-  border: 1px solid var(--border2);
-  border-radius: var(--radius);
-  background: var(--bg); color: var(--text);
-  font-family: inherit; width: 100%; outline: none;
-  transition: border-color .15s;
-}
-.rpt-input:focus { border-color: var(--accent); }
-.rpt-textarea { resize: vertical; min-height: 60px; }
-
-/* ═══════════════════════════════════════════
-   CSS § 12. 푸터
-   ═══════════════════════════════════════════ */
-footer {
-  padding: 1.25rem;
-  text-align: center;
-  font-size: 11px; color: var(--text3);
-  border-top: 1px solid var(--border);
-}
-
-/* ═══════════════════════════════════════════
-   CSS § 13. 날씨 달력 섹션
-   ═══════════════════════════════════════════ */
-.wx-section {
-  border-top: 1px solid var(--border);
-  padding: .75rem .9rem;
-  background: var(--bg);
-}
-.wx-section-label {
-  font-size: 10px; font-weight: 700;
-  color: var(--accent); letter-spacing: .1em;
-  text-transform: uppercase; margin-bottom: .6rem;
-}
-.wx-region-tabs { display: flex; gap: 4px; flex-wrap: wrap; margin-bottom: .55rem; }
-.wx-rtab {
-  font-size: 10px; padding: 3px 9px;
-  border: 1px solid var(--border2); border-radius: 20px;
-  background: transparent; color: var(--text2);
-  cursor: pointer; font-family: inherit; transition: all .15s;
-  white-space: nowrap; font-weight: 500;
-}
-.wx-rtab:hover { background: var(--bg2); }
-.wx-rtab.on {
-  background: var(--accent); color: #E6F1FB;
-  border-color: var(--accent); font-weight: 600;
-  box-shadow: 0 2px 6px rgba(22,89,168,.2);
-}
-.wx-nav {
-  display: flex; align-items: center;
-  justify-content: space-between; margin-bottom: .5rem;
-}
-.wx-nav-btn {
-  width: 24px; height: 24px;
-  border: 1px solid var(--border2); border-radius: 6px;
-  background: transparent; cursor: pointer;
-  font-size: 14px; color: var(--text2);
-  display: flex; align-items: center; justify-content: center;
-  font-family: inherit; transition: all .15s;
-}
-.wx-nav-btn:hover { background: var(--bg2); }
-.wx-nav-btn:disabled { opacity: .3; cursor: default; }
-.wx-nav-label { font-size: 11.5px; font-weight: 700; color: var(--text); }
-.wx-nav-sub { font-size: 10px; color: var(--text3); font-weight: 400; margin-left: 4px; }
-.wx-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: .6rem; }
-.wx-card { border: 1px solid var(--border); border-radius: 8px; padding: 10px 12px; background: var(--bg); }
-.wx-card-lbl { font-size: 10px; font-weight: 700; color: var(--text2); margin-bottom: 4px; }
-.wx-card-unit { font-weight: 400; color: var(--text3); }
-.wx-card-val { font-size: 22px; font-weight: 700; color: var(--text); line-height: 1.2; margin-bottom: 3px; }
-.wx-card-sub { font-size: 10px; color: var(--text3); font-weight: 500; }
-.wx-cals { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; align-items: start; }
-.wx-cal {
-  border: 1px solid var(--border);
-  border-radius: 9px; overflow: hidden; background: var(--bg);
-}
-.wx-cals .wx-cal:first-child { border: 2px solid var(--accent); }
-.wx-cals .wx-cal:first-child .wx-cal-hd { background: var(--accent-lt); }
-.wx-cal-hd {
-  padding: 6px 10px; background: var(--bg2);
-  border-bottom: 1px solid var(--border);
-  display: flex; justify-content: space-between; align-items: center;
-  gap: 6px;
-}
-.wx-cal-hd-lbl { font-size: 10.5px; font-weight: 700; color: var(--text); }
-.wx-cal-hd-sub {
-  font-size: 9px; font-weight: 700; letter-spacing: .03em;
-  padding: 2px 7px; border-radius: 4px;
-}
-.wx-cals .wx-cal:first-child .wx-cal-hd-sub {
-  background: var(--accent); color: #fff;
-}
-.wx-cals .wx-cal:last-child .wx-cal-hd-sub {
-  background: var(--bg3); color: var(--text2);
-}
-.wx-dow-row {
-  display: grid; grid-template-columns: repeat(7,1fr);
-  border-bottom: 1px solid var(--border);
-}
-.wx-dow {
-  text-align: center; padding: 3px 0;
-  font-size: 9px; color: var(--text3); font-weight: 600;
-}
-.wx-dow:first-child { color: #C0392B; }
-.wx-dow:last-child  { color: var(--accent); }
-.wx-day-grid { display: grid; grid-template-columns: repeat(7,1fr); }
-.wx-cell {
-  border-right: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-  padding: 2px 3px; min-height: 38px;
-  display: flex; flex-direction: column; gap: 0;
-}
-.wx-cell:nth-child(7n) { border-right: none; }
-.wx-cell.empty { background: var(--bg3); }
-.wx-cell.pad   { background: var(--bg); border-right: none; border-bottom: none; }
-.wx-cell.today { background: #E6F4ED; }
-.wx-cell.future { opacity: .3; }
-.wx-cell.holiday { background: #FEE9E9; }
-.wx-dnum { font-size: 9px; font-weight: 500; color: var(--text2); line-height: 1.3; }
-.wx-cell.sun .wx-dnum, .wx-cell.holiday .wx-dnum { color: #C0392B; }
-.wx-cell.sat .wx-dnum { color: var(--accent); }
-.wx-cell.today .wx-dnum { color: #0C447C; font-weight: 800; }
-.wx-hname { font-size: 7.5px; color: #C0392B; line-height: 1.1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.wx-temp  { font-size: 9.5px; font-weight: 700; color: #993C1D; line-height: 1.2; }
-.wx-rain  { font-size: 8.5px; color: #1659A8; line-height: 1.2; font-weight: 500; }
-.wx-nd    { font-size: 8px; color: var(--text3); }
-.wx-legend { display: flex; gap: 8px; margin-top: .45rem; flex-wrap: wrap; }
-.wx-leg { display: flex; align-items: center; gap: 3px; font-size: 9.5px; color: var(--text3); }
-.wx-leg-dot  { width: 7px; height: 7px; border-radius: 50%; }
-.wx-leg-box  { width: 10px; height: 10px; border-radius: 3px; }
-.wx-dow-idx {
-  margin-top: .65rem;
-  border: 1px solid var(--border); border-radius: 9px; overflow: hidden;
-}
-.wx-di-hd {
-  padding: 6px 10px; background: var(--bg2);
-  border-bottom: 1px solid var(--border);
-  display: flex; justify-content: space-between; align-items: center;
-}
-.wx-di-hd-lbl { font-size: 10.5px; font-weight: 700; color: var(--text); }
-.wx-di-hd-sub { font-size: 9px; color: var(--text3); }
-.wx-di-body { padding: 8px 10px; }
-.wx-di-grid { display: grid; grid-template-columns: repeat(8, 1fr); gap: 4px; margin-bottom: 6px; }
-.wx-di-chip { border: 1px solid var(--border); border-radius: 6px; padding: 5px 2px; text-align: center; background: var(--bg); }
-.wx-di-chip.today-dow { background: var(--accent-lt); border-color: var(--accent); }
-.wx-di-chip.hol-chip { background: #FEE9E9; border-color: #F7C1C1; }
-.wx-di-chip-lbl { font-size: 8px; color: var(--text3); margin-bottom: 3px; }
-.wx-di-chip-val { font-size: 11px; font-weight: 700; }
-.wx-di-chip-val.pos { color: #A32D2D; }
-.wx-di-chip-val.neg { color: var(--accent); }
-.wx-di-chip-val.zero { color: var(--text3); }
-.wx-di-row { display: grid; grid-template-columns: 52px 1fr 44px; align-items: center; gap: 6px; }
-.wx-di-name { font-size: 10px; color: var(--text2); }
-.wx-di-bar-wrap { height: 6px; background: var(--bg2); border-radius: 3px; position: relative; }
-.wx-di-mid { position: absolute; left: 50%; top: -2px; width: 1px; height: 10px; background: var(--border2); }
-.wx-di-bar { height: 6px; border-radius: 3px; position: absolute; top: 0; }
-.wx-di-bar.pos { background: #F0997B; right: 50%; }
-.wx-di-bar.neg { background: #85B7EB; left: 50%; }
-.wx-di-bar.zero { width: 2px; background: var(--border2); left: calc(50% - 1px); }
-.wx-di-val { font-size: 10px; font-weight: 600; text-align: right; }
-.wx-di-val.pos { color: #A32D2D; } .wx-di-val.neg { color: var(--accent); } .wx-di-val.zero { color: var(--text3); }
-.wx-di-sep { border: none; border-top: 1px solid var(--border); margin: 2px 0; }
-.wx-di-hol-detail { font-size: 9px; color: var(--text3); grid-column: 1/-1; margin-top: -2px; }
-
-/* ═══════════════════════════════════════════
-   CSS § 14. 반응형 — 모바일
-   ═══════════════════════════════════════════ */
-@media (max-width: 768px) {
-  body { overflow: auto; }
-  .page { height: auto; }
-  .body-wrap { flex-direction: column; overflow: visible; }
-  .resizer { display: none; }
-  .top-bar { flex-wrap: wrap; height: auto; }
-  #topbar-key-row.insight-key-row { flex-wrap: wrap; width: 100%; margin-top: 6px; }
-  #topbar-key-row .ai-key-btn { margin-left: 0; }
-  .sidebar {
-    width: 100% !important; max-width: 100% !important;
-    min-width: 0 !important; border-right: none;
-    border-bottom: 1px solid var(--border); overflow: visible;
+<script>
+/* ── 프로바이더 설정 ── */
+var PROVIDER_CFG = {
+  copilot: {
+    label: 'Copilot Studio',
+    storageKey: 'copilot_secret',
+    placeholder: 'Direct Line Secret 붙여넣기…',
+    desc: 'Copilot Studio → Settings → Security → Web channel security에서 <b>Secret 1</b> 값을 복사해 입력하세요.'
+  },
+  gemini: {
+    label: 'Gemini',
+    storageKey: 'gemini_api_key',
+    placeholder: 'AIza… API 키 붙여넣기…',
+    desc: '<a href="https://aistudio.google.com/apikey" target="_blank" style="color:var(--accent)">Google AI Studio</a>에서 API 키를 발급해 입력하세요. (gemini-2.0-flash 사용)'
+  },
+  anthropic: {
+    label: 'Claude',
+    storageKey: 'anthropic_api_key',
+    placeholder: 'sk-ant-… API 키 붙여넣기…',
+    desc: '<a href="https://console.anthropic.com/settings/keys" target="_blank" style="color:var(--accent)">Anthropic Console</a>에서 API 키를 발급해 입력하세요. (claude-haiku 사용)'
+  },
+  groq: {
+    label: 'Groq',
+    storageKey: 'groq_api_key',
+    placeholder: 'gsk_… API 키 붙여넣기…',
+    desc: '<a href="https://console.groq.com/keys" target="_blank" style="color:var(--accent)">Groq Console</a>에서 API 키를 발급해 입력하세요. 무료, 카드 불필요. (llama-3.3-70b 사용)'
   }
-  .sidebar-chart { max-height: none; overflow: visible; }
-  .content { overflow: visible; }
-  .cat-grid { grid-template-columns: 1fr 1fr 1fr; }
-  .kpi-grid { grid-template-columns: 1fr 1fr; row-gap: 5px; }
-  .kpill .kv { font-size: 12px; }
-  .kpill .kl { font-size: 8px; }
-  #schg, #syoy { font-size: 12px; }
-  .wx-cals { grid-template-columns: 1fr; }
-  .wx-summary { grid-template-columns: 1fr 1fr; }
+};
+
+function currentProvider() {
+  return localStorage.getItem('ai_provider') || 'copilot';
 }
+
+function switchProvider(btn) {
+  document.querySelectorAll('.ptab').forEach(function(b){ b.classList.remove('on'); });
+  btn.classList.add('on');
+  localStorage.setItem('ai_provider', btn.dataset.provider);
+  updateKeyStatus();
+}
+
+/* ── 탭 전환 ── */
+function switchTab(btn) {
+  document.querySelectorAll('.rtab').forEach(function(b){ b.classList.remove('on'); });
+  document.querySelectorAll('.tab-panel').forEach(function(p){ p.style.display = 'none'; });
+  btn.classList.add('on');
+  var panel = document.getElementById(btn.dataset.tab);
+  if (panel) panel.style.display = '';
+}
+
+/* ── AI 키 모달 ── */
+function openKeyModal() {
+  var cfg    = PROVIDER_CFG[currentProvider()];
+  var stored = localStorage.getItem(cfg.storageKey) || '';
+  document.getElementById('key-modal-title').textContent = cfg.label + ' 키 설정';
+  document.getElementById('key-modal-desc').innerHTML =
+    cfg.desc + '<br><span style="color:var(--text3);font-size:10px">키는 이 브라우저에만 저장되며 서버로 전송되지 않습니다.</span>';
+  document.getElementById('key-modal-input').placeholder = cfg.placeholder;
+  document.getElementById('key-modal-input').value = stored ? '••••••••••••••••' : '';
+  document.getElementById('key-modal-backdrop').style.display = 'flex';
+  if (!stored) document.getElementById('key-modal-input').focus();
+}
+function closeKeyModal(e) {
+  if (!e || e.target === document.getElementById('key-modal-backdrop')) {
+    document.getElementById('key-modal-backdrop').style.display = 'none';
+  }
+}
+function saveKey() {
+  var val = document.getElementById('key-modal-input').value.trim();
+  if (!val || val === '••••••••••••••••') { closeKeyModal(); return; }
+  var cfg = PROVIDER_CFG[currentProvider()];
+  localStorage.setItem(cfg.storageKey, val);
+  updateKeyStatus();
+  closeKeyModal();
+}
+function clearKey() {
+  var cfg = PROVIDER_CFG[currentProvider()];
+  localStorage.removeItem(cfg.storageKey);
+  if (currentProvider() === 'copilot' && typeof _dlToken !== 'undefined') {
+    _dlToken = null; _dlTokenExpiresAt = 0;
+  }
+  updateKeyStatus();
+  document.getElementById('key-modal-input').value = '';
+}
+function updateKeyStatus() {
+  var provider = currentProvider();
+  var cfg      = PROVIDER_CFG[provider];
+  var dot      = document.getElementById('ai-key-status-dot');
+  var btnTxt   = document.getElementById('ai-key-btn-text');
+  var hasKey   = !!localStorage.getItem(cfg.storageKey);
+  dot.className = 'ai-key-dot ' + (hasKey ? 'set' : 'unset');
+  if (btnTxt) btnTxt.textContent = hasKey ? '키 등록됨 — 클릭하여 변경' : '키 미설정 — 클릭하여 등록';
+  document.querySelectorAll('.ptab').forEach(function(b){
+    b.classList.toggle('on', b.dataset.provider === provider);
+  });
+}
+document.addEventListener('DOMContentLoaded', updateKeyStatus);
+document.addEventListener('keydown', function(e){ if(e.key === 'Escape') closeKeyModal(); });
+</script>
+
+<script src="js/config.js"></script>
+<script src="js/core.js"></script>
+<script src="js/ai.js"></script>
+<script src="js/content.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
