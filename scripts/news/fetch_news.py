@@ -18,6 +18,7 @@ MAX_PER_KW    = 3   # 키워드당 최대 기사 수
 
 # 제목 필터 예외 키워드 (본문에만 있어도 허용)
 TITLE_FILTER_EXCEPTIONS = {
+    "까르띠에", "LVMH", "샤넬", "반클리프아펠",
     "한국관광공사", "관광공사 방한", "관광공사 외래객",
     "Visit Korea", "코리아둘레길", "관광 활성화"
 }
@@ -93,7 +94,9 @@ def search_naver(query: str, display: int = DISPLAY) -> list:
         return []
 
 def title_matches(title: str, keyword: str) -> bool:
-    """제목에 키워드가 포함되는지 확인 (예외 키워드는 통과)"""
+    """제목에 정치성 단어가 있으면 항상 제외. 그 외엔 예외 키워드는 통과, 아니면 제목에 키워드 포함 여부로 판단"""
+    if any(p in title for p in POLITICAL_EXCLUDE):
+        return False
     if keyword in TITLE_FILTER_EXCEPTIONS:
         return True
     return keyword in title
