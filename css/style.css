@@ -256,10 +256,10 @@ body {
   border-radius: 9px; padding: 6px 5px;
 }
 .kpill .kl { font-size: 8.5px; color: var(--text3); margin-bottom: 2px; font-weight: 500; white-space: nowrap; }
-.kpill .kv { font-size: 12.5px; font-weight: 700; color: var(--text); line-height: 1.2; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.kpill .kc { font-size: 8.5px; margin-top: 2px; font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.kpill .kv { font-size: 12.5px; font-weight: 700; color: var(--text); line-height: 1.2; }
+.kpill .kc { font-size: 8.5px; margin-top: 2px; font-weight: 500; }
 /* 전월비(schg)는 JS가 className을 통째로 갈아끼우므로 ID 선택자로 크기를 고정 */
-#schg, #syoy { font-size: 12.5px; font-weight: 700; line-height: 1.2; margin-top: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+#schg, #syoy { font-size: 12.5px; font-weight: 700; line-height: 1.2; margin-top: 0; }
 
 /* KPI 색상 */
 .up   { color: #C0392B; }
@@ -294,7 +294,20 @@ body {
 }
 .ai-interpret-hd { display: flex; align-items: center; gap: 6px; margin-bottom: 5px; }
 .ai-interpret-title { font-size: 11.5px; font-weight: 700; color: var(--text); }
-.ai-interpret-body { font-size: 11px; color: var(--text3); min-height: 32px; display: flex; align-items: center; }
+.ai-interpret-provider {
+  font-size: 9px; color: var(--text3); background: var(--bg);
+  border: 1px solid var(--border); border-radius: 999px;
+  padding: 1px 7px; margin-left: 2px;
+}
+.ai-interpret-refresh {
+  margin-left: auto; background: none; border: none; cursor: pointer;
+  font-size: 13px; color: var(--text2); padding: 2px 5px; line-height: 1;
+  border-radius: 5px;
+}
+.ai-interpret-refresh:hover { color: var(--text); background: var(--bg); }
+.ai-interpret-refresh:disabled { opacity: .4; cursor: default; }
+.ai-interpret-body { font-size: 11px; color: var(--text3); min-height: 32px; line-height: 1.6; }
+.ai-interpret-body a { color: var(--accent); }
 .ai-interpret-placeholder { font-style: italic; }
 
 /* 지수 설명 박스 */
@@ -700,14 +713,20 @@ body {
 }
 .res-pane-error { color: #C0392B; font-size: 12px; }
 
-/* 프롬프트 입력창 */
+/* 프롬프트 입력창 (기본 접힘 · 커스텀 분석 토글) */
 .prompt-input-row {
   margin: .8rem 0 .65rem;
 }
-.prompt-input-label {
+.prompt-toggle-btn {
+  display: flex; align-items: center; gap: 5px;
   font-size: 11.5px; font-weight: 700; color: var(--text2);
-  margin-bottom: .35rem;
+  background: none; border: none; padding: 2px 0;
+  cursor: pointer; font-family: inherit; margin-bottom: .35rem;
 }
+.prompt-toggle-btn:hover { color: var(--text); }
+.prompt-toggle-icon { font-size: 9px; display: inline-block; transition: transform .15s; }
+.prompt-toggle-sub { font-size: 11px; color: #888; font-weight: 400; }
+.prompt-input-body { margin-top: .35rem; }
 .prompt-textarea {
   width: 100%; min-height: 110px;
   font-size: 12px; font-family: inherit; color: var(--text);
