@@ -431,6 +431,12 @@ function updateKeyStatus() {
   if (txt) txt.textContent = hasKey
     ? (cfg.label) + ' 키 등록됨 — 클릭하여 변경'
     : (_lastFocusedProvider ? (cfg.label) + ' 키 미설정 — 클릭하여 등록' : '엔진 선택 후 키 등록');
+
+  // 좌측 사이드바 "AI 지표 해석" 박스도 같이 갱신 (키 등록/변경 시 바로 반영)
+  var indBox = document.getElementById('ai-interpret-box');
+  if (indBox && indBox.style.display !== 'none' && typeof curKey !== 'undefined' && typeof CD !== 'undefined') {
+    resetIndicatorAI(curKey, CD[curKey]);
+  }
 }
 
 document.addEventListener('DOMContentLoaded', updateKeyStatus);
@@ -544,6 +550,15 @@ function updateDefaultPrompt() {
     return;
   }
   textarea.value = buildDefaultPrompt(checked);
+}
+
+function togglePromptEditor() {
+  var body = document.getElementById('prompt-input-body');
+  var icon = document.getElementById('prompt-toggle-icon');
+  if (!body) return;
+  var isOpen = body.style.display !== 'none';
+  body.style.display = isOpen ? 'none' : '';
+  if (icon) icon.textContent = isOpen ? '▸' : '▾';
 }
 
 function selectedIndicatorsToPrompt(checked) {
@@ -733,3 +748,79 @@ document.addEventListener('DOMContentLoaded', function() {
     updateDefaultPrompt();
   });
 });
+
+/* ===========================================
+   ai.js § 9. 단일 지표 AI 해석 (좌측 사이드바)
+   · resetIndicatorAI(key, d): 지표 전환 시 상태 초기화 + 키 있으면 자동 생성
+   · runIndicatorAI(): 현재 지표에 대해 AI 해석 (재)생성
+   =========================================== */
+var _indicatorAIAbort = null;
+
+function resetIndicatorAI(key, d) {
+  var box        = document.getElementById('ai-interpret-box');
+  var body       = document.getElementById('ai-interpret-body');
+  var refreshBtn = document.getElementById('ai-interpret-refresh-btn');
+  var providerTag= document.getElementById('ai-interpret-provider');
+  if (!box || !body) return;
+
+  if (_indicatorAIAbort) { _indicatorAIAbort.abort(); _indicatorAIAbort = null; }
+
+  if (!d || !d.prompt) {
+    box.style.display = 'none';
+    return;
+  }
+  box.style.display = '';
+  box.dataset.key = key;
+
+  var provider = currentProvider();
+  var cfg = PROVIDER_CFG[provider];
+  if (providerTag) providerTag.textContent = cfg ? cfg.label : '';
+
+  var hasKey = cfg && !!localStorage.getItem(cfg.storageKey);
+  if (refreshBtn) refreshBtn.style.display = hasKey ? '' : 'none';
+
+  if (hasKey) {
+    runIndicatorAI();
+  } else {
+    body.innerHTML = '<span class="ai-interpret-placeholder">AI 엔진 키를 등록하면 자동으로 분석이 생성됩니다. '
+      + '<a href="#" onclick="openKeyModal();return false;">키 등록하기</a></span>';
+  }
+}
+
+async function runIndicatorAI() {
+  var box        = document.getElementById('ai-interpret-box');
+  var body       = document.getElementById('ai-interpret-body');
+  var refreshBtn = document.getElementById('ai-interpret-refresh-btn');
+  if (!box || !body) return;
+  var key = box.dataset.key;
+  var d = (typeof CD !== 'undefined') ? CD[key] : null;
+  if (!d || !d.prompt) return;
+
+  var provider = currentProvider();
+  var cfg = PROVIDER_CFG[provider];
+  if (!cfg || !localStorage.getItem(cfg.storageKey)) {
+    body.innerHTML = '<span class="ai-interpret-placeholder">AI 엔진 키를 등록하면 분석을 생성할 수 있습니다. '
+      + '<a href="#" onclick="openKeyModal();return false;">키 등록하기</a></span>';
+    return;
+  }
+
+  if (_indicatorAIAbort) _indicatorAIAbort.abort();
+  _indicatorAIAbort = new AbortController();
+  if (refreshBtn) refreshBtn.disabled = true;
+  body.innerHTML = '<span class="ai-interpret-placeholder">✦ 분석 생성 중…</span>';
+
+  try {
+    var txt = await askAIByProvider(provider, d.prompt, { signal: _indicatorAIAbort.signal });
+    var html = (typeof marked !== 'undefined') ? marked.parse(txt || '') : (txt || '').replace(/\n/g, '<br>');
+    // 응답 도착 시점에 사용자가 다른 지표로 이동했으면 반영하지 않음
+    if (box.dataset.key === key) body.innerHTML = html;
+  } catch (e) {
+    if (box.dataset.key === key) {
+      body.innerHTML = (e.name === 'AbortError')
+        ? '<span style="color:#888">⊘ 분석이 중단되었습니다.</span>'
+        : '<span class="res-pane-error">⚠ ' + e.message + '</span>';
+    }
+  } finally {
+    if (refreshBtn) refreshBtn.disabled = false;
+  }
+}
