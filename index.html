@@ -90,13 +90,15 @@
     <div class="canvas-wrap"><canvas id="mc" role="img" aria-label="지표 추세 차트"></canvas></div>
 
     <!-- AI 지표 해석 (공간 확보 — 데이터 연동은 추후 예정) -->
-    <div class="ai-interpret-box" id="ai-interpret-box">
+    <div class="ai-interpret-box" id="ai-interpret-box" style="display:none">
       <div class="ai-interpret-hd">
         <span class="ai-feature-badge">✦ AI</span>
         <span class="ai-interpret-title">AI 지표 해석</span>
+        <span class="ai-interpret-provider" id="ai-interpret-provider"></span>
+        <button class="ai-interpret-refresh" id="ai-interpret-refresh-btn" onclick="runIndicatorAI()" title="다시 생성" style="display:none">⟳</button>
       </div>
       <div class="ai-interpret-body" id="ai-interpret-body">
-        <span class="ai-interpret-placeholder">추후 업데이트 예정입니다.</span>
+        <span class="ai-interpret-placeholder">지표를 선택하면 분석이 표시됩니다.</span>
       </div>
     </div>
 
@@ -317,8 +319,13 @@
           <input type="checkbox" class="ind-chk" id="ic_convenience" value="편의점 품목별 매출증감률(전년비)"><label class="ind-chk-label" for="ic_convenience">편의점매출</label>
         </div>
         <div class="prompt-input-row">
-          <div class="prompt-input-label">AI에게 보낼 질문 <span style="font-size:11px;color:#888;font-weight:400">(지표 선택 시 자동 생성 · 직접 수정 가능)</span></div>
-          <textarea id="custom-prompt-input" class="prompt-textarea" placeholder="지표를 2개 이상 선택하면 기본 프롬프트가 자동으로 입력됩니다."></textarea>
+          <button type="button" class="prompt-toggle-btn" id="prompt-toggle-btn" onclick="togglePromptEditor()">
+            <span class="prompt-toggle-icon" id="prompt-toggle-icon">▸</span> 커스텀 분석
+            <span class="prompt-toggle-sub">(질문 직접 수정)</span>
+          </button>
+          <div class="prompt-input-body" id="prompt-input-body" style="display:none">
+            <textarea id="custom-prompt-input" class="prompt-textarea" placeholder="지표를 2개 이상 선택하면 기본 프롬프트가 자동으로 입력됩니다."></textarea>
+          </div>
         </div>
         <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
           <button class="custom-run" id="custom-run-btn" onclick="runCustomInsight()">🔍 선택 지표 AI 교차분석 생성</button>
