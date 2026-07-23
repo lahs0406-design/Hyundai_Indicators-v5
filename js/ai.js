@@ -769,14 +769,37 @@ function buildIndicatorPrompt(key, d) {
 
   var recentLine = '';
   if (Array.isArray(_lastSeriesVals) && _lastSeriesVals.length > 0) {
-    var n = Math.min(6, _lastSeriesVals.length);
-    var recentVals   = _lastSeriesVals.slice(-n);
-    var recentLabels = Array.isArray(_lastSeriesLabels) ? _lastSeriesLabels.slice(-n) : [];
-    var pairs = recentVals.map(function(v, i) {
-      var lbl = recentLabels[i];
+    var isDailySeries = Array.isArray(_lastSeriesLabels) && _lastSeriesLabels.length > 0
+      && /^\d{2}\/\d{2}$/.test(_lastSeriesLabels[0]);
+    var sampleVals, sampleLabels;
+
+    if (isDailySeries) {
+      // 일별 데이터: 최근 며칠치만 보면 노이즈를 추세 전환으로 착각할 수 있으므로
+      // 최근 3~4개월(최대 90거래일)을 넉넉히 보고, 대표 지점만 추려서 전달
+      var lookback    = Math.min(90, _lastSeriesVals.length);
+      var sliceVals   = _lastSeriesVals.slice(-lookback);
+      var sliceLabels = _lastSeriesLabels.slice(-lookback);
+      var step = Math.max(1, Math.ceil(sliceVals.length / 10));
+      sampleVals = []; sampleLabels = [];
+      for (var i = 0; i < sliceVals.length; i += step) {
+        sampleVals.push(sliceVals[i]); sampleLabels.push(sliceLabels[i]);
+      }
+      var lastIdx = sliceVals.length - 1;
+      if (sampleLabels[sampleLabels.length - 1] !== sliceLabels[lastIdx]) {
+        sampleVals.push(sliceVals[lastIdx]); sampleLabels.push(sliceLabels[lastIdx]);
+      }
+    } else {
+      var n = Math.min(6, _lastSeriesVals.length);
+      sampleVals   = _lastSeriesVals.slice(-n);
+      sampleLabels = Array.isArray(_lastSeriesLabels) ? _lastSeriesLabels.slice(-n) : [];
+    }
+
+    var pairs = sampleVals.map(function(v, i) {
+      var lbl = sampleLabels[i];
       return (lbl ? lbl + ':' : '') + v;
     });
-    recentLine = '최근 추이(오래된 순 → 최신순): ' + pairs.join(' → ') + '\n';
+    recentLine = (isDailySeries ? '최근 약 3개월간 추이(오래된 순 → 최신순, 대표 지점 샘플링): ' : '최근 추이(오래된 순 → 최신순): ')
+      + pairs.join(' → ') + '\n';
   }
 
   return (
@@ -784,9 +807,10 @@ function buildIndicatorPrompt(key, d) {
     '최신값: ' + cur + unit + ' · 전월비: ' + chg + ' · 전년비: ' + yoy + ' · 6개월 평균: ' + avg + '\n' +
     recentLine +
     '\n위 수치는 방금 화면에 표시된 실제 최신 데이터입니다. ' +
-    '장기 추세만 보고 방향을 성급히 단정하지 말고, 특히 가장 최근 1~2개 구간에서 반등하거나 급변한 지점이 있다면 ' +
-    '그것이 국면 전환의 시작일 수 있다는 점을 최우선으로 짚어주세요. ' +
-    '이 지표가 한국 국민과 외국인관광객의 소비와 현대백화점 고객 소비 심리에 미치는 영향을 3~4문장으로, 한국어로 해석해주세요.'
+    '단순히 최근 하루이틀·한두 구간의 반등만으로 "추세 전환"이라고 성급히 단정하지 마세요. ' +
+    '최근 수개월간의 고점·저점 대비 현재 위치가 어디인지 먼저 짚고, 그 다음 가장 최근 구간에서 ' +
+    '일시적 반등인지 아니면 방향 자체가 바뀌는 신호인지 구분해서 설명해주세요.\n' +
+    '이 지표가 현대백화점 매출과 고객 소비 심리에 미치는 영향을 3~4문장으로, 한국어로 해석해주세요.'
   );
 }
 
