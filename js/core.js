@@ -101,7 +101,10 @@ function makeMonthLabels() {
    ═══════════════════════════════════════════ */
 // 일별 데이터(KOSPI 등)일 때: 데이터 포인트는 일별 그대로 유지하되
 // 가로축 레이블만 "월이 바뀌는 첫 번째 인덱스"에만 월 표시
+var _lastSeriesVals = null, _lastSeriesLabels = null;
+
 function renderChart(vals, prevVals, labels, d) {
+  _lastSeriesVals = vals; _lastSeriesLabels = labels;
   if(mc){ mc.destroy(); mc = null; }
 
   // MM/DD 형식이면 일별 데이터로 판단
@@ -415,8 +418,6 @@ if(idx !== undefined && catBtns[idx]) catBtns[idx].classList.add('open');
 
   var d = CD[key]; if(!d) return;
 
-  if(typeof resetIndicatorAI === 'function') resetIndicatorAI(key, d);
-
   if(ECOS_MAP[key]) {
     await loadEcosChart(key);
   } else if(key==='dept'||key==='mart'||key==='convenience') {
@@ -429,6 +430,9 @@ if(idx !== undefined && catBtns[idx]) catBtns[idx].classList.add('open');
     updateKPI(d);
     renderChart(d.data||[], null, makeMonthLabels(), d);
   }
+
+  // KPI·차트 데이터가 다 반영된 뒤에 실행 → AI 해석이 최신값을 정확히 참조
+  if(typeof resetIndicatorAI === 'function') resetIndicatorAI(key, d);
 }
 
 /* ═══════════════════════════════════════════
