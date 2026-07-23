@@ -415,6 +415,8 @@ if(idx !== undefined && catBtns[idx]) catBtns[idx].classList.add('open');
 
   var d = CD[key]; if(!d) return;
 
+  if(typeof resetIndicatorAI === 'function') resetIndicatorAI(key, d);
+
   if(ECOS_MAP[key]) {
     await loadEcosChart(key);
   } else if(key==='dept'||key==='mart'||key==='convenience') {
