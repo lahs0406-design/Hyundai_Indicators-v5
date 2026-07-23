@@ -499,7 +499,7 @@ async function buildRawDataBlock(checked) {
       if (kpi.avg6 !== undefined) kpiParts.push('6개월평균:' + kpi.avg6);
 
       // 12개월 시계열
-      var series = s12.map(function(r) { return r.ym + ':' + r.val; }).join(', ');
+      var series = s12.map(function(r) { return formatKoreanYm(r.ym) + ':' + r.val; }).join(', ');
 
       var block = '[' + label + ']\n';
       if (kpiParts.length) block += '  요약: ' + kpiParts.join(' | ') + '\n';
@@ -517,7 +517,7 @@ async function buildRawDataBlock(checked) {
     } else if (jsonData && key && jsonData[key]) {
       // 폴백: data.json 최근 12개월
       var rows = jsonData[key].slice(-12);
-      lines.push('[' + label + ']\n  월별: ' + rows.map(function(r) { return r.ym + ':' + r.val; }).join(', '));
+      lines.push('[' + label + ']\n  월별: ' + rows.map(function(r) { return formatKoreanYm(r.ym) + ':' + r.val; }).join(', '));
     } else {
       lines.push('[' + label + ']\n  데이터 없음');
     }
@@ -538,6 +538,7 @@ function buildDefaultPrompt(checked) {
     '2. 현대백화점 매출·고객 방문에 미치는 영향 분석\n' +
     '3. 상품 카테고리별 기회/리스크 (예: 명품, 식품, 생활, 스포츠 등)\n' +
     '4. 단기(1~3개월) 대응 전략 제언\n\n' +
+    '날짜나 시점을 언급할 때는 반드시 "OO년 O월"(예: 26년 7월) 형식으로만 표기하고, "26.07" 같은 표기는 쓰지 마세요.\n\n' +
     '(실제 지표 수치는 아래 [데이터] 섹션에 포함됩니다.)';
 }
 
@@ -759,6 +760,23 @@ document.addEventListener('DOMContentLoaded', function() {
    =========================================== */
 var _indicatorAIAbort = null;
 
+function formatKoreanYm(ym) {
+  if (!ym) return '';
+  var s = String(ym);
+  if (s.length >= 8) {
+    var yy = s.slice(2, 4);
+    var mm = parseInt(s.slice(4, 6), 10);
+    var dd = parseInt(s.slice(6, 8), 10);
+    return yy + '년 ' + mm + '월 ' + dd + '일';
+  }
+  if (s.length === 6) {
+    var yy2 = s.slice(2, 4);
+    var mm2 = parseInt(s.slice(4, 6), 10);
+    return yy2 + '년 ' + mm2 + '월';
+  }
+  return s;
+}
+
 function buildIndicatorPrompt(key, d) {
   var cur = (document.getElementById('scur') || {}).textContent || '';
   var chg = (document.getElementById('schg') || {}).textContent || '';
@@ -769,33 +787,35 @@ function buildIndicatorPrompt(key, d) {
 
   var recentLine = '';
   if (Array.isArray(_lastSeriesVals) && _lastSeriesVals.length > 0) {
-    var isDailySeries = Array.isArray(_lastSeriesLabels) && _lastSeriesLabels.length > 0
-      && /^\d{2}\/\d{2}$/.test(_lastSeriesLabels[0]);
-    var sampleVals, sampleLabels;
+    var hasYms = Array.isArray(_lastSeriesYms) && _lastSeriesYms.length === _lastSeriesVals.length;
+    var isDailySeries = hasYms
+      ? (_lastSeriesYms[0] && String(_lastSeriesYms[0]).length >= 8)
+      : (Array.isArray(_lastSeriesLabels) && _lastSeriesLabels.length > 0 && /^\d{2}\/\d{2}$/.test(_lastSeriesLabels[0]));
+    var sampleVals, sampleYms;
 
     if (isDailySeries) {
       // 일별 데이터: 최근 며칠치만 보면 노이즈를 추세 전환으로 착각할 수 있으므로
       // 최근 3~4개월(최대 90거래일)을 넉넉히 보고, 대표 지점만 추려서 전달
-      var lookback    = Math.min(90, _lastSeriesVals.length);
-      var sliceVals   = _lastSeriesVals.slice(-lookback);
-      var sliceLabels = _lastSeriesLabels.slice(-lookback);
+      var lookback  = Math.min(90, _lastSeriesVals.length);
+      var sliceVals = _lastSeriesVals.slice(-lookback);
+      var sliceYms  = hasYms ? _lastSeriesYms.slice(-lookback) : [];
       var step = Math.max(1, Math.ceil(sliceVals.length / 10));
-      sampleVals = []; sampleLabels = [];
+      sampleVals = []; sampleYms = [];
       for (var i = 0; i < sliceVals.length; i += step) {
-        sampleVals.push(sliceVals[i]); sampleLabels.push(sliceLabels[i]);
+        sampleVals.push(sliceVals[i]); sampleYms.push(sliceYms[i]);
       }
       var lastIdx = sliceVals.length - 1;
-      if (sampleLabels[sampleLabels.length - 1] !== sliceLabels[lastIdx]) {
-        sampleVals.push(sliceVals[lastIdx]); sampleLabels.push(sliceLabels[lastIdx]);
+      if (sampleVals[sampleVals.length - 1] !== sliceVals[lastIdx]) {
+        sampleVals.push(sliceVals[lastIdx]); sampleYms.push(sliceYms[lastIdx]);
       }
     } else {
       var n = Math.min(6, _lastSeriesVals.length);
-      sampleVals   = _lastSeriesVals.slice(-n);
-      sampleLabels = Array.isArray(_lastSeriesLabels) ? _lastSeriesLabels.slice(-n) : [];
+      sampleVals = _lastSeriesVals.slice(-n);
+      sampleYms  = hasYms ? _lastSeriesYms.slice(-n) : [];
     }
 
     var pairs = sampleVals.map(function(v, i) {
-      var lbl = sampleLabels[i];
+      var lbl = hasYms ? formatKoreanYm(sampleYms[i]) : '';
       return (lbl ? lbl + ':' : '') + v;
     });
     recentLine = (isDailySeries ? '최근 약 3개월간 추이(오래된 순 → 최신순, 대표 지점 샘플링): ' : '최근 추이(오래된 순 → 최신순): ')
@@ -807,6 +827,7 @@ function buildIndicatorPrompt(key, d) {
     '최신값: ' + cur + unit + ' · 전월비: ' + chg + ' · 전년비: ' + yoy + ' · 6개월 평균: ' + avg + '\n' +
     recentLine +
     '\n위 수치는 방금 화면에 표시된 실제 최신 데이터입니다. ' +
+    '날짜나 시점을 언급할 때는 반드시 "OO년 O월"(예: 26년 7월) 형식으로만 표기하고, "26.07" 같은 표기는 쓰지 마세요. ' +
     '단순히 최근 하루이틀·한두 구간의 반등만으로 "추세 전환"이라고 성급히 단정하지 마세요. ' +
     '최근 수개월간의 고점·저점 대비 현재 위치가 어디인지 먼저 짚고, 그 다음 가장 최근 구간에서 ' +
     '일시적 반등인지 아니면 방향 자체가 바뀌는 신호인지 구분해서 설명해주세요.\n' +
