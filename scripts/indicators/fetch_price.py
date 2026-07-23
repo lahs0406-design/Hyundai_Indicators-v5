@@ -44,13 +44,7 @@ def run(data: dict) -> dict:
     # ── 기준금리 (일별 조회 후 월별 집계 — 금리 변경일이 월중 언제든 반영되도록)
     print("\n[물가금리] 기준금리")
     series = data.get("rate", [])
-    recent_start   = months_ago(3) + "01"     # 평소엔 최근 3개월만 봐도 충분
-    earliest_start = months_ago(16) + "01"    # 500행 한도 고려한 최대 조회 범위(약 16개월)
-    if series:
-        gap_start = series[-1]["ym"] + "01"     # 마지막 저장된 달 다음부터 다시 채움
-        start_date = max(min(gap_start, recent_start), earliest_start)
-    else:
-        start_date = earliest_start
+    start_date = months_ago(15) + "01"   # 매번 넉넉하게 15개월치를 다시 조회 (500행 한도 안전 + 중간 공백도 자동 복구)
     rows = ecos_fetch("722Y001", "0101000", "D",
                       start_date, today, ECOS_KEY)
     if rows:
