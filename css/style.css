@@ -306,8 +306,15 @@ body {
 }
 .ai-interpret-refresh:hover { color: var(--text); background: var(--bg); }
 .ai-interpret-refresh:disabled { opacity: .4; cursor: default; }
-.ai-interpret-body { font-size: 11px; color: var(--text3); min-height: 32px; line-height: 1.6; }
+.ai-interpret-body { font-size: 11px; color: var(--text3); min-height: 32px; line-height: 1.6; overflow-wrap: break-word; }
 .ai-interpret-body a { color: var(--accent); }
+.ai-interpret-body p { margin: 0 0 .5em; }
+.ai-interpret-body p:last-child { margin-bottom: 0; }
+.ai-interpret-body ul, .ai-interpret-body ol {
+  margin: .3em 0 .5em; padding-left: 1.2em;
+}
+.ai-interpret-body li { margin: .15em 0; }
+.ai-interpret-body strong { color: var(--text); }
 .ai-interpret-placeholder { font-style: italic; }
 
 /* 지수 설명 박스 */
@@ -642,7 +649,12 @@ body {
 .custom-run:hover { background: #0e4a8a; box-shadow: 0 4px 12px rgba(22,89,168,.35); }
 .custom-run:disabled { opacity: .5; cursor: not-allowed; box-shadow: none; }
 
-/* 인사이트 탭 내 AI 키 행 */
+/* 상단 바로 옮긴 AI 키 행 (기존 인사이트 탭 내부 스타일 재사용, 여기선 카드 배경 없이 한 줄로) */
+#topbar-key-row.insight-key-row {
+  margin-bottom: 0; background: transparent; border: none; padding: 0;
+  flex-wrap: nowrap;
+}
+#topbar-key-row .ai-key-btn { margin-left: 8px; white-space: nowrap; }
 .insight-key-row {
   display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
   background: var(--bg2); border: 1px solid var(--border);
@@ -1094,6 +1106,9 @@ footer {
   .page { height: auto; }
   .body-wrap { flex-direction: column; overflow: visible; }
   .resizer { display: none; }
+  .top-bar { flex-wrap: wrap; height: auto; }
+  #topbar-key-row.insight-key-row { flex-wrap: wrap; width: 100%; margin-top: 6px; }
+  #topbar-key-row .ai-key-btn { margin-left: 0; }
   .sidebar {
     width: 100% !important; max-width: 100% !important;
     min-width: 0 !important; border-right: none;
