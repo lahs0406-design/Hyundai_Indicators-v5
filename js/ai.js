@@ -751,10 +751,44 @@ document.addEventListener('DOMContentLoaded', function() {
 
 /* ===========================================
    ai.js § 9. 단일 지표 AI 해석 (좌측 사이드바)
+   · 오른쪽 "지표 교차 인사이트"와 완전히 독립적으로 동작
    · resetIndicatorAI(key, d): 지표 전환 시 상태 초기화 + 키 있으면 자동 생성
    · runIndicatorAI(): 현재 지표에 대해 AI 해석 (재)생성
+   · buildIndicatorPrompt(): config.js의 고정 예시문이 아니라, 화면에 실제로
+     표시된 최신 KPI·최근 추이 값을 그대로 프롬프트에 넣어 최신 시점 기준으로 해석하도록 함
    =========================================== */
 var _indicatorAIAbort = null;
+
+function buildIndicatorPrompt(key, d) {
+  var cur = (document.getElementById('scur') || {}).textContent || '';
+  var chg = (document.getElementById('schg') || {}).textContent || '';
+  var yoy = (document.getElementById('syoy') || {}).textContent || '';
+  var avg = (document.getElementById('savg') || {}).textContent || '';
+  var unit  = d.unit  || '';
+  var title = d.title || key;
+
+  var recentLine = '';
+  if (Array.isArray(_lastSeriesVals) && _lastSeriesVals.length > 0) {
+    var n = Math.min(6, _lastSeriesVals.length);
+    var recentVals   = _lastSeriesVals.slice(-n);
+    var recentLabels = Array.isArray(_lastSeriesLabels) ? _lastSeriesLabels.slice(-n) : [];
+    var pairs = recentVals.map(function(v, i) {
+      var lbl = recentLabels[i];
+      return (lbl ? lbl + ':' : '') + v;
+    });
+    recentLine = '최근 추이(오래된 순 → 최신순): ' + pairs.join(' → ') + '\n';
+  }
+
+  return (
+    '[' + title + ']\n' +
+    '최신값: ' + cur + unit + ' · 전월비: ' + chg + ' · 전년비: ' + yoy + ' · 6개월 평균: ' + avg + '\n' +
+    recentLine +
+    '\n위 수치는 방금 화면에 표시된 실제 최신 데이터입니다. ' +
+    '장기 추세만 보고 방향을 성급히 단정하지 말고, 특히 가장 최근 1~2개 구간에서 반등하거나 급변한 지점이 있다면 ' +
+    '그것이 국면 전환의 시작일 수 있다는 점을 최우선으로 짚어주세요. ' +
+    '이 지표가 현대백화점 매출과 고객 소비 심리에 미치는 영향을 3~4문장으로, 한국어로 해석해주세요.'
+  );
+}
 
 function resetIndicatorAI(key, d) {
   var box        = document.getElementById('ai-interpret-box');
@@ -765,7 +799,7 @@ function resetIndicatorAI(key, d) {
 
   if (_indicatorAIAbort) { _indicatorAIAbort.abort(); _indicatorAIAbort = null; }
 
-  if (!d || !d.prompt) {
+  if (!d) {
     box.style.display = 'none';
     return;
   }
@@ -794,7 +828,7 @@ async function runIndicatorAI() {
   if (!box || !body) return;
   var key = box.dataset.key;
   var d = (typeof CD !== 'undefined') ? CD[key] : null;
-  if (!d || !d.prompt) return;
+  if (!d) return;
 
   var provider = currentProvider();
   var cfg = PROVIDER_CFG[provider];
@@ -810,7 +844,8 @@ async function runIndicatorAI() {
   body.innerHTML = '<span class="ai-interpret-placeholder">✦ 분석 생성 중…</span>';
 
   try {
-    var txt = await askAIByProvider(provider, d.prompt, { signal: _indicatorAIAbort.signal });
+    var prompt = buildIndicatorPrompt(key, d);
+    var txt = await askAIByProvider(provider, prompt, { signal: _indicatorAIAbort.signal });
     var html = (typeof marked !== 'undefined') ? marked.parse(txt || '') : (txt || '').replace(/\n/g, '<br>');
     // 응답 도착 시점에 사용자가 다른 지표로 이동했으면 반영하지 않음
     if (box.dataset.key === key) body.innerHTML = html;
