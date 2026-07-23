@@ -231,6 +231,31 @@ function updateKPI(d) {
    · API 성공 → 실시간 데이터로 KPI + 차트 갱신
    · API 실패 → 샘플 데이터 fallback
    ═══════════════════════════════════════════ */
+/* ═══════════════════════════════════════════
+   JS § 12-1. 전년 대비(YoY) 비교값 탐색 (findYoyRow)
+   · 월별(YYYYMM)이든 일별(YYYYMMDD)이든 "ym" 문자열의 실제 날짜를 보고
+     1년 전 시점(또는 그 직전 가장 가까운 영업일/월)의 값을 찾는다.
+   · 배열 인덱스를 고정폭(-13)으로 거슬러 올라가는 방식은 일별 데이터에서
+     "1년 전"이 아니라 "13거래일 전"이 되어버리는 오류가 있어 이 함수로 대체.
+   ═══════════════════════════════════════════ */
+function findYoyRow(rows) {
+  if (!Array.isArray(rows) || rows.length < 2) return null;
+  var latestYm = rows[rows.length - 1].ym;
+  if (!latestYm) return null;
+  var isDaily = latestYm.length >= 8;
+
+  var y  = parseInt(latestYm.slice(0, 4), 10) - 1;
+  var targetYm = isDaily
+    ? (String(y) + latestYm.slice(4, 8))   // YYYY(전년)MMDD
+    : (String(y) + latestYm.slice(4, 6));  // YYYY(전년)MM
+
+  // targetYm 이하(=1년 전 시점이거나 그 직전 가장 가까운 영업일/월)인 가장 최근 항목을 뒤에서부터 탐색
+  for (var i = rows.length - 1; i >= 0; i--) {
+    if (rows[i].ym <= targetYm) return rows[i];
+  }
+  return null;
+}
+
 async function loadEcosChart(key) {
   var d = CD[key]; if(!d) return;
   var _wrap = document.querySelector('.canvas-wrap');
@@ -259,9 +284,8 @@ async function loadEcosChart(key) {
   var diff   = latest - (vals[vals.length-2]||latest);
 
   // 전년 대비 KPI 계산 (차트 라인 별도 표시 안 함 — 2년 시계열에 이미 포함)
-  var yoyDiff = vals.length >= 13
-    ? (latest - vals[vals.length-13])
-    : null;
+  var yoyRow  = findYoyRow(rows);
+  var yoyDiff = yoyRow ? (latest - yoyRow.val) : null;
 
   document.getElementById('ctitle').textContent = d.title;
   setMetaLive(d, 'data.json');
@@ -307,7 +331,8 @@ async function loadKosisChart(key) {
   var latest   = vals[vals.length-1];
   var avg6     = vals.slice(-6).reduce(function(a,b){return a+b;},0)/Math.min(6,vals.length);
   var diff     = latest - (vals[vals.length-2]||latest);
-  var yoyDiff  = vals.length >= 13 ? (latest - vals[vals.length-13]) : null;
+  var yoyRow   = findYoyRow(rows);
+  var yoyDiff  = yoyRow ? (latest - yoyRow.val) : null;
   var prevVals = null;
 
   // online: 억원→조 변환 (소수점 1자리)
@@ -539,7 +564,8 @@ async function loadRetailItemChart(key) {
   var labels  = makeLabels(totalRows);
   var latest  = vals[vals.length-1];
   var avg6    = vals.slice(-6).reduce(function(a,b){return a+b;},0)/Math.min(6,vals.length);
-  var yoyDiff = vals.length>=13 ? (latest-vals[vals.length-13]) : null;
+  var yoyRow  = findYoyRow(totalRows);
+  var yoyDiff = yoyRow ? (latest - yoyRow.val) : null;
   var diff    = latest - (vals[vals.length-2]||latest);
 
   setMetaLive(d, 'data.json');
