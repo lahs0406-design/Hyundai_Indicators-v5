@@ -1,6 +1,12 @@
 {
   "hri": [
     {
+      "title": "다 좋았던 2분기 유일한 '흠' 건설투자…연 0.2% 반등도 불투명",
+      "date": "Sun, 26 Jul 2026 08:12:00",
+      "source": "news.einfomax.co.kr",
+      "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4426857"
+    },
+    {
       "title": "워시도 금리인상 막기 어렵다…\"신용팽창·AI 투자發 물가압력 커져\"",
       "date": "Fri, 24 Jul 2026 09:20:00",
       "source": "n.news.naver.com",
@@ -53,15 +59,39 @@
       "date": "Mon, 13 Jul 2026 10:04:00",
       "source": "fntoday.co.kr",
       "url": "https://www.fntoday.co.kr/news/articleView.html?idxno=388004"
-    },
-    {
-      "title": "16일 기준금리 인상 전망…'변동금리 쏠린' 대출자 부담 더 커질 듯",
-      "date": "Mon, 13 Jul 2026 09:06:00",
-      "source": "raonnews.com",
-      "url": "https://www.raonnews.com/news/article.html?no=59501"
     }
   ],
   "kdi": [
+    {
+      "title": "AI에 일자리 뺏겼다, IT·전문직 청년 취업자 17% 줄어",
+      "date": "Mon, 27 Jul 2026 00:56:00",
+      "source": "n.news.naver.com",
+      "url": "https://www.chosun.com/economy/economy_general/2026/07/27/2YAPKDGJOJBWXCLQ3YP2OLENQE/?utm_source=naver&utm_medium=referral&utm_campaign=naver-news"
+    },
+    {
+      "title": "[한경에세이] 일론 머스크의 '로봇 유토피아'",
+      "date": "Mon, 27 Jul 2026 00:55:00",
+      "source": "n.news.naver.com",
+      "url": "https://www.hankyung.com/article/2026072665141"
+    },
+    {
+      "title": "'새벽배송' 등 유통법 개정논의 본격화...\"전통시장 피해 없을 것\"",
+      "date": "Sun, 26 Jul 2026 17:00:00",
+      "source": "n.news.naver.com",
+      "url": "https://www.mt.co.kr/living/2026/07/26/2026072414353364569"
+    },
+    {
+      "title": "전주교도소 언제 착공하나…첫 삽 목표는 2027년 말",
+      "date": "Sun, 26 Jul 2026 15:56:00",
+      "source": "domin.co.kr",
+      "url": "http://www.domin.co.kr/news/articleView.html?idxno=1563015"
+    },
+    {
+      "title": "[기획]美 관세리스크에 K-산업, 하반기 수익 악화 불가피",
+      "date": "Sun, 26 Jul 2026 13:00:00",
+      "source": "m-i.kr",
+      "url": "https://www.m-i.kr/news/articleView.html?idxno=1395072"
+    },
     {
       "title": "“이젠 단순 스펙보다 AI 툴”… 취준생부터 중장년까지 교육 열풍",
       "date": "Sat, 25 Jul 2026 17:02:00",
@@ -91,98 +121,68 @@
       "date": "Sat, 25 Jul 2026 07:01:00",
       "source": "n.news.naver.com",
       "url": "https://economist.co.kr/article/view/ecn202607210067"
-    },
-    {
-      "title": "KDI \"AI 확산으로 10년 후 연간 일자리 25만개 감소...기업 생산성은 향...",
-      "date": "Sat, 25 Jul 2026 05:00:00",
-      "source": "etoday.co.kr",
-      "url": "https://www.etoday.co.kr/news/view/2606962"
-    },
-    {
-      "title": "\"고환율·고유가 더는 못참아\"...농심·뚜레쥬르·던킨, 가격 인상 행렬",
-      "date": "Fri, 24 Jul 2026 17:10:00",
-      "source": "consumernews.co.kr",
-      "url": "http://www.consumernews.co.kr/news/articleView.html?idxno=760040"
-    },
-    {
-      "title": "정부, 대형마트 규제 손질 시동…업계 \"의무휴업 완화가 우선\"",
-      "date": "Fri, 24 Jul 2026 15:34:00",
-      "source": "sports.hankooki.com",
-      "url": "https://sports.hankooki.com/news/articleView.html?idxno=6936890"
-    },
-    {
-      "title": "유가 2차 충격 현실화...성장 눈높이 상향에 변수로",
-      "date": "Fri, 24 Jul 2026 15:32:00",
-      "source": "updownnews.co.kr",
-      "url": "http://www.updownnews.co.kr/news/articleView.html?idxno=318102"
-    },
-    {
-      "title": "‘고용없는 성장’에 금리충격까지…청년·서민 대책 정교해야",
-      "date": "Fri, 24 Jul 2026 11:08:00",
-      "source": "n.news.naver.com",
-      "url": "https://biz.heraldcorp.com/article/10819005?ref=naver"
     }
   ],
   "bok": [
     {
-      "title": "[탐사보도 뉴스프리즘] 반도체 호황의 역설 / 금리 인상에 곳곳 아우성",
-      "date": "Sat, 25 Jul 2026 22:01:00",
+      "title": "고금리에… 금융사 순익 13조 최대, 가계 연체율은 10년새 최악",
+      "date": "Mon, 27 Jul 2026 00:31:00",
       "source": "n.news.naver.com",
-      "url": "http://www.yonhapnewstv.co.kr/news/MYH202607241616052p2"
+      "url": "https://www.donga.com/news/Economy/article/all/20260726/134367199/2"
     },
     {
-      "title": "추가 기준금리 인상·총량 관리에 연 8% 향하는 주담대 금리",
-      "date": "Sat, 25 Jul 2026 17:58:00",
-      "source": "asiatime.co.kr",
-      "url": "https://www.asiatime.co.kr/article/20260721500396"
+      "title": "&lt;사진으로 본 세상&gt; 내 대출 어쩌나∼",
+      "date": "Mon, 27 Jul 2026 00:02:00",
+      "source": "ilyosisa.co.kr",
+      "url": "https://www.ilyosisa.co.kr/news/article.html?no=257038"
     },
     {
-      "title": "[N위크] 폭염 속 부동산 종합대책 나올 듯...美 '301조 관세' 발표 초읽...",
-      "date": "Sat, 25 Jul 2026 14:58:00",
-      "source": "tfmedia.co.kr",
-      "url": "https://www.tfmedia.co.kr/news/article.html?no=206001"
-    },
-    {
-      "title": "증시 변동성에 '멘붕' 개미들 다시 은행으로?…시중은행 정기예금 3.2%·...",
-      "date": "Sat, 25 Jul 2026 14:00:00",
+      "title": "국제유가 ‘홍해 쇼크’…하반기 ‘물가 3% 사수’ 비상",
+      "date": "Mon, 27 Jul 2026 00:02:00",
       "source": "n.news.naver.com",
-      "url": "https://www.ddaily.co.kr/page/view/2026072511573014209"
+      "url": "https://www.joongang.co.kr/article/25448278"
     },
     {
-      "title": "지금 코스피, 싸진 걸까 위험해진 걸까…한은의 진단은? [Deep Spot]",
-      "date": "Sat, 25 Jul 2026 10:38:00",
+      "title": "원화가치 상승폭은 주요국 통화 1위…엔화는 40년 만에 최저",
+      "date": "Sun, 26 Jul 2026 21:20:00",
       "source": "n.news.naver.com",
-      "url": "https://biz.heraldcorp.com/article/10819873?ref=naver"
+      "url": "https://www.hankyung.com/article/2026072665721"
     },
     {
-      "title": "반도체 생산 회복했나…내주 인구주택총조사·산업활동지표 줄줄이 공개",
-      "date": "Sat, 25 Jul 2026 10:08:00",
-      "source": "youthdaily.co.kr",
-      "url": "https://www.youthdaily.co.kr/news/article.html?no=223764"
-    },
-    {
-      "title": "글로벌 복합위기와 AI 파동 속, 연금은 어떻게 지켜야 하나",
-      "date": "Sat, 25 Jul 2026 10:08:00",
-      "source": "greenpostkorea.co.kr",
-      "url": "https://www.greenpostkorea.co.kr/news/articleView.html?idxno=307166"
-    },
-    {
-      "title": "[다음주 경제] 반도체 생산 얼마나 늘었을까…인구주택총조사 결과 공개",
-      "date": "Sat, 25 Jul 2026 08:48:00",
+      "title": "\"돈 묶어두면 손해\"라더니…발빠른 뭉칫돈 '22조' 몰려간 곳이",
+      "date": "Sun, 26 Jul 2026 19:55:00",
       "source": "n.news.naver.com",
-      "url": "https://www.yna.co.kr/view/AKR20260725016200002?input=1195m"
+      "url": "http://www.wowtv.co.kr/NewsCenter/News/Read?articleId=A202607260132&t=NN"
     },
     {
-      "title": "‘반도체 훈풍’에 소비심리 석 달째 개선되나[한은 미리보기]",
-      "date": "Sat, 25 Jul 2026 08:03:00",
+      "title": "[초점] 정부, 8차 석유 최고가격 동결…휘발유 1,784원·경유 1,773원 유지",
+      "date": "Sun, 26 Jul 2026 19:48:00",
+      "source": "energydaily.co.kr",
+      "url": "https://www.energydaily.co.kr/news/articleView.html?idxno=201738"
+    },
+    {
+      "title": "국제유가 불안 다시 고조…'물가·환율·금리' 경고등",
+      "date": "Sun, 26 Jul 2026 18:42:00",
       "source": "n.news.naver.com",
-      "url": "https://www.edaily.co.kr/news/newspath.asp?newsid=01882726645518128"
+      "url": "http://www.yonhapnewstv.co.kr/news/MYH20260726184155guO"
     },
     {
-      "title": "8차 석유 최고가격 동결...\"서민경제 보호 고려\"",
-      "date": "Sat, 25 Jul 2026 07:26:00",
-      "source": "tfmedia.co.kr",
-      "url": "https://www.tfmedia.co.kr/news/article.html?no=205992"
+      "title": "[EBN 오늘(26일) 이슈 종합] 개미들 투자법 달라졌다...ETF에 70조 몰렸다...",
+      "date": "Sun, 26 Jul 2026 18:30:00",
+      "source": "ebn.co.kr",
+      "url": "https://www.ebn.co.kr/news/articleView.html?idxno=1717818"
+    },
+    {
+      "title": "엔화 추락·원화 강세…뚜렷해진 디커플링",
+      "date": "Sun, 26 Jul 2026 18:01:00",
+      "source": "n.news.naver.com",
+      "url": "https://www.hankyung.com/article/2026072666311"
+    },
+    {
+      "title": "넘쳐나는 세수 ‘한국형 트럼프 계좌’ 도입은 어떨까[이태규 특파원의...",
+      "date": "Sun, 26 Jul 2026 17:43:00",
+      "source": "n.news.naver.com",
+      "url": "https://www.sedaily.com/article/20071993?ref=naver"
     }
   ],
   "kiep": [
@@ -309,5 +309,5 @@
       "url": "http://www.whitepaper.co.kr/news/articleView.html?idxno=264090"
     }
   ],
-  "updated": "2026.07.26 02:59"
+  "updated": "2026.07.27 03:03"
 }
