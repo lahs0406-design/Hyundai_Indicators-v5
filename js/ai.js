@@ -835,11 +835,27 @@ function buildIndicatorPrompt(key, d) {
   );
 }
 
+/* ai_interpretations.json: 매일 새벽 GitHub Actions 배치가 생성해 두는
+   지표별 AI 해석 캐시. { generated_at: '...', items: { key: { text } } } */
+var _aiInterpCache = null;
+var _aiInterpCacheTime = 0;
+async function loadAiInterpretations(forceRefresh) {
+  var now = Date.now();
+  if (!forceRefresh && _aiInterpCache && now - _aiInterpCacheTime < 60000) return _aiInterpCache;
+  try {
+    var res = await fetch('./ai_interpretations.json?_=' + now);
+    if (res.ok) {
+      _aiInterpCache = await res.json();
+      _aiInterpCacheTime = now;
+      return _aiInterpCache;
+    }
+  } catch (e) {}
+  return null;
+}
+
 function resetIndicatorAI(key, d) {
-  var box        = document.getElementById('ai-interpret-box');
-  var body       = document.getElementById('ai-interpret-body');
-  var refreshBtn = document.getElementById('ai-interpret-refresh-btn');
-  var providerTag= document.getElementById('ai-interpret-provider');
+  var box  = document.getElementById('ai-interpret-box');
+  var body = document.getElementById('ai-interpret-body');
   if (!box || !body) return;
 
   if (_indicatorAIAbort) { _indicatorAIAbort.abort(); _indicatorAIAbort = null; }
@@ -850,57 +866,37 @@ function resetIndicatorAI(key, d) {
   }
   box.style.display = '';
   box.dataset.key = key;
-
-  var provider = currentProvider();
-  var cfg = PROVIDER_CFG[provider];
-  if (providerTag) providerTag.textContent = cfg ? cfg.label : '';
-
-  var hasKey = cfg && !!localStorage.getItem(cfg.storageKey);
-  if (refreshBtn) refreshBtn.style.display = hasKey ? '' : 'none';
-
-  if (hasKey) {
-    runIndicatorAI();
-  } else {
-    body.innerHTML = '<span class="ai-interpret-placeholder">AI 엔진 키를 등록하면 자동으로 분석이 생성됩니다. '
-      + '<a href="#" onclick="openKeyModal();return false;">키 등록하기</a></span>';
-  }
+  showIndicatorAI(key, false);
 }
 
-async function runIndicatorAI() {
+/* 클릭 시마다 AI를 새로 호출하는 대신, 배치가 미리 만들어 둔
+   ai_interpretations.json에서 해당 지표의 해석을 읽어와 표시한다. */
+async function showIndicatorAI(key, forceRefresh) {
   var box        = document.getElementById('ai-interpret-box');
   var body       = document.getElementById('ai-interpret-body');
-  var refreshBtn = document.getElementById('ai-interpret-refresh-btn');
+  var providerTag= document.getElementById('ai-interpret-provider');
   if (!box || !body) return;
-  var key = box.dataset.key;
-  var d = (typeof CD !== 'undefined') ? CD[key] : null;
-  if (!d) return;
 
-  var provider = currentProvider();
-  var cfg = PROVIDER_CFG[provider];
-  if (!cfg || !localStorage.getItem(cfg.storageKey)) {
-    body.innerHTML = '<span class="ai-interpret-placeholder">AI 엔진 키를 등록하면 분석을 생성할 수 있습니다. '
-      + '<a href="#" onclick="openKeyModal();return false;">키 등록하기</a></span>';
+  body.innerHTML = '<span class="ai-interpret-placeholder">✦ 해석 불러오는 중…</span>';
+
+  var data = await loadAiInterpretations(forceRefresh);
+  if (box.dataset.key !== key) return; // 응답 도착 전 다른 지표로 이동했으면 무시
+
+  var entry = data && data.items && data.items[key];
+  if (providerTag) providerTag.textContent = (data && data.generated_at) ? data.generated_at + ' 기준' : '';
+
+  if (!entry || !entry.text) {
+    body.innerHTML = '<span class="ai-interpret-placeholder">아직 생성된 해석이 없습니다. (매일 새벽 자동 갱신됩니다)</span>';
     return;
   }
+  var html = (typeof marked !== 'undefined') ? marked.parse(entry.text) : entry.text.replace(/\n/g, '<br>');
+  body.innerHTML = html;
+}
 
-  if (_indicatorAIAbort) _indicatorAIAbort.abort();
-  _indicatorAIAbort = new AbortController();
-  if (refreshBtn) refreshBtn.disabled = true;
-  body.innerHTML = '<span class="ai-interpret-placeholder">✦ 분석 생성 중…</span>';
-
-  try {
-    var prompt = buildIndicatorPrompt(key, d);
-    var txt = await askAIByProvider(provider, prompt, { signal: _indicatorAIAbort.signal });
-    var html = (typeof marked !== 'undefined') ? marked.parse(txt || '') : (txt || '').replace(/\n/g, '<br>');
-    // 응답 도착 시점에 사용자가 다른 지표로 이동했으면 반영하지 않음
-    if (box.dataset.key === key) body.innerHTML = html;
-  } catch (e) {
-    if (box.dataset.key === key) {
-      body.innerHTML = (e.name === 'AbortError')
-        ? '<span style="color:#888">⊘ 분석이 중단되었습니다.</span>'
-        : '<span class="res-pane-error">⚠ ' + e.message + '</span>';
-    }
-  } finally {
-    if (refreshBtn) refreshBtn.disabled = false;
-  }
+/* "⟳" 버튼: 재생성이 아니라 캐시를 무시하고 ai_interpretations.json을 다시 읽어온다
+   (예: 배치가 방금 막 갱신됐을 때 새로고침 용도) */
+function runIndicatorAI() {
+  var box = document.getElementById('ai-interpret-box');
+  if (!box || !box.dataset.key) return;
+  showIndicatorAI(box.dataset.key, true);
 }
