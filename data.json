@@ -8895,9 +8895,19 @@
             "d": 25,
             "temp": 28.7,
             "rain": 0.0
+          },
+          {
+            "d": 26,
+            "temp": 29.2,
+            "rain": 0.0
+          },
+          {
+            "d": 27,
+            "temp": 28.9,
+            "rain": 0.0
           }
         ],
-        "avg_temp": 26.5,
+        "avg_temp": 26.7,
         "max_temp": 30.4,
         "total_rain": 385.8,
         "rain_days": 19
@@ -12897,10 +12907,20 @@
             "d": 25,
             "temp": 29.4,
             "rain": 0.0
+          },
+          {
+            "d": 26,
+            "temp": 30.8,
+            "rain": 0.0
+          },
+          {
+            "d": 27,
+            "temp": 29.9,
+            "rain": 0.0
           }
         ],
-        "avg_temp": 26.7,
-        "max_temp": 29.4,
+        "avg_temp": 26.9,
+        "max_temp": 30.8,
         "total_rain": 59.7,
         "rain_days": 5
       }
