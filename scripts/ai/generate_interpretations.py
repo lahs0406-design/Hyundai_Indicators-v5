@@ -5,12 +5,19 @@ summary.json(지표별 kpi/series12)을 읽어 각 지표에 대한 AI 해석을
 1회 생성하고 ai_interpretations.json으로 저장합니다.
 
 기존에는 사용자가 좌측 사이드바에서 지표를 클릭할 때마다
-(js/ai.js의 runIndicatorAI → askGemini)를 호출했지만,
+(js/ai.js의 runIndicatorAI → askCopilotAgent, Direct Line)를 호출했지만,
 이 스크립트로 하루 1회(GitHub Actions 스케줄) 미리 생성해두고
 프론트엔드는 생성된 결과만 읽어 표시합니다.
 
+Copilot Studio 에이전트 자체에 이미 시스템 지시사항(분석 조건/가이드)이
+구성되어 있으므로, js/ai.js의 askCopilotAgent()와 동일하게 이 스크립트도
+별도 system prompt 없이 지표 데이터(build_prompt 결과)만 메시지로 보냅니다.
+
 환경변수:
-  GEMINI_API_KEY   Google AI Studio에서 발급한 Gemini API 키
+  COPILOT_SECRET   Copilot Studio(Direct Line) 채널 시크릿.
+                   웹페이지에서 입력하는 것과 동일한 값을
+                   GitHub 저장소 Settings → Secrets and variables → Actions에
+                   COPILOT_SECRET 이름으로 등록해야 합니다.
                    (없으면 이 단계는 조용히 skip — 나머지 파이프라인에는 영향 없음)
 
 ※ INDICATOR_META의 title/unit은 js/config.js의 CD 정의(각 지표 제목·단위)와
@@ -23,48 +30,16 @@ import json
 import time
 import datetime
 import urllib.request
+import urllib.error
 
 ROOT         = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..")
 SUMMARY_PATH = os.path.join(ROOT, "summary.json")
 OUTPUT_PATH  = os.path.join(ROOT, "ai_interpretations.json")
 
-GEMINI_KEY   = os.environ.get("GEMINI_API_KEY", "")
-GEMINI_MODEL = "gemini-3.5-flash"   # js/ai.js의 askGemini()와 동일한 모델
-GEMINI_URL   = f"https://generativelanguage.googleapis.com/v1beta/models/{GEMINI_MODEL}:generateContent"
-
-# js/ai.js의 AI_SYSTEM_PROMPT와 동일
-AI_SYSTEM_PROMPT = "\n".join([
-    '당신은 현대백화점 상품본부 전략 분석가입니다.',
-    '아래 최근 경제 지표 실수치 데이터를 분석하여, 현대백화점 관점의 실전 인사이트를 작성해주세요.',
-    '',
-    '[분석 조건 설정]',
-    '- 경제 지표 : 소비심리지수 / 소비자물가 / 기준금리 / 환율 / 코스피 / 외국인관광객 / 날씨(기온/강수)',
-    '- 상품군 : 패션 / 명품 / 하이주얼리 / 장신구·잡화 / 뷰티 / 리빙 / 가전 / 유·아동 / F&B / 식품관 / SPA / 스포츠·아웃도어',
-    '- 고객군 : 내국인 VIP고객 / 내국인 일반고객 / 외국인 관광객',
-    '',
-    '[분석 내용 가이드]',
-    '① 지표 추이 요약',
-    '- 각 지표의 최근 방향성(상승/하락/보합)과 변화 폭을 수치와 함께 2~3줄로 요약',
-    '',
-    '② 소비자 및 백화점 업계 영향',
-    '- 현재 지표 조합이 내·외국인 소비 심리에 미치는 복합적 영향',
-    '- 백화점 방문 빈도 및 객단가 관점에서 서술',
-    '',
-    '③ 상품 카테고리별 기회·리스크',
-    '- 상품군 / 기회요인 / 리스크요인 / 지표에 대한 수치적 근거 순으로 작성',
-    '',
-    '④ 단기(1~3개월) MD 대응 전략 제언',
-    '- 각 상품군별 구체적인 행동 방향 (프로모션 타이밍, 재고 전략, 외국인 타겟 마케팅 등)',
-    '- 수치 근거를 바탕으로 우선순위 제시',
-    '',
-    '[인사이트 작성시 유의사항]',
-    '※ 지표 간 상관관계를 반드시 포함할 것',
-    '   Ex) 환율 상승 → 외국인 구매력 증가 → 명품 수요 확대',
-    '※ 단순 현황 나열이 아닌, 수치 기반 판단 근거를 포함할 것',
-    '※ 긍정/부정 양면을 균형 있게 서술할 것',
-    '※ 아래 제공되는 [경제 지표 실수치]는 실제 API에서 수집된 데이터로,',
-    '   반드시 제공된 수치만을 근거로 분석하고, 데이터에 없는 수치는 절대 추측하거나 임의 생성 금지. 반드시 한글로만 작성할것.',
-])
+COPILOT_SECRET   = os.environ.get("COPILOT_SECRET", "")
+DL_BASE          = "https://directline.botframework.com/v3/directline"
+POLL_INTERVAL    = 1.0     # 초
+RESPONSE_TIMEOUT = 120     # 초, 지표 1건당 응답 대기 한도
 
 # ── 지표별 제목·단위 : js/config.js의 CD 정의와 대조해서 확인/수정하세요 ──
 INDICATOR_META = {
@@ -121,29 +96,76 @@ def build_prompt(key: str, entry: dict) -> str:
     )
 
 
-def ask_gemini(prompt: str) -> str:
-    body = json.dumps({
-        "systemInstruction": {"parts": [{"text": AI_SYSTEM_PROMPT}]},
-        "contents": [{"parts": [{"text": prompt}]}],
-    }).encode("utf-8")
-    req = urllib.request.Request(
-        f"{GEMINI_URL}?key={GEMINI_KEY}",
-        data=body,
-        headers={"Content-Type": "application/json"},
-        method="POST",
-    )
-    with urllib.request.urlopen(req, timeout=60) as res:
-        data = json.loads(res.read().decode("utf-8"))
-    return data["candidates"][0]["content"]["parts"][0]["text"]
+def _http(method: str, url: str, token: str = None, body: dict = None, timeout: int = 30) -> dict:
+    headers = {"Content-Type": "application/json"}
+    if token:
+        headers["Authorization"] = f"Bearer {token}"
+    data = json.dumps(body).encode("utf-8") if body is not None else None
+    req = urllib.request.Request(url, data=data, headers=headers, method=method)
+    with urllib.request.urlopen(req, timeout=timeout) as res:
+        raw = res.read()
+        return json.loads(raw.decode("utf-8")) if raw else {}
+
+
+def ask_copilot(message: str) -> str:
+    """js/ai.js의 askCopilotAgent()(Direct Line)와 동일한 흐름을
+    폴링 방식으로 구현. (배치에서는 WebSocket 대신 폴링만 사용)"""
+    if not COPILOT_SECRET:
+        raise RuntimeError("COPILOT_SECRET이 설정되지 않았습니다.")
+
+    # 1) 토큰 발급
+    token_data = _http("POST", f"{DL_BASE}/tokens/generate", token=COPILOT_SECRET)
+    token = token_data.get("token")
+    if not token:
+        raise RuntimeError("Direct Line 토큰 발급 실패")
+
+    # 2) 대화 시작
+    conv = _http("POST", f"{DL_BASE}/conversations", token=token)
+    conv_id    = conv.get("conversationId")
+    conv_token = conv.get("token", token)
+    if not conv_id:
+        raise RuntimeError("Direct Line 대화 시작 실패")
+    act_url = f"{DL_BASE}/conversations/{conv_id}/activities"
+
+    # 3) 메시지 전송
+    _http("POST", act_url, token=conv_token, body={
+        "type": "message",
+        "from": {"id": "batch-job"},
+        "text": message,
+    })
+    send_time = time.time()
+
+    # 4) 응답 폴링
+    watermark = None
+    deadline  = send_time + RESPONSE_TIMEOUT
+    while time.time() < deadline:
+        time.sleep(POLL_INTERVAL)
+        url = act_url + (f"?watermark={watermark}" if watermark else "")
+        try:
+            poll = _http("GET", url, token=conv_token)
+        except urllib.error.URLError:
+            continue
+        watermark = poll.get("watermark", watermark)
+        bot_msgs = [
+            a.get("text", "")
+            for a in poll.get("activities", [])
+            if a.get("type") == "message"
+            and (a.get("from") or {}).get("id") != "batch-job"
+            and isinstance(a.get("text"), str) and a.get("text").strip()
+        ]
+        if bot_msgs:
+            return "\n\n".join(bot_msgs)
+
+    raise TimeoutError(f"응답 시간 초과 ({RESPONSE_TIMEOUT}초)")
 
 
 def main():
     print("=" * 55)
-    print("generate_interpretations.py 시작")
+    print("generate_interpretations.py 시작 (Copilot Studio / Direct Line)")
     print("=" * 55)
 
-    if not GEMINI_KEY:
-        print("[AI 해석] skip (GEMINI_API_KEY 없음)")
+    if not COPILOT_SECRET:
+        print("[AI 해석] skip (COPILOT_SECRET 없음)")
         return
 
     if not os.path.exists(SUMMARY_PATH):
@@ -169,14 +191,14 @@ def main():
         print(f"  [{key}] 해석 생성 중...")
         try:
             prompt = build_prompt(key, entry)
-            text = ask_gemini(prompt)
+            text = ask_copilot(prompt)
             items[key] = {"text": text}
         except Exception as e:
             print(f"  [{key}] 오류: {e}")
             if key in prev_items:
                 print(f"  [{key}] 이전 해석을 유지합니다.")
                 items[key] = prev_items[key]
-        time.sleep(1)  # 무료 티어 rate limit 여유
+        time.sleep(1)
 
     now_kst = datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=9)))
     output = {
