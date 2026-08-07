@@ -2345,6 +2345,14 @@
     {
       "ym": "20260805",
       "val": 6598.26
+    },
+    {
+      "ym": "20260806",
+      "val": 6296.38
+    },
+    {
+      "ym": "20260807",
+      "val": 6258.77
     }
   ],
   "fx": [
@@ -8989,10 +8997,20 @@
             "d": 4,
             "temp": 32.6,
             "rain": 0.0
+          },
+          {
+            "d": 5,
+            "temp": 32.8,
+            "rain": 0.0
+          },
+          {
+            "d": 6,
+            "temp": 32.9,
+            "rain": 0.0
           }
         ],
-        "avg_temp": 31.1,
-        "max_temp": 32.6,
+        "avg_temp": 31.7,
+        "max_temp": 32.9,
         "total_rain": 0.0,
         "rain_days": 0
       }
@@ -13045,9 +13063,19 @@
             "d": 4,
             "temp": 30.5,
             "rain": 0.0
+          },
+          {
+            "d": 5,
+            "temp": 29.6,
+            "rain": 0.0
+          },
+          {
+            "d": 6,
+            "temp": 29.7,
+            "rain": 0.0
           }
         ],
-        "avg_temp": 31.5,
+        "avg_temp": 30.9,
         "max_temp": 32.1,
         "total_rain": 0.0,
         "rain_days": 0
@@ -17101,9 +17129,19 @@
             "d": 4,
             "temp": 30.0,
             "rain": 0.0
+          },
+          {
+            "d": 5,
+            "temp": 29.8,
+            "rain": 0.0
+          },
+          {
+            "d": 6,
+            "temp": 29.7,
+            "rain": 0.0
           }
         ],
-        "avg_temp": 31.8,
+        "avg_temp": 31.1,
         "max_temp": 32.9,
         "total_rain": 0.0,
         "rain_days": 0
@@ -21157,10 +21195,20 @@
             "d": 4,
             "temp": 31.2,
             "rain": 0.0
+          },
+          {
+            "d": 5,
+            "temp": 31.5,
+            "rain": 0.0
+          },
+          {
+            "d": 6,
+            "temp": 31.9,
+            "rain": 0.0
           }
         ],
-        "avg_temp": 30.1,
-        "max_temp": 31.2,
+        "avg_temp": 30.7,
+        "max_temp": 31.9,
         "total_rain": 0.0,
         "rain_days": 0
       }
@@ -25213,9 +25261,19 @@
             "d": 4,
             "temp": 30.8,
             "rain": 23.9
+          },
+          {
+            "d": 5,
+            "temp": 30.3,
+            "rain": 0.0
+          },
+          {
+            "d": 6,
+            "temp": 31.0,
+            "rain": 0.0
           }
         ],
-        "avg_temp": 31.1,
+        "avg_temp": 31.0,
         "max_temp": 32.0,
         "total_rain": 23.9,
         "rain_days": 1
@@ -29269,10 +29327,20 @@
             "d": 4,
             "temp": 31.2,
             "rain": 13.9
+          },
+          {
+            "d": 5,
+            "temp": 31.3,
+            "rain": 0.0
+          },
+          {
+            "d": 6,
+            "temp": 31.2,
+            "rain": 0.0
           }
         ],
-        "avg_temp": 30.6,
-        "max_temp": 31.2,
+        "avg_temp": 30.8,
+        "max_temp": 31.3,
         "total_rain": 13.9,
         "rain_days": 1
       }
@@ -33325,9 +33393,19 @@
             "d": 4,
             "temp": 28.6,
             "rain": 0.0
+          },
+          {
+            "d": 5,
+            "temp": 28.0,
+            "rain": 0.0
+          },
+          {
+            "d": 6,
+            "temp": 27.5,
+            "rain": 0.0
           }
         ],
-        "avg_temp": 30.5,
+        "avg_temp": 29.6,
         "max_temp": 32.5,
         "total_rain": 0.0,
         "rain_days": 0
@@ -37381,10 +37459,20 @@
             "d": 4,
             "temp": 31.9,
             "rain": 0.7
+          },
+          {
+            "d": 5,
+            "temp": 32.4,
+            "rain": 0.0
+          },
+          {
+            "d": 6,
+            "temp": 32.6,
+            "rain": 0.0
           }
         ],
-        "avg_temp": 31.4,
-        "max_temp": 31.9,
+        "avg_temp": 31.8,
+        "max_temp": 32.6,
         "total_rain": 0.7,
         "rain_days": 1
       }
