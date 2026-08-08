@@ -9007,10 +9007,15 @@
             "d": 6,
             "temp": 32.9,
             "rain": 0.0
+          },
+          {
+            "d": 7,
+            "temp": 33.1,
+            "rain": 0.0
           }
         ],
-        "avg_temp": 31.7,
-        "max_temp": 32.9,
+        "avg_temp": 31.9,
+        "max_temp": 33.1,
         "total_rain": 0.0,
         "rain_days": 0
       }
@@ -13072,6 +13077,11 @@
           {
             "d": 6,
             "temp": 29.7,
+            "rain": 0.0
+          },
+          {
+            "d": 7,
+            "temp": 30.9,
             "rain": 0.0
           }
         ],
@@ -17139,6 +17149,11 @@
             "d": 6,
             "temp": 29.7,
             "rain": 0.0
+          },
+          {
+            "d": 7,
+            "temp": 30.6,
+            "rain": 0.0
           }
         ],
         "avg_temp": 31.1,
@@ -21205,10 +21220,15 @@
             "d": 6,
             "temp": 31.9,
             "rain": 0.0
+          },
+          {
+            "d": 7,
+            "temp": 32.3,
+            "rain": 0.0
           }
         ],
-        "avg_temp": 30.7,
-        "max_temp": 31.9,
+        "avg_temp": 30.9,
+        "max_temp": 32.3,
         "total_rain": 0.0,
         "rain_days": 0
       }
@@ -25271,10 +25291,15 @@
             "d": 6,
             "temp": 31.0,
             "rain": 0.0
+          },
+          {
+            "d": 7,
+            "temp": 32.4,
+            "rain": 0.0
           }
         ],
-        "avg_temp": 31.0,
-        "max_temp": 32.0,
+        "avg_temp": 31.2,
+        "max_temp": 32.4,
         "total_rain": 23.9,
         "rain_days": 1
       }
@@ -29337,10 +29362,15 @@
             "d": 6,
             "temp": 31.2,
             "rain": 0.0
+          },
+          {
+            "d": 7,
+            "temp": 32.0,
+            "rain": 0.0
           }
         ],
-        "avg_temp": 30.8,
-        "max_temp": 31.3,
+        "avg_temp": 31.0,
+        "max_temp": 32.0,
         "total_rain": 13.9,
         "rain_days": 1
       }
@@ -33403,9 +33433,14 @@
             "d": 6,
             "temp": 27.5,
             "rain": 0.0
+          },
+          {
+            "d": 7,
+            "temp": 28.7,
+            "rain": 0.0
           }
         ],
-        "avg_temp": 29.6,
+        "avg_temp": 29.4,
         "max_temp": 32.5,
         "total_rain": 0.0,
         "rain_days": 0
@@ -37469,10 +37504,15 @@
             "d": 6,
             "temp": 32.6,
             "rain": 0.0
+          },
+          {
+            "d": 7,
+            "temp": 33.2,
+            "rain": 0.0
           }
         ],
-        "avg_temp": 31.8,
-        "max_temp": 32.6,
+        "avg_temp": 32.0,
+        "max_temp": 33.2,
         "total_rain": 0.7,
         "rain_days": 1
       }
