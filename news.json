@@ -1,126 +1,77 @@
 {
   "dept": [
     {
-      "title": "롯데백화점 본점, 특별기획전 '이화전' 연다",
-      "date": "Wed, 12 Aug 2026 22:52:00",
-      "source": "financialpost.co.kr",
-      "url": "https://www.financialpost.co.kr/news/articleView.html?idxno=270178",
-      "sub": ""
-    },
-    {
-      "title": "현대백화점, 독립유공자 후손 주거환경 개선사업에 '2억' 후원",
-      "date": "Wed, 12 Aug 2026 22:50:00",
-      "source": "financialpost.co.kr",
-      "url": "https://www.financialpost.co.kr/news/articleView.html?idxno=270086",
-      "sub": ""
-    },
-    {
-      "title": "컬리·무신사 \"인기 뷰티상품 최대 90% 저렴하게\"",
-      "date": "Wed, 12 Aug 2026 21:34:00",
-      "source": "idaegu.co.kr",
-      "url": "https://www.idaegu.co.kr/news/articleView.html?idxno=556597",
-      "sub": ""
-    },
-    {
-      "title": "롯데백화점 대구점, '딤섬 가이즈' 15일 신규 오픈",
-      "date": "Wed, 12 Aug 2026 20:58:00",
-      "source": "hidomin.com",
-      "url": "https://www.hidomin.com/news/articleView.html?idxno=717107",
-      "sub": ""
-    },
-    {
-      "title": "[무신사 포커스] 무신사, 필리핀 오프라인 진출·경량패딩 수요 선점…...",
-      "date": "Wed, 12 Aug 2026 19:14:00",
-      "source": "thevaluenews.co.kr",
-      "url": "http://www.thevaluenews.co.kr/news/view.php?idx=200743",
-      "sub": ""
-    },
-    {
-      "title": "대구에 '홍콩 딤섬' 상륙…롯데백화점, 지역 최초 '딤섬가이즈' 오픈",
-      "date": "Wed, 12 Aug 2026 18:54:00",
-      "source": "kyongbuk.co.kr",
-      "url": "https://www.kyongbuk.co.kr/news/articleView.html?idxno=4081016",
-      "sub": ""
-    },
-    {
-      "title": "수익성 살아난 롯데… 신동빈의 다음 승부는 '성장'",
-      "date": "Wed, 12 Aug 2026 17:16:00",
-      "source": "pressman.kr",
-      "url": "https://www.pressman.kr/news/articleView.html?idxno=103100",
-      "sub": ""
-    },
-    {
-      "title": "돌아가신 엄마 손때 묻은 20년 된 니트, 유니클로 직원 손에서 '세상 하...",
-      "date": "Wed, 12 Aug 2026 17:04:00",
-      "source": "insight.co.kr",
-      "url": "https://www.insight.co.kr/news/567933",
-      "sub": ""
-    },
-    {
-      "title": "롯데 신동빈 '유동성 위기' 급한 불 껐지만...본업 경쟁력 확보 과제",
-      "date": "Wed, 12 Aug 2026 16:22:00",
-      "source": "esgeconomy.com",
-      "url": "https://www.esgeconomy.com/news/articleView.html?idxno=16380",
-      "sub": ""
-    },
-    {
       "title": "한유원, '현백 뷰티페스타' 개최...창업기업 124개사 선정",
       "date": "Wed, 05 Aug 2026 14:14:00",
       "source": "ajunews.com",
       "url": "https://www.ajunews.com/view/20260805133710685",
       "sub": ""
+    },
+    {
+      "title": "라이엇 게임즈, '와일드 팬페스트 in 현백 판교점' 사전 예약 예고",
+      "date": "Tue, 11 Aug 2026 10:28:00",
+      "source": "n.news.naver.com",
+      "url": "https://zdnet.co.kr/view/?no=20260811102718",
+      "sub": ""
+    },
+    {
+      "title": "롯데백화점, 클랙식 유망주들에 날개 달았다…'롯데 키즈 오케스트라 음...",
+      "date": "Thu, 13 Aug 2026 23:56:00",
+      "source": "financialpost.co.kr",
+      "url": "https://www.financialpost.co.kr/news/articleView.html?idxno=270356",
+      "sub": ""
+    },
+    {
+      "title": "현대백화점, 추석 선물세트 예약판매…한우·굴비부터 뷰티·가전까지",
+      "date": "Thu, 13 Aug 2026 21:04:00",
+      "source": "thepublic.kr",
+      "url": "https://www.thepublic.kr/news/articleView.html?idxno=314926",
+      "sub": ""
+    },
+    {
+      "title": "롯데백화점, 추석 선물세트 사전 예약 품목 190여종 구성",
+      "date": "Thu, 13 Aug 2026 19:36:00",
+      "source": "lawissue.co.kr",
+      "url": "http://www.lawissue.co.kr/view.php?ud=20260813193520442204ead0791_12",
+      "sub": ""
+    },
+    {
+      "title": "무신사, 빅뱅 데뷔 20주년 기념 MD 58종 선보여",
+      "date": "Thu, 13 Aug 2026 19:32:00",
+      "source": "lawissue.co.kr",
+      "url": "http://www.lawissue.co.kr/view.php?ud=202608131930012854204ead0791_12",
+      "sub": ""
+    },
+    {
+      "title": "코스맥스, 중기부·무신사와 신진 K뷰티 브랜드 지원",
+      "date": "Thu, 13 Aug 2026 18:20:00",
+      "source": "weekly.hankooki.com",
+      "url": "https://weekly.hankooki.com/news/articleView.html?idxno=7178942",
+      "sub": ""
+    },
+    {
+      "title": "롯데 · 유니클로 · 휠라 · HDEX, 크리에이터 모집 잇달아",
+      "date": "Thu, 13 Aug 2026 17:58:00",
+      "source": "fashionbiz.co.kr",
+      "url": "https://www.fashionbiz.co.kr/article/228597",
+      "sub": ""
+    },
+    {
+      "title": "빅뱅 데뷔 20주년, 무신사와 함께…'뱅봉' 등 한정판 MD 58종 단독 발매",
+      "date": "Thu, 13 Aug 2026 17:46:00",
+      "source": "joongangenews.com",
+      "url": "https://www.joongangenews.com/news/articleView.html?idxno=540018",
+      "sub": ""
+    },
+    {
+      "title": "신동빈 롯데 회장, 롯데웰푸드서만 상반기 보수 11억원 수령",
+      "date": "Thu, 13 Aug 2026 17:39:00",
+      "source": "n.news.naver.com",
+      "url": "https://www.ddaily.co.kr/page/view/2026081317352135529",
+      "sub": ""
     }
   ],
   "trend": [
-    {
-      "title": "제니, 'Less than a Lover' 뮤비 속 스페인 별장…에어비앤비로 팬들과 나...",
-      "date": "Wed, 12 Aug 2026 23:52:00",
-      "source": "topstarnews.net",
-      "url": "https://www.topstarnews.net/news/articleView.html?idxno=16162079",
-      "sub": ""
-    },
-    {
-      "title": "중국 중산층, 명품 핸드백보다 고급 화장품 선호",
-      "date": "Wed, 12 Aug 2026 22:06:00",
-      "source": "apparelnews.co.kr",
-      "url": "http://www.apparelnews.co.kr/news/news_view/?idx=226873",
-      "sub": ""
-    },
-    {
-      "title": "'케링vs메타' 소송까지…'메이드 인 이탈리아'란 무엇인가",
-      "date": "Wed, 12 Aug 2026 20:30:00",
-      "source": "ktnews.com",
-      "url": "http://www.ktnews.com/news/articleView.html?idxno=147692",
-      "sub": ""
-    },
-    {
-      "title": "She’ll Make You Rethink How to Wear a Shirt",
-      "date": "Wed, 12 Aug 2026 18:02:00",
-      "source": "nytimes.com",
-      "url": "https://www.nytimes.com/2026/08/12/style/charlotte-collet-stylist-auralee-jil-sander.html?partner=naver",
-      "sub": ""
-    },
-    {
-      "title": "리사, '태국 차은우'와 열애설 활활…'전남친' 프레데릭도 새 여친? 엇갈...",
-      "date": "Wed, 12 Aug 2026 17:20:00",
-      "source": "m.entertain.naver.com",
-      "url": "https://www.xportsnews.com/article/2182702",
-      "sub": ""
-    },
-    {
-      "title": "전문가만 알고 있는 숨겨진 '명작 시계' 20",
-      "date": "Wed, 12 Aug 2026 13:00:00",
-      "source": "esquirekorea.co.kr",
-      "url": "https://www.esquirekorea.co.kr/article/1907829",
-      "sub": ""
-    },
-    {
-      "title": "한쪽은 역대급, 한쪽은 속앓이...신세계·이마트 '희비쌍곡선'",
-      "date": "Wed, 12 Aug 2026 10:12:00",
-      "source": "ebn.co.kr",
-      "url": "https://www.ebn.co.kr/news/articleView.html?idxno=1720052",
-      "sub": ""
-    },
     {
       "title": "티파니부터 샤넬까지 '하이 주얼리' 아이콘은 어떻게 탄생했을까?",
       "date": "Tue, 11 Aug 2026 08:00:00",
@@ -129,61 +80,75 @@
       "sub": ""
     },
     {
-      "title": "현진, 까르띠에 팬더 주얼리로 'THIS & THAT' 컴백 비주얼 완성",
-      "date": "Thu, 13 Aug 2026 02:06:00",
-      "source": "topstarnews.net",
-      "url": "https://www.topstarnews.net/news/articleView.html?idxno=16162121",
+      "title": "올여름 가장 핫한 패션 브랜드는 '샤넬'",
+      "date": "Thu, 13 Aug 2026 22:04:00",
+      "source": "apparelnews.co.kr",
+      "url": "http://www.apparelnews.co.kr/news/news_view/?idx=226903",
       "sub": ""
     },
     {
-      "title": "박하선, 고영욱 명품 저격 후…\"샤넬 빈티지백+쿠팡 모자 매치, 하이로...",
-      "date": "Thu, 13 Aug 2026 00:03:00",
-      "source": "m.entertain.naver.com",
-      "url": "https://www.mydaily.co.kr/page/view/2026081221180485698",
+      "title": "올가을 유행할 가방은 질감으로 승부한대요",
+      "date": "Thu, 13 Aug 2026 17:06:00",
+      "source": "elle.co.kr",
+      "url": "https://www.elle.co.kr/article/1907914",
+      "sub": ""
+    },
+    {
+      "title": "박하선, 고영욱 ‘명품’ 저격 후…“샤넬백에 쿠팡 모자”",
+      "date": "Thu, 13 Aug 2026 16:58:00",
+      "source": "bntnews.co.kr",
+      "url": "https://www.bntnews.co.kr/article/view/bnt202608130259",
+      "sub": ""
+    },
+    {
+      "title": "신세계면세점, 마리끌레르·라쿠제트 입점",
+      "date": "Thu, 13 Aug 2026 15:38:00",
+      "source": "apparelnews.co.kr",
+      "url": "http://www.apparelnews.co.kr/news/news_view/?idx=226912",
+      "sub": ""
+    },
+    {
+      "title": "페드리고니, K-PRINT 2026서 점착소재 선봬... \"지속가능 솔루션 제시\"",
+      "date": "Thu, 13 Aug 2026 14:22:00",
+      "source": "kr.aving.net",
+      "url": "https://kr.aving.net/news/articleView.html?idxno=1813156",
+      "sub": ""
+    },
+    {
+      "title": "진짜만 모았다! 남자 '정장 브랜드' 5",
+      "date": "Thu, 13 Aug 2026 13:00:00",
+      "source": "esquirekorea.co.kr",
+      "url": "https://www.esquirekorea.co.kr/article/1907855",
+      "sub": ""
+    },
+    {
+      "title": "요즘 주목받는 낯설고 매혹적인 6가지 하이 주얼리 컬러 보석",
+      "date": "Thu, 13 Aug 2026 12:02:00",
+      "source": "marieclairekorea.com",
+      "url": "https://www.marieclairekorea.com/fashion/2026/08/unfamiliar-gemstones-in-high-jewelry/?utm_source=naver&utm_medium=partnership",
+      "sub": ""
+    },
+    {
+      "title": "가을을 부르는 신상 향수 4ㅣ마리끌레르",
+      "date": "Thu, 13 Aug 2026 09:16:00",
+      "source": "marieclairekorea.com",
+      "url": "https://www.marieclairekorea.com/beauty/2026/08/new-perfume-6/?utm_source=naver&utm_medium=partnership",
+      "sub": ""
+    },
+    {
+      "title": "\"이구아수폭포 보며 피크닉\"… '배움과 경험' 비아신세계의 남다른 여정...",
+      "date": "Thu, 13 Aug 2026 04:30:00",
+      "source": "n.news.naver.com",
+      "url": "https://www.hankookilbo.com/news/article/A2026081015110002616?did=NA",
       "sub": ""
     }
   ],
   "rate": [
     {
-      "title": "'김밥축제·부항댐 한 번에'…김천시, 맞춤형 관광DRT 사업 본격화",
-      "date": "Wed, 12 Aug 2026 23:02:00",
-      "source": "ajunews.com",
-      "url": "https://www.ajunews.com/view/20260812225458003",
-      "sub": ""
-    },
-    {
-      "title": "관광공사, 광복절에 꼭 가봐야 할 역사 여행지 총정리",
-      "date": "Wed, 12 Aug 2026 20:08:00",
-      "source": "livesnews.com",
-      "url": "https://www.livesnews.com/news/article.html?no=63350",
-      "sub": ""
-    },
-    {
-      "title": "옥천군, '27 국가대표 선발전 겸한 대규모 전국 정구대회 유치",
-      "date": "Wed, 12 Aug 2026 19:08:00",
-      "source": "breaknews.com",
-      "url": "http://www.breaknews.com/1228543",
-      "sub": ""
-    },
-    {
-      "title": "전남광주통합특별시, 거문도 근대역사문화공간 보존·활용 업무협약 체...",
-      "date": "Wed, 12 Aug 2026 19:06:00",
-      "source": "breaknews.com",
-      "url": "http://www.breaknews.com/1228628",
-      "sub": ""
-    },
-    {
       "title": "“인공지능 AI로 똑똑하게, 휴식은 아날로그 감성”…지금은 ‘이원적 ...",
       "date": "Wed, 12 Aug 2026 17:33:00",
       "source": "n.news.naver.com",
       "url": "https://www.segye.com/newsView/20260812515805?OutUrl=naver",
-      "sub": ""
-    },
-    {
-      "title": "1000만명 관광객이 12조원 썼다…유통업계 ‘외국인 특수’",
-      "date": "Wed, 12 Aug 2026 14:38:00",
-      "source": "n.news.naver.com",
-      "url": "https://www.joongang.co.kr/article/25452745",
       "sub": ""
     },
     {
@@ -194,35 +159,77 @@
       "sub": ""
     },
     {
-      "title": "1000만 관광객이 12조 썼다…유통업계, 내수 부진 뚫은 '외국인 특수'",
-      "date": "Wed, 12 Aug 2026 13:49:00",
+      "title": "[전문기자칼럼] 관광공사 해외지사, 왜 도마에 올랐나",
+      "date": "Wed, 12 Aug 2026 06:02:00",
       "source": "n.news.naver.com",
-      "url": "https://www.newsis.com/view/NISX20260812_0003745897",
+      "url": "https://www.edaily.co.kr/news/newspath.asp?newsid=02450166645546664",
       "sub": ""
     },
     {
-      "title": "\"집나간 입맛 돌아온다\"…'광양전어축제'로 떠나는 가을 여행",
-      "date": "Wed, 12 Aug 2026 11:54:00",
+      "title": "외국인 관광객 3000만 시대 … 2028년 조기달성 기대",
+      "date": "Tue, 11 Aug 2026 17:33:00",
       "source": "n.news.naver.com",
-      "url": "https://view.asiae.co.kr/article/2026081211262635546",
+      "url": "https://www.mk.co.kr/article/12124224",
       "sub": ""
     },
     {
-      "title": "웨이브릿지, 코인베이스 베이스 기반 스테이블코인 전환 기술로 BC카드...",
-      "date": "Wed, 12 Aug 2026 11:30:00",
-      "source": "tokenpost.kr",
-      "url": "https://www.tokenpost.kr/news/blockchain/388867",
+      "title": "키아프·화랑미술제 연계 K-아트 홍보... 관광공사, 럭셔리 팸투어 추진",
+      "date": "Thu, 13 Aug 2026 22:58:00",
+      "source": "ttlnews.com",
+      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3134182",
+      "sub": ""
+    },
+    {
+      "title": "Bill Gates in S. Korea to discuss cooperation in next-generation nuclear ...",
+      "date": "Thu, 13 Aug 2026 22:53:00",
+      "source": "n.news.naver.com",
+      "url": "https://en.yna.co.kr/view/AEN20260813011600315?input=2106m",
+      "sub": ""
+    },
+    {
+      "title": "한국관광공사, 한국화랑협회와 K-아트 전시 협력",
+      "date": "Thu, 13 Aug 2026 22:50:00",
+      "source": "lawissue.co.kr",
+      "url": "http://www.lawissue.co.kr/view.php?ud=20260813224805552f4ab64559d_12",
+      "sub": ""
+    },
+    {
+      "title": "Bill Gates arrives in Korea for talks on SMR cooperation",
+      "date": "Thu, 13 Aug 2026 22:04:00",
+      "source": "n.news.naver.com",
+      "url": "https://www.koreaherald.com/article/10840798?ref=naver",
+      "sub": ""
+    },
+    {
+      "title": "Gates’ S. Korea visit puts AI power, SMR cooperation in focus",
+      "date": "Thu, 13 Aug 2026 20:30:00",
+      "source": "arirang.com",
+      "url": "https://www.arirang.com/news/view?id=299646",
+      "sub": ""
+    },
+    {
+      "title": "\"가을 전어 맛보러 광양으로\"…제25회 광양전어축제 9월 4일 개막",
+      "date": "Thu, 13 Aug 2026 17:46:00",
+      "source": "newsmaker.or.kr",
+      "url": "http://www.newsmaker.or.kr/news/articleView.html?idxno=180728",
       "sub": ""
     }
   ],
   "asset": [
     {
-      "title": "[사사건건] 대출도 ‘선착순’ 경쟁…가계부채 총량 규제, 왜?",
-      "date": "Wed, 12 Aug 2026 16:43:00",
+      "title": "美 7월 소비자물가 3.4% 올라… 9월 금리인상 미뤄지나",
+      "date": "Fri, 14 Aug 2026 00:32:00",
       "source": "n.news.naver.com",
-      "url": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8635188&ref=A",
+      "url": "https://www.chosun.com/economy/int_economy/2026/08/14/HCZH23AMXFEY3DZWU2VSDM4P44/?utm_source=naver&utm_medium=referral&utm_campaign=naver-news",
+      "sub": ""
+    },
+    {
+      "title": "가계부채 총량 증가율 1.5%→3% 2배 확대…대출 오픈런 해소 기대",
+      "date": "Fri, 14 Aug 2026 00:02:00",
+      "source": "n.news.naver.com",
+      "url": "https://www.kwnews.co.kr/article/20260813501792",
       "sub": ""
     }
   ],
-  "updated": "2026.08.13 02:59"
+  "updated": "2026.08.14 02:59"
 }
