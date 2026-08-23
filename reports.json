@@ -1,6 +1,24 @@
 {
   "hri": [
     {
+      "title": "8월 기준금리 결정 앞둔 한국은행… 전문가들 전망 엇갈린 이유는?",
+      "date": "Sun, 23 Aug 2026 12:12:00",
+      "source": "gokorea.kr",
+      "url": "https://www.gokorea.kr/news/articleView.html?idxno=876033"
+    },
+    {
+      "title": "전문가도 반으로 갈렸다…8월 금리 '인상·동결' 5 대 5",
+      "date": "Sun, 23 Aug 2026 10:00:00",
+      "source": "n.news.naver.com",
+      "url": "https://www.mt.co.kr/economy/2026/08/23/2026082110315365105"
+    },
+    {
+      "title": "한은, 올해 성장률 전망치 3%대 초중반으로 높일 듯",
+      "date": "Sun, 23 Aug 2026 05:30:00",
+      "source": "n.news.naver.com",
+      "url": "https://www.yna.co.kr/view/AKR20260822035400002?input=1195m"
+    },
+    {
       "title": "반도체 호황 성장률 견인…건설 부진에 내수 회복 지연",
       "date": "Wed, 12 Aug 2026 16:59:00",
       "source": "polinews.co.kr",
@@ -41,148 +59,130 @@
       "date": "Wed, 29 Jul 2026 15:42:00",
       "source": "sportsq.co.kr",
       "url": "http://www.sportsq.co.kr/news/articleView.html?idxno=496891"
-    },
-    {
-      "title": "다 좋았던 2분기 유일한 '흠' 건설투자…연 0.2% 반등도 불투명",
-      "date": "Sun, 26 Jul 2026 08:12:00",
-      "source": "news.einfomax.co.kr",
-      "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4426857"
-    },
-    {
-      "title": "워시도 금리인상 막기 어렵다…\"신용팽창·AI 투자發 물가압력 커져\"",
-      "date": "Fri, 24 Jul 2026 09:20:00",
-      "source": "n.news.naver.com",
-      "url": "http://www.joseilbo.com/news/news_read.php?uid=572523&class=18&grp="
-    },
-    {
-      "title": "워시의 매파 본색…\"연내 1회 금리인상\"",
-      "date": "Wed, 22 Jul 2026 11:38:00",
-      "source": "fntimes.com",
-      "url": "https://www.fntimes.com/html/view.php?ud=2026072211372179209bdb80fab5_18"
     }
   ],
   "kdi": [
     {
-      "title": "고용 악화, 가계빚 2천조 돌파… '금융·재정정책' 재점검할 때",
-      "date": "Sat, 22 Aug 2026 13:29:00",
+      "title": "[다산칼럼] AI 경제 '신중론'에도 귀 기울여야",
+      "date": "Mon, 24 Aug 2026 01:00:00",
       "source": "n.news.naver.com",
-      "url": "https://www.thescoop.co.kr/news/articleView.html?idxno=311331"
+      "url": "https://www.hankyung.com/article/2026082370941"
     },
     {
-      "title": "한은, 두 달 연속 금리 올릴까 … 27일 금통위에 쏠린 눈",
-      "date": "Sat, 22 Aug 2026 11:46:00",
-      "source": "biz.newdaily.co.kr",
-      "url": "https://biz.newdaily.co.kr/site/data/html/2026/08/22/2026082200010.html"
-    },
-    {
-      "title": "반도체 초호황…韓 성장률 전망치도 줄상향[위클리 이슈]",
-      "date": "Sat, 22 Aug 2026 09:00:00",
+      "title": "타당성 심판대 선 춘천 소양 8교 '교통난 설득전'",
+      "date": "Mon, 24 Aug 2026 00:06:00",
       "source": "n.news.naver.com",
-      "url": "https://magazine.hankyung.com/business/article/202608202494b"
+      "url": "https://www.kado.net/news/articleView.html?idxno=2068056"
     },
     {
-      "title": "다음주 한은 금통위 개최…기준금리 '백투백' 인상되나",
-      "date": "Sat, 22 Aug 2026 08:00:00",
-      "source": "newsworks.co.kr",
-      "url": "https://www.newsworks.co.kr/news/articleView.html?idxno=851088"
-    },
-    {
-      "title": "3.2% 성장의 착시…반도체 밖 온도차",
-      "date": "Sat, 22 Aug 2026 07:16:00",
-      "source": "sateconomy.co.kr",
-      "url": "https://sateconomy.co.kr/news/view/1065562412079142"
-    },
-    {
-      "title": "[머니브리핑] 금리 인상 한 번 더?…27일 금통위 ‘체크포인트’",
-      "date": "Sat, 22 Aug 2026 06:00:00",
-      "source": "etoday.co.kr",
-      "url": "https://www.etoday.co.kr/news/view/2616851"
-    },
-    {
-      "title": "국내금융그룹이 전망하는 올해 하반기 기준금리는?",
-      "date": "Fri, 21 Aug 2026 17:35:00",
+      "title": "엔비디아도 15% 인상…극한 칩플레이션 덮친다",
+      "date": "Sun, 23 Aug 2026 19:27:00",
       "source": "n.news.naver.com",
-      "url": "https://www.khan.co.kr/article/202608211735011"
+      "url": "https://www.dt.co.kr/article/12079676?ref=naver"
     },
     {
-      "title": "물가·가계부채 불안하고 성장세는 강해…한은, '백투백 인상' 가나",
-      "date": "Fri, 21 Aug 2026 17:01:00",
-      "source": "kpinews.kr",
-      "url": "https://www.kpinews.kr/newsView/1065598420742658"
+      "title": "[기자수첩] 이제 고용의 시간",
+      "date": "Sun, 23 Aug 2026 19:10:00",
+      "source": "n.news.naver.com",
+      "url": "http://www.fnnews.com/news/202608231909158294"
     },
     {
-      "title": "KDI, 반도체 호황에 올해 성장률 3.2%로 상향…내년 2.2%",
-      "date": "Fri, 21 Aug 2026 15:28:00",
-      "source": "dailytw.kr",
-      "url": "https://www.dailytw.kr/news/articleView.html?idxno=31660"
+      "title": "교부금 개편에 내년 1.8조 늘어도…교육계 ‘재정 축소’ 반발",
+      "date": "Sun, 23 Aug 2026 18:58:00",
+      "source": "n.news.naver.com",
+      "url": "https://www.hani.co.kr/arti/economy/economy_general/1274229.html"
     },
     {
-      "title": "2040년 최대전력 165GW…원전 19기 분량 늘었다",
-      "date": "Fri, 21 Aug 2026 14:54:00",
-      "source": "dealsite.co.kr",
-      "url": "https://dealsite.co.kr/articles/167590"
+      "title": "한은 기준금리 올릴까, 워시 의장 첫 기조연설…이번주(24~30일) 주요 일...",
+      "date": "Sun, 23 Aug 2026 17:44:00",
+      "source": "n.news.naver.com",
+      "url": "https://www.news1.kr/politics/president/6266754"
+    },
+    {
+      "title": "가계빚·물가에 환율까지…기준금리 '고차방정식'",
+      "date": "Sun, 23 Aug 2026 17:30:00",
+      "source": "newstomato.com",
+      "url": "http://www.newstomato.com/ReadNews.aspx?no=1311104&inflow=N"
+    },
+    {
+      "title": "교육감·교육단체, 정부 교육교부금 대폭 개편안에 반발",
+      "date": "Sun, 23 Aug 2026 15:10:00",
+      "source": "n.news.naver.com",
+      "url": "https://www.busan.com/view/busan/view.php?code=2026082312463987363"
+    },
+    {
+      "title": "27일 금통위…성장·가계빚은 '인상', 환율은 '속도조절'",
+      "date": "Sun, 23 Aug 2026 14:00:00",
+      "source": "metroseoul.co.kr",
+      "url": "http://www.metroseoul.co.kr/article/20260823500156"
+    },
+    {
+      "title": "연속 인상이냐 숨 고르기냐…한은 8월 금리 전망 '팽팽'",
+      "date": "Sun, 23 Aug 2026 13:48:00",
+      "source": "ebn.co.kr",
+      "url": "https://www.ebn.co.kr/news/articleView.html?idxno=1721312"
     }
   ],
   "bok": [
     {
-      "title": "엔비디아 기대감과 금리 우려의 '이중주' [주간 증시 전망]",
-      "date": "Sun, 23 Aug 2026 00:11:00",
+      "title": "[사설] 기준금리 연 3%로 오를 듯…긴축의 시대 대비를",
+      "date": "Mon, 24 Aug 2026 01:01:00",
       "source": "n.news.naver.com",
-      "url": "https://www.dailian.co.kr/news/view/1680963/?sc=Naver"
+      "url": "https://www.hankyung.com/article/2026082370981"
     },
     {
-      "title": "\"월요일 국장 또 폭등?\"…삼성전자·SK하이닉스, 美금리·엔비디아에 주...",
-      "date": "Sat, 22 Aug 2026 20:10:00",
-      "source": "ajunews.com",
-      "url": "https://www.ajunews.com/view/20260821171126525"
-    },
-    {
-      "title": "이번주 국내 주요 금융일정(8.24~8.28)",
-      "date": "Sat, 22 Aug 2026 17:00:00",
-      "source": "newspim.com",
-      "url": "https://www.newspim.com/news/view/20260821000888"
-    },
-    {
-      "title": "[N위크] 기준금리 동결할까 인상할까…코스피 최고 7500 예측",
-      "date": "Sat, 22 Aug 2026 16:26:00",
-      "source": "tfmedia.co.kr",
-      "url": "https://www.tfmedia.co.kr/news/article.html?no=206639"
-    },
-    {
-      "title": "고용 악화, 가계빚 2천조 돌파… '금융·재정정책' 재점검할 때",
-      "date": "Sat, 22 Aug 2026 13:29:00",
+      "title": "[사설] 반도체 추가 세수 현 정부가 다 쓰면 안 된다",
+      "date": "Mon, 24 Aug 2026 00:26:00",
       "source": "n.news.naver.com",
-      "url": "https://www.thescoop.co.kr/news/articleView.html?idxno=311331"
+      "url": "https://www.joongang.co.kr/article/25455507"
     },
     {
-      "title": "한은 금리·성장률 전망 '동시 공개'…다음주 경제 일정 촉각",
-      "date": "Sat, 22 Aug 2026 13:22:00",
-      "source": "ebn.co.kr",
-      "url": "https://www.ebn.co.kr/news/articleView.html?idxno=1721277"
+      "title": "\"엔비디아·잭슨홀 주목\"...기준금리 결정도 관심",
+      "date": "Sun, 23 Aug 2026 23:24:00",
+      "source": "n.news.naver.com",
+      "url": "https://www.ytn.co.kr/_ln/0102_202608232324243318"
     },
     {
-      "title": "한은, 두 달 연속 금리 올릴까 … 27일 금통위에 쏠린 눈",
-      "date": "Sat, 22 Aug 2026 11:46:00",
-      "source": "biz.newdaily.co.kr",
-      "url": "https://biz.newdaily.co.kr/site/data/html/2026/08/22/2026082200010.html"
+      "title": "\"오를까 유지할까\"...한은 27일 기준금리 결정 전망",
+      "date": "Sun, 23 Aug 2026 21:02:00",
+      "source": "g-enews.com",
+      "url": "https://www.g-enews.com/view.php?ud=202608232059331888923c501012_1"
     },
     {
-      "title": "다음주 한은 기준금리 결정…두 달 연속 인상하나",
-      "date": "Sat, 22 Aug 2026 11:36:00",
-      "source": "mbnmoney.mbn.co.kr",
-      "url": "http://mbnmoney.mbn.co.kr/news/view?news_no=MM1005905941"
+      "title": "\"엔비디아·잭슨홀 주목\"...기준금리 결정도 관심",
+      "date": "Sun, 23 Aug 2026 20:16:00",
+      "source": "n.news.naver.com",
+      "url": "https://www.ytn.co.kr/_ln/0102_202608232016351415"
     },
     {
-      "title": "기준금리 또 오를까…한은 금통위·수정 경제전망 주목",
-      "date": "Sat, 22 Aug 2026 11:14:00",
-      "source": "kjdaily.com",
-      "url": "http://www.kjdaily.com/article.php?aid=1787364698684959227"
+      "title": "환율 급락에 숨은 반전… 은행주, 3분기 실적 방어선 구축하나",
+      "date": "Sun, 23 Aug 2026 19:08:00",
+      "source": "pointe.co.kr",
+      "url": "https://www.pointe.co.kr/news/articleView.html?idxno=83677"
     },
     {
-      "title": "\"성장률 3%대 올리고, 금리도 올리나\"…한은 '선택'이 가를 경제 향방",
-      "date": "Sat, 22 Aug 2026 11:00:00",
-      "source": "youthdaily.co.kr",
-      "url": "https://www.youthdaily.co.kr/news/article.html?no=225512"
+      "title": "물가 잡자니 가계빚 2000조… 한은 ‘백투백 금리 인상’ 딜레마",
+      "date": "Sun, 23 Aug 2026 19:00:00",
+      "source": "n.news.naver.com",
+      "url": "https://www.kmib.co.kr/article/view.asp?arcid=9000005308&cp=nv"
+    },
+    {
+      "title": "금리, 이달 연속 인상하나…국채금리 급등에 신중론도",
+      "date": "Sun, 23 Aug 2026 18:26:00",
+      "source": "n.news.naver.com",
+      "url": "https://www.sedaily.com/article/20082324?ref=naver"
+    },
+    {
+      "title": "\"금리인상 쉴 이유 있나\" vs \"7월 인상효과 확인이 먼저\"",
+      "date": "Sun, 23 Aug 2026 18:24:00",
+      "source": "n.news.naver.com",
+      "url": "http://www.fnnews.com/news/202608231822393309"
+    },
+    {
+      "title": "경제전문가 63% \"한은, 두 달 연속 금리 올릴 것\"",
+      "date": "Sun, 23 Aug 2026 17:58:00",
+      "source": "n.news.naver.com",
+      "url": "https://www.hankyung.com/article/2026082371081"
     }
   ],
   "kiep": [
@@ -309,5 +309,5 @@
       "url": "http://www.sisacast.kr/news/articleView.html?idxno=97171"
     }
   ],
-  "updated": "2026.08.23 02:25"
+  "updated": "2026.08.24 02:26"
 }
