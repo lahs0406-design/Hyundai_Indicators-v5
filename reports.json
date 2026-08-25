@@ -1,10 +1,22 @@
 {
   "hri": [
     {
+      "title": "8월 금통위 관련 전문가 13인 주요 코멘트 [금통위폴]",
+      "date": "Tue, 25 Aug 2026 12:06:00",
+      "source": "etoday.co.kr",
+      "url": "https://www.etoday.co.kr/news/view/2617606"
+    },
+    {
       "title": "금리 오를까 쉬어갈까…금통위 표심 5대5",
       "date": "Mon, 24 Aug 2026 09:40:00",
       "source": "newskr.kr",
       "url": "http://www.newskr.kr/news/articleView.html?idxno=105803"
+    },
+    {
+      "title": "경제전문가 63% \"한은, 두 달 연속 금리 올릴 것\"",
+      "date": "Sun, 23 Aug 2026 17:58:00",
+      "source": "n.news.naver.com",
+      "url": "https://www.hankyung.com/article/2026082371081"
     },
     {
       "title": "8월 기준금리 결정 앞둔 한국은행… 전문가들 전망 엇갈린 이유는?",
@@ -47,142 +59,130 @@
       "date": "Wed, 05 Aug 2026 08:08:00",
       "source": "m-i.kr",
       "url": "https://www.m-i.kr/news/articleView.html?idxno=1398765"
-    },
-    {
-      "title": "현대경제연구원, 하반기 물가 상승률 2.5~3.0% 전망",
-      "date": "Sun, 02 Aug 2026 20:30:00",
-      "source": "tokenpost.kr",
-      "url": "https://www.tokenpost.kr/news/economy/383875"
-    },
-    {
-      "title": "베일 벗는 하반기 경제 지표…수출 '호조', 물가 '불안', 환율 '글쎄'",
-      "date": "Sun, 02 Aug 2026 16:00:00",
-      "source": "n.news.naver.com",
-      "url": "https://www.mt.co.kr/economy/2026/08/02/2026080212411312661"
     }
   ],
   "kdi": [
     {
-      "title": "[취재수첩] 반쪽짜리로 끝난 교육교부금 개편",
-      "date": "Tue, 25 Aug 2026 01:30:00",
+      "title": "교육계 “결사 반대” vs 재정계 “반쪽 개혁”… 샌드위치 된 교육교부...",
+      "date": "Wed, 26 Aug 2026 00:18:00",
       "source": "n.news.naver.com",
-      "url": "https://www.hankyung.com/article/2026082495231"
+      "url": "https://www.kmib.co.kr/article/view.asp?arcid=9000006162&cp=nv"
     },
     {
-      "title": "[CPTPP 딜레마] 멕시코 관세 장벽 낮추고 日 추가 개방…수출 돌파구 될...",
-      "date": "Mon, 24 Aug 2026 19:02:00",
-      "source": "ajunews.com",
-      "url": "https://www.ajunews.com/view/20260824150520754"
+      "title": "[사설] '800조+α' 슈퍼예산, 과잉유동성 촉발 우려",
+      "date": "Wed, 26 Aug 2026 00:02:00",
+      "source": "asiatoday.co.kr",
+      "url": "https://www.asiatoday.co.kr/kn/view.php?key=20260825010008493"
     },
     {
-      "title": "2030 '쉬었음' 월평균 68만명…청년 일자리 '성장 사다리'가 끊겼다",
-      "date": "Mon, 24 Aug 2026 18:20:00",
+      "title": "8월 들어 현재·미래 경기인식 꺾였다, 정부 '내수회복' 노력에 미국의...",
+      "date": "Tue, 25 Aug 2026 15:56:00",
+      "source": "businesspost.co.kr",
+      "url": "https://www.businesspost.co.kr/BP?command=article_view&num=445538"
+    },
+    {
+      "title": "한은, 성장률 대폭 상향?…반도체 훈풍에 '3%대 진입' 무게",
+      "date": "Tue, 25 Aug 2026 15:55:00",
+      "source": "n.news.naver.com",
+      "url": "https://www.dailian.co.kr/news/view/1682093/?sc=Naver"
+    },
+    {
+      "title": "기초연금 개편안 발표 임박…'기준중위소득 연동 비율' 쟁점",
+      "date": "Tue, 25 Aug 2026 14:37:00",
       "source": "newspim.com",
-      "url": "https://www.newspim.com/news/view/20260824000889"
+      "url": "https://www.newspim.com/news/view/20260825000774"
     },
     {
-      "title": "韓 기준금리, 연속 인상이냐 동결이냐 … 신현송은 27일 금통위 직후 잭...",
-      "date": "Mon, 24 Aug 2026 17:50:00",
+      "title": "8월 금리 인상 시험대 오른 한은…고금리 부담에도 인상 유력",
+      "date": "Tue, 25 Aug 2026 14:00:00",
+      "source": "ntoday.co.kr",
+      "url": "https://www.ntoday.co.kr/news/articleView.html?idxno=128961"
+    },
+    {
+      "title": "전북혁신도시 인근 KTX역 추진…경제성·정책성 평가 관건",
+      "date": "Tue, 25 Aug 2026 09:59:00",
       "source": "n.news.naver.com",
-      "url": "https://www.mk.co.kr/article/12135100"
+      "url": "https://www.nocutnews.co.kr/news/6567417?utm_source=naver&utm_medium=article&utm_campaign=20260825095845"
     },
     {
-      "title": "청년고용, 규제 개혁에 달렸다…\"성장 경로 필요\" [뉴스+현장]",
-      "date": "Mon, 24 Aug 2026 17:48:00",
+      "title": "삼전닉스 뺀 대기업, 영업익 72% 늘어도 설비투자 11% 줄였다",
+      "date": "Tue, 25 Aug 2026 09:00:00",
+      "source": "sentv.co.kr",
+      "url": "https://www.sentv.co.kr/article/view/sentv202608250015"
+    },
+    {
+      "title": "[기자수첩] 성장 전망 올라도 체감경기는 '아직'",
+      "date": "Tue, 25 Aug 2026 08:36:00",
+      "source": "newsclaim.co.kr",
+      "url": "https://www.newsclaim.co.kr/news/articleView.html?idxno=3073031"
+    },
+    {
+      "title": "“첫 직장이 평생직장 될까 봐”…청년들이 취업 미루는 이유",
+      "date": "Tue, 25 Aug 2026 06:00:00",
       "source": "n.news.naver.com",
-      "url": "https://www.wowtv.co.kr/NewsCenter/News/Read?articleId=A202608240247&t=NNv"
-    },
-    {
-      "title": "대한상의, 경제연구총괄에 이시욱 전 KIEP 원장 내정",
-      "date": "Mon, 24 Aug 2026 17:02:00",
-      "source": "ebn.co.kr",
-      "url": "https://www.ebn.co.kr/news/articleView.html?idxno=1721466"
-    },
-    {
-      "title": "\"중소→중견·대기업 사다리 만들어야\"…청년고용 세미나",
-      "date": "Mon, 24 Aug 2026 17:01:00",
-      "source": "n.news.naver.com",
-      "url": "http://www.yonhapnewstv.co.kr/news/AKR20260824170014o8f"
-    },
-    {
-      "title": "전문가들 \"한은, 올해 성장률 전망 대폭 상향\"⋯최고 3.5% 가능성도 [금...",
-      "date": "Mon, 24 Aug 2026 16:22:00",
-      "source": "etoday.co.kr",
-      "url": "https://www.etoday.co.kr/news/view/2617533"
-    },
-    {
-      "title": "청년들이 바라는 고용정책…\"취업 넘어 '성장 사다리' 만들어야\"",
-      "date": "Mon, 24 Aug 2026 16:16:00",
-      "source": "youthdaily.co.kr",
-      "url": "https://www.youthdaily.co.kr/news/article.html?no=225585"
-    },
-    {
-      "title": "“반도체산업 호황”…KDI, 올해 국내 경제성장률 3.2% 전망",
-      "date": "Mon, 24 Aug 2026 15:45:00",
-      "source": "n.news.naver.com",
-      "url": "https://www.nongmin.com/article/20260824500359"
+      "url": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8644934&ref=A"
     }
   ],
   "bok": [
     {
-      "title": "[경제시평] 한은의 금리 결정을 앞두고",
-      "date": "Tue, 25 Aug 2026 00:34:00",
+      "title": "엔비디아 실적·워시 연설, 코스피 향방 가를 듯",
+      "date": "Wed, 26 Aug 2026 00:36:00",
       "source": "n.news.naver.com",
-      "url": "https://www.kmib.co.kr/article/view.asp?arcid=9000005805&cp=nv"
+      "url": "https://www.chosun.com/economy/stock-finance/2026/08/26/47CNVRV4ZVHHBFTSK6PWOBYOB4/?utm_source=naver&utm_medium=referral&utm_campaign=naver-news"
     },
     {
-      "title": "불황·물가상승·대출이자까지…자영업 \"폐업 직전 겨우버텨\"",
-      "date": "Tue, 25 Aug 2026 00:09:00",
+      "title": "美 반도체주 찬바람 버틴 코스피, 0.7% 상승 마감",
+      "date": "Wed, 26 Aug 2026 00:33:00",
       "source": "n.news.naver.com",
-      "url": "https://www.kado.net/news/articleView.html?idxno=2068360"
+      "url": "https://www.donga.com/news/Economy/article/all/20260825/134542376/2"
     },
     {
-      "title": "[오정근의 경제포커스] 방심하면 안 될 원·엔 환율",
-      "date": "Tue, 25 Aug 2026 00:06:00",
+      "title": "내일 금통위… 기준금리 연속 인상할까",
+      "date": "Wed, 26 Aug 2026 00:32:00",
+      "source": "n.news.naver.com",
+      "url": "https://www.chosun.com/economy/economy_general/2026/08/26/L5T6WCCDW5G4FCT2423MVIBA6U/?utm_source=naver&utm_medium=referral&utm_campaign=naver-news"
+    },
+    {
+      "title": "엔비디아·잭슨홀·금통위 앞두고 韓 증시 시험대",
+      "date": "Wed, 26 Aug 2026 00:18:00",
+      "source": "n.news.naver.com",
+      "url": "https://www.kmib.co.kr/article/view.asp?arcid=9000006161&cp=nv"
+    },
+    {
+      "title": "[사설] 통화·금융 당국, 가계 빚 연착륙 유도를",
+      "date": "Wed, 26 Aug 2026 00:04:00",
       "source": "m.skyedaily.com",
-      "url": "https://m.skyedaily.com/news_view.html?ID=310278"
+      "url": "https://m.skyedaily.com/news_view.html?ID=310404"
     },
     {
-      "title": "코스피 흔들 세 가지 변수…엔비디아·금통위·잭슨홀[투자360]",
-      "date": "Mon, 24 Aug 2026 22:41:00",
+      "title": "[사설] '800조+α' 슈퍼예산, 과잉유동성 촉발 우려",
+      "date": "Wed, 26 Aug 2026 00:02:00",
+      "source": "asiatoday.co.kr",
+      "url": "https://www.asiatoday.co.kr/kn/view.php?key=20260825010008493"
+    },
+    {
+      "title": "집값 상승 기대 5개월째 오름세…소비심리도 한달만에 반등",
+      "date": "Wed, 26 Aug 2026 00:02:00",
+      "source": "ksilbo.co.kr",
+      "url": "https://www.ksilbo.co.kr/news/articleView.html?idxno=1065463"
+    },
+    {
+      "title": "[잡채기 칼럼] '100조+α'의 경제 논리",
+      "date": "Wed, 26 Aug 2026 00:00:00",
+      "source": "newsclaim.co.kr",
+      "url": "https://www.newsclaim.co.kr/news/articleView.html?idxno=3073144"
+    },
+    {
+      "title": "11개월 만에 1370원대 진입한 환율…코스피 구원투수 될까",
+      "date": "Wed, 26 Aug 2026 00:00:00",
+      "source": "ziksir.com",
+      "url": "https://www.ziksir.com/news/articleView.html?idxno=144213"
+    },
+    {
+      "title": "[동아광장/유재동]한국의 나랏빚, 자경단 감시망에 올랐다",
+      "date": "Tue, 25 Aug 2026 23:19:00",
       "source": "n.news.naver.com",
-      "url": "https://biz.heraldcorp.com/article/10850558?ref=naver"
-    },
-    {
-      "title": "[포커스] 4대은행 금리차 무게중심 이동…기존엔 예금, 신규엔 대출",
-      "date": "Mon, 24 Aug 2026 22:06:00",
-      "source": "startuptoday.co.kr",
-      "url": "https://www.startuptoday.co.kr/news/articleView.html?idxno=810712"
-    },
-    {
-      "title": "미 ‘국채 30년물’ 19년 만에 최고…국내 주담대 금리 동반 상승",
-      "date": "Mon, 24 Aug 2026 21:24:00",
-      "source": "n.news.naver.com",
-      "url": "https://www.khan.co.kr/article/202608242124005"
-    },
-    {
-      "title": "자꾸 뛰는 금리…가계 빚 '2천조 시대' 이자 비상",
-      "date": "Mon, 24 Aug 2026 20:42:00",
-      "source": "n.news.naver.com",
-      "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008719478&plink=ORI&cooper=NAVER"
-    },
-    {
-      "title": "속수무책 뛰는 미 국채 금리에, 국내 주담대 연 7% 시대 오나",
-      "date": "Mon, 24 Aug 2026 19:05:00",
-      "source": "n.news.naver.com",
-      "url": "https://www.khan.co.kr/article/202608241905001"
-    },
-    {
-      "title": "워시 연준 의장, 시장과 소통 간소화… 그린스펀식 재량 통화주의 귀환",
-      "date": "Mon, 24 Aug 2026 18:02:00",
-      "source": "g-enews.com",
-      "url": "https://www.g-enews.com/view.php?ud=202608241757581577fbbec65dfb_1"
-    },
-    {
-      "title": "쏟아지는 달러…원·달러 환율, 1,370원대 진입",
-      "date": "Mon, 24 Aug 2026 17:56:00",
-      "source": "n.news.naver.com",
-      "url": "https://www.wowtv.co.kr/NewsCenter/News/Read?articleId=A202608240296&t=NNv"
+      "url": "https://www.donga.com/news/Opinion/article/all/20260825/134543661/2"
     }
   ],
   "kiep": [
@@ -309,5 +309,5 @@
       "url": "https://www.megaeconomy.co.kr/news/newsview.php?ncode=1065577155690402"
     }
   ],
-  "updated": "2026.08.25 02:31"
+  "updated": "2026.08.26 02:31"
 }
