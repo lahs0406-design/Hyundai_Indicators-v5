@@ -1,6 +1,24 @@
 {
   "hri": [
     {
+      "title": "[사설] 수출 1조 달러 시대 눈앞…체감경기 괴리 줄이는게 과제",
+      "date": "Mon, 07 Sep 2026 00:54:00",
+      "source": "n.news.naver.com",
+      "url": "https://www.hankyung.com/article/2026090669411"
+    },
+    {
+      "title": "[사설] 수출 역대급 호황, K자 양극화 구조개혁 지금이 적기",
+      "date": "Sun, 06 Sep 2026 18:55:00",
+      "source": "n.news.naver.com",
+      "url": "https://www.fnnews.com/news/202609061853435870"
+    },
+    {
+      "title": "\"경기 좋지만 통화정책 과잉대응 경계해야…양극화 고착화 우려\"",
+      "date": "Sun, 06 Sep 2026 11:00:00",
+      "source": "n.news.naver.com",
+      "url": "https://www.newsis.com/view/NISX20260906_0003777858"
+    },
+    {
       "title": "달러 환율 1년 2개월 만에 최저…더 떨어질까",
       "date": "Sat, 05 Sep 2026 07:29:00",
       "source": "n.news.naver.com",
@@ -41,27 +59,45 @@
       "date": "Sun, 23 Aug 2026 17:58:00",
       "source": "n.news.naver.com",
       "url": "https://www.hankyung.com/article/2026082371081"
-    },
-    {
-      "title": "8월 기준금리 결정 앞둔 한국은행… 전문가들 전망 엇갈린 이유는?",
-      "date": "Sun, 23 Aug 2026 12:12:00",
-      "source": "gokorea.kr",
-      "url": "https://www.gokorea.kr/news/articleView.html?idxno=876033"
-    },
-    {
-      "title": "전문가도 반으로 갈렸다…8월 금리 '인상·동결' 5 대 5",
-      "date": "Sun, 23 Aug 2026 10:00:00",
-      "source": "n.news.naver.com",
-      "url": "https://www.mt.co.kr/economy/2026/08/24/2026082110315365105"
-    },
-    {
-      "title": "한은, 올해 성장률 전망치 3%대 초중반으로 높일 듯",
-      "date": "Sun, 23 Aug 2026 05:30:00",
-      "source": "n.news.naver.com",
-      "url": "https://www.yna.co.kr/view/AKR20260822035400002?input=1195m"
     }
   ],
   "kdi": [
+    {
+      "title": "[사설] 수출 1조 달러 시대 눈앞…체감경기 괴리 줄이는게 과제",
+      "date": "Mon, 07 Sep 2026 00:54:00",
+      "source": "n.news.naver.com",
+      "url": "https://www.hankyung.com/article/2026090669411"
+    },
+    {
+      "title": "[김용삼의 한국 반도체 비하인드] 전두환의 결단, 기흥·이천 반도체공...",
+      "date": "Sun, 06 Sep 2026 14:54:00",
+      "source": "n.news.naver.com",
+      "url": "https://www.imaeil.com/page/view/2026090614445908824"
+    },
+    {
+      "title": "[채권-주간] FOMC 앞두고 美 물가 주시…국제유가도 주목",
+      "date": "Sun, 06 Sep 2026 13:02:00",
+      "source": "news.einfomax.co.kr",
+      "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4433623"
+    },
+    {
+      "title": "강원도, 포천~철원 고속도로 조기 추진 힘 모은다",
+      "date": "Sun, 06 Sep 2026 11:46:00",
+      "source": "jeonmae.co.kr",
+      "url": "https://www.jeonmae.co.kr/news/articleView.html?idxno=1290451"
+    },
+    {
+      "title": "포천~철원 고속道 예타 통과 ‘한목소리’… 국회·경기·강원 공동 대응",
+      "date": "Sun, 06 Sep 2026 09:40:00",
+      "source": "n.news.naver.com",
+      "url": "https://www.munhwa.com/article/11614788?ref=naver"
+    },
+    {
+      "title": "포천~철원 고속도로 예타 통과 총력…관계기관 업무협약 체결",
+      "date": "Sun, 06 Sep 2026 07:00:00",
+      "source": "shinailbo.co.kr",
+      "url": "https://www.shinailbo.co.kr/news/articleView.html?idxno=5058542"
+    },
     {
       "title": "우상호 강원지사, 포천~철원 고속도로 예타 통과 총력…\"접경지역 균형...",
       "date": "Fri, 04 Sep 2026 21:22:00",
@@ -85,104 +121,68 @@
       "date": "Fri, 04 Sep 2026 18:30:00",
       "source": "weekly.hankooki.com",
       "url": "https://weekly.hankooki.com/news/articleView.html?idxno=7182419"
-    },
-    {
-      "title": "“남북4축 마지막 단절구간 연결”…포천~철원 고속도로 예타 통과 총력",
-      "date": "Fri, 04 Sep 2026 17:27:00",
-      "source": "n.news.naver.com",
-      "url": "https://www.kmib.co.kr/article/view.asp?arcid=9000009159&cp=nv"
-    },
-    {
-      "title": "올해 3%대 성장 청신호…체감경기는 미진",
-      "date": "Fri, 04 Sep 2026 17:20:00",
-      "source": "yonhapmidas.com",
-      "url": "https://www.yonhapmidas.com/news/articleView.html?idxno=10573"
-    },
-    {
-      "title": "국회·경기·강원, 포천~철원 고속도로 예타 통과 위한 공동 건의",
-      "date": "Fri, 04 Sep 2026 15:42:00",
-      "source": "m-i.kr",
-      "url": "https://www.m-i.kr/news/articleView.html?idxno=1410148"
-    },
-    {
-      "title": "포천~철원 고속도로 예비 타당성 조사 업무 협약",
-      "date": "Fri, 04 Sep 2026 15:20:00",
-      "source": "n.news.naver.com",
-      "url": "https://www.ytn.co.kr/_ln/0115_202609041520507517"
-    },
-    {
-      "title": "우상호 강원지사, 포천~철원 고속道 예타 통과 '총력'",
-      "date": "Fri, 04 Sep 2026 15:14:00",
-      "source": "enewstoday.co.kr",
-      "url": "http://www.enewstoday.co.kr/news/articleView.html?idxno=2466753"
-    },
-    {
-      "title": "[위클리오늘] 우상호 강원도지사, '포천~철원 고속도로' 예타 통과 위해...",
-      "date": "Fri, 04 Sep 2026 15:08:00",
-      "source": "weeklytoday.com",
-      "url": "http://www.weeklytoday.com/news/articleView.html?idxno=793115"
     }
   ],
   "bok": [
     {
-      "title": "[프리즘] 1년 9개월 만 기준금리 3% 시대…추가 인상 시계 '째깍'",
-      "date": "Sat, 05 Sep 2026 23:43:00",
+      "title": "[사설] 수출 1조 달러 시대 눈앞…체감경기 괴리 줄이는게 과제",
+      "date": "Mon, 07 Sep 2026 00:54:00",
       "source": "n.news.naver.com",
-      "url": "http://www.yonhapnewstv.co.kr/news/MYH202609052342460Vs"
+      "url": "https://www.hankyung.com/article/2026090669411"
     },
     {
-      "title": "[탐사보도 뉴스프리즘] 좀 줄었나 싶더니 다시 커진 이자 부담…'더 오...",
-      "date": "Sat, 05 Sep 2026 22:01:00",
+      "title": "23개월 만에 최저 환율...안정세 이어가나?",
+      "date": "Mon, 07 Sep 2026 00:15:00",
       "source": "n.news.naver.com",
-      "url": "http://www.yonhapnewstv.co.kr/news/MYH202609051303027Hb"
+      "url": "https://www.ytn.co.kr/_ln/0102_202609070015219657"
     },
     {
-      "title": "[N위크] GDP·일자리·가계빚 등 경기체력 회복하나 ...李대통령 佛국빈...",
-      "date": "Sat, 05 Sep 2026 19:06:00",
-      "source": "tfmedia.co.kr",
-      "url": "https://www.tfmedia.co.kr/news/article.html?no=207004"
+      "title": "1350.4원 원·달러, 14개월 만에 최저",
+      "date": "Sun, 06 Sep 2026 19:14:00",
+      "source": "tokenpost.kr",
+      "url": "https://www.tokenpost.kr/news/economy/403332"
     },
     {
-      "title": "미국 고용 좋다는데…왜 내 대출금리까지 흔들까요",
-      "date": "Sat, 05 Sep 2026 16:48:00",
+      "title": "23개월 만에 최저 환율...안정세 이어가나?",
+      "date": "Sun, 06 Sep 2026 18:40:00",
       "source": "n.news.naver.com",
-      "url": "https://www.thescoop.co.kr/news/articleView.html?idxno=311494"
+      "url": "https://www.ytn.co.kr/_ln/0102_202609061840485107"
     },
     {
-      "title": "경제 살아난다는데 일자리·가계빚은?…다음주 ‘진짜 성적표’ 나온다",
-      "date": "Sat, 05 Sep 2026 15:03:00",
+      "title": "2030년 적자성 채무 1300조 돌파…나랏빚 이자만 한 해 '50조'",
+      "date": "Sun, 06 Sep 2026 17:48:00",
+      "source": "newsgn.com",
+      "url": "https://www.newsgn.com/news/articleView.html?idxno=571781"
+    },
+    {
+      "title": "“5년 갚았는데 월 원리금이 30만원 늘었어요”···코로나 시기 ‘초저...",
+      "date": "Sun, 06 Sep 2026 16:51:00",
       "source": "n.news.naver.com",
-      "url": "https://biz.heraldcorp.com/article/10863568?ref=naver"
+      "url": "https://www.khan.co.kr/article/202609061651001"
     },
     {
-      "title": "세수 194조 증가하는데 국가채무 왜 106조 늘어나나",
-      "date": "Sat, 05 Sep 2026 14:17:00",
+      "title": "국내 경제 유동성 크게 늘 듯…성장 기대 속 물가·금리 오를 우려",
+      "date": "Sun, 06 Sep 2026 16:26:00",
       "source": "n.news.naver.com",
-      "url": "https://www.thescoop.co.kr/news/articleView.html?idxno=311483"
+      "url": "https://www.hani.co.kr/arti/economy/economy_general/1276468.html"
     },
     {
-      "title": "“금값 다시 5000달러 간다고?”…중앙은행까지 ‘사자’ 나서니 금ETF에...",
-      "date": "Sat, 05 Sep 2026 14:13:00",
-      "source": "n.news.naver.com",
-      "url": "https://www.mk.co.kr/article/12145057"
+      "title": "[이번주 증시] 美 CPI에 쏠린 시선…코스피 7000선 회복 '시험대'",
+      "date": "Sun, 06 Sep 2026 15:14:00",
+      "source": "newsian.co.kr",
+      "url": "http://www.newsian.co.kr/news/articleView.html?idxno=94861"
     },
     {
-      "title": "집 사느라 결혼 미루고, 나이 들어 생활비 쪼들려…이게 한국 ‘주택금...",
-      "date": "Sat, 05 Sep 2026 13:36:00",
-      "source": "n.news.naver.com",
-      "url": "https://biz.heraldcorp.com/article/10863449?ref=naver"
+      "title": "[이번주 주식시장 전망]美 물가지표에 쏠린 눈",
+      "date": "Sun, 06 Sep 2026 14:48:00",
+      "source": "kjdaily.com",
+      "url": "http://www.kjdaily.com/article.php?aid=1788673580686017227"
     },
     {
-      "title": "“서울 근무가 경쟁력”…서울시 산하기관 경쟁률 최고 390대1",
-      "date": "Sat, 05 Sep 2026 12:18:00",
-      "source": "n.news.naver.com",
-      "url": "https://www.sedaily.com/article/20087489?ref=naver"
-    },
-    {
-      "title": "남양주시, 중소기업육성자금 100억 원 추가 지원… 7일부터 신청",
-      "date": "Sat, 05 Sep 2026 11:21:00",
-      "source": "newstown.co.kr",
-      "url": "http://www.newstown.co.kr/news/articleView.html?idxno=714797"
+      "title": "[채권-주간] FOMC 앞두고 美 물가 주시…국제유가도 주목",
+      "date": "Sun, 06 Sep 2026 13:02:00",
+      "source": "news.einfomax.co.kr",
+      "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4433623"
     }
   ],
   "kiep": [
@@ -309,5 +309,5 @@
       "url": "https://www.megaeconomy.co.kr/news/newsview.php?ncode=1065577155690402"
     }
   ],
-  "updated": "2026.09.06 03:49"
+  "updated": "2026.09.07 03:52"
 }
