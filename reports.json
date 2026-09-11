@@ -63,7 +63,13 @@
   ],
   "kdi": [
     {
-      "title": "2027년 재정, '162조원 미래기금' 닻 올린다",
+      "title": "정부, KDI도 “고물가·고용 부진” 경고음…경기 회복세 발목 잡나",
+      "date": "Fri, 11 Sep 2026 15:34:00",
+      "source": "ekn.kr",
+      "url": "https://www.ekn.kr/web/view.php?key=20260911025043638"
+    },
+    {
+      "title": "'821조' 2027년 재정, '162조원 미래기금' 닻 올린다",
       "date": "Fri, 11 Sep 2026 15:14:00",
       "source": "straightnews.co.kr",
       "url": "https://www.straightnews.co.kr/news/articleView.html?idxno=310989"
@@ -115,12 +121,6 @@
       "date": "Thu, 10 Sep 2026 15:44:00",
       "source": "n.news.naver.com",
       "url": "https://www.kyeonggi.com/article/20260910580307"
-    },
-    {
-      "title": "박찬대 \"서해 최북단 인천 백령공항 2033년 개항··· 김포공항서 취항...",
-      "date": "Thu, 10 Sep 2026 14:40:00",
-      "source": "incheontoday.com",
-      "url": "https://www.incheontoday.com/news/articleView.html?idxno=323482"
     }
   ],
   "bok": [
@@ -179,10 +179,10 @@
       "url": "https://biz.heraldcorp.com/article/10870431?ref=naver"
     },
     {
-      "title": "[노현우의 채권분석] 서울 채권시장 베타값 작다고 볼 이유",
+      "title": "“노란봉투법 6개월, 교섭 성사율 22%” 혼선 속 노사 갈등 확산",
       "date": "Fri, 11 Sep 2026 10:00:00",
-      "source": "news.einfomax.co.kr",
-      "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4434414"
+      "source": "n.news.naver.com",
+      "url": "https://www.sedaily.com/article/20089725?ref=naver"
     }
   ],
   "kiep": [
@@ -309,5 +309,5 @@
       "url": "https://www.megaeconomy.co.kr/news/newsview.php?ncode=1065577155690402"
     }
   ],
-  "updated": "2026.09.11 15:17"
+  "updated": "2026.09.11 15:57"
 }
