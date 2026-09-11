@@ -172,7 +172,9 @@ def build_prompt(key: str, entry: dict) -> str:
 
 
 def _http(method: str, url: str, token: str = None, body: dict = None, timeout: int = 30) -> dict:
-    headers = {"Content-Type": "application/json"}
+    headers = {}
+    if body is not None:
+        headers["Content-Type"] = "application/json"
     if token:
         headers["Authorization"] = f"Bearer {token}"
     data = json.dumps(body).encode("utf-8") if body is not None else None
