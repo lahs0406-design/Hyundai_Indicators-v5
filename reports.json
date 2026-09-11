@@ -63,6 +63,12 @@
   ],
   "kdi": [
     {
+      "title": "유가 급등에도 버틴 환율…엔캐리·물가가 변수",
+      "date": "Fri, 11 Sep 2026 16:06:00",
+      "source": "ntoday.co.kr",
+      "url": "https://www.ntoday.co.kr/news/articleView.html?idxno=129300"
+    },
+    {
       "title": "정부, KDI도 “고물가·고용 부진” 경고음…경기 회복세 발목 잡나",
       "date": "Fri, 11 Sep 2026 15:34:00",
       "source": "ekn.kr",
@@ -115,26 +121,32 @@
       "date": "Thu, 10 Sep 2026 17:24:00",
       "source": "joongboo.com",
       "url": "https://www.joongboo.com/news/articleView.html?idxno=363736412"
-    },
-    {
-      "title": "박찬대 “백령공항 개항 2033년 예상”…당초 목표보다 3년 지연",
-      "date": "Thu, 10 Sep 2026 15:44:00",
-      "source": "n.news.naver.com",
-      "url": "https://www.kyeonggi.com/article/20260910580307"
     }
   ],
   "bok": [
     {
-      "title": "장기 고정형 주담대 유도하겠다는 당국, 변동형만 바라보는 소비자",
-      "date": "Fri, 11 Sep 2026 14:16:00",
-      "source": "mediapen.com",
-      "url": "https://www.mediapen.com/news/view/1122907"
+      "title": "[데스크리포트 9월] 이재명 대통령 지지율 하락세, '대통령의 시간' 1년...",
+      "date": "Fri, 11 Sep 2026 16:06:00",
+      "source": "businesspost.co.kr",
+      "url": "https://www.businesspost.co.kr/BP?command=article_view&num=447009"
+    },
+    {
+      "title": "\"글로벌 기관, 亞주식에 강한 수요…한국·대만에 자금 배분\"",
+      "date": "Fri, 11 Sep 2026 15:56:00",
+      "source": "n.news.naver.com",
+      "url": "https://www.newsis.com/view/NISX20260911_0003786182"
     },
     {
       "title": "영끌족 이자 부담 더 커지나 … 美 금리 폭풍에 국고채 3년물 3년 만에 ...",
       "date": "Fri, 11 Sep 2026 14:16:00",
       "source": "biz.newdaily.co.kr",
       "url": "https://biz.newdaily.co.kr/site/data/html/2026/09/11/2026091100177.html"
+    },
+    {
+      "title": "장기 고정형 주담대 유도하겠다는 당국, 변동형만 바라보는 소비자",
+      "date": "Fri, 11 Sep 2026 14:16:00",
+      "source": "mediapen.com",
+      "url": "https://www.mediapen.com/news/view/1122907"
     },
     {
       "title": "유가 100달러·美금리 급등에…국고채 3년물 4% 돌파",
@@ -171,18 +183,6 @@
       "date": "Fri, 11 Sep 2026 12:18:00",
       "source": "news.einfomax.co.kr",
       "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4434462"
-    },
-    {
-      "title": "‘물가·금리 이중고’ 중기·자영업 연체율 상승",
-      "date": "Fri, 11 Sep 2026 11:40:00",
-      "source": "n.news.naver.com",
-      "url": "https://biz.heraldcorp.com/article/10870431?ref=naver"
-    },
-    {
-      "title": "“노란봉투법 6개월, 교섭 성사율 22%” 혼선 속 노사 갈등 확산",
-      "date": "Fri, 11 Sep 2026 10:00:00",
-      "source": "n.news.naver.com",
-      "url": "https://www.sedaily.com/article/20089725?ref=naver"
     }
   ],
   "kiep": [
@@ -309,5 +309,5 @@
       "url": "https://www.megaeconomy.co.kr/news/newsview.php?ncode=1065577155690402"
     }
   ],
-  "updated": "2026.09.11 15:57"
+  "updated": "2026.09.11 16:09"
 }
