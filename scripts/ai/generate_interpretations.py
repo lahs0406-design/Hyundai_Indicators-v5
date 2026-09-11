@@ -179,9 +179,14 @@ def _http(method: str, url: str, token: str = None, body: dict = None, timeout: 
         headers["Authorization"] = f"Bearer {token}"
     data = json.dumps(body).encode("utf-8") if body is not None else None
     req = urllib.request.Request(url, data=data, headers=headers, method=method)
-    with urllib.request.urlopen(req, timeout=timeout) as res:
-        raw = res.read()
-        return json.loads(raw.decode("utf-8")) if raw else {}
+    try:
+        with urllib.request.urlopen(req, timeout=timeout) as res:
+            raw = res.read()
+            return json.loads(raw.decode("utf-8")) if raw else {}
+    except urllib.error.HTTPError as e:
+        print(f"  [DEBUG] {url}")
+        print(f"  [DEBUG] 응답코드: {e.code} / 응답본문: {e.read().decode('utf-8', errors='replace')}")
+        raise
 
 
 def ask_copilot(message: str) -> str:
