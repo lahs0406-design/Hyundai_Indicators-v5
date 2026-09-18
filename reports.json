@@ -1,6 +1,12 @@
 {
   "hri": [
     {
+      "title": "[김광석의 경제 읽어주는 남자] 반도체 호황의 역설 …잘나갈때 '그다음...",
+      "date": "Fri, 18 Sep 2026 06:02:00",
+      "source": "ajunews.com",
+      "url": "https://www.ajunews.com/view/20260914101837577"
+    },
+    {
       "title": "美 금리 따라 은행채 들썩… 영끌·빚투족 비명 [美, 3년2개월 만에 기준...",
       "date": "Thu, 17 Sep 2026 19:02:00",
       "source": "n.news.naver.com",
@@ -53,15 +59,45 @@
       "date": "Tue, 08 Sep 2026 17:50:00",
       "source": "newstomato.com",
       "url": "http://www.newstomato.com/ReadNews.aspx?no=1312988&inflow=N"
-    },
-    {
-      "title": "반도체만 뜨겁고, 소비는 차가워···KDI “AI 투자가 끌어올린 경기, ...",
-      "date": "Mon, 07 Sep 2026 17:01:00",
-      "source": "n.news.naver.com",
-      "url": "https://www.khan.co.kr/article/202609071701011"
     }
   ],
   "kdi": [
+    {
+      "title": "한국수자원공사, 대청댐 수열 활용 'AI 데이터센터' 조성...친환경 첨단...",
+      "date": "Fri, 18 Sep 2026 19:10:00",
+      "source": "ppss.kr",
+      "url": "https://www.ppss.kr/news/articleView.html?idxno=311552"
+    },
+    {
+      "title": "대청댐 물로 AI 데이터센터 식힌다…청주에 '수열·전력망' 결합 첨단산...",
+      "date": "Fri, 18 Sep 2026 18:14:00",
+      "source": "energydaily.co.kr",
+      "url": "https://www.energydaily.co.kr/news/articleView.html?idxno=203438"
+    },
+    {
+      "title": "수자원공사, 대청댐 수열특화단지내 AI 데이터센터 구축 시동",
+      "date": "Fri, 18 Sep 2026 17:52:00",
+      "source": "ikld.kr",
+      "url": "http://www.ikld.kr/news/articleView.html?idxno=341006"
+    },
+    {
+      "title": "AI 배우는 요양보호사들···돌봄 인력난, 기술만으로 풀릴까",
+      "date": "Fri, 18 Sep 2026 16:20:00",
+      "source": "womaneconomy.co.kr",
+      "url": "https://www.womaneconomy.co.kr/news/articleView.html?idxno=258885"
+    },
+    {
+      "title": "李 “정책실장 인선 고심…사회정책 강화로 정책 중심 살짝 이동해야”",
+      "date": "Fri, 18 Sep 2026 12:25:00",
+      "source": "n.news.naver.com",
+      "url": "https://www.mk.co.kr/article/12156398"
+    },
+    {
+      "title": "3분기 카드소비 늘었는데 내수 체감은 그대로",
+      "date": "Fri, 18 Sep 2026 11:50:00",
+      "source": "gokorea.kr",
+      "url": "https://www.gokorea.kr/news/articleView.html?idxno=878993"
+    },
     {
       "title": "장종태, \"100% 팔린다\"던 LH 산단, 현실은 65% 미분양…수요예측 왜 빗나...",
       "date": "Thu, 17 Sep 2026 21:13:00",
@@ -85,107 +121,83 @@
       "date": "Thu, 17 Sep 2026 13:01:00",
       "source": "n.news.naver.com",
       "url": "https://www.chosun.com/economy/economy_general/2026/09/17/2CSCAIBCORBL3JC6XKS3N3HESM/?utm_source=naver&utm_medium=referral&utm_campaign=naver-news"
-    },
-    {
-      "title": "[12차 전기본 의문점②] 2040년 재생에너지 236GW 설비확충...어떻게?",
-      "date": "Thu, 17 Sep 2026 08:12:00",
-      "source": "newstree.kr",
-      "url": "https://www.newstree.kr/newsView/ntr202609160018"
-    },
-    {
-      "title": "‘생산적 금융’ 실상… 대기업·운전 자금으로 쏠려",
-      "date": "Thu, 17 Sep 2026 00:33:00",
-      "source": "n.news.naver.com",
-      "url": "https://www.chosun.com/economy/economy_general/2026/09/17/QISM6Z5Z3NEAJP66UAWEDFSDFE/?utm_source=naver&utm_medium=referral&utm_campaign=naver-news"
-    },
-    {
-      "title": "영일만횡단대교 사업, 포항시 “해상노선으로 간다”",
-      "date": "Wed, 16 Sep 2026 21:52:00",
-      "source": "yeongnam.com",
-      "url": "https://www.yeongnam.com/web/view.php?key=20260916028518897"
-    },
-    {
-      "title": "'내국제 연동 폐지' 교육교부금 개편안에 전문가도 찬반 공방",
-      "date": "Wed, 16 Sep 2026 18:22:00",
-      "source": "n.news.naver.com",
-      "url": "https://www.yna.co.kr/view/AKR20260916173800001?input=1195m"
-    },
-    {
-      "title": "국회 공청회서 교부금 개편안 재검토 목소리…\"GDP 이상치, 교육수요와...",
-      "date": "Wed, 16 Sep 2026 17:53:00",
-      "source": "newspim.com",
-      "url": "https://www.newspim.com/news/view/20260916001148"
-    },
-    {
-      "title": "사우디發 원유수급 비상, 업종별 희비 엇갈려",
-      "date": "Wed, 16 Sep 2026 17:26:00",
-      "source": "ekoreanews.co.kr",
-      "url": "https://www.ekoreanews.co.kr/news/articleView.html?idxno=88167"
     }
   ],
   "bok": [
     {
-      "title": "美, 3년 만에 기준금리 인상…글로벌 긴축 시계 다시 돈다",
-      "date": "Fri, 18 Sep 2026 05:01:00",
+      "title": "'월 50만원 더 내라고?'…5년 전 영끌족 '날벼락'",
+      "date": "Sat, 19 Sep 2026 03:13:00",
       "source": "n.news.naver.com",
-      "url": "https://www.seoul.co.kr/news/economy/finance/2026/09/18/20260918001006?wlog_tag3=naver"
+      "url": "https://biz.sbs.co.kr/article_hub/20000335431?division=NAVER"
     },
     {
-      "title": "한은, 11월에 기준금리 올해 세번째 올릴 가능성",
-      "date": "Fri, 18 Sep 2026 04:35:00",
-      "source": "n.news.naver.com",
-      "url": "https://www.donga.com/news/Economy/article/all/20260918/134692538/2"
+      "title": "해외주식펀드 163조로 커졌는데…한은이 자산운용사에 내민 ‘새 시험지...",
+      "date": "Fri, 18 Sep 2026 18:34:00",
+      "source": "megaeconomy.co.kr",
+      "url": "https://www.megaeconomy.co.kr/news/newsview.php?ncode=1065604588492317"
     },
     {
-      "title": "美긴축, 韓에도 부담… 주담대 8%대 치솟고 기업 돈줄 마를 우려",
-      "date": "Fri, 18 Sep 2026 04:35:00",
-      "source": "n.news.naver.com",
-      "url": "https://www.donga.com/news/Economy/article/all/20260918/134692542/2"
+      "title": "일본은행, 3개월 만에 또 금리인상…31년 만에 1.25%",
+      "date": "Fri, 18 Sep 2026 18:32:00",
+      "source": "econovill.com",
+      "url": "https://www.econovill.com/news/articleView.html?idxno=751320"
     },
     {
-      "title": "美, 3년만에 금리인상… 긴축시대 다시 열렸다",
-      "date": "Fri, 18 Sep 2026 04:35:00",
+      "title": "[증시 인사이트] BOJ 금리인상…코스피 외국인 자금 이탈 심해질까",
+      "date": "Fri, 18 Sep 2026 18:31:00",
       "source": "n.news.naver.com",
-      "url": "https://www.donga.com/news/Inter/article/all/20260918/134692490/2"
+      "url": "https://biz.sbs.co.kr/article_hub/20000335632?division=NAVER"
     },
     {
-      "title": "[박근종 칼럼] '고금리 뉴노멀'의 시대 도래, 빚의 잔치 끝내고 구조개...",
-      "date": "Fri, 18 Sep 2026 03:04:00",
-      "source": "mhns.co.kr",
-      "url": "https://www.mhns.co.kr/news/articleView.html?idxno=760853"
+      "title": "日 기준금리 1.0→1.25% … 31년來 최고",
+      "date": "Fri, 18 Sep 2026 17:51:00",
+      "source": "n.news.naver.com",
+      "url": "https://www.mk.co.kr/article/12156721"
     },
     {
-      "title": "\"86주 연속 서울 집값 상승\"…과거엔 '이것' 나오자 꺾였다",
-      "date": "Fri, 18 Sep 2026 01:50:00",
-      "source": "n.news.naver.com",
-      "url": "https://www.newsis.com/view/NISX20260917_0003794038"
+      "title": "'소비쿠폰·추경' 탓에…지난해 공공부문 83.1조 적자 '역대 최대'",
+      "date": "Fri, 18 Sep 2026 17:32:00",
+      "source": "newstomato.com",
+      "url": "http://www.newstomato.com/ReadNews.aspx?no=1314241&inflow=N"
     },
     {
-      "title": "더 가혹한 긴축이 온다",
-      "date": "Fri, 18 Sep 2026 00:33:00",
-      "source": "n.news.naver.com",
-      "url": "https://www.joongang.co.kr/article/25462891"
+      "title": "세금 더 걷혔지만 지출은 더 빨랐다…공공부문 적자 83조 '역대 최대'",
+      "date": "Fri, 18 Sep 2026 17:25:00",
+      "source": "ppss.kr",
+      "url": "https://www.ppss.kr/news/articleView.html?idxno=311550"
     },
     {
-      "title": "유럽·美·日… 세계 중앙은행들 ‘긴축 행렬’",
-      "date": "Fri, 18 Sep 2026 00:32:00",
-      "source": "n.news.naver.com",
-      "url": "https://www.chosun.com/economy/economy_general/2026/09/18/BVJIOJ3D3VBEPCT23QM23CNAQQ/?utm_source=naver&utm_medium=referral&utm_campaign=naver-news"
+      "title": "지난해 공공부문 적자 83조원 돌파…통계 작성 이래 '역대 최대'",
+      "date": "Fri, 18 Sep 2026 17:18:00",
+      "source": "businesskorea.co.kr",
+      "url": "https://www.businesskorea.co.kr/news/articleView.html?idxno=277330"
     },
     {
-      "title": "추가 긴축 예고한 연준… 고금리 압박에 경기둔화 우려",
-      "date": "Fri, 18 Sep 2026 00:20:00",
+      "title": "美 금리 올렸는데 끝이 아니다…주담대 7%·‘고금리 장기전’ 온다",
+      "date": "Fri, 18 Sep 2026 17:17:00",
       "source": "n.news.naver.com",
-      "url": "https://www.kmib.co.kr/article/view.asp?arcid=9000013168&cp=nv"
+      "url": "https://economist.co.kr/article/view/ecn202609180036"
     },
     {
-      "title": "[사설] 3년 만에 금리 올린 미국... ‘긴축의 시대’ 충격 대비하길",
-      "date": "Fri, 18 Sep 2026 00:10:00",
-      "source": "n.news.naver.com",
-      "url": "https://www.hankookilbo.com/news/article/A2026091715420004083?did=NA"
+      "title": "[A 주간 서머리] 경제·산업계 \"美 연준, 3년 만에 긴축모드 전환...K푸드...",
+      "date": "Fri, 18 Sep 2026 17:00:00",
+      "source": "asiaa.co.kr",
+      "url": "https://www.asiaa.co.kr/news/articleView.html?idxno=263007"
     }
   ],
   "kiep": [
+    {
+      "title": "日 8월 무역수지, 유가 급등으로 1.1조엔 적자...4개월 연속",
+      "date": "Fri, 18 Sep 2026 16:10:00",
+      "source": "g-enews.com",
+      "url": "https://www.g-enews.com/view.php?ud=202609181606086944e7e8286d56_1"
+    },
+    {
+      "title": "[오늘의 신문] 대미투자 원전 협상 막판 진통…美 금리인상·유가 120달...",
+      "date": "Fri, 18 Sep 2026 07:48:00",
+      "source": "kor.theasian.asia",
+      "url": "http://kor.theasian.asia/archives/415874"
+    },
     {
       "title": "현대硏 \"경제성장률 3.5% → 내년 2.4% ... 구조 개선 통한 질적 성장 필...",
       "date": "Sun, 13 Sep 2026 13:40:00",
@@ -233,18 +245,6 @@
       "date": "Thu, 25 Jun 2026 07:29:00",
       "source": "n.news.naver.com",
       "url": "https://www.kmib.co.kr/article/view.asp?arcid=0030017761&code=61141111&cp=nv"
-    },
-    {
-      "title": "[프로필] 이동훈 수출입은행 상임이사, 대외협력·자금조달·리스크관리...",
-      "date": "Tue, 09 Jun 2026 14:56:00",
-      "source": "fntimes.com",
-      "url": "http://www.fntimes.com/html/view.php?ud=2026060911203414025e6e69892f_18"
-    },
-    {
-      "title": "[성공예감] 스페이스X 상장의 이면, 일론 머스크 발등에 떨어진 불 – 홍...",
-      "date": "Tue, 09 Jun 2026 14:43:00",
-      "source": "n.news.naver.com",
-      "url": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8581636&ref=A"
     }
   ],
   "kif": [
@@ -309,5 +309,5 @@
       "url": "http://www.ftoday.co.kr/news/articleView.html?idxno=361843"
     }
   ],
-  "updated": "2026.09.18 05:08"
+  "updated": "2026.09.19 04:34"
 }
