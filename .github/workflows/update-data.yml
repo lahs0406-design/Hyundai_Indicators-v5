@@ -1,58 +1,41 @@
-name: 외부지표 데이터 자동 갱신
+name: Update DART disclosures
 
 on:
   schedule:
-    - cron: '0 17 * * *'   # 매일 02:00 KST (UTC 17:00)
-  workflow_dispatch: {}     # 수동 실행 버튼
+    # 매일 06:10 KST = 전날 21:10 UTC (뉴스 업데이트와 겹치지 않도록 10분 뒤로 배치)
+    - cron: '10 21 * * *'
+  workflow_dispatch: {}
 
 permissions:
   contents: write
 
 jobs:
-  update-data:
+  update-dart:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
 
-      - uses: actions/setup-python@v5
+      - name: Set up Node
+        uses: actions/setup-node@v4
         with:
-          python-version: '3.12'
+          node-version: '20'
 
-      - name: 의존성 설치
-        run: pip install python-dotenv
-
-      - name: data.json 갱신 (ECOS/KOSIS/기상청)
+      - name: Fetch disclosures from OpenDART API
         env:
-          ECOS_KEY: ${{ secrets.ECOS_KEY }}
-          KOSIS_KEY: ${{ secrets.KOSIS_KEY }}
-          KOSIS_PROXY: ${{ secrets.KOSIS_PROXY }}
-          KMA_KEY: ${{ secrets.KMA_KEY }}
-          HOLIDAY_KEY: ${{ secrets.HOLIDAY_KEY }}
-          TOURISM_KEY: ${{ secrets.TOURISM_KEY }}
-        run: python scripts/fetch_data.py
+          DART_API_KEY: ${{ secrets.DART_API_KEY }}
+        run: node scripts/fetch-dart.mjs
 
-      - name: ai_interpretations.json 갱신 (지표별 AI 해석)
+      - name: Summarize recent disclosures with Gemini
         env:
-          COPILOT_SECRET: ${{ secrets.COPILOT_SECRET }}
-        run: python scripts/ai/generate_interpretations.py
+          DART_API_KEY: ${{ secrets.DART_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: node scripts/summarize-dart.mjs
 
-      - name: news.json 갱신 (네이버 뉴스)
-        env:
-          NAVER_CLIENT_ID: ${{ secrets.NAVER_CLIENT_ID }}
-          NAVER_CLIENT_SECRET: ${{ secrets.NAVER_CLIENT_SECRET }}
-        run: python scripts/news/fetch_news.py
-
-      - name: reports.json 갱신 (연구기관 보고서)
-        env:
-          NAVER_CLIENT_ID: ${{ secrets.NAVER_CLIENT_ID }}
-          NAVER_CLIENT_SECRET: ${{ secrets.NAVER_CLIENT_SECRET }}
-        run: python scripts/reports/fetch_reports.py
-
-      - name: 결과 커밋 & 푸시
+      - name: Commit updated DART data
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data.json summary.json news.json reports.json
-          git add ai_interpretations.json 2>/dev/null || true
-          git diff --staged --quiet || git commit -m "chore: 외부지표 데이터 자동 갱신 $(TZ='Asia/Seoul' date +'%Y-%m-%d %H:%M KST')"
+          git add data/dart.json data/dart_corp_codes.json data/dart_summaries.json
+          git diff --cached --quiet || git commit -m "chore: update DART disclosure data ($(date -u +%Y-%m-%d))"
           git push
