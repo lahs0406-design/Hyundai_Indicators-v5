@@ -1,6 +1,24 @@
 {
   "hri": [
     {
+      "title": "[국민소득 4만弗] 경제는 커졌는데 국민 체감은 '팍팍'",
+      "date": "Thu, 24 Sep 2026 08:02:00",
+      "source": "news.einfomax.co.kr",
+      "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4436370"
+    },
+    {
+      "title": "[창간 24/3% 성장의 그늘①] 반도체 호황에도 '기초체력' 잠재성장률 1%...",
+      "date": "Thu, 24 Sep 2026 08:00:00",
+      "source": "seoulfn.com",
+      "url": "https://www.seoulfn.com/news/articleView.html?idxno=638481"
+    },
+    {
+      "title": "K자 양극화 해법 찾을까…집값·물가 안정도 숙제 [이형일호 출범②]",
+      "date": "Thu, 24 Sep 2026 07:00:00",
+      "source": "n.news.naver.com",
+      "url": "https://www.newsis.com/view/NISX20260924_0003802799"
+    },
+    {
       "title": "[기획] 성장률 3배 뛰는데 일자리 감소…AI 시대 '고용 없는 성장'",
       "date": "Mon, 21 Sep 2026 14:04:00",
       "source": "m-i.kr",
@@ -41,148 +59,130 @@
       "date": "Mon, 14 Sep 2026 10:00:00",
       "source": "itbiznews.com",
       "url": "https://www.itbiznews.com/news/articleView.html?idxno=224760"
-    },
-    {
-      "title": "[논단] 가만히 있으면 반도체의 낙수효과는 없다",
-      "date": "Mon, 14 Sep 2026 07:00:00",
-      "source": "koscaj.com",
-      "url": "https://www.koscaj.com/news/articleView.html?idxno=326406"
-    },
-    {
-      "title": "[스타트 경제] 서울 국평 분양가 20억 '코앞'...아파트 분양가 신기록",
-      "date": "Fri, 11 Sep 2026 07:23:00",
-      "source": "n.news.naver.com",
-      "url": "https://www.ytn.co.kr/_ln/0102_202609110723173325"
-    },
-    {
-      "title": "국민소득 4만弗 눈앞인데…반도체만 웃는 ‘반쪽짜리 호황’",
-      "date": "Thu, 10 Sep 2026 16:06:00",
-      "source": "segyebiz.com",
-      "url": "http://www.segyebiz.com/newsView/20260910514608?OutUrl=naver"
     }
   ],
   "kdi": [
     {
-      "title": "[박근종 칼럼] 성장률 잇단 상향에도 서민 경제는 냉골, 구조개혁 강화...",
-      "date": "Thu, 24 Sep 2026 03:58:00",
-      "source": "mhns.co.kr",
-      "url": "https://www.mhns.co.kr/news/articleView.html?idxno=761668"
-    },
-    {
-      "title": "OECD, 올해 韓성장률 전망… 석달만에 2.6%→3.7% 상향",
-      "date": "Thu, 24 Sep 2026 01:41:00",
+      "title": "막대한 자본 필요한 AX, 수익·비용 분담 논의는 제자리 [전환의 그늘④...",
+      "date": "Thu, 24 Sep 2026 18:01:00",
       "source": "n.news.naver.com",
-      "url": "https://www.donga.com/news/Economy/article/all/20260923/134730063/2"
+      "url": "https://www.dailian.co.kr/news/view/1694027/?sc=Naver"
     },
     {
-      "title": "[사설] OECD “韓 올해 3.7% 성장”…문제는 1%대 잠재성장률",
-      "date": "Thu, 24 Sep 2026 00:02:00",
+      "title": "내 통장·주식에도 훈풍 불까…OECD 한국 성장률 '이만큼' 상승",
+      "date": "Thu, 24 Sep 2026 11:04:00",
+      "source": "wikitree.co.kr",
+      "url": "https://www.wikitree.co.kr/articles/1161810"
+    },
+    {
+      "title": "OECD, 韓 올해 성장률 2.6% → 3.7%로 상향",
+      "date": "Thu, 24 Sep 2026 11:00:00",
+      "source": "kfenews.co.kr",
+      "url": "https://www.kfenews.co.kr/news/articleView.html?idxno=665261"
+    },
+    {
+      "title": "반년 새 2%p 뛴 OECD 韓 전망…엔진은 반도체 하나",
+      "date": "Thu, 24 Sep 2026 10:04:00",
+      "source": "newskr.kr",
+      "url": "http://www.newskr.kr/news/articleView.html?idxno=106647"
+    },
+    {
+      "title": "OECD 한국 성장률 전망 2.6%→3.7%로 조정···G20 중 상향 최대폭",
+      "date": "Thu, 24 Sep 2026 10:02:00",
+      "source": "todaykorea.co.kr",
+      "url": "https://www.todaykorea.co.kr/news/articleView.html?idxno=406486"
+    },
+    {
+      "title": "소프트뱅크 정크본드에 200억달러 몰렸다…오픈AI에 투자",
+      "date": "Thu, 24 Sep 2026 10:01:00",
       "source": "n.news.naver.com",
-      "url": "https://www.sedaily.com/article/20094670?ref=naver"
+      "url": "https://www.sedaily.com/article/20094786?ref=naver"
     },
     {
-      "title": "OECD, 올해 한국 성장률 2.6→3.7%로 확 올렸다",
-      "date": "Thu, 24 Sep 2026 00:01:00",
+      "title": "대기업 총수들 2027 판 짜기 시작…추석에도 경영 전선",
+      "date": "Thu, 24 Sep 2026 10:01:00",
       "source": "n.news.naver.com",
-      "url": "https://www.joongang.co.kr/article/25464541"
+      "url": "https://www.sedaily.com/article/20094793?ref=naver"
     },
     {
-      "title": "반년 만에 1.7→3.7%…OECD, 韓 성장률 눈높이 확 높였다",
-      "date": "Wed, 23 Sep 2026 21:08:00",
-      "source": "kukinews.com",
-      "url": "https://www.kukinews.com/article/view/kuk202609230204"
-    },
-    {
-      "title": "\"수출·제조업 강력한 반등\"…OECD, 한국 성장률 3.7% 조정",
-      "date": "Wed, 23 Sep 2026 19:56:00",
-      "source": "globalepic.co.kr",
-      "url": "http://www.globalepic.co.kr/view.php?ud=2026092319501841667cc35ccc5c_29"
-    },
-    {
-      "title": "OECD, 韓 올해 성장률 전망 2.6%→3.7%…G20 중 상향폭 가장 커",
-      "date": "Wed, 23 Sep 2026 19:48:00",
-      "source": "segyebiz.com",
-      "url": "http://www.segyebiz.com/newsView/20260923516888?OutUrl=naver"
-    },
-    {
-      "title": "OECD, 한국 성장률 3.7%로 상향…G20 최대 폭",
-      "date": "Wed, 23 Sep 2026 19:42:00",
-      "source": "ebn.co.kr",
-      "url": "https://www.ebn.co.kr/news/articleView.html?idxno=1725587"
-    },
-    {
-      "title": "올 한국 성장률 전망 3.7% ‘대폭 상향’",
-      "date": "Wed, 23 Sep 2026 19:11:00",
+      "title": "반년 만에 1.7%→3.7%… 한국 성장률 전망 확 뛰었다",
+      "date": "Thu, 24 Sep 2026 10:00:00",
       "source": "n.news.naver.com",
-      "url": "https://www.khan.co.kr/article/202609231911025"
+      "url": "https://www.jibs.co.kr/news/articles/articlesDetail/65815?feed=na"
     },
     {
-      "title": "OECD, 올해 한국 성장률 2.6%→3.7%로 대폭 상향",
-      "date": "Wed, 23 Sep 2026 19:02:00",
-      "source": "n.news.naver.com",
-      "url": "https://news.tvchosun.com/site/data/html_dir/2026/09/23/2026092390225.html"
+      "title": "OECD, 올해 韓 성장률 3.7%로 대폭 상향…G20 최대폭",
+      "date": "Thu, 24 Sep 2026 09:16:00",
+      "source": "econovill.com",
+      "url": "https://www.econovill.com/news/articleView.html?idxno=751809"
+    },
+    {
+      "title": "[국민소득 4만弗] 경제는 커졌는데 국민 체감은 '팍팍'",
+      "date": "Thu, 24 Sep 2026 08:02:00",
+      "source": "news.einfomax.co.kr",
+      "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4436370"
     }
   ],
   "bok": [
     {
-      "title": "[사설] 경제지표만 풍성, 추석 경기 더 팍팍하다",
-      "date": "Thu, 24 Sep 2026 05:01:00",
+      "title": "멕 관세 낮추고 FA-50 길 넓힌다…한·멕, 20년 만에 시장개방 시동",
+      "date": "Fri, 25 Sep 2026 04:00:00",
       "source": "n.news.naver.com",
-      "url": "https://www.imaeil.com/page/view/2026092316475956752"
+      "url": "https://www.edaily.co.kr/News/Read?newsId=01312006645583728&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article"
     },
     {
-      "title": "[박근종 칼럼] 성장률 잇단 상향에도 서민 경제는 냉골, 구조개혁 강화...",
-      "date": "Thu, 24 Sep 2026 03:58:00",
-      "source": "mhns.co.kr",
-      "url": "https://www.mhns.co.kr/news/articleView.html?idxno=761668"
+      "title": "신현송 “인구구조, 잠재성장률·균형금리 좌우”",
+      "date": "Thu, 24 Sep 2026 21:40:00",
+      "source": "tokenpost.kr",
+      "url": "https://www.tokenpost.kr/news/economy/413533"
     },
     {
-      "title": "OECD, 올해 한국 성장률 2.6→3.7%로 확 올렸다",
-      "date": "Thu, 24 Sep 2026 00:01:00",
-      "source": "n.news.naver.com",
-      "url": "https://www.joongang.co.kr/article/25464541"
+      "title": "연휴 뒤 채권시장 변수는?…미중 정상회담·유가·국고채 발행",
+      "date": "Thu, 24 Sep 2026 21:12:00",
+      "source": "econovill.com",
+      "url": "https://www.econovill.com/news/articleView.html?idxno=751826"
     },
     {
-      "title": "9월 소비심리 한 달 만에 반등…금리·가계부채 부담 커졌다",
-      "date": "Wed, 23 Sep 2026 22:36:00",
-      "source": "dailysportshankook.co.kr",
-      "url": "https://www.dailysportshankook.co.kr/news/articleView.html?idxno=433832"
-    },
-    {
-      "title": "OECD \"韓 성장률 3.7%로 상향…내년엔 소비가 발목\"",
-      "date": "Wed, 23 Sep 2026 22:09:00",
-      "source": "n.news.naver.com",
-      "url": "http://www.inews24.com/view/2008986"
-    },
-    {
-      "title": "\"수출·제조업 강력한 반등\"…OECD, 한국 성장률 3.7% 조정",
-      "date": "Wed, 23 Sep 2026 19:56:00",
-      "source": "globalepic.co.kr",
-      "url": "http://www.globalepic.co.kr/view.php?ud=2026092319501841667cc35ccc5c_29"
-    },
-    {
-      "title": "OECD, 한국 성장률 3.7%로 상향…G20 최대 폭",
-      "date": "Wed, 23 Sep 2026 19:42:00",
+      "title": "[EBN 오늘(24일) 이슈 종합] 미·중 무역 휴전 2개월 연장…'부산 합의' ...",
+      "date": "Thu, 24 Sep 2026 19:24:00",
       "source": "ebn.co.kr",
-      "url": "https://www.ebn.co.kr/news/articleView.html?idxno=1725587"
+      "url": "https://www.ebn.co.kr/news/articleView.html?idxno=1725632"
     },
     {
-      "title": "소비심리 한 달 만에 반등",
-      "date": "Wed, 23 Sep 2026 19:11:00",
+      "title": "[연합뉴스 이 시각 헤드라인] - 15:00",
+      "date": "Thu, 24 Sep 2026 15:00:00",
       "source": "n.news.naver.com",
-      "url": "https://www.khan.co.kr/article/202609231911005"
+      "url": "https://www.yna.co.kr/view/AKR20260924035700011?input=1195m"
     },
     {
-      "title": "OECD, 올해 한국 성장률 2.6%→3.7%로 대폭 상향",
-      "date": "Wed, 23 Sep 2026 19:02:00",
-      "source": "n.news.naver.com",
-      "url": "https://news.tvchosun.com/site/data/html_dir/2026/09/23/2026092390225.html"
+      "title": "韓 성장률 눈높이 또 높아졌다..OECD 2.6→3.7% ‘껑충’",
+      "date": "Thu, 24 Sep 2026 12:52:00",
+      "source": "kpenews.com",
+      "url": "https://kpenews.com/View.aspx?No=4241127"
     },
     {
-      "title": "반도체 수출·설비투자 ‘쌍끌이’…OECD, 韓 성장 전망 반년새 2%P 상향",
-      "date": "Wed, 23 Sep 2026 19:01:00",
+      "title": "저소득 자영업자 연체율, 10년 6개월 만에 최고",
+      "date": "Thu, 24 Sep 2026 12:44:00",
       "source": "n.news.naver.com",
-      "url": "https://www.sedaily.com/article/20094727?ref=naver"
+      "url": "https://www.ytn.co.kr/_ln/0102_202609241244169549"
+    },
+    {
+      "title": "9월 소비자심리지수 106.6...경기·물가 전망 동반 상승",
+      "date": "Thu, 24 Sep 2026 12:30:00",
+      "source": "m-economynews.com",
+      "url": "https://www.m-economynews.com/news/article.html?no=71045"
+    },
+    {
+      "title": "[선우윤호의 경제본색] 추석 밥상 오를 '집값·물가'...李 정부 입장에선...",
+      "date": "Thu, 24 Sep 2026 12:08:00",
+      "source": "pennmike.com",
+      "url": "https://www.pennmike.com/news/articleView.html?idxno=128393"
+    },
+    {
+      "title": "금리 오르자 주식시장에서 은행으로···'역머니무브' 가속화하나",
+      "date": "Thu, 24 Sep 2026 12:00:00",
+      "source": "seoulfn.com",
+      "url": "https://www.seoulfn.com/news/articleView.html?idxno=638669"
     }
   ],
   "kiep": [
@@ -309,5 +309,5 @@
       "url": "http://www.ftoday.co.kr/news/articleView.html?idxno=361843"
     }
   ],
-  "updated": "2026.09.24 05:02"
+  "updated": "2026.09.25 05:27"
 }
