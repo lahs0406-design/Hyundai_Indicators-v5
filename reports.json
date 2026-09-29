@@ -1,6 +1,18 @@
 {
   "hri": [
     {
+      "title": "[경제 이슈] 현대경제연구원, \"반도체 중심 수출 호황이 경제성장 견인...",
+      "date": "Tue, 29 Sep 2026 09:30:00",
+      "source": "sisacast.kr",
+      "url": "http://www.sisacast.kr/news/articleView.html?idxno=100433"
+    },
+    {
+      "title": "세계 채권시장, 0%대 빚의 청구서 날아와··· 韓 경제까지 번진 '금리...",
+      "date": "Tue, 29 Sep 2026 07:50:00",
+      "source": "smartbizn.com",
+      "url": "https://www.smartbizn.com/news/articleView.html?idxno=155034"
+    },
+    {
       "title": "[신간] AI가 불러온 '돈의 역류'… 2027 경제질서 읽는다",
       "date": "Mon, 28 Sep 2026 16:32:00",
       "source": "newscj.com",
@@ -47,21 +59,27 @@
       "date": "Sun, 20 Sep 2026 11:10:00",
       "source": "n.news.naver.com",
       "url": "https://www.edaily.co.kr/News/Read?newsId=01443206645582088&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article"
-    },
-    {
-      "title": "[김광석의 경제 읽어주는 남자] 반도체 호황의 역설 …잘나갈때 '그다음...",
-      "date": "Fri, 18 Sep 2026 06:02:00",
-      "source": "ajunews.com",
-      "url": "https://www.ajunews.com/view/20260914101837577"
-    },
-    {
-      "title": "美 금리 따라 은행채 들썩… 영끌·빚투족 비명 [美, 3년2개월 만에 기준...",
-      "date": "Thu, 17 Sep 2026 19:02:00",
-      "source": "n.news.naver.com",
-      "url": "https://www.segye.com/newsView/20260917516903?OutUrl=naver"
     }
   ],
   "kdi": [
+    {
+      "title": "무주~대구 고속道, 예타 통과 사활",
+      "date": "Tue, 29 Sep 2026 16:58:00",
+      "source": "jjn.co.kr",
+      "url": "http://www.jjn.co.kr/news/articleView.html?idxno=1053349"
+    },
+    {
+      "title": "[그 차의 시대③] 그랜저···3低 호황이 낳은 1986년",
+      "date": "Tue, 29 Sep 2026 13:56:00",
+      "source": "pointdaily.co.kr",
+      "url": "https://www.pointdaily.co.kr/news/articleView.html?idxno=320696"
+    },
+    {
+      "title": "증권가, 성장률 1%·환율 1700원 경고 … \"李정부 국내 투자 매력 못 살...",
+      "date": "Tue, 29 Sep 2026 10:18:00",
+      "source": "biz.newdaily.co.kr",
+      "url": "https://biz.newdaily.co.kr/site/data/html/2026/09/29/2026092900085.html"
+    },
     {
       "title": "패트롤] 고양시-동두천시-양주시-의정부시-포천시",
       "date": "Tue, 29 Sep 2026 01:30:00",
@@ -103,86 +121,68 @@
       "date": "Mon, 28 Sep 2026 17:30:00",
       "source": "n.news.naver.com",
       "url": "https://view.asiae.co.kr/article/2026092817083315703"
-    },
-    {
-      "title": "여야·영호남 한목소리 무주~대구 고속도로 예타 통과 총력",
-      "date": "Mon, 28 Sep 2026 17:14:00",
-      "source": "jeollailbo.com",
-      "url": "http://www.jeollailbo.com/news/articleView.html?idxno=812247"
-    },
-    {
-      "title": "허니버터칩·아침햇살도 오른다…10월 먹거리 가격 줄인상",
-      "date": "Mon, 28 Sep 2026 17:06:00",
-      "source": "idomin.com",
-      "url": "https://www.idomin.com/news/articleView.html?idxno=2015800"
-    },
-    {
-      "title": "재경위, 구글코리아·KAI 사장 국감 증인 채택…김용범·여한구 '불발'",
-      "date": "Mon, 28 Sep 2026 15:47:00",
-      "source": "n.news.naver.com",
-      "url": "https://www.news1.kr/politics/assembly/6303448"
     }
   ],
   "bok": [
     {
-      "title": "메트로신문 9월29일자 한줄뉴스",
-      "date": "Tue, 29 Sep 2026 07:02:00",
-      "source": "metroseoul.co.kr",
-      "url": "http://www.metroseoul.co.kr/article/20260928500529"
+      "title": "[이용우의 공정경제] AI 꿈은 무한대… 그러나 자본은 유한",
+      "date": "Wed, 30 Sep 2026 06:02:00",
+      "source": "ajunews.com",
+      "url": "https://www.ajunews.com/view/20260923191846451"
     },
     {
-      "title": "금리 계속 오르는데…올 4분기 만기 회사채만 105조원",
-      "date": "Tue, 29 Sep 2026 07:02:00",
-      "source": "dnews.co.kr",
-      "url": "https://www.dnews.co.kr/uhtml/view.jsp?idxno=202609281146533180540"
-    },
-    {
-      "title": "반도체 성과급은 어디서 오는가[박선영의 경제 인사이트]",
-      "date": "Tue, 29 Sep 2026 06:30:00",
+      "title": "\"돈잔치? 남의 집 얘기\"…'반도체 집중' 한국도 대만도 고민",
+      "date": "Wed, 30 Sep 2026 06:01:00",
       "source": "n.news.naver.com",
-      "url": "https://www.news1.kr/industry/general-industry/6303647"
+      "url": "https://www.hankyung.com/article/202609292461g"
     },
     {
-      "title": "[제3회 대경 민간투자포럼](2) “소비자물가 대신 건설물가 적용…급격...",
-      "date": "Tue, 29 Sep 2026 06:22:00",
-      "source": "dnews.co.kr",
-      "url": "https://www.dnews.co.kr/uhtml/view.jsp?idxno=202609281657572210620"
-    },
-    {
-      "title": "[N2 모닝 경제 브리핑-9월 29일] 美 증시, 금리·유가 급등에 일제히 하...",
-      "date": "Tue, 29 Sep 2026 05:34:00",
-      "source": "news2day.co.kr",
-      "url": "https://www.news2day.co.kr/article/20260928500207"
-    },
-    {
-      "title": "[박근종 칼럼] 거시 지표 호조 속 가려진 민생 경제 위기, 선제적 구조조...",
-      "date": "Tue, 29 Sep 2026 05:18:00",
-      "source": "mhns.co.kr",
-      "url": "https://www.mhns.co.kr/news/articleView.html?idxno=761994"
-    },
-    {
-      "title": "美 국채·중동발 충격 한국 덮쳤다…코스피 2.7% 급락·환율 1,365원",
-      "date": "Tue, 29 Sep 2026 05:02:00",
-      "source": "geconomy.co.kr",
-      "url": "https://www.geconomy.co.kr/news/article.html?no=323979"
-    },
-    {
-      "title": "[사설]정부·한은 공조로 정책 엇박자 피해야",
-      "date": "Tue, 29 Sep 2026 04:05:00",
+      "title": "■9월 30일 수 경제 캘린더",
+      "date": "Wed, 30 Sep 2026 05:06:00",
       "source": "n.news.naver.com",
-      "url": "https://www.mt.co.kr/opinion/2026/09/29/2026092815262633863"
+      "url": "https://www.ytn.co.kr/_ln/0102_202609300506467926"
     },
     {
-      "title": "9월 소비심리 다시 반등… 집값 상승 기대 영향",
-      "date": "Tue, 29 Sep 2026 02:30:00",
-      "source": "ggilbo.com",
-      "url": "https://www.ggilbo.com/news/articleView.html?idxno=1183527"
+      "title": "日 2년물 국채금리 2% 육박… 30년 만에 최고치 눈앞",
+      "date": "Wed, 30 Sep 2026 05:00:00",
+      "source": "g-enews.com",
+      "url": "https://www.g-enews.com/view.php?ud=202609300253217432e7e8286d56_1"
     },
     {
-      "title": "다시 금 사는 중앙은행들…뉴욕 아닌 런던에 쌓아둔다",
-      "date": "Tue, 29 Sep 2026 00:01:00",
+      "title": "달러당 160엔 턱밑 엔저… 일본 정부, 개입 카드 소진에 ‘어쩌나’",
+      "date": "Wed, 30 Sep 2026 04:50:00",
+      "source": "g-enews.com",
+      "url": "https://www.g-enews.com/view.php?ud=202609300314454861e7e8286d56_1"
+    },
+    {
+      "title": "美국채금리 5%대 고착화… 연준 추가 금리인상 무게",
+      "date": "Wed, 30 Sep 2026 04:36:00",
       "source": "n.news.naver.com",
-      "url": "https://www.joongang.co.kr/article/25465370"
+      "url": "https://www.donga.com/news/Economy/article/all/20260930/134756620/2"
+    },
+    {
+      "title": "부유한 국가, 가난한 국민 [뉴스룸에서]",
+      "date": "Wed, 30 Sep 2026 04:31:00",
+      "source": "n.news.naver.com",
+      "url": "https://www.hankookilbo.com/news/article/A2026092916330005005?did=NA"
+    },
+    {
+      "title": "[다산칼럼] 반도체 날지만 경제 체력은 '골골'",
+      "date": "Wed, 30 Sep 2026 01:24:00",
+      "source": "n.news.naver.com",
+      "url": "https://www.hankyung.com/article/2026092928421"
+    },
+    {
+      "title": "불붙은 美국채금리 '6% 가시권'",
+      "date": "Tue, 29 Sep 2026 18:52:00",
+      "source": "n.news.naver.com",
+      "url": "https://www.edaily.co.kr/News/Read?newsId=05116806645585040&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article"
+    },
+    {
+      "title": "[여명] 고금리 ‘뉴노멀’ 시대의 韓 재정정책",
+      "date": "Tue, 29 Sep 2026 18:41:00",
+      "source": "n.news.naver.com",
+      "url": "https://www.sedaily.com/article/20096276?ref=naver"
     }
   ],
   "kiep": [
@@ -309,5 +309,5 @@
       "url": "http://www.ftoday.co.kr/news/articleView.html?idxno=361843"
     }
   ],
-  "updated": "2026.09.29 07:30"
+  "updated": "2026.09.30 06:20"
 }
