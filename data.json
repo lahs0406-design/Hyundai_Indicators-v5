@@ -123,10 +123,6 @@
   ],
   "cpi": [
     {
-      "ym": "202403",
-      "val": 113.95
-    },
-    {
       "ym": "202404",
       "val": 114.01
     },
@@ -241,6 +237,10 @@
     {
       "ym": "202608",
       "val": 120.05
+    },
+    {
+      "ym": "202609",
+      "val": 120.43
     }
   ],
   "rate": [
@@ -9686,9 +9686,19 @@
             "d": 1,
             "temp": 17.6,
             "rain": 0.0
+          },
+          {
+            "d": 2,
+            "temp": 16.6,
+            "rain": 0.0
+          },
+          {
+            "d": 3,
+            "temp": 17.1,
+            "rain": 0.0
           }
         ],
-        "avg_temp": 17.6,
+        "avg_temp": 17.1,
         "max_temp": 17.6,
         "total_rain": 0.0,
         "rain_days": 0
@@ -14040,9 +14050,14 @@
             "d": 2,
             "temp": 19.7,
             "rain": 0.0
+          },
+          {
+            "d": 3,
+            "temp": 20.6,
+            "rain": 0.0
           }
         ],
-        "avg_temp": 20.5,
+        "avg_temp": 20.6,
         "max_temp": 21.4,
         "total_rain": 0.0,
         "rain_days": 0
@@ -18394,9 +18409,14 @@
             "d": 2,
             "temp": 17.3,
             "rain": 0.0
+          },
+          {
+            "d": 3,
+            "temp": 17.3,
+            "rain": 0.0
           }
         ],
-        "avg_temp": 18.9,
+        "avg_temp": 18.4,
         "max_temp": 20.5,
         "total_rain": 0.0,
         "rain_days": 0
@@ -22748,9 +22768,14 @@
             "d": 2,
             "temp": 17.3,
             "rain": 0.0
+          },
+          {
+            "d": 3,
+            "temp": 17.9,
+            "rain": 0.0
           }
         ],
-        "avg_temp": 17.6,
+        "avg_temp": 17.7,
         "max_temp": 17.9,
         "total_rain": 0.0,
         "rain_days": 0
@@ -27097,9 +27122,19 @@
             "d": 1,
             "temp": 19.6,
             "rain": 0.0
+          },
+          {
+            "d": 2,
+            "temp": 18.2,
+            "rain": 0.0
+          },
+          {
+            "d": 3,
+            "temp": 19.3,
+            "rain": 0.0
           }
         ],
-        "avg_temp": 19.6,
+        "avg_temp": 19.0,
         "max_temp": 19.6,
         "total_rain": 0.0,
         "rain_days": 0
@@ -31451,9 +31486,14 @@
             "d": 2,
             "temp": 15.7,
             "rain": 0.0
+          },
+          {
+            "d": 3,
+            "temp": 16.3,
+            "rain": 0.0
           }
         ],
-        "avg_temp": 16.8,
+        "avg_temp": 16.6,
         "max_temp": 17.8,
         "total_rain": 0.0,
         "rain_days": 0
@@ -35805,9 +35845,14 @@
             "d": 2,
             "temp": 17.3,
             "rain": 0.0
+          },
+          {
+            "d": 3,
+            "temp": 18.1,
+            "rain": 0.0
           }
         ],
-        "avg_temp": 18.5,
+        "avg_temp": 18.4,
         "max_temp": 19.7,
         "total_rain": 0.0,
         "rain_days": 0
@@ -40159,9 +40204,14 @@
             "d": 2,
             "temp": 16.8,
             "rain": 0.0
+          },
+          {
+            "d": 3,
+            "temp": 17.2,
+            "rain": 0.0
           }
         ],
-        "avg_temp": 17.8,
+        "avg_temp": 17.6,
         "max_temp": 18.8,
         "total_rain": 0.0,
         "rain_days": 0
