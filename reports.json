@@ -1,6 +1,12 @@
 {
   "hri": [
     {
+      "title": "반도체 호황이 만든 명목 GDP…내수와 가계로 퍼질까",
+      "date": "Wed, 07 Oct 2026 16:40:00",
+      "source": "junggi.co.kr",
+      "url": "https://www.junggi.co.kr/news/articleView.html?idxno=38023"
+    },
+    {
       "title": "'이상 징후' 보이기 시작...암울한 한국 분위기 [자막뉴스]",
       "date": "Sun, 04 Oct 2026 14:03:00",
       "source": "n.news.naver.com",
@@ -53,15 +59,51 @@
       "date": "Thu, 24 Sep 2026 08:00:00",
       "source": "seoulfn.com",
       "url": "https://www.seoulfn.com/news/articleView.html?idxno=638481"
-    },
-    {
-      "title": "K자 양극화 해법 찾을까…집값·물가 안정도 숙제 [이형일호 출범②]",
-      "date": "Thu, 24 Sep 2026 07:00:00",
-      "source": "n.news.naver.com",
-      "url": "https://www.newsis.com/view/NISX20260924_0003802799"
     }
   ],
   "kdi": [
+    {
+      "title": "200조 넘보는 미래기금…‘쌓는 법’은 있는데 ‘쓰는 곳’은[Deep Spot]",
+      "date": "Thu, 08 Oct 2026 06:01:00",
+      "source": "n.news.naver.com",
+      "url": "https://biz.heraldcorp.com/article/10896060?ref=naver"
+    },
+    {
+      "title": "‘내륙 우회’ 기로 영일만대교…김정재 “해상노선” 洪 “대안으로라...",
+      "date": "Wed, 07 Oct 2026 22:22:00",
+      "source": "kbmaeil.com",
+      "url": "https://www.kbmaeil.com/article/20261007500795"
+    },
+    {
+      "title": "공공·민간 공동 재원 부담…오일허브서 미래 에너지 거점으로",
+      "date": "Wed, 07 Oct 2026 21:42:00",
+      "source": "ulsanpress.net",
+      "url": "https://www.ulsanpress.net/news/articleView.html?idxno=584354"
+    },
+    {
+      "title": "AI·반도체가 끌어올린 3%대 성장…내년부터가 승부처",
+      "date": "Wed, 07 Oct 2026 14:54:00",
+      "source": "asiatime.co.kr",
+      "url": "https://www.asiatime.co.kr/article/20261007500288"
+    },
+    {
+      "title": "[기획] 역대급 초과세수 63조…“미래세대 빚, 국채부터 갚아야”",
+      "date": "Wed, 07 Oct 2026 14:34:00",
+      "source": "ekn.kr",
+      "url": "https://www.ekn.kr/web/view.php?key=20261007021543239"
+    },
+    {
+      "title": "반도체가 끌어올린 韓성장률…해외IB 평균 3.5%·JP모건 4%",
+      "date": "Wed, 07 Oct 2026 10:56:00",
+      "source": "newsian.co.kr",
+      "url": "http://www.newsian.co.kr/news/articleView.html?idxno=96649"
+    },
+    {
+      "title": "AI가 24시간 돌봄 공백 메운다…복지부 ‘복지·돌봄 AI 대전환 로드맵...",
+      "date": "Wed, 07 Oct 2026 07:10:00",
+      "source": "medicalworldnews.co.kr",
+      "url": "https://medicalworldnews.co.kr/news/view.php?idx=1510977694"
+    },
     {
       "title": "수출 신기록 찍은 韓…올해 성장률, 3.3% 넘어설까",
       "date": "Wed, 07 Oct 2026 06:22:00",
@@ -79,110 +121,68 @@
       "date": "Wed, 07 Oct 2026 04:31:00",
       "source": "n.news.naver.com",
       "url": "https://www.donga.com/news/Society/article/all/20261007/134797277/2"
-    },
-    {
-      "title": "김성환 \"호남 반도체 팹 9기 땐 14GW…AI 급증에 전력망 계획 원점 점검...",
-      "date": "Tue, 06 Oct 2026 23:39:00",
-      "source": "n.news.naver.com",
-      "url": "https://www.newsis.com/view/NISX20261006_0003816380"
-    },
-    {
-      "title": "인천1호선 송도 8공구, 예타통과관련... 국정감사 촉구",
-      "date": "Tue, 06 Oct 2026 21:30:00",
-      "source": "jeonmae.co.kr",
-      "url": "https://www.jeonmae.co.kr/news/articleView.html?idxno=1299216"
-    },
-    {
-      "title": "제2용인~서울고속도로 사업 속도···'수지·광교' 교통여건 개선 기대",
-      "date": "Tue, 06 Oct 2026 17:32:00",
-      "source": "sisajournal-e.com",
-      "url": "https://www.sisajournal-e.com/news/articleView.html?idxno=424151"
-    },
-    {
-      "title": "돌봄 현장에 AI 본격 도입… 현장은 '인력 감축' 우려",
-      "date": "Tue, 06 Oct 2026 17:30:00",
-      "source": "sisaweek.com",
-      "url": "https://www.sisaweek.com/news/articleView.html?idxno=238223"
-    },
-    {
-      "title": "\"AI가 24시간 살피고 복지 추천까지\"…정부, '복지·돌봄 AI 대전환' 시동",
-      "date": "Tue, 06 Oct 2026 16:56:00",
-      "source": "ajunews.com",
-      "url": "https://www.ajunews.com/view/20261006165043613"
-    },
-    {
-      "title": "“2043년 요양보호사 99만명 부족”...‘AI 돌봄’으로 빈자리 메운다",
-      "date": "Tue, 06 Oct 2026 16:43:00",
-      "source": "n.news.naver.com",
-      "url": "https://www.joongang.co.kr/article/25467526"
-    },
-    {
-      "title": "3%대 후반까지 높아진 성장 눈높이…물가 부담도 '쑥↑'",
-      "date": "Tue, 06 Oct 2026 16:40:00",
-      "source": "newstomato.com",
-      "url": "http://www.newstomato.com/ReadNews.aspx?no=1315810&inflow=N"
     }
   ],
   "bok": [
     {
-      "title": "“내년 상반기까지 박스권…일반 기업의 AI 성과 주시하라”",
-      "date": "Wed, 07 Oct 2026 06:02:00",
-      "source": "magazine.hankyung.com",
-      "url": "https://magazine.hankyung.com/money/article/202609168351c"
-    },
-    {
-      "title": "[N2 모닝 경제 브리핑-10월 7일] 美 증시, 국채금리 꺾이자 기술주 반등...",
-      "date": "Wed, 07 Oct 2026 05:58:00",
-      "source": "news2day.co.kr",
-      "url": "https://www.news2day.co.kr/article/20261006500041"
-    },
-    {
-      "title": "[단독]韓 정부부채 비율 42.6%로 하락",
-      "date": "Wed, 07 Oct 2026 05:02:00",
+      "title": "해외IB, 韓성장률 3.5%로↑… 8곳 중 6곳 내년 전망치도↑",
+      "date": "Thu, 08 Oct 2026 00:31:00",
       "source": "n.news.naver.com",
-      "url": "https://www.edaily.co.kr/News/Read?newsId=01646566645610624&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article"
+      "url": "https://www.donga.com/news/Economy/article/all/20261007/134804863/2"
     },
     {
-      "title": "美 국채금리 32년 만에 최대 폭등…가계빚 2000조 한국에 직격탄",
-      "date": "Tue, 06 Oct 2026 19:54:00",
-      "source": "thepublic.kr",
-      "url": "https://www.thepublic.kr/news/articleView.html?idxno=321312"
+      "title": "산은·기은 ‘내부통제’ 도마…금융사고부터 정책금융 운용까지 [2026 국...",
+      "date": "Wed, 07 Oct 2026 22:22:00",
+      "source": "fntimes.com",
+      "url": "https://www.fntimes.com/html/view.php?ud=2026100716205919645e6e69892f_18"
     },
     {
-      "title": "\"물가 2% 안착 중요\"… 日 우에다, 추가 금리인상 시사",
-      "date": "Tue, 06 Oct 2026 18:40:00",
-      "source": "g-enews.com",
-      "url": "https://www.g-enews.com/view.php?ud=202610061839314147e7e8286d56_1"
-    },
-    {
-      "title": "[매크로 인사이트] 윤여삼 팀장 “AI 하이퍼스케일러 부외부채 2조弗 폭...",
-      "date": "Tue, 06 Oct 2026 18:14:00",
+      "title": "“7000만원 필요한데 은행선 1500만원만 대출” 카드사·캐피탈로 밀려...",
+      "date": "Wed, 07 Oct 2026 17:22:00",
       "source": "n.news.naver.com",
-      "url": "http://www.wowtv.co.kr/NewsCenter/News/Read?articleId=A202610060155&t=NN"
+      "url": "https://biz.heraldcorp.com/article/10896097?ref=naver"
     },
     {
-      "title": "이형일 \"국고채 발행 추가 축소 검토…초과세수 우선 활용\"",
-      "date": "Tue, 06 Oct 2026 16:37:00",
+      "title": "반도체 호조에…해외IB, 올해 韓성장률 3.5%로 상향",
+      "date": "Wed, 07 Oct 2026 17:07:00",
       "source": "n.news.naver.com",
-      "url": "https://www.news1.kr/economy/trend/6311726"
+      "url": "https://www.donga.com/news/Economy/article/all/20261007/134802122/1"
     },
     {
-      "title": "세계은행, 동아시아 올해 성장률 전망 4.5%로 상향조정…\"AI 수출 호조\"",
-      "date": "Tue, 06 Oct 2026 16:24:00",
-      "source": "news.einfomax.co.kr",
-      "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4437948"
-    },
-    {
-      "title": "2027년 '빚 내는 경제'…성장률이 이자 부담을 앞설까",
-      "date": "Tue, 06 Oct 2026 16:12:00",
+      "title": "반도체 호황이 만든 명목 GDP…내수와 가계로 퍼질까",
+      "date": "Wed, 07 Oct 2026 16:40:00",
       "source": "junggi.co.kr",
-      "url": "https://www.junggi.co.kr/news/articleView.html?idxno=38006"
+      "url": "https://www.junggi.co.kr/news/articleView.html?idxno=38023"
     },
     {
-      "title": "세계은행, AI로 동아시아·태평양國 올해 성장률 4.5%로 상향",
-      "date": "Tue, 06 Oct 2026 15:53:00",
+      "title": "'달러 강세' 꺾이자 환율 변동성 확대…내년 1200원대 전망도",
+      "date": "Wed, 07 Oct 2026 16:10:00",
+      "source": "metroseoul.co.kr",
+      "url": "http://www.metroseoul.co.kr/article/20261007500438"
+    },
+    {
+      "title": "치솟는 시장금리에 주담대 7%…한계기업 부실 위험도 커진다",
+      "date": "Wed, 07 Oct 2026 16:08:00",
+      "source": "metroseoul.co.kr",
+      "url": "http://www.metroseoul.co.kr/article/20261007500434"
+    },
+    {
+      "title": "[사설] 성장률전망은 ‘후끈’ 체감경기는 ‘냉골’ 혼란스런 경제지표",
+      "date": "Wed, 07 Oct 2026 10:52:00",
+      "source": "asiatime.co.kr",
+      "url": "https://www.asiatime.co.kr/article/20261007500112"
+    },
+    {
+      "title": "5년 연속 늪 빠진 건설시장…\"내년 GTX·가덕도신공항·반도체로 물꼬터...",
+      "date": "Wed, 07 Oct 2026 10:46:00",
+      "source": "econovill.com",
+      "url": "https://www.econovill.com/news/articleView.html?idxno=752915"
+    },
+    {
+      "title": "중국 디지털 결제 플랫폼 엠브릿지, 달러와 스위프트 대체할 수 있나[원...",
+      "date": "Wed, 07 Oct 2026 10:05:00",
       "source": "n.news.naver.com",
-      "url": "https://www.fnnews.com/news/202610061458461088"
+      "url": "https://www.pressian.com/pages/articles/2026100617022465708?utm_source=naver&utm_medium=search"
     }
   ],
   "kiep": [
@@ -309,5 +309,5 @@
       "url": "https://www.yna.co.kr/view/AKR20260710057800008?input=1195m"
     }
   ],
-  "updated": "2026.10.07 06:30"
+  "updated": "2026.10.08 06:51"
 }
