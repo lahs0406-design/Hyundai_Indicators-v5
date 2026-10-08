@@ -1,112 +1,77 @@
 {
   "dept": [
     {
-      "title": "동국제약 마데카파마시아, 현대백화점 판교 더마뷰티 편집숍 '코오드' ...",
-      "date": "Wed, 07 Oct 2026 21:24:00",
-      "source": "biztribune.co.kr",
-      "url": "http://www.biztribune.co.kr/news/articleView.html?idxno=360200",
-      "sub": ""
-    },
-    {
-      "title": "라루셀, 현대백화점 판교점 ‘코오드’ 입점…더마뷰티 고객 접점 넓힌...",
-      "date": "Wed, 07 Oct 2026 19:53:00",
-      "source": "n.news.naver.com",
-      "url": "https://sports.khan.co.kr/article/202610071952003?pt=nv",
-      "sub": ""
-    },
-    {
-      "title": "정용진의 AI 행보…리플렉션AI 협력으로 사업 영역 확대",
-      "date": "Wed, 07 Oct 2026 18:28:00",
-      "source": "cbci.co.kr",
-      "url": "https://www.cbci.co.kr/news/articleView.html?idxno=613238",
-      "sub": ""
-    },
-    {
-      "title": "\"이번엔 해리포터 산다\"…정용진의 1.4조 베팅, 성공할까 [참견하는 기자...",
-      "date": "Wed, 07 Oct 2026 18:04:00",
-      "source": "n.news.naver.com",
-      "url": "https://www.wowtv.co.kr/NewsCenter/News/Read?articleId=A202610070121&t=NNv",
-      "sub": ""
-    },
-    {
-      "title": "메종 마르지엘라, 신세계백화점 대구점에 신규 부티크 열어",
-      "date": "Wed, 07 Oct 2026 17:57:00",
-      "source": "n.news.naver.com",
-      "url": "https://sports.khan.co.kr/article/202610071756003?pt=nv",
-      "sub": ""
-    },
-    {
-      "title": "더현대 광주 공사현장서 폭탄 발견..아군 폭탄 추정",
-      "date": "Wed, 07 Oct 2026 17:05:00",
-      "source": "kjmbc.co.kr",
-      "url": "https://kjmbc.co.kr/NewsArticle/1539982",
-      "sub": ""
-    },
-    {
-      "title": "제주SK FC, 국내 프로축구단 최초 유니클로 UTme! 협업 티셔츠 공개",
-      "date": "Wed, 07 Oct 2026 15:48:00",
-      "source": "m.sports.naver.com",
-      "url": "https://www.sportalkorea.com/news/articleView.html?idxno=2025052909553596882",
-      "sub": ""
-    },
-    {
-      "title": "제주SK FC, 유니클로와 협업 티셔츠 선보여",
-      "date": "Wed, 07 Oct 2026 15:44:00",
-      "source": "samdailbo.com",
-      "url": "http://www.samdailbo.com/news/articleView.html?idxno=271050",
-      "sub": ""
-    },
-    {
-      "title": "제주SK, 유니클로와 협업 티셔츠 선보인다...감규리.행코부터 윈드포스...",
-      "date": "Wed, 07 Oct 2026 10:30:00",
-      "source": "headlinejeju.co.kr",
-      "url": "https://www.headlinejeju.co.kr/news/articleView.html?idxno=600085",
-      "sub": ""
-    },
-    {
       "title": "[트렌드 키워드] “백화점 와도 살 게 없는 부잣집 딸처럼”… 현백코어",
       "date": "Tue, 06 Oct 2026 16:18:00",
       "source": "n.news.naver.com",
       "url": "https://www.womennews.co.kr/news/articleView.html?idxno=282966",
       "sub": ""
+    },
+    {
+      "title": "공예작가 17인, 더현대 서울서 2주간 '쓰임의 미학' 펼친다",
+      "date": "Thu, 08 Oct 2026 23:14:00",
+      "source": "gukjenews.com",
+      "url": "https://www.gukjenews.com/news/articleView.html?idxno=3716312",
+      "sub": ""
+    },
+    {
+      "title": "무신사, 온·오프라인 FW 프로모션…오프라인 혜택 강화",
+      "date": "Thu, 08 Oct 2026 22:48:00",
+      "source": "megaeconomy.co.kr",
+      "url": "https://www.megaeconomy.co.kr/news/newsview.php?ncode=1065620563240896",
+      "sub": ""
+    },
+    {
+      "title": "'더현대 광주' 공사현장서 6·25전쟁 추정 포탄 발견",
+      "date": "Thu, 08 Oct 2026 21:44:00",
+      "source": "n.news.naver.com",
+      "url": "https://www.nocutnews.co.kr/news/6589267?utm_source=naver&utm_medium=article&utm_campaign=20261008094439",
+      "sub": ""
+    },
+    {
+      "title": "[현장] '고양이와 스프' 매력 속으로…스타필드 하남 10주년 파티",
+      "date": "Thu, 08 Oct 2026 21:32:00",
+      "source": "sports.hankooki.com",
+      "url": "https://sports.hankooki.com/news/articleView.html?idxno=6941418",
+      "sub": ""
+    },
+    {
+      "title": "유니클로 해외 매출 터졌다…5년 연속 최대 실적",
+      "date": "Thu, 08 Oct 2026 19:42:00",
+      "source": "ktnews.com",
+      "url": "http://www.ktnews.com/news/articleView.html?idxno=149212",
+      "sub": ""
+    },
+    {
+      "title": "현대백화점, 외국인 관광객 동선 잡는다…삼성역 일대 '월드패스'로 묶...",
+      "date": "Thu, 08 Oct 2026 18:12:00",
+      "source": "wikileaks-kr.org",
+      "url": "http://www.wikileaks-kr.org/news/articleView.html?idxno=192977",
+      "sub": ""
+    },
+    {
+      "title": "1.4조 베팅…정용진 '해리포터 스타필드' 승부수 [CEO 업&다운]",
+      "date": "Thu, 08 Oct 2026 17:27:00",
+      "source": "n.news.naver.com",
+      "url": "https://biz.sbs.co.kr/article_hub/20000339044?division=NAVER",
+      "sub": ""
+    },
+    {
+      "title": "중국 주춤하자 미국·유럽 날았다…유니클로, 5년 연속 최대 실적",
+      "date": "Thu, 08 Oct 2026 17:02:00",
+      "source": "peoplewatch.co.kr",
+      "url": "https://www.peoplewatch.co.kr/article/view/ppw202610080014",
+      "sub": ""
+    },
+    {
+      "title": "정용진, 신사업 투자 광폭행보…'조단위 재원 마련' 과제",
+      "date": "Thu, 08 Oct 2026 16:16:00",
+      "source": "news.mtn.co.kr",
+      "url": "https://news.mtn.co.kr/news-detail/2026100815144154110",
+      "sub": ""
     }
   ],
   "trend": [
-    {
-      "title": "세계 200대 컬렉터에 이서현·김웅기·서경배…한국 '3색 수집' 주목",
-      "date": "Wed, 07 Oct 2026 21:42:00",
-      "source": "n.news.naver.com",
-      "url": "https://view.asiae.co.kr/article/2026100721423549919",
-      "sub": ""
-    },
-    {
-      "title": "백지영, 서인영만 불화 아니었다…\"이지혜 말이 마음에 안 들어서 싸워...",
-      "date": "Wed, 07 Oct 2026 21:40:00",
-      "source": "m.entertain.naver.com",
-      "url": "https://www.tenasia.co.kr/article/2026100794254",
-      "sub": ""
-    },
-    {
-      "title": "부산 시민단체 \"전재수, 보좌진 증거인멸 판결 거취 결단해야\"",
-      "date": "Wed, 07 Oct 2026 11:34:00",
-      "source": "n.news.naver.com",
-      "url": "https://www.newsis.com/view/NISX20261007_0003817162",
-      "sub": ""
-    },
-    {
-      "title": "서류·도장까지 베낀 가짜에 뚫린 통관망, 미국 무역 당국이 인증 체계...",
-      "date": "Wed, 07 Oct 2026 10:00:00",
-      "source": "g-enews.com",
-      "url": "https://www.g-enews.com/view.php?ud=202610070956267750fbbec65dfb_1",
-      "sub": ""
-    },
-    {
-      "title": "까르띠에의 우아한 관능",
-      "date": "Wed, 07 Oct 2026 09:00:00",
-      "source": "elle.co.kr",
-      "url": "https://www.elle.co.kr/article/1910512",
-      "sub": ""
-    },
     {
       "title": "자개 상감에 별자리 장식…70억짜리 롤스로이스, 100대 완판 비결은",
       "date": "Wed, 07 Oct 2026 05:30:00",
@@ -115,70 +80,70 @@
       "sub": ""
     },
     {
-      "title": "유치원생→삐에로? 원희의 험난한 명품 입문기",
-      "date": "Thu, 08 Oct 2026 06:00:00",
+      "title": "프랑스 재정 위기에…\"국채보다 기업채가 '안전자산'\"",
+      "date": "Thu, 08 Oct 2026 17:08:00",
+      "source": "n.news.naver.com",
+      "url": "https://www.edaily.co.kr/News/Read?newsId=05162726645610952&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
+      "sub": ""
+    },
+    {
+      "title": "미국은 에너지, 한국은 에너지·헬스케어…글로벌 EPS 엇갈려",
+      "date": "Thu, 08 Oct 2026 16:20:00",
+      "source": "pinpointnews.co.kr",
+      "url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=493882",
+      "sub": ""
+    },
+    {
+      "title": "백남준 김종식.... 서울옥션 4년 만에 부산 경매",
+      "date": "Thu, 08 Oct 2026 15:21:00",
+      "source": "n.news.naver.com",
+      "url": "http://www.kookje.co.kr/news2011/asp/newsbody.asp?code=0500&key=20261008.99099002278",
+      "sub": ""
+    },
+    {
+      "title": "대구컬렉션, 오는 21일 개막…2027 패션 트렌드 한눈에",
+      "date": "Thu, 08 Oct 2026 15:18:00",
+      "source": "ggilbo.com",
+      "url": "https://www.ggilbo.com/news/articleView.html?idxno=1185876",
+      "sub": ""
+    },
+    {
+      "title": "서울옥션, 4년 만에 《BUSAN SALE》 개최… 백남준 첫 출품작 등 61억 원...",
+      "date": "Thu, 08 Oct 2026 12:36:00",
+      "source": "abcn.kr",
+      "url": "https://www.abcn.kr/news/articleView.html?idxno=92840",
+      "sub": ""
+    },
+    {
+      "title": "10월의 탄생석 오팔, 가장 힘든 시기에 만난 ‘희망’의 보석",
+      "date": "Thu, 08 Oct 2026 12:02:00",
+      "source": "marieclairekorea.com",
+      "url": "https://www.marieclairekorea.com/fashion/2026/10/october-birthstone-opal/?utm_source=naver&utm_medium=partnership",
+      "sub": ""
+    },
+    {
+      "title": "로고 없이도 알아보는 주얼리 아이콘",
+      "date": "Mon, 05 Oct 2026 03:28:00",
+      "source": "elle.co.kr",
+      "url": "https://www.elle.co.kr/article/1910565",
+      "sub": ""
+    },
+    {
+      "title": "반클리프 아펠이 시간을 읽는 시적인 관점",
+      "date": "Mon, 05 Oct 2026 03:02:00",
+      "source": "elle.co.kr",
+      "url": "https://www.elle.co.kr/article/1910155",
+      "sub": ""
+    },
+    {
+      "title": "‘매디슨, 매디슨을 만나다’…이재용 딸 이원주, 젠슨 황 딸과 뉴욕서...",
+      "date": "Fri, 09 Oct 2026 06:44:00",
       "source": "m.entertain.naver.com",
-      "url": "http://www.atstar1.com/news/articleView.html?idxno=6039361",
-      "sub": ""
-    },
-    {
-      "title": "김민하·전도연·김도연, ‘제31회 부산국제영화제’ 수놓은 샤넬 레드...",
-      "date": "Thu, 08 Oct 2026 03:23:00",
-      "source": "m.entertain.naver.com",
-      "url": "https://sports.khan.co.kr/article/202610080322003?pt=nv",
-      "sub": ""
-    },
-    {
-      "title": "'세계 200대 컬렉터'에 샤넬·아마존 회장,한국선 서경배·이서현·김웅...",
-      "date": "Thu, 08 Oct 2026 03:02:00",
-      "source": "newspim.com",
-      "url": "https://www.newspim.com/news/view/20261008000002",
-      "sub": ""
-    },
-    {
-      "title": "Can America’s Most Glamorous Department Store Return to Its Golden Age?",
-      "date": "Thu, 08 Oct 2026 02:04:00",
-      "source": "nytimes.com",
-      "url": "https://www.nytimes.com/2026/10/07/business/bergdorf-goodman.html?partner=naver",
+      "url": "https://www.sportsseoul.com/news/read/1640331?ref=naver",
       "sub": ""
     }
   ],
   "rate": [
-    {
-      "title": "제주, 영국 관광객 공략…한·일 연계상품 개발 나서",
-      "date": "Wed, 07 Oct 2026 22:28:00",
-      "source": "newsjeju.net",
-      "url": "https://www.newsjeju.net/news/articleView.html?idxno=426737",
-      "sub": ""
-    },
-    {
-      "title": "경남도의회, 알마티시의회와 교통·산업 협력 논의",
-      "date": "Wed, 07 Oct 2026 21:02:00",
-      "source": "breaknews.com",
-      "url": "http://www.breaknews.com/1241645",
-      "sub": ""
-    },
-    {
-      "title": "Nuri's 5th launch a success; all 5 NEONSATs complete initial contact",
-      "date": "Wed, 07 Oct 2026 20:00:00",
-      "source": "arirang.com",
-      "url": "https://www.arirang.com/news/view?id=301650",
-      "sub": ""
-    },
-    {
-      "title": "고창문화관광재단, 2025년도 경영실적평가 ‘A등급’ 획득",
-      "date": "Wed, 07 Oct 2026 18:56:00",
-      "source": "sjbnews.com",
-      "url": "https://sjbnews.com/news/news.php?number=889345",
-      "sub": ""
-    },
-    {
-      "title": "자원은 충분한데…외국인 발길 끌 '상품' 부족 [충청 치유관광 숙제]",
-      "date": "Wed, 07 Oct 2026 18:40:00",
-      "source": "cctoday.co.kr",
-      "url": "https://www.cctoday.co.kr/news/articleView.html?idxno=2237973",
-      "sub": ""
-    },
     {
       "title": "치유관광산업 본격화…숲·바다·온천 품은 충청권 새 관광시장 열린다",
       "date": "Wed, 07 Oct 2026 18:40:00",
@@ -187,56 +152,84 @@
       "sub": ""
     },
     {
-      "title": "제107회 대전창업포럼 13일 개막, \"양자기술이 미래 산업으로\"",
-      "date": "Wed, 07 Oct 2026 18:36:00",
-      "source": "breaknews.com",
-      "url": "http://www.breaknews.com/1241558",
-      "sub": ""
-    },
-    {
-      "title": "하나투어, 2026 오픈이노베이션 개최…관광 스타트업 18일까지 모집",
-      "date": "Wed, 07 Oct 2026 18:16:00",
-      "source": "ttlnews.com",
-      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3149839",
-      "sub": ""
-    },
-    {
-      "title": "\"사상 첫 외국인 매출 1조 시대\"…VIP 유치 공들이는 K백화점",
-      "date": "Wed, 07 Oct 2026 15:54:00",
+      "title": "'Bedford Park' director tells Korean American story she wanted to see",
+      "date": "Thu, 08 Oct 2026 19:35:00",
       "source": "n.news.naver.com",
-      "url": "https://www.edaily.co.kr/News/Read?newsId=04411606645610624&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
+      "url": "https://en.yna.co.kr/view/AEN20261008008900315?input=2106m",
       "sub": ""
     },
     {
-      "title": "[고창소식]고창문화관광재단, 경영실적 평가서 A등급 등",
-      "date": "Wed, 07 Oct 2026 15:20:00",
+      "title": "McCormick backs S. Korea's greater role in U.S. shipbuilding, urges faste...",
+      "date": "Thu, 08 Oct 2026 19:08:00",
       "source": "n.news.naver.com",
-      "url": "https://www.newsis.com/view/NISX20261007_0003817592",
+      "url": "https://en.yna.co.kr/view/AEN20261008008800315?input=2106m",
+      "sub": ""
+    },
+    {
+      "title": "와우패스, 부산 관광패스 이용 1만 건 돌파",
+      "date": "Thu, 08 Oct 2026 17:58:00",
+      "source": "pinpointnews.co.kr",
+      "url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=493908",
+      "sub": ""
+    },
+    {
+      "title": "바닷길과 숲길이 만났다…태안서 '걷기여행주간' 선포식",
+      "date": "Thu, 08 Oct 2026 17:18:00",
+      "source": "n.news.naver.com",
+      "url": "https://www.fnnews.com/news/202610061625551424",
+      "sub": ""
+    },
+    {
+      "title": "가을 별자리 시민천문대, 10월 비 오는 날 5.9일…영양부터 영월까지 별...",
+      "date": "Thu, 08 Oct 2026 16:34:00",
+      "source": "n.news.naver.com",
+      "url": "https://www.imaeil.com/page/view/2026100615052802583",
+      "sub": ""
+    },
+    {
+      "title": "르무통이 정관장과 만났다…걷기 문화 확산 나서",
+      "date": "Thu, 08 Oct 2026 15:05:00",
+      "source": "n.news.naver.com",
+      "url": "https://www.munhwa.com/article/11622282?ref=naver",
+      "sub": ""
+    },
+    {
+      "title": "스벅·투썸 밀어낸 ‘약국’…관광객 따라 노른자 상권도 바뀐다",
+      "date": "Thu, 08 Oct 2026 14:54:00",
+      "source": "n.news.naver.com",
+      "url": "https://www.ddaily.co.kr/page/view/2026100814051486886",
+      "sub": ""
+    },
+    {
+      "title": "르무통, 정관장과 브랜드 협업",
+      "date": "Thu, 08 Oct 2026 14:14:00",
+      "source": "hansbiz.co.kr",
+      "url": "http://www.hansbiz.co.kr/news/articleView.html?idxno=871148",
+      "sub": ""
+    },
+    {
+      "title": "한국관광공사, '단풍지도'로 국내여행 띄우고 외국인 지역관광 지원",
+      "date": "Thu, 08 Oct 2026 13:30:00",
+      "source": "s-journal.co.kr",
+      "url": "https://www.s-journal.co.kr/news/articleView.html?idxno=44306",
       "sub": ""
     }
   ],
   "asset": [
     {
-      "title": "국채금리 급등에 美 증시 결국 발목…코스피도 제동 걸리나",
-      "date": "Thu, 08 Oct 2026 06:44:00",
-      "source": "ebn.co.kr",
-      "url": "https://www.ebn.co.kr/news/articleView.html?idxno=1727082",
+      "title": "이억원 \"AI 해킹 막으려면 AI 써야…가계부채 수준 높아 연착륙 필요\"(종...",
+      "date": "Thu, 08 Oct 2026 20:52:00",
+      "source": "n.news.naver.com",
+      "url": "https://www.edaily.co.kr/News/Read?newsId=06933926645610952&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
       "sub": ""
     },
     {
-      "title": "코스피·코스닥 전 거래일(7일) 주요공시는?...에피소드컴퍼니, 140억원...",
-      "date": "Thu, 08 Oct 2026 06:36:00",
+      "title": "코스피·코스닥 전 거래일(8일) 주요공시는... HD현대마린솔루션, 글로벌...",
+      "date": "Fri, 09 Oct 2026 06:34:00",
       "source": "pinpointnews.co.kr",
-      "url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=493512",
-      "sub": ""
-    },
-    {
-      "title": "반도체 소부장·바이오가 끌었다…코스피 제친 코스닥 “정책 기대”",
-      "date": "Thu, 08 Oct 2026 06:06:00",
-      "source": "kukinews.com",
-      "url": "https://www.kukinews.com/article/view/kuk202610070222",
+      "url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=493924",
       "sub": ""
     }
   ],
-  "updated": "2026.10.08 06:51"
+  "updated": "2026.10.09 06:55"
 }
