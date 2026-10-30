@@ -2569,6 +2569,10 @@
     {
       "ym": "20261029",
       "val": 5937.66
+    },
+    {
+      "ym": "20261030",
+      "val": 5730.74
     }
   ],
   "fx": [
@@ -2695,10 +2699,6 @@
   ],
   "tourist": [
     {
-      "ym": "202403",
-      "val": 1491748.0
-    },
-    {
       "ym": "202404",
       "val": 1462797.0
     },
@@ -2813,6 +2813,10 @@
     {
       "ym": "202608",
       "val": 2245293.0
+    },
+    {
+      "ym": "202609",
+      "val": 2062042.0
     }
   ],
   "outbound": [
@@ -2895,6 +2899,10 @@
     {
       "ym": "202608",
       "val": 2431669.0
+    },
+    {
+      "ym": "202609",
+      "val": 2268409.0
     }
   ],
   "dept": [
@@ -9889,12 +9897,17 @@
             "d": 28,
             "temp": 7.9,
             "rain": 0.0
+          },
+          {
+            "d": 29,
+            "temp": 7.8,
+            "rain": 3.0
           }
         ],
-        "avg_temp": 16.8,
+        "avg_temp": 16.4,
         "max_temp": 23.8,
-        "total_rain": 70.0,
-        "rain_days": 5
+        "total_rain": 73.0,
+        "rain_days": 6
       }
     },
     "busan": {
@@ -14373,12 +14386,17 @@
             "d": 28,
             "temp": 12.2,
             "rain": 0.0
+          },
+          {
+            "d": 29,
+            "temp": 14.2,
+            "rain": 0.2
           }
         ],
-        "avg_temp": 19.6,
+        "avg_temp": 19.4,
         "max_temp": 23.6,
-        "total_rain": 250.2,
-        "rain_days": 10
+        "total_rain": 250.4,
+        "rain_days": 11
       }
     },
     "daegu": {
@@ -18857,12 +18875,17 @@
             "d": 28,
             "temp": 10.0,
             "rain": 0.0
+          },
+          {
+            "d": 29,
+            "temp": 8.7,
+            "rain": 0.1
           }
         ],
-        "avg_temp": 17.6,
+        "avg_temp": 17.3,
         "max_temp": 23.5,
-        "total_rain": 115.5,
-        "rain_days": 9
+        "total_rain": 115.6,
+        "rain_days": 10
       }
     },
     "incheon": {
@@ -23341,12 +23364,17 @@
             "d": 28,
             "temp": 8.7,
             "rain": 0.0
+          },
+          {
+            "d": 29,
+            "temp": 9.7,
+            "rain": 6.1
           }
         ],
-        "avg_temp": 17.2,
+        "avg_temp": 16.9,
         "max_temp": 23.2,
-        "total_rain": 49.9,
-        "rain_days": 6
+        "total_rain": 56.0,
+        "rain_days": 7
       }
     },
     "gwangju": {
@@ -27825,12 +27853,17 @@
             "d": 28,
             "temp": 10.7,
             "rain": 0.0
+          },
+          {
+            "d": 29,
+            "temp": 9.8,
+            "rain": 2.5
           }
         ],
-        "avg_temp": 18.0,
+        "avg_temp": 17.8,
         "max_temp": 23.6,
-        "total_rain": 99.4,
-        "rain_days": 9
+        "total_rain": 101.9,
+        "rain_days": 10
       }
     },
     "daejeon": {
@@ -32309,9 +32342,14 @@
             "d": 28,
             "temp": 8.1,
             "rain": 0.0
+          },
+          {
+            "d": 29,
+            "temp": 8.9,
+            "rain": 0.0
           }
         ],
-        "avg_temp": 16.6,
+        "avg_temp": 16.4,
         "max_temp": 24.4,
         "total_rain": 105.5,
         "rain_days": 6
@@ -36793,12 +36831,17 @@
             "d": 28,
             "temp": 10.0,
             "rain": 0.0
+          },
+          {
+            "d": 29,
+            "temp": 11.3,
+            "rain": 0.1
           }
         ],
-        "avg_temp": 17.7,
+        "avg_temp": 17.4,
         "max_temp": 21.7,
-        "total_rain": 181.6,
-        "rain_days": 11
+        "total_rain": 181.7,
+        "rain_days": 12
       }
     },
     "cheongju": {
@@ -41277,12 +41320,17 @@
             "d": 28,
             "temp": 9.4,
             "rain": 0.0
+          },
+          {
+            "d": 29,
+            "temp": 9.7,
+            "rain": 0.1
           }
         ],
-        "avg_temp": 17.4,
+        "avg_temp": 17.2,
         "max_temp": 24.6,
-        "total_rain": 93.1,
-        "rain_days": 6
+        "total_rain": 93.2,
+        "rain_days": 7
       }
     }
   }

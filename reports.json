@@ -1,6 +1,12 @@
 {
   "hri": [
     {
+      "title": "서울 아파트값 90주째 최장기 상승, '서울 빠진' 신규택지 발표 효과는...",
+      "date": "Fri, 30 Oct 2026 07:26:00",
+      "source": "n.news.naver.com",
+      "url": "https://www.ytn.co.kr/_ln/0102_202610300726345443"
+    },
+    {
       "title": "[알쓸다정] 수출은 역대 최대인데 체감은 왜 다를까… 'K자형 경제'",
       "date": "Sun, 25 Oct 2026 07:02:00",
       "source": "gokorea.kr",
@@ -53,15 +59,57 @@
       "date": "Mon, 12 Oct 2026 07:16:00",
       "source": "asiatime.co.kr",
       "url": "https://www.asiatime.co.kr/article/20261008500331"
-    },
-    {
-      "title": "반도체 호황이 만든 명목 GDP…내수와 가계로 퍼질까",
-      "date": "Wed, 07 Oct 2026 16:40:00",
-      "source": "junggi.co.kr",
-      "url": "https://www.junggi.co.kr/news/articleView.html?idxno=38023"
     }
   ],
   "kdi": [
+    {
+      "title": "신용시장까지 번진 ‘AI 거품론’… ‘탄탄한 본업 바탕’ 반론도",
+      "date": "Sat, 31 Oct 2026 01:44:00",
+      "source": "n.news.naver.com",
+      "url": "https://www.donga.com/news/Economy/article/all/20261030/134941582/2"
+    },
+    {
+      "title": "[이슈] 821조 예산국회 첫날부터 충돌…與 \"미래투자\" 野 \"빚잔치\", 162조...",
+      "date": "Fri, 30 Oct 2026 20:13:00",
+      "source": "polinews.co.kr",
+      "url": "https://www.polinews.co.kr/news/articleView.html?idxno=747372"
+    },
+    {
+      "title": "[단독]발전사, 5조 투자사업 심의 생략…수익도 전망치의 25%",
+      "date": "Fri, 30 Oct 2026 18:08:00",
+      "source": "n.news.naver.com",
+      "url": "https://www.sedaily.com/article/20108461?ref=naver"
+    },
+    {
+      "title": "예산안 공청회…미래대응기금에 \"체질개선 기회\" vs \"李대통령 머니머신...",
+      "date": "Fri, 30 Oct 2026 17:04:00",
+      "source": "n.news.naver.com",
+      "url": "https://www.edaily.co.kr/News/Read?newsId=05441526645618168&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article"
+    },
+    {
+      "title": "국회, 2027년도 예산안 심사 돌입...여야 대립 속 법정시한 준수 주목",
+      "date": "Fri, 30 Oct 2026 15:10:00",
+      "source": "m-economynews.com",
+      "url": "https://www.m-economynews.com/news/article.html?no=72343"
+    },
+    {
+      "title": "난곡선 재추진에 지역 관심...예타 결과 앞두고 교통 개선 기대",
+      "date": "Fri, 30 Oct 2026 11:26:00",
+      "source": "joongangenews.com",
+      "url": "https://www.joongangenews.com/news/articleView.html?idxno=559931"
+    },
+    {
+      "title": "인간 대체하는 AI… 10년뒤엔 年 25만개씩 일자리 증발[창간 35주년 특집...",
+      "date": "Fri, 30 Oct 2026 09:56:00",
+      "source": "n.news.naver.com",
+      "url": "https://www.munhwa.com/article/11627514?ref=naver"
+    },
+    {
+      "title": "홍성 내포 국가산단 예타 탈락 후폭풍…평가 공정성·정부 책임 도마",
+      "date": "Fri, 30 Oct 2026 09:06:00",
+      "source": "newsprime.co.kr",
+      "url": "http://www.newsprime.co.kr/news/article.html?no=753004"
+    },
     {
       "title": "\"경제활동인구 내년 정점…2045년엔 3명 중 1명 노인\"",
       "date": "Thu, 29 Oct 2026 18:11:00",
@@ -73,116 +121,68 @@
       "date": "Thu, 29 Oct 2026 16:56:00",
       "source": "dkilbo.com",
       "url": "https://www.dkilbo.com/news/articleView.html?idxno=558967"
-    },
-    {
-      "title": "[재정 골든타임] ② 반도체 걷어낸 韓 경제의 민낯…수출 절반·법인세...",
-      "date": "Thu, 29 Oct 2026 16:20:00",
-      "source": "newspim.com",
-      "url": "https://www.newspim.com/news/view/20261028001576"
-    },
-    {
-      "title": "박홍근 “인구 구조 변화는 예견된 미래…AI활용·이민정책 정비 필요”",
-      "date": "Thu, 29 Oct 2026 15:31:00",
-      "source": "n.news.naver.com",
-      "url": "https://www.seoul.co.kr/news/economy/2026/10/29/20261029500201?wlog_tag3=naver"
-    },
-    {
-      "title": "영일만횡단대교 연내 노선 확정 전망···포항시, 해상안 사수 총력",
-      "date": "Thu, 29 Oct 2026 14:54:00",
-      "source": "idaegu.co.kr",
-      "url": "https://www.idaegu.co.kr/news/articleView.html?idxno=563787"
-    },
-    {
-      "title": "박홍근 \"인구절벽 해법은 AI와 이민 현실화\"…국가 시스템 전면 재설계...",
-      "date": "Thu, 29 Oct 2026 10:38:00",
-      "source": "widedaily.com",
-      "url": "https://www.widedaily.com/news/articleView.html?idxno=302454"
-    },
-    {
-      "title": "박홍근 \"인구구조 변화는 예견된 미래…'질적 성장' 대전환\"",
-      "date": "Thu, 29 Oct 2026 09:40:00",
-      "source": "n.news.naver.com",
-      "url": "https://view.asiae.co.kr/article/2026102909401519706"
-    },
-    {
-      "title": "박홍근 \"인구 전략, 질적 성장으로 대전환…사회·경제 재설계할 것\"",
-      "date": "Thu, 29 Oct 2026 09:22:00",
-      "source": "news.einfomax.co.kr",
-      "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4441788"
-    },
-    {
-      "title": "박홍근 \"인구감소 공백에 AI 활용…이민정책도 현실적으로 정비\"",
-      "date": "Thu, 29 Oct 2026 09:10:00",
-      "source": "n.news.naver.com",
-      "url": "https://www.newsis.com/view/NISX20261029_0003845666"
-    },
-    {
-      "title": "“슈퍼사이클 이후 연착륙 전략 짜야… 성장만큼 리바운드 클 것”[창간...",
-      "date": "Thu, 29 Oct 2026 08:40:00",
-      "source": "n.news.naver.com",
-      "url": "https://www.munhwa.com/article/11627117?ref=naver"
     }
   ],
   "bok": [
     {
-      "title": "고정형 주담대 5% 돌파에 11월 인상 전망까지…사면초가 '영끌족'",
-      "date": "Fri, 30 Oct 2026 06:00:00",
+      "title": "日銀, 기준금리 1.25% 동결에도 추가 인상 예고…엔화·글로벌 금융시장...",
+      "date": "Sat, 31 Oct 2026 05:34:00",
+      "source": "geconomy.co.kr",
+      "url": "https://www.geconomy.co.kr/news/article.html?no=325113"
+    },
+    {
+      "title": "신용시장까지 번진 ‘AI 거품론’… ‘탄탄한 본업 바탕’ 반론도",
+      "date": "Sat, 31 Oct 2026 01:44:00",
       "source": "n.news.naver.com",
-      "url": "https://www.news1.kr/economy/trend/6336919"
+      "url": "https://www.donga.com/news/Economy/article/all/20261030/134941582/2"
     },
     {
-      "title": "코스피, 6000선 탈환…단기 불꽃일까, 대세 상승장일까",
-      "date": "Fri, 30 Oct 2026 06:00:00",
-      "source": "ziksir.com",
-      "url": "https://www.ziksir.com/news/articleView.html?idxno=151239"
+      "title": "[권말특집] 정권은 어떻게 무너지는가…역대 정부 집권 첫 1 년 &lt;5&gt; 이명...",
+      "date": "Fri, 30 Oct 2026 17:38:00",
+      "source": "monthly.chosun.com",
+      "url": "https://monthly.chosun.com/news/articleView.html?idxno=71853"
     },
     {
-      "title": "美 금리 쉬어가도 ‘인상 불씨’…한은 새달·연준 12월 가능성",
-      "date": "Fri, 30 Oct 2026 05:05:00",
+      "title": "[채권마감] 10년금리 5개월만 최저, 주가 급락에 안전선호+WGBI 자금유입",
+      "date": "Fri, 30 Oct 2026 17:36:00",
+      "source": "etoday.co.kr",
+      "url": "https://www.etoday.co.kr/news/view/2642445"
+    },
+    {
+      "title": "비트코인 반등했는데 왜 시장은 흔들리나...유동성 악화의 신호[엠블록...",
+      "date": "Fri, 30 Oct 2026 17:36:00",
       "source": "n.news.naver.com",
-      "url": "https://www.seoul.co.kr/news/economy/finance/2026/10/30/20261030031004?wlog_tag3=naver"
+      "url": "https://www.mk.co.kr/article/12191756"
     },
     {
-      "title": "미국 연준 금리 동결…12월 인상 여부 주목",
-      "date": "Fri, 30 Oct 2026 05:00:00",
+      "title": "[공동락의 금리산책] 안전자산 선호 반영한 '금리하락' 일시적",
+      "date": "Fri, 30 Oct 2026 17:28:00",
+      "source": "weekly.hankooki.com",
+      "url": "https://weekly.hankooki.com/news/articleView.html?idxno=7191291"
+    },
+    {
+      "title": "[투자 노하우] 현지시간 29일 뉴욕증시 3대지수 일제히 하락",
+      "date": "Fri, 30 Oct 2026 17:04:00",
       "source": "n.news.naver.com",
-      "url": "https://www.sidae.com/article/2026102911091120737"
+      "url": "https://biz.sbs.co.kr/article_hub/20000343385?division=NAVER"
     },
     {
-      "title": "[사설] 반도체만 웃는 성장, 중소기업은 고금리·저수익 이중고",
-      "date": "Fri, 30 Oct 2026 05:00:00",
-      "source": "n.news.naver.com",
-      "url": "https://www.imaeil.com/page/view/2026102917424874390"
+      "title": "11월 증시도 쉴 틈 없다⋯美 중간선거·엔비디아·금통위 일정에 ‘주목...",
+      "date": "Fri, 30 Oct 2026 17:02:00",
+      "source": "etoday.co.kr",
+      "url": "https://www.etoday.co.kr/news/view/2642383"
     },
     {
-      "title": "미 매파적 금리 동결…“한은, 내달 인상 가능성”",
-      "date": "Fri, 30 Oct 2026 00:02:00",
-      "source": "n.news.naver.com",
-      "url": "https://www.joongang.co.kr/article/25474198"
+      "title": "美 연준 금리 동결에도 인상 가능성 여전…한은, 11월 금통위 '고심'",
+      "date": "Fri, 30 Oct 2026 16:40:00",
+      "source": "thepublic.kr",
+      "url": "https://www.thepublic.kr/news/articleView.html?idxno=324525"
     },
     {
-      "title": "연준은 멈췄는데 한은은?…11월 추가 인상 무게",
-      "date": "Thu, 29 Oct 2026 21:04:00",
-      "source": "n.news.naver.com",
-      "url": "http://www.yonhapnewstv.co.kr/news/MYH202610292103292zd"
-    },
-    {
-      "title": "[월드 e 브리핑] 캐나다, 기준금리 연 2.50%로 상향…3년 3개월 만",
-      "date": "Thu, 29 Oct 2026 20:46:00",
-      "source": "obsnews.co.kr",
-      "url": "https://www.obsnews.co.kr/news/articleView.html?idxno=1542125"
-    },
-    {
-      "title": "경남 소비자심리 3달 연속 내리막",
-      "date": "Thu, 29 Oct 2026 20:24:00",
-      "source": "gnnews.co.kr",
-      "url": "https://www.gnnews.co.kr/news/articleView.html?idxno=648476"
-    },
-    {
-      "title": "연준 기준금리 동결…추가 인상 여지 남겨",
-      "date": "Thu, 29 Oct 2026 19:05:00",
-      "source": "n.news.naver.com",
-      "url": "http://www.kookje.co.kr/news2011/asp/newsbody.asp?code=0200&key=20261030.22010008933"
+      "title": "美·유럽·日 나란히 동결 … 반도체 호황에 한은만 인상 저울질, '금리...",
+      "date": "Fri, 30 Oct 2026 16:26:00",
+      "source": "biz.newdaily.co.kr",
+      "url": "https://biz.newdaily.co.kr/site/data/html/2026/10/30/2026103000289.html"
     }
   ],
   "kiep": [
@@ -309,5 +309,5 @@
       "url": "https://www.ajunews.com/view/20260916143410575"
     }
   ],
-  "updated": "2026.10.30 06:38"
+  "updated": "2026.10.31 06:26"
 }
