@@ -1,96 +1,124 @@
 {
   "dept": [
     {
-      "title": "올겨울도 우아하게, 문가영의 ‘현백코어’는 계속된다",
-      "date": "Thu, 19 Nov 2026 19:18:00",
-      "source": "harpersbazaar.co.kr",
-      "url": "https://www.harpersbazaar.co.kr/article/1913313",
-      "sub": ""
-    },
-    {
-      "title": "몽클로스, 올리브영 국내 글로벌 거점 매장 중심으로 ‘컴포트 핸드크림...",
-      "date": "Sun, 22 Nov 2026 22:44:00",
+      "title": "신세계백화점 폭파 협박범, 울산 사는 중학생으로 확인",
+      "date": "Tue, 24 Nov 2026 12:05:00",
       "source": "n.news.naver.com",
-      "url": "https://sports.khan.co.kr/article/202611222243003?pt=nv",
+      "url": "https://www.yna.co.kr/view/AKR20261124097100057?input=1195m",
       "sub": ""
     },
     {
-      "title": "SK텔레콤, 무신사와 손잡고 에어 요금제 특가…최대 11만원 쇼핑 혜택",
-      "date": "Sun, 22 Nov 2026 22:26:00",
-      "source": "eroun.net",
-      "url": "https://www.eroun.net/news/articleView.html?idxno=96181",
-      "sub": ""
-    },
-    {
-      "title": "“에이전틱 커머스+글로벌 옴니채널” CJ올리브영, ‘테크 콘퍼런스’ ...",
-      "date": "Sun, 22 Nov 2026 20:47:00",
+      "title": "[속보] 신세계백화점 폭파 협박범 검거, 울산 사는 중학생으로 확인",
+      "date": "Tue, 24 Nov 2026 12:04:00",
       "source": "n.news.naver.com",
-      "url": "https://sports.donga.com/economy/article/all/20261122/135065928/1",
+      "url": "https://www.busan.com/view/busan/view.php?code=2026112411584393083",
       "sub": ""
     },
     {
-      "title": "\"와인·사케 비켜\"… 국세청, 더현대 달굴 최정예 국가대표 'K-술' 12종 선...",
-      "date": "Sun, 22 Nov 2026 19:12:00",
-      "source": "nbntv.co.kr",
-      "url": "https://www.nbntv.co.kr/news/articleView.html?idxno=4027773",
-      "sub": ""
-    },
-    {
-      "title": "[포토] 스타필드 수원, 황금빛 크리스마스 분위기 물씬",
-      "date": "Sun, 22 Nov 2026 18:12:00",
-      "source": "kgnews.co.kr",
-      "url": "https://www.kgnews.co.kr/news/article.html?no=920679",
-      "sub": ""
-    },
-    {
-      "title": "유니클로, 경남 거제서 김장 나눔…전국 독거노인엔 히트텍 7만 장",
-      "date": "Sun, 22 Nov 2026 17:24:00",
+      "title": "[속보] 신세계백화점 폭파 협박범 검거, 울산 사는 중학생으로 확인",
+      "date": "Tue, 24 Nov 2026 12:02:00",
       "source": "n.news.naver.com",
-      "url": "https://www.busan.com/view/busan/view.php?code=2026112217204967533",
+      "url": "http://www.kookje.co.kr/news2011/asp/newsbody.asp?code=0300&key=20261124.99099007482",
       "sub": ""
     },
     {
-      "title": "유니클로 ‘더 하트 오브 라이프웨어’ 캠페인, 국내 저소득층 독거노인...",
-      "date": "Sun, 22 Nov 2026 09:38:00",
+      "title": "'MADE IN ULSAN' 팝업 24일 연남동서 개막···울산 브랜드 한자리에",
+      "date": "Tue, 24 Nov 2026 11:58:00",
+      "source": "enetnews.co.kr",
+      "url": "https://www.enetnews.co.kr/news/articleView.html?idxno=56689",
+      "sub": ""
+    },
+    {
+      "title": "설화수·맥 신제품 먼저 푼 무신사 뷰티…럭셔리 거래액 110%↑",
+      "date": "Tue, 24 Nov 2026 11:56:00",
+      "source": "wolyo.co.kr",
+      "url": "https://www.wolyo.co.kr/news/articleView.html?idxno=320971",
+      "sub": ""
+    },
+    {
+      "title": "[유통갤러리] 히트텍부터 파카까지…유니클로, 2주간 감사제 연다 外",
+      "date": "Tue, 24 Nov 2026 11:56:00",
+      "source": "theviewers.co.kr",
+      "url": "https://theviewers.co.kr/View.aspx?No=4326594",
+      "sub": ""
+    },
+    {
+      "title": "오센티크, 현대백화점 판교점 '코오드(KHODE)' 입점",
+      "date": "Tue, 24 Nov 2026 11:54:00",
+      "source": "businesskorea.co.kr",
+      "url": "https://www.businesskorea.co.kr/news/articleView.html?idxno=282029",
+      "sub": ""
+    },
+    {
+      "title": "[똑똑한케어] 코스맥스, 몽클로스, 아모레퍼시픽, 무신사 뷰티, LG생활건...",
+      "date": "Tue, 24 Nov 2026 11:52:00",
+      "source": "ekn.kr",
+      "url": "https://www.ekn.kr/web/view.php?key=20261124022183803",
+      "sub": ""
+    },
+    {
+      "title": "[똑똑한패션] 유니클로 감사제, 이랜드 뉴발란스, LF 이에르로르, 신성...",
+      "date": "Tue, 24 Nov 2026 11:50:00",
+      "source": "ekn.kr",
+      "url": "https://www.ekn.kr/web/view.php?key=20261124021073815",
+      "sub": ""
+    },
+    {
+      "title": "이케아, 현대백화점 판교점에 세 번째 팝업…수납·정리 제품 선봬",
+      "date": "Tue, 24 Nov 2026 11:45:00",
       "source": "n.news.naver.com",
-      "url": "https://www.sportschosun.com/life/2026-11-22/202611220100135240012736",
-      "sub": ""
-    },
-    {
-      "title": "‘현백코어’ 입고 ‘재벌 3세 아이돌’ 열광…‘세습된 부티’ 좇는 청...",
-      "date": "Sun, 15 Nov 2026 20:00:00",
-      "source": "n.news.naver.com",
-      "url": "https://www.hani.co.kr/arti/society/society_general/1287448.html",
-      "sub": ""
-    },
-    {
-      "title": "정용진의 승부수…트레이더스 성공 넘어 AI·콘텐츠로 영토 확장",
-      "date": "Sat, 21 Nov 2026 09:50:00",
-      "source": "newspost.kr",
-      "url": "https://www.newspost.kr/news/articleView.html?idxno=227635",
+      "url": "https://view.asiae.co.kr/article/2026112411453629332",
       "sub": ""
     }
   ],
   "trend": [
     {
-      "title": "정준일, 최소라♥이코베 교제→결혼 반대했다…\"소라가 먼저 청혼\" ('전...",
-      "date": "Sun, 22 Nov 2026 19:37:00",
+      "title": "세계 영화제를 매료시킨 샤넬의 레드카펫 모먼트",
+      "date": "Tue, 24 Nov 2026 10:32:00",
+      "source": "marieclairekorea.com",
+      "url": "https://www.marieclairekorea.com/fashion/2026/11/chanel-90/?utm_source=naver&utm_medium=partnership",
+      "sub": ""
+    },
+    {
+      "title": "겨울에 레이스라니, 입어보면 생각이 달라집니다",
+      "date": "Tue, 24 Nov 2026 10:18:00",
+      "source": "elle.co.kr",
+      "url": "https://www.elle.co.kr/article/1913539",
+      "sub": ""
+    },
+    {
+      "title": "디올 뷰티 홀리데이 팝업서 시선 주목시킨 이들 누구?",
+      "date": "Tue, 24 Nov 2026 10:11:00",
+      "source": "n.news.naver.com",
+      "url": "https://www.mk.co.kr/article/12216883",
+      "sub": ""
+    },
+    {
+      "title": "맥라렌엔 인텔, 메르세데스엔 AMD…첨단기술 경쟁 무대 된 F1",
+      "date": "Tue, 24 Nov 2026 06:01:00",
+      "source": "n.news.naver.com",
+      "url": "http://www.inews24.com/view/2029496",
+      "sub": ""
+    },
+    {
+      "title": "007 손목서 오메가 사라지나…JLC로 교체설에 명품 시계업계 촉각",
+      "date": "Tue, 24 Nov 2026 05:44:00",
       "source": "m.entertain.naver.com",
-      "url": "https://www.tvreport.co.kr/broadcast/article/1092869/",
+      "url": "https://www.segye.com/newsView/20261123513586?OutUrl=naver",
       "sub": ""
     },
     {
-      "title": "[목지수의 도시브랜드 산책] OLD IS NEW",
-      "date": "Sun, 22 Nov 2026 19:02:00",
-      "source": "n.news.naver.com",
-      "url": "http://www.kookje.co.kr/news2011/asp/newsbody.asp?code=1700&key=20261123.22021005934",
+      "title": "뉴욕 대저택과 맞바꾼 진주 목걸이…100년 만에 달라진 보석의 가치",
+      "date": "Tue, 24 Nov 2026 05:04:00",
+      "source": "betanews.net",
+      "url": "https://www.betanews.net/article/view/beta202611240001",
       "sub": ""
     },
     {
-      "title": "홀리데이 시즌…대전신세계, 하이주얼리 '티파니앤코' 부티크 첫 선",
-      "date": "Sun, 22 Nov 2026 13:21:00",
+      "title": "제임스 본드 '빈 손목'에 명품시계 쟁탈전…오메가 수성이냐, 예거르쿨...",
+      "date": "Tue, 24 Nov 2026 00:23:00",
       "source": "n.news.naver.com",
-      "url": "https://www.daejonilbo.com/news/articleView.html?idxno=2315500",
+      "url": "https://www.fnnews.com/news/202611240015433663",
       "sub": ""
     },
     {
@@ -101,142 +129,156 @@
       "sub": ""
     },
     {
-      "title": "신기한 거 보여줄까? 파리의 밤하늘 담은 눈물나게 예쁜 남자 시계",
-      "date": "Sun, 22 Nov 2026 03:54:00",
-      "source": "gqkorea.co.kr",
-      "url": "https://www.gqkorea.co.kr/2026/11/22/%ec%8b%a0%ea%b8%b0%ed%95%9c-%ea%b1%b0-%eb%b3%b4%ec%97%ac%ec%a4%84%ea%b9%8c-%ed%8c%8c%eb%a6%ac%ec%9d%98-%eb%b0%a4%ed%95%98%eb%8a%98-%eb%8b%b4%ec%9d%80-%eb%88%88%eb%ac%bc%eb%82%98%ea%b2%8c-%ec%98%88/?utm_source=naver&utm_medium=partnership",
-      "sub": ""
-    },
-    {
-      "title": "[Who Is ?] 문성욱 신세계라이브쇼핑 대표이사 사장",
-      "date": "Mon, 23 Nov 2026 07:02:00",
-      "source": "businesspost.co.kr",
-      "url": "https://www.businesspost.co.kr/BP?command=article_view&num=451456",
-      "sub": ""
-    },
-    {
-      "title": "[Who Is ?] 임세령 대상 부회장 겸 대상홀딩스 부회장",
-      "date": "Mon, 23 Nov 2026 07:02:00",
-      "source": "businesspost.co.kr",
-      "url": "https://www.businesspost.co.kr/BP?command=article_view&num=452237",
-      "sub": ""
-    },
-    {
-      "title": "‘불가리’ 세계적 브랜드로 키운 파올로 불가리 前 회장 별세",
-      "date": "Mon, 23 Nov 2026 06:07:00",
+      "title": "명품 콧대 꺾였나…소비 위축에 잇단 '가격 인하'",
+      "date": "Mon, 23 Nov 2026 23:11:00",
       "source": "n.news.naver.com",
-      "url": "https://www.segye.com/newsView/20261122510243?OutUrl=naver",
+      "url": "http://www.yonhapnewstv.co.kr/news/MYH20261123231101FW9",
       "sub": ""
     },
     {
-      "title": "[HIF 2026] 노화 세포 되살리고 근육 지키고…건강수명 늘리는 롱제비티...",
-      "date": "Mon, 23 Nov 2026 06:03:00",
-      "source": "n.news.naver.com",
-      "url": "https://biz.chosun.com/science-chosun/medicine-health/2026/11/23/XRWF3XBT7FFWZOL5HO6N54ERVA/?utm_source=naver&utm_medium=original&utm_campaign=biz",
-      "sub": ""
-    },
-    {
-      "title": "“AI 슬롭 벌써 질려… 미술관은 ‘예술적 지능’ 실험장”",
-      "date": "Mon, 23 Nov 2026 00:42:00",
-      "source": "n.news.naver.com",
-      "url": "https://www.chosun.com/culture-life/art-gallery/2026/11/23/ZADLETUUKVHMFHSNEYVB7EUD7U/?utm_source=naver&utm_medium=referral&utm_campaign=naver-news",
+      "title": "Paolo Bulgari, Heir of Italian Jewelry Dynasty, Dies at 89",
+      "date": "Mon, 23 Nov 2026 22:48:00",
+      "source": "nytimes.com",
+      "url": "https://www.nytimes.com/2026/11/23/style/paolo-bulgari-dead.html?partner=naver",
       "sub": ""
     }
   ],
   "rate": [
     {
-      "title": "'18년째' 서귀포 삼매봉밸리 유원지 개발사업...준공 절차 본격화",
-      "date": "Thu, 19 Nov 2026 19:38:00",
-      "source": "headlinejeju.co.kr",
-      "url": "https://www.headlinejeju.co.kr/news/articleView.html?idxno=602449",
+      "title": "청송의 가을 정취, 자연 속에서 즐기는 가볼 만한 곳",
+      "date": "Tue, 24 Nov 2026 12:10:00",
+      "source": "joongangenews.com",
+      "url": "https://www.joongangenews.com/news/articleView.html?idxno=561998",
       "sub": ""
     },
     {
-      "title": "1위는 뉴욕 어퍼...세계에서 임대료 가장 비싼 지역 톱10 차지한 '서울 ...",
-      "date": "Sun, 22 Nov 2026 18:00:00",
-      "source": "wikitree.co.kr",
-      "url": "https://www.wikitree.co.kr/articles/1175700",
+      "title": "경주시, 천년의 역사 위에 관광의 미래를 열다… 글로벌 관광도시 도약",
+      "date": "Tue, 24 Nov 2026 12:10:00",
+      "source": "dkilbo.com",
+      "url": "https://www.dkilbo.com/news/articleView.html?idxno=561883",
       "sub": ""
     },
     {
-      "title": "In South Korea, 'Swedish massage' can mean more than a massage",
-      "date": "Sun, 22 Nov 2026 16:41:00",
+      "title": "서천군, '에이본-히스코트 하구와 자매서식지 모색'... 4박 6일 현지 시...",
+      "date": "Tue, 24 Nov 2026 12:06:00",
+      "source": "newsworker.co.kr",
+      "url": "https://www.newsworker.co.kr/news/articleView.html?idxno=515805",
+      "sub": ""
+    },
+    {
+      "title": "한국 산에 빠진 외국인들… K팝·K푸드 다음은 K-트레킹",
+      "date": "Tue, 24 Nov 2026 12:04:00",
       "source": "n.news.naver.com",
-      "url": "https://www.koreaherald.com/article/10945182?ref=naver",
+      "url": "https://www.etnews.com/20261124000269",
       "sub": ""
     },
     {
-      "title": "2000만 외국인 홀린 한국 관광…국가별 맞춤형 방한 마케팅 전개한다",
-      "date": "Sun, 22 Nov 2026 15:27:00",
+      "title": "춘천 해피초원목장·강릉 경포해변 '열린관광지' 낙점",
+      "date": "Tue, 24 Nov 2026 12:04:00",
+      "source": "newscj.com",
+      "url": "https://www.newscj.com/news/articleView.html?idxno=3451563",
+      "sub": ""
+    },
+    {
+      "title": "'보는 섬'에서 '즐기는 섬'…신안군, 지자체 홍보대상 관광 부문 대상",
+      "date": "Tue, 24 Nov 2026 12:04:00",
+      "source": "thefairnews.co.kr",
+      "url": "https://www.thefairnews.co.kr/news/articleView.html?idxno=95312",
+      "sub": ""
+    },
+    {
+      "title": "순창 떡볶이 축제, K-푸드 관광의 새로운 가능성 열었다…경제적 파급효...",
+      "date": "Tue, 24 Nov 2026 12:03:00",
+      "source": "ppss.kr",
+      "url": "https://www.ppss.kr/news/articleView.html?idxno=322648",
+      "sub": ""
+    },
+    {
+      "title": "개그맨 황제성, 코리아둘레길 걷기여행 전도사로 나선다",
+      "date": "Tue, 24 Nov 2026 11:40:00",
       "source": "n.news.naver.com",
-      "url": "https://biz.heraldcorp.com/article/10945140?ref=naver",
+      "url": "https://www.fnnews.com/news/202611241128580795",
       "sub": ""
     },
     {
-      "title": "김정기 세계스마트시티기구(WeGO) 사무총장, 브라질 상파울루 WeGO 총회 ...",
-      "date": "Sun, 22 Nov 2026 15:10:00",
-      "source": "breaknews.com",
-      "url": "http://www.breaknews.com/1252911",
-      "sub": ""
-    },
-    {
-      "title": "한한령 해제 기대감…국내 여행사 \"중국인 직접 모집 길 열린다\"",
-      "date": "Sun, 22 Nov 2026 10:36:00",
-      "source": "ntoday.co.kr",
-      "url": "https://www.ntoday.co.kr/news/articleView.html?idxno=131024",
-      "sub": ""
-    },
-    {
-      "title": "[여기는 인천항] 고법, 새만금공항 계획 취소 판결...백령공항 계획에 ...",
-      "date": "Mon, 23 Nov 2026 07:14:00",
-      "source": "news.ifm.kr",
-      "url": "https://news.ifm.kr/news/articleView.html?idxno=485142",
-      "sub": ""
-    },
-    {
-      "title": "안동시, 2027년 본예산 1조7900억원 편성…민생·미래 성장동력 집중 투...",
-      "date": "Mon, 23 Nov 2026 07:13:00",
+      "title": "개그맨 황제성, 관광공사 코리아둘레길 홍보대사 위촉",
+      "date": "Tue, 24 Nov 2026 11:32:00",
       "source": "n.news.naver.com",
-      "url": "https://biz.heraldcorp.com/article/10945347?ref=naver",
+      "url": "https://www.seoul.co.kr/news/life/travel-news/2026/11/24/20261124500118?wlog_tag3=naver",
       "sub": ""
     },
     {
-      "title": "청송군, 2027년 열린관광지 공모 선정…15억원 투입해 관광환경 개선",
-      "date": "Mon, 23 Nov 2026 07:07:00",
-      "source": "n.news.naver.com",
-      "url": "https://biz.heraldcorp.com/article/10945341?ref=naver",
-      "sub": ""
-    },
-    {
-      "title": "[Who Is ?] 임세령 대상 부회장 겸 대상홀딩스 부회장",
-      "date": "Mon, 23 Nov 2026 07:02:00",
-      "source": "businesspost.co.kr",
-      "url": "https://www.businesspost.co.kr/BP?command=article_view&num=452237",
+      "title": "National Gugak Center Performs at Abu Dhabi's 2026 Korea Festival",
+      "date": "Tue, 24 Nov 2026 11:10:00",
+      "source": "nc.press",
+      "url": "https://www.nc.press/news/articleView.html?idxno=631768",
       "sub": ""
     }
   ],
   "asset": [
     {
-      "title": "하락장에 빛난다던 ‘방어형’ ETF…코스피 보다 더 떨어진 상품 속출",
-      "date": "Mon, 23 Nov 2026 07:16:00",
+      "title": "“두번째 기회 줘서 감사하다”… 젠슨황 복귀에 코스피 반등",
+      "date": "Tue, 24 Nov 2026 12:05:00",
       "source": "n.news.naver.com",
-      "url": "https://www.mk.co.kr/article/12215774",
+      "url": "https://www.munhwa.com/article/11633682?ref=naver",
       "sub": ""
     },
     {
-      "title": "코스피·코스닥 전 거래일(20일) 주요공시는...제주반도체 \"종속회사 H에...",
-      "date": "Mon, 23 Nov 2026 07:08:00",
-      "source": "pinpointnews.co.kr",
-      "url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=506797",
+      "title": "엔비디아 CEO 복귀에 코스피 장 초반 5000선 회복",
+      "date": "Tue, 24 Nov 2026 12:04:00",
+      "source": "vegannews.co.kr",
+      "url": "https://www.vegannews.co.kr/news/article.html?no=410408",
       "sub": ""
     },
     {
-      "title": "코스피 제약주 회복세, 코스닥 바이오로 확산 전망…대형 바이오텍 성과...",
-      "date": "Mon, 23 Nov 2026 07:08:00",
-      "source": "medicopharma.co.kr",
-      "url": "https://www.medicopharma.co.kr/news/articleView.html?idxno=70566",
+      "title": "9,100 땐 축포, 4,700 땐 침묵… 국민의힘, 코스피 급락 정부 책임론",
+      "date": "Tue, 24 Nov 2026 12:04:00",
+      "source": "sisaweek.com",
+      "url": "https://www.sisaweek.com/news/articleView.html?idxno=239154",
+      "sub": ""
+    },
+    {
+      "title": "증시 요동·금리 인상 유력… 소비자심리지수 7개월만에 최저",
+      "date": "Tue, 24 Nov 2026 11:56:00",
+      "source": "n.news.naver.com",
+      "url": "https://www.munhwa.com/article/11633647?ref=naver",
+      "sub": ""
+    },
+    {
+      "title": "채권시장 참여자 54% “11월 기준금리 인상”…투자심리 위축",
+      "date": "Tue, 24 Nov 2026 11:52:00",
+      "source": "viva100.com",
+      "url": "https://www.viva100.com/article/20261124500674",
+      "sub": ""
+    },
+    {
+      "title": "11월 소비자심리지수 103.1…전월 대비 2.3p 하락",
+      "date": "Tue, 24 Nov 2026 11:48:00",
+      "source": "junggi.co.kr",
+      "url": "https://www.junggi.co.kr/news/articleView.html?idxno=38617",
+      "sub": ""
+    },
+    {
+      "title": "채권전문가 54% “11월 금통위, 기준금리 인상 전망”",
+      "date": "Tue, 24 Nov 2026 11:42:00",
+      "source": "n.news.naver.com",
+      "url": "http://www.joseilbo.com/news/news_read.php?uid=580319&class=18&grp=",
+      "sub": ""
+    },
+    {
+      "title": "채권시장 참여자 54% \"11월 금통위서 기준금리 인상 예상\"",
+      "date": "Tue, 24 Nov 2026 11:39:00",
+      "source": "n.news.naver.com",
+      "url": "https://www.yna.co.kr/view/AKR20261124086800008?input=1195m",
+      "sub": ""
+    },
+    {
+      "title": "11월 대구·경북 소비자심리지수 104.4···10월 대비 2.9포인트 하락",
+      "date": "Tue, 24 Nov 2026 11:37:00",
+      "source": "n.news.naver.com",
+      "url": "https://dgmbc.com/NewsArticle/875056",
       "sub": ""
     }
   ],
-  "updated": "2026.11.23 07:21"
+  "updated": "2026.11.24 12:12"
 }
